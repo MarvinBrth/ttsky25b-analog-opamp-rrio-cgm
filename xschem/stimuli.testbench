@@ -1,0 +1,26 @@
+
+unit n
+voltage VCC
+slope 1
+format hspice_simple
+
+param vcommon 0.9
+param vdelta 0.2
+
+beginfile stimuli_opamp.cir
+set vss = 0
+set vcc = 1
+set plus = vcommon
+set minus = vcommon
+
+set 100
+
+set minus vcommon-vdelta
+s 1000
+set minus = vcommon
+s 1000
+set plus = vcommon+vdelta
+s 1000
+
+
+
