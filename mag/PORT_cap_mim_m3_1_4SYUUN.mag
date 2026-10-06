@@ -1,0 +1,16 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1791227161
+use sky130_fd_pr__cap_mim_m3_1_4SYUUN XDEV
+timestamp 0
+transform 1 0 0 0 1 0
+box -1986 -1840 1986 1840
+<< metal4 >>
+rect 1880 -40 1960 40
+<< labels >>
+rlabel metal4 -190 -30 -130 30 0 P
+port 1 nsew
+rlabel metal4 1890 -30 1950 30 0 N
+port 2 nsew
+<< end >>

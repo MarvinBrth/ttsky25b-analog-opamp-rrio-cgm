@@ -1,0 +1,48 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1791213699
+use sky130_fd_pr__pfet_g5v0d10v5_8EHTD6 XDEV
+timestamp 0
+transform 1 0 0 0 1 0
+box -858 -3597 858 3597
+<< locali >>
+rect -796 -33 -730 33
+<< viali >>
+rect -780 -17 -746 17
+<< metal1 >>
+rect -803 -40 -723 40
+rect -1312 -32 -731 32
+rect -1320 -40 -1240 40
+rect -669 -40 -589 40
+rect 589 -40 669 40
+rect -616 3341 1312 3405
+rect -616 -3405 1312 -3341
+rect 1248 -3396 1312 3872
+rect 1240 3800 1320 3880
+<< via1 >>
+rect -1310 -30 -1250 30
+rect -659 -30 -599 30
+rect 599 -30 659 30
+rect 1250 3810 1310 3870
+<< metal2 >>
+rect -1330 -50 -1230 50
+rect -679 -50 -579 50
+rect -669 -40 -589 40
+rect -669 -1640 -589 40
+rect 579 -50 679 50
+rect 589 -40 669 40
+rect 589 -40 669 1640
+rect -1160 -1640 -589 -1560
+rect 589 1560 1160 1640
+rect 1230 3790 1330 3890
+<< labels >>
+rlabel metal2 -1310 -30 -1250 30 0 B
+port 1 nsew
+rlabel metal2 -1150 -1630 -1090 -1570 0 S
+port 2 nsew
+rlabel metal2 1090 1570 1150 1630 0 D
+port 3 nsew
+rlabel metal2 1250 3810 1310 3870 0 G
+port 4 nsew
+<< end >>

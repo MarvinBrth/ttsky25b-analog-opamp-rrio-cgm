@@ -1,0 +1,12 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=label
+format="*.alias @lab"
+template="name=b lab=VGND"
+net_name=true}
+V {}
+S {}
+E {}
+B 5 -1.25 -1.25 1.25 1.25 {name=p dir=in}
+T {@lab} 4 2 0 0 0.13 0.13 {}

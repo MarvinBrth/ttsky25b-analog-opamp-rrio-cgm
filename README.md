@@ -1,36 +1,11 @@
-![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg)
+# SKY130 rail-to-rail op amp
 
-# Tiny Tapeout Analog Project Template
+A self-biased 3.3 V class-AB operational amplifier based on Huijsing Fig. 7.7.6. The SKY130 implementation uses a 5 µA reference, complementary input pairs and Miller compensation in a 1 × 2 Tiny Tapeout analog tile.
 
-- [Read the documentation for project](docs/info.md)
+The three analog pins are `ua[0]` (IN+), `ua[1]` (IN−) and `ua[2]` (OUT). For a voltage follower, connect OUT to IN− and apply the signal to IN+. Use the separate 3.3 V analog and 1.8 V shuttle supplies.
 
-## What is Tiny Tapeout?
+See the [project documentation](docs/info.md) for simulated performance, load limits and the test procedure. The checked external capacitive load is 20 pF; 100 pF is not qualified. Silicon measurements are pending.
 
-Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip.
+The submission includes GDS and LEF files, the Verilog interface, Xschem schematics and Magic layout sources. The layout contains KIT and Marvin artwork in metal4.
 
-To learn more and get started, visit https://tinytapeout.com.
-
-## Analog projects
-
-For specifications and instructions, see the [analog specs page](https://tinytapeout.com/specs/analog/).
-
-## Enable GitHub actions to build the results page
-
-- [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
-
-## Resources
-
-- [FAQ](https://tinytapeout.com/faq/)
-- [Digital design lessons](https://tinytapeout.com/digital_design/)
-- [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
-- [Join the community](https://tinytapeout.com/discord)
-
-## What next?
-
-- [Submit your design to the next shuttle](https://app.tinytapeout.com/).
-- Edit [this README](README.md) and explain your design, how it works, and how to test it.
-- Share your project on your social network of choice:
-  - LinkedIn [#tinytapeout](https://www.linkedin.com/search/results/content/?keywords=%23tinytapeout) [@TinyTapeout](https://www.linkedin.com/company/100708654/)
-  - Mastodon [#tinytapeout](https://chaos.social/tags/tinytapeout) [@matthewvenn](https://chaos.social/@matthewvenn)
-  - X (formerly Twitter) [#tinytapeout](https://twitter.com/hashtag/tinytapeout) [@tinytapeout](https://twitter.com/tinytapeout)
-  - Bluesky [@tinytapeout.com](https://bsky.app/profile/tinytapeout.com)
+The current schematic is [opamp-rrio-cgm-3v3.sch](xschem/opamp-rrio-cgm-3v3.sch); the current layout is [tt_um_marvinbrth_opamp_rrio_cgm_3v3.mag](mag/tt_um_marvinbrth_opamp_rrio_cgm_3v3.mag). Set `PDK_ROOT` to your installed SKY130 PDK before opening the sources. The older 1.8 V schematics and simulations are retained for reference.

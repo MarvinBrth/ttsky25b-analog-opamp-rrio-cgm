@@ -1,0 +1,68 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1791213699
+use sky130_fd_pr__nfet_g5v0d10v5_W95E4S XDEV
+timestamp 0
+transform 1 0 0 0 1 0
+box -594 -1647 594 1647
+<< locali >>
+rect -562 -33 -496 33
+<< viali >>
+rect -546 -17 -512 17
+<< metal1 >>
+rect -569 -40 -489 40
+rect -1152 -32 -497 32
+rect -1160 -40 -1080 40
+rect -435 -40 -355 40
+rect -277 -40 -197 40
+rect -119 -40 -39 40
+rect 39 -40 119 40
+rect 197 -40 277 40
+rect 355 -40 435 40
+rect -382 1421 992 1485
+rect -382 -1485 992 -1421
+rect 928 -1476 992 1952
+rect 920 1880 1000 1960
+<< via1 >>
+rect -1150 -30 -1090 30
+rect -425 -30 -365 30
+rect -267 -30 -207 30
+rect -109 -30 -49 30
+rect 49 -30 109 30
+rect 207 -30 267 30
+rect 365 -30 425 30
+rect 930 1890 990 1950
+<< metal2 >>
+rect -1170 -50 -1070 50
+rect -445 -50 -345 50
+rect -435 -40 -355 40
+rect -435 -680 -355 40
+rect -287 -50 -187 50
+rect -277 -40 -197 40
+rect -277 -40 -197 680
+rect -129 -50 -29 50
+rect -119 -40 -39 40
+rect -119 -680 -39 40
+rect 29 -50 129 50
+rect 39 -40 119 40
+rect 39 -40 119 680
+rect 187 -50 287 50
+rect 197 -40 277 40
+rect 197 -680 277 40
+rect 345 -50 445 50
+rect 355 -40 435 40
+rect 355 -40 435 680
+rect -840 -680 277 -600
+rect -277 600 840 680
+rect 910 1870 1010 1970
+<< labels >>
+rlabel metal2 -1150 -30 -1090 30 0 B
+port 1 nsew
+rlabel metal2 -830 -670 -770 -610 0 S
+port 2 nsew
+rlabel metal2 770 610 830 670 0 D
+port 3 nsew
+rlabel metal2 930 1890 990 1950 0 G
+port 4 nsew
+<< end >>

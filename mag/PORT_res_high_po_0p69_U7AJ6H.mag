@@ -1,0 +1,36 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1791213699
+use sky130_fd_pr__res_high_po_0p69_U7AJ6H XDEV
+timestamp 0
+transform 1 0 0 0 1 0
+box -235 -3632 235 3632
+<< locali >>
+rect -215 -33 -149 33
+<< viali >>
+rect -199 -17 -165 17
+<< metal1 >>
+rect -222 -40 -142 40
+rect -672 -32 -150 32
+rect -680 -40 -600 40
+rect -40 3210 40 4040
+rect -40 3960 40 4040
+rect -40 -4040 40 -3210
+rect -40 -4040 40 -3960
+<< via1 >>
+rect -670 -30 -610 30
+rect -30 3970 30 4030
+rect -30 -4030 30 -3970
+<< metal2 >>
+rect -690 -50 -590 50
+rect -50 3950 50 4050
+rect -50 -4050 50 -3950
+<< labels >>
+rlabel metal2 -670 -30 -610 30 0 B
+port 1 nsew
+rlabel metal2 -30 3970 30 4030 0 P
+port 2 nsew
+rlabel metal2 -30 -4030 30 -3970 0 N
+port 3 nsew
+<< end >>

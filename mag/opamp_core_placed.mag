@@ -1,0 +1,257 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1791227188
+use PORT_nfet_g5v0d10v5_FMN43G XM1a
+timestamp 0
+transform 1 0 11200 0 1 25120
+box -850 -1647 850 1970
+use PORT_nfet_g5v0d10v5_HMN43E XM1b
+timestamp 0
+transform 1 0 22400 0 1 25120
+box -1010 -1647 850 1970
+use PORT_nfet_g5v0d10v5_HMN43E XM3a
+timestamp 0
+transform 1 0 13440 0 1 25120
+box -1010 -1647 850 1970
+use PORT_nfet_g5v0d10v5_FMN43G XM3b
+timestamp 0
+transform 1 0 24640 0 1 25120
+box -850 -1647 850 1970
+use PORT_nfet_g5v0d10v5_W95E4S XM7
+timestamp 0
+transform 1 0 16960 0 1 25120
+box -1170 -1647 1010 1970
+use PORT_nfet_g5v0d10v5_W95E4S XM8
+timestamp 0
+transform 1 0 19840 0 1 25120
+box -1170 -1647 1010 1970
+use PORT_nfet_g5v0d10v5_RB7YWG XM18
+timestamp 0
+transform 0 -1 7520 1 0 12800
+box -850 -1647 690 1970
+use PORT_nfet_g5v0d10v5_RB7YWG XM19
+timestamp 0
+transform 0 -1 7520 1 0 15200
+box -850 -1647 690 1970
+use PORT_nfet_g5v0d10v5_ZEEQT3 XM20
+timestamp 0
+transform 1 0 7040 0 1 10560
+box -1170 -591 1170 1010
+use PORT_nfet_g5v0d10v5_ZEEQT3 XM21
+timestamp 0
+transform 1 0 25600 0 1 10560
+box -1170 -591 1170 1010
+use PORT_nfet_g5v0d10v5_PX3QBC XM22
+timestamp 0
+transform 1 0 8320 0 1 25120
+box -1330 -1258 1330 1650
+use PORT_nfet_g5v0d10v5_RB7YWG XM25
+timestamp 0
+transform 0 -1 26080 1 0 12800
+box -850 -1647 690 1970
+use PORT_nfet_g5v0d10v5_RB7YWG XM26
+timestamp 0
+transform 0 -1 26080 1 0 15200
+box -850 -1647 690 1970
+use PORT_nfet_g5v0d10v5_ZEEQT3 XM30
+timestamp 0
+transform 1 0 16320 0 1 10560
+box -1170 -591 1170 1010
+use PORT_nfet_g5v0d10v5_PX3QBC XM31
+timestamp 0
+transform 1 0 27040 0 1 25120
+box -1330 -1258 1330 1650
+use PORT_nfet_g5v0d10v5_BL7ZKV XM32
+timestamp 0
+transform 1 0 16000 0 1 4480
+box -9810 -591 9810 1010
+use PORT_cap_mim_m3_1_4SYUUN XC1
+timestamp 0
+transform 1 0 12000 0 1 12480
+box -1986 -1840 1986 1840
+use PORT_cap_mim_m3_1_QCS3AB XC2
+timestamp 0
+transform 1 0 20800 0 1 13120
+box -3186 -3040 3186 3040
+use PORT_cap_mim_m3_1_TVJUAC XC2B
+timestamp 0
+transform 1 0 12400 0 1 15680
+box -3186 -1040 3186 1040
+use PORT_pfet_g5v0d10v5_8EHTD6 XM13
+timestamp 0
+transform 0 -1 22400 1 0 42720
+box -1330 -3597 1330 3890
+use PORT_pfet_g5v0d10v5_V6J3CS XM14
+timestamp 0
+transform 1 0 7840 0 1 29120
+box -1170 -1397 1170 1810
+use PORT_pfet_g5v0d10v5_V6J3CS XM15
+timestamp 0
+transform 1 0 7840 0 1 33120
+box -1170 -1397 1170 1810
+use PORT_pfet_g5v0d10v5_A4SVUH XM16
+timestamp 0
+transform 0 -1 12000 1 0 17920
+box -850 -4880 690 5170
+use PORT_pfet_g5v0d10v5_8EHTD6 XM23
+timestamp 0
+transform 0 -1 22400 1 0 21760
+box -1330 -3597 1330 3890
+use PORT_pfet_g5v0d10v5_A4SVUH XM24
+timestamp 0
+transform 0 -1 23040 1 0 17920
+box -850 -4880 690 5170
+use PORT_pfet_g5v0d10v5_V6J3CS XM28
+timestamp 0
+transform 1 0 7840 0 1 37120
+box -1170 -1397 1170 1810
+use PORT_pfet_g5v0d10v5_CLVBX9 XM29
+timestamp 0
+transform 1 0 16000 0 1 7680
+box -9970 -1397 9810 1810
+use PORT_pfet_g5v0d10v5_A4SVUH XM34
+timestamp 0
+transform 0 -1 23040 1 0 19680
+box -850 -4880 690 5170
+use PORT_pfet_g5v0d10v5_A4SVUH XM35
+timestamp 0
+transform 0 -1 12000 1 0 19680
+box -850 -4880 690 5170
+use PORT_pfet_g5v0d10v5_9M2JVY XM2a
+timestamp 0
+transform 1 0 19840 0 1 30400
+box -1490 -2589 1490 2930
+use PORT_pfet_g5v0d10v5_9M2JVY XM2b
+timestamp 0
+transform 1 0 15520 0 1 36000
+box -1490 -2589 1490 2930
+use PORT_pfet_g5v0d10v5_9M2JVY XM4a
+timestamp 0
+transform 1 0 24160 0 1 30400
+box -1490 -2589 1490 2930
+use PORT_pfet_g5v0d10v5_9M2JVY XM4b
+timestamp 0
+transform 1 0 11200 0 1 36000
+box -1490 -2589 1490 2930
+use PORT_pfet_g5v0d10v5_9M2JVY XM9a
+timestamp 0
+transform 1 0 11200 0 1 30400
+box -1490 -2589 1490 2930
+use PORT_pfet_g5v0d10v5_9M2JVY XM9b
+timestamp 0
+transform 1 0 24160 0 1 36000
+box -1490 -2589 1490 2930
+use PORT_pfet_g5v0d10v5_9M2JVY XM10a
+timestamp 0
+transform 1 0 15520 0 1 30400
+box -1490 -2589 1490 2930
+use PORT_pfet_g5v0d10v5_9M2JVY XM10b
+timestamp 0
+transform 1 0 19840 0 1 36000
+box -1490 -2589 1490 2930
+use PORT_res_high_po_0p69_U7AJ6H XB__XREF__XR1
+timestamp 0
+transform 1 0 5120 0 1 14080
+box -690 -4050 235 4050
+use PORT_pfet_g5v0d10v5_CGD7BJ XB__XREF__XM40
+timestamp 0
+transform 1 0 6560 0 1 1760
+box -850 -1297 850 1650
+use PORT_nfet_g5v0d10v5_D8TNYB XB__XREF__XM44
+timestamp 0
+transform 1 0 4960 0 1 6560
+box -850 -558 850 850
+use PORT_pfet_g5v0d10v5_CGD7BJ XB__XREF__XM41
+timestamp 0
+transform 1 0 8800 0 1 1760
+box -850 -1297 850 1650
+use PORT_pfet_g5v0d10v5_PC2PN5 XB__XREF__XM43
+timestamp 0
+transform 1 0 2400 0 1 1760
+box -1810 -397 1650 690
+use PORT_nfet_g5v0d10v5_EEMQY6 XB__XREF__XM42
+timestamp 0
+transform 1 0 1440 0 1 5920
+box -850 -758 850 1170
+use PORT_nfet_g5v0d10v5_Z47WFL XB__XREF__XM39
+timestamp 0
+transform 1 0 3200 0 1 5920
+box -850 -2258 850 2610
+use PORT_nfet_g5v0d10v5_YYAQG7 XB__XREF__XM45
+timestamp 0
+transform 1 0 4960 0 1 4480
+box -850 -458 850 850
+use PORT_pfet_g5v0d10v5_CGD7BJ XB__XREF__XM1
+timestamp 0
+transform 1 0 11040 0 1 1760
+box -850 -1297 850 1650
+use PORT_nfet_g5v0d10v5_EEMQY6 XB__XMBN
+timestamp 0
+transform 1 0 20000 0 1 1760
+box -850 -758 850 1170
+use PORT_pfet_g5v0d10v5_CGD7BJ XB__XMPMASTER
+timestamp 0
+transform 1 0 13280 0 1 1760
+box -850 -1297 850 1650
+use PORT_nfet_g5v0d10v5_EEMQY6 XB__XMNMASTER
+timestamp 0
+transform 1 0 22240 0 1 1760
+box -850 -758 850 1170
+use PORT_pfet_g5v0d10v5_8EHTD6 XB__XMPTAIL
+timestamp 0
+transform 0 -1 13920 1 0 42720
+box -1330 -3597 1330 3890
+use PORT_nfet_g5v0d10v5_EEMQY6 XB__XMNPTAIL
+timestamp 0
+transform 1 0 24480 0 1 1760
+box -850 -758 850 1170
+use PORT_pfet_g5v0d10v5_CGD7BJ XB__XMPNTAIL
+timestamp 0
+transform 1 0 15520 0 1 1760
+box -850 -1297 850 1650
+use PORT_nfet_g5v0d10v5_PX3QBC XB__XMNTAIL
+timestamp 0
+transform 1 0 27520 0 1 35040
+box -1330 -1258 1330 1650
+use PORT_res_high_po_0p69_TM88EY XB__XRPCAS
+timestamp 0
+transform 1 0 5120 0 1 30240
+box -690 -10930 235 10930
+use PORT_pfet_g5v0d10v5_A4SVUH XB__XMPCAS
+timestamp 0
+transform 0 -1 12800 1 0 40320
+box -850 -4880 690 5170
+use PORT_nfet_g5v0d10v5_EEMQY6 XB__XMNPCAS
+timestamp 0
+transform 1 0 26720 0 1 1760
+box -850 -758 850 1170
+use PORT_pfet_g5v0d10v5_CGD7BJ XB__XMPNCAS
+timestamp 0
+transform 1 0 17760 0 1 1760
+box -850 -1297 850 1650
+use PORT_nfet_g5v0d10v5_RB7YWG XB__XMNCAS
+timestamp 0
+transform 0 -1 3360 1 0 42560
+box -850 -1647 690 1970
+use PORT_res_high_po_0p69_TM88EY XB__XRNCAS
+timestamp 0
+transform 1 0 6400 0 1 30240
+box -690 -10930 235 10930
+use PORT_res_high_po_0p69_S7T95V XB__XRCM_TOP
+timestamp 0
+transform 1 0 2560 0 1 24960
+box -690 -15890 235 15890
+use PORT_res_high_po_0p69_S7T95V XB__XRCM_BOTTOM
+timestamp 0
+transform 1 0 3840 0 1 24960
+box -690 -15890 235 15890
+use PORT_pfet_g5v0d10v5_A4SVUH XMFC_P
+timestamp 0
+transform 0 -1 12000 1 0 22080
+box -850 -4880 690 5170
+use PORT_nfet_g5v0d10v5_RB7YWG XMFC_N
+timestamp 0
+transform 1 0 16480 0 1 13600
+box -850 -1647 690 1970
+<< end >>
