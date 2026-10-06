@@ -47,11 +47,10 @@ N -240 0 -240 10 {
 lab=in-}
 N -240 10 -220 10 {
 lab=in-}
-N -220 10 -220 0 {
+N -220 0 -220 10 {
 lab=in-}
 N -220 0 -140 0 {
 lab=in-}
-
 N -490 70 230 70 {
 lab=#net4}
 N 230 70 230 170 {
@@ -124,8 +123,6 @@ N 1060 -50 1110 -50 {
 lab=#net9}
 N 1110 -60 1110 -50 {
 lab=#net9}
-N 450 -130 530 -130 {
-lab=#net6}
 N 1110 -330 1110 -310 {
 lab=VAPWR}
 N 600 -150 600 -140 {
@@ -172,7 +169,7 @@ N 0 -330 0 -310 {
 lab=VAPWR}
 N 0 -330 450 -330 {
 lab=VAPWR}
-N -50 -350 -50 -280 {
+N -100 -350 -100 -280 {
 lab=bias1}
 N -50 -280 -40 -280 {
 lab=bias1}
@@ -204,11 +201,10 @@ N 220 0 220 10 {
 lab=in+}
 N 220 10 240 10 {
 lab=in+}
-N 240 10 240 0 {
+N 240 0 240 10 {
 lab=in+}
 N 240 0 280 0 {
 lab=in+}
-
 N 100 -220 100 -120 {
 lab=drain}
 N 100 -220 600 -220 {
@@ -251,8 +247,6 @@ N -860 30 -860 160 {
 lab=#net3}
 N -860 160 -730 160 {
 lab=#net3}
-N 1200 40 1200 170 {
-lab=#net4}
 N 1260 40 1320 40 {
 lab=diffout}
 N 1200 -220 1200 -80 {
@@ -265,7 +259,7 @@ N 1320 0 1320 40 {
 lab=diffout}
 N 1320 -110 1320 -80 {
 lab=diffout}
-N 1320 -80 1320 0 {
+N 1320 -20 1320 0 {
 lab=diffout}
 N 230 170 600 170 {
 lab=#net4}
@@ -277,31 +271,20 @@ N 850 0 860 -0 {
 lab=#net8}
 N 490 -180 520 -180 {lab=bias2}
 N 520 -180 560 -180 {lab=bias2}
-N 520 -180 520 -150 {lab=bias2}
 N 490 130 520 130 {lab=bias3}
 N 520 130 560 130 {lab=bias3}
-N 520 130 520 160 {lab=bias3}
 N 490 230 520 230 {lab=fc_nref}
 N 520 230 560 230 {lab=fc_nref}
-N 520 230 520 260 {lab=fc_nref}
 N -550 -560 -490 -560 {lab=bias1}
 N -550 -510 -490 -510 {lab=bias4}
 N -550 -460 -490 -460 {lab=bias2}
 N -550 -410 -490 -410 {lab=bias3}
 N -550 -360 -490 -360 {lab=bias}
-N -40 230 -75 230 {lab=bias4}
-N 1070 230 1035 230 {lab=bias4}
-N 450 -130 450 -60 {lab=fc_pref}
-N 450 -60 600 -60 {lab=fc_pref}
-N 450 0 600 0 {lab=fc_nref}
-N 450 0 450 50 {lab=fc_nref}
-N 450 50 450 100 {lab=fc_nref}
-N 490 -30 500 -30 {lab=ab_p}
-N 500 -30 500 -100 {lab=ab_p}
-N 560 -30 550 -30 {lab=ab_n}
-N 550 -30 550 60 {lab=ab_n}
-N 860 -40 860 -80 {lab=ab_n}
-N 1060 -90 1060 -190 {lab=ab_p}
+N 1050 230 1070 230 {lab=bias4}
+N 450 -130 450 -60 {lab=#net6}
+N 450 -110 600 -110 {lab=#net6}
+N 450 70 450 100 {lab=fc_nref}
+N 640 -70 650 -70 {lab=#net8}
 N -940 -50 -900 -50 {lab=bias}
 N -900 -50 -770 -50 {lab=bias}
 N -770 -50 -650 -50 {lab=bias}
@@ -310,6 +293,46 @@ N -900 -50 -900 0 {lab=bias}
 N -770 -50 -770 0 {lab=bias}
 N -650 -50 -650 0 {lab=bias}
 N -530 -50 -530 0 {lab=bias}
+N 1200 -20 1200 170 {lab=#net4}
+N 1260 -20 1320 -20 {lab=diffout}
+N 1050 230 1050 300 {
+lab=bias4}
+N -80 230 -80 300 {
+lab=bias4}
+N -80 300 1050 300 {
+lab=bias4}
+N 1320 -80 1320 -20 {
+lab=diffout}
+N -80 230 -40 230 {
+lab=bias4}
+N -100 230 -80 230 {
+lab=bias4}
+N -100 -280 -50 -280 {
+lab=bias1}
+N -100 -350 -50 -350 {
+lab=bias1}
+N 450 80 600 80 {
+lab=fc_nref}
+N 600 0 600 70 {
+lab=fc_nref}
+N 600 -110 600 -100 {
+lab=#net6}
+N 490 40 500 40 {
+lab=#net9}
+N 600 70 600 80 {
+lab=fc_nref}
+N 500 40 1110 40 {
+lab=#net9}
+N 450 -60 450 10 {
+lab=#net6}
+N 600 -40 600 0 {
+lab=fc_nref}
+N 650 -70 810 -70 {
+lab=#net8}
+N 530 80 530 230 {
+lab=fc_nref}
+N 530 -130 530 -110 {
+lab=#net6}
 C {hv_nmos.sym} -120 0 0 0 {name=M1
 L=0.5
 W=69.44
@@ -526,12 +549,10 @@ spiceprefix=X
 }
 C {miller_cap_horizontal.sym} 1230 -80 0 0 {name=C1 model=cap_mim_m3_1 W=18 L=18 MF=1 spiceprefix=X}
 C {miller_cap_horizontal.sym} 1230 40 0 0 {name=C2 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X}
-N 1200 -20 1200 40 {lab=#net4}
-N 1260 -20 1320 -20 {lab=diffout}
 C {miller_cap_horizontal.sym} 1230 -20 0 0 {name=C2B model=cap_mim_m3_1 W=30 L=10 MF=1 spiceprefix=X}
 C {devices/opin.sym} 1370 0 0 0 {name=p3 lab=diffout}
-C {devices/iopin.sym} 0 -330 0 0 {name=p4 lab=VAPWR}
-C {devices/iopin.sym} 0 280 0 0 {name=p5 lab=VGND}
+C {devices/iopin.sym} 0 -330 0 1 {name=p4 lab=VAPWR}
+C {devices/iopin.sym} 0 280 0 1 {name=p5 lab=VGND}
 C {hv_pmos.sym} -20 -280 0 0 {name=M13
 L=6
 W=33
@@ -746,8 +767,7 @@ C {devices/lab_wire.sym} 660 -220 0 0 {name=p11 sig_type=std_logic lab=drain}
 C {opamp_bias_3v3.sym} -700 -460 0 0 {name=XB}
 C {devices/lab_pin.sym} -850 -560 0 0 {name=pb56 lab=VAPWR}
 C {devices/lab_pin.sym} -850 -360 0 0 {name=pb57 lab=VGND}
-C {devices/lab_pin.sym} 450 -130 0 0 {name=pb77 lab=fc_pref}
-C {hv_pmos_floating.sym} 470 -30 0 1 {name=MFC_P
+C {hv_pmos_floating.sym} 470 40 0 1 {name=MFC_P
 L=0.5
 W=45.83
 nf=1
@@ -761,7 +781,7 @@ nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X}
-C {hv_nmos_floating.sym} 580 -30 0 0 {name=MFC_N
+C {hv_nmos_floating.sym} 620 -70 0 1 {name=MFC_N
 L=0.5
 W=13.89
 nf=1
@@ -803,32 +823,15 @@ C {body_label.sym} -490 0 0 0 {name=body_M2 lab=VAPWR}
 C {body_label.sym} -610 0 0 0 {name=body_M4 lab=VAPWR}
 C {body_label.sym} -230 0 0 0 {name=body_M9 lab=VAPWR}
 C {body_label.sym} 230 0 0 1 {name=body_M10 lab=VAPWR}
-T {Floating source: Huijsing M29/M30
-Current is set internally by the class-AB loop.} 350 -405 0 0 0.24 0.24 {}
-T {Bias: reference_bias_3v3 + independent current replicas
-All PMOS bodies: VAPWR; all NMOS bodies: VGND.} -820 -300 0 0 0.23 0.23 {}
-C {body_label.sym} 450 -30 0 1 {name=body_MFC_P lab=VAPWR}
-C {body_label.sym} 600 -30 0 0 {name=body_MFC_N lab=VGND}
-
-C {devices/lab_pin.sym} 520 -150 0 0 {name=hv_bias2 lab=bias2}
-C {devices/lab_pin.sym} 520 160 0 0 {name=hv_bias3 lab=bias3}
-C {devices/lab_pin.sym} 520 260 0 0 {name=hv_fc_nref lab=fc_nref}
-T {3.3 V schematic candidate: all MOS are g5v0d10v5, L >= 0.5 um
-Supply VAPWR. Matched-W2 output stage; revised Miller compensation C1 / C2 + C2B.
-See compensation_20261005 for simulation and layout qualification.} -820 -670 0 0 0.23 0.23 {}
+C {body_label.sym} 450 40 0 1 {name=body_MFC_P lab=VAPWR}
+C {body_label.sym} 600 -70 0 1 {name=body_MFC_N lab=VGND}
+C {devices/lab_pin.sym} 550 -180 0 0 {name=hv_bias2 lab=bias2}
+C {devices/lab_pin.sym} 500 130 2 0 {name=hv_bias3 lab=bias3}
 C {devices/lab_pin.sym} -490 -560 0 1 {name=pb58 lab=bias1}
 C {devices/lab_pin.sym} -490 -510 0 1 {name=pb59 lab=bias4}
 C {devices/lab_pin.sym} -490 -460 0 1 {name=pb60 lab=bias2}
 C {devices/lab_pin.sym} -490 -410 0 1 {name=pb61 lab=bias3}
 C {devices/lab_pin.sym} -490 -360 0 1 {name=pb62 lab=bias}
-C {devices/lab_pin.sym} -75 230 0 0 {name=pb64 lab=bias4}
-C {devices/lab_pin.sym} 1035 230 0 0 {name=pb65 lab=bias4}
-C {devices/lab_pin.sym} -50 -350 0 0 {name=pb63 lab=bias1}
-C {devices/lab_pin.sym} 500 -100 0 0 {name=fc_gate_p lab=ab_p}
-C {devices/lab_pin.sym} 550 60 0 1 {name=fc_gate_n lab=ab_n}
-C {devices/lab_pin.sym} 450 50 0 0 {name=pb76 lab=fc_nref}
-C {devices/lab_pin.sym} 860 -80 0 1 {name=pb78 lab=ab_n}
-C {devices/lab_pin.sym} 1060 -190 0 1 {name=pb79 lab=ab_p}
-T {HV-N = nfet_g5v0d10v5; HV-P = pfet_g5v0d10v5
-Floating source ports are wired locally; remote class-AB control nets remain labelled.} 350 -460 0 0 0.23 0.23 {}
+C {devices/lab_pin.sym} -95 230 0 0 {name=pb64 lab=bias4}
+C {devices/lab_pin.sym} -100 -280 0 0 {name=pb63 lab=bias1}
 C {devices/lab_pin.sym} -940 -50 0 0 {name=spillover_bias_bus lab=bias}

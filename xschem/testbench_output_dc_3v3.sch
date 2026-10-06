@@ -46,10 +46,10 @@ C {devices/code_shown.sym} -470 290 0 0 {name=COMMANDS only_toplevel=true value=
 .nodeset v(x1.net3)=0.866789395
 .nodeset v(x1.net4)=0.29731059
 .nodeset v(x1.net5)=0.297227056
-.nodeset v(x1.net7)=2.03109432
-.nodeset v(x1.net9)=1.08535928
-.nodeset v(x1.fc_pref)=2.02894826
-.nodeset v(x1.fc_nref)=1.08255405
+.nodeset v(x1.net10)=2.03109432
+.nodeset v(x1.net12)=1.08535928
+.nodeset v(x1.net6)=2.02894826
+.nodeset v(x1.net13)=1.08255405
 .nodeset v(x1.bias1)=2.05405688
 .nodeset v(x1.bias2)=2.04452255
 .nodeset v(x1.bias3)=1.14047666

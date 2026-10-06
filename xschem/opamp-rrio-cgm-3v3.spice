@@ -4,41 +4,41 @@ XM1 net2 IN_N net3 VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=69.44 nf=5 m=1
 XM3 drain IN_P net3 VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=69.44 nf=5 m=1
 XM7 drain bias net3 VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=69.44 nf=5 m=1
 XM8 net2 bias net3 VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=69.44 nf=5 m=1
-XM18 fc_nref bias3 net5 VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=13.89 nf=1 m=1
-XM19 net9 bias3 net4 VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=13.89 nf=1 m=1
-XM20 net5 fc_nref VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=6.66 nf=2 m=1
-XM21 net4 fc_nref VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=6.66 nf=2 m=1
+XM18 net13 bias3 net5 VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=13.89 nf=1 m=1
+XM19 net12 bias3 net4 VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=13.89 nf=1 m=1
+XM20 net5 net13 VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=6.66 nf=2 m=1
+XM21 net4 net13 VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=6.66 nf=2 m=1
 XM22 net3 bias4 VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=6 W=10 nf=1 m=1
-XM25 ab_n ab_n net8 VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=13.89 nf=1 m=1
-XM26 net7 ab_n net9 VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=13.89 nf=1 m=1
-XM30 net8 net8 VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=6.66 nf=2 m=1
-XM31 ab_p bias4 VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=6 W=10 nf=1 m=1
-XM32 diffout net9 VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=133.2 nf=40 m=1
+XM25 net8 net8 net11 VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=13.89 nf=1 m=1
+XM26 net10 net8 net12 VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=13.89 nf=1 m=1
+XM30 net11 net11 VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=6.66 nf=2 m=1
+XM31 net9 bias4 VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=6 W=10 nf=1 m=1
+XM32 diffout net12 VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=133.2 nf=40 m=1
 XC1 diffout drain sky130_fd_pr__cap_mim_m3_1 W=18 L=18 m=1
 XC2 diffout net4 sky130_fd_pr__cap_mim_m3_1 W=30 L=30 m=1
 XC2B diffout net4 sky130_fd_pr__cap_mim_m3_1 W=30 L=10 m=1
 XM13 net1 bias1 VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=6 W=33 nf=1 m=1
-XM14 net2 fc_pref VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=2 W=22 nf=2 m=1
-XM15 drain fc_pref VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=2 W=22 nf=2 m=1
-XM16 net7 bias2 drain VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=45.83 nf=1 m=1
-XM23 ab_n bias1 VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=6 W=33 nf=1 m=1
-XM24 fc_pref bias2 net2 VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=45.83 nf=1 m=1
-XM28 net6 net6 VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=2 W=22 nf=2 m=1
-XM29 diffout net7 VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=2 W=440 nf=40 m=1
-XM34 ab_p ab_p net6 VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=45.83 nf=1 m=1
-XM35 net9 ab_p net7 VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=45.83 nf=1 m=1
+XM14 net2 net6 VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=2 W=22 nf=2 m=1
+XM15 drain net6 VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=2 W=22 nf=2 m=1
+XM16 net10 bias2 drain VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=45.83 nf=1 m=1
+XM23 net8 bias1 VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=6 W=33 nf=1 m=1
+XM24 net6 bias2 net2 VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=45.83 nf=1 m=1
+XM28 net7 net7 VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=2 W=22 nf=2 m=1
+XM29 diffout net10 VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=2 W=440 nf=40 m=1
+XM34 net9 net9 net7 VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=45.83 nf=1 m=1
+XM35 net12 net9 net10 VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=45.83 nf=1 m=1
 XM2 net4 bias net1 VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=229.17 nf=10 m=2
 XM4 net5 bias net1 VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=229.17 nf=10 m=2
 XM9 net5 IN_N net1 VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=229.17 nf=10 m=2
 XM10 net4 IN_P net1 VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=229.17 nf=10 m=2
 XB VAPWR VGND bias1 bias4 bias2 bias3 bias opamp_bias_3v3
-XMFC_P fc_nref ab_p fc_pref VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=45.83 nf=1 m=1
-XMFC_N fc_pref ab_n fc_nref VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=13.89 nf=1 m=1
+XMFC_P net13 net9 net6 VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=45.83 nf=1 m=1
+XMFC_N net6 net8 net13 VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=13.89 nf=1 m=1
 .ends
 
 * expanding   symbol:  opamp_bias_3v3.sym # of pins=7
-** sym_path: /home/ttuser/ttsky25b-analog-opamp-rrio-cgm/xschem/migration_3v3/compensation_20261005/xschem_candidates/c18_30_aux10/opamp_bias_3v3.sym
-** sch_path: /home/ttuser/ttsky25b-analog-opamp-rrio-cgm/xschem/migration_3v3/compensation_20261005/xschem_candidates/c18_30_aux10/opamp_bias_3v3.sch
+** sym_path: /home/ttuser/ttsky25b-analog-opamp-rrio-cgm/xschem/migration_3v3/opamp_bias_3v3.sym
+** sch_path: /home/ttuser/ttsky25b-analog-opamp-rrio-cgm/xschem/migration_3v3/opamp_bias_3v3.sch
 .subckt opamp_bias_3v3 VAPWR VGND bias1 bias4 bias2 bias3 bias
 *.PININFO VAPWR:B VGND:B bias1:O bias4:O bias2:O bias3:O bias:O
 XREF VAPWR IREF VGND reference_bias_3v3
@@ -61,8 +61,8 @@ XRCM_BOTTOM VGND bias VGND sky130_fd_pr__res_high_po_0p69 L=150 mult=1 m=1
 
 
 * expanding   symbol:  reference_bias_3v3.sym # of pins=3
-** sym_path: /home/ttuser/ttsky25b-analog-opamp-rrio-cgm/xschem/migration_3v3/compensation_20261005/xschem_candidates/c18_30_aux10/reference_bias_3v3.sym
-** sch_path: /home/ttuser/ttsky25b-analog-opamp-rrio-cgm/xschem/migration_3v3/compensation_20261005/xschem_candidates/c18_30_aux10/reference_bias_3v3.sch
+** sym_path: /home/ttuser/ttsky25b-analog-opamp-rrio-cgm/xschem/migration_3v3/reference_bias_3v3.sym
+** sch_path: /home/ttuser/ttsky25b-analog-opamp-rrio-cgm/xschem/migration_3v3/reference_bias_3v3.sch
 .subckt reference_bias_3v3 VAPWR IREF VGND
 *.PININFO VAPWR:B VGND:B IREF:O
 XR1 VGND net1 VGND sky130_fd_pr__res_high_po_0p69 L=30.5 mult=1 m=1
