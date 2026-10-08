@@ -27,11 +27,11 @@ These are simulation results, not measurements or production specifications. Nom
 | Quiescent supply current | 260 µA |
 | Open-loop DC gain | 98.9 dB |
 | Unity-gain frequency | 3.10 MHz |
-| Phase margin | 79.5° |
+| Phase margin | 79.6° |
 
 Post-layout checks cover process corners, supply voltages of 3.0–3.6 V, temperatures from −40 to 125 °C, common-mode sweeps, and source/sink loads up to 1 mA. A conservative interface model uses 500 Ω and 5 pF per analog path, plus a 20 pF external load. At 3.3 V, the checked loaded output range with this interface is 0.8–2.5 V. The unloaded core can approach the rails more closely. “Rail-to-rail” does not imply zero headroom under load.
 
-Across 60 checked interface operating conditions, the minimum simulated phase margin was 60.9°. A 32-sample local mismatch study gave mid-supply offsets from −13.3 to +13.9 mV, with 6.1 mV standard deviation. The largest unloaded error across low, middle and high output levels was 20.1 mV. The PDK mismatch model has incomplete parameter coverage; these samples do not establish manufacturing yield or input matching after spatial layout variation.
+The earlier interface sweep covered 60 operating conditions. A fresh regression of the revised routing repeated 42 core conditions, the four limiting interface cases, startup and transient checks. The lowest interface phase margin remained 60.9°. An earlier 32-sample local mismatch study gave mid-supply offsets from −13.3 to +13.9 mV, with 6.1 mV standard deviation. The largest unloaded error across low, middle and high output levels was 20.1 mV. The PDK mismatch model has incomplete parameter coverage; these samples do not establish manufacturing yield or input matching after spatial layout variation.
 
 Use up to 20 pF external load, including probes and wiring. A 100 pF load is not qualified. Fast load steps can produce several hundred millivolts of transient error. The checked DC load is ±1 mA; the shuttle's pin-current limit is not an amplifier drive-current rating.
 

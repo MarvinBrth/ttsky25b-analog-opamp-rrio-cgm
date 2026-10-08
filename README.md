@@ -9,3 +9,5 @@ See the [project documentation](docs/info.md) for simulated performance, load li
 The submission includes GDS and LEF files, the Verilog interface, Xschem schematics and Magic layout sources. The layout contains KIT and Marvin artwork in metal4.
 
 The current schematic is [opamp-rrio-cgm-3v3.sch](xschem/opamp-rrio-cgm-3v3.sch); the current layout is [tt_um_marvinbrth_opamp_rrio_cgm_3v3.mag](mag/tt_um_marvinbrth_opamp_rrio_cgm_3v3.mag). Set `PDK_ROOT` to your installed SKY130 PDK before opening the sources. The older 1.8 V schematics and simulations are retained for reference.
+
+The [routing verification report](docs/routing_cleanup.md) records the checks for the current layout.

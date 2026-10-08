@@ -1,8 +1,6 @@
 magic
 tech sky130A
-timestamp 1791242228
-<< checkpaint >>
-rect -630 -630 15166 23206
+timestamp 1791304138
 << metal2 >>
 rect 11740 185 11780 260
 rect 13660 185 13700 260
@@ -334,9 +332,9 @@ rect 13632 100 13692 140
 rect 11685 0 11775 100
 rect 13617 0 13707 100
 use marvin_kit_art  marvin_kit_art_0
-timestamp 1619844083
-transform 1 0 0 0 1 0
-box 10000 19950 13790 20650
+timestamp 1791425928
+transform 1 0 -1000 0 1 0
+box 10000 19730 13790 20430
 use opamp_core_routed  XOP
 timestamp 1791227188
 transform 1 0 0 0 1 0
