@@ -64,25 +64,25 @@
     "core-cases.csv": {
       "evidence_source": "qualify42_summary.json",
       "source_sha256": "d029f1b5eb10e7a18fa49c2b2ae22d755ddeee1a386f202fae1f303fb8e9cb02",
-      "published_sha256": "c6000672a3428e98204c1713fe58e41eb5a446d0e02c7cbb11fd28f81a32d1cd",
+      "published_sha256": "892950e851ecfe46e88d316a20bc77120826687fef3194fe6c8bacee4141ed39",
       "rows": 42
     },
     "interface-cases.csv": {
       "evidence_source": "targeted_interface_summary.json",
       "source_sha256": "e91d3e62659462223b07756dd76e7d887de4a89c857ca05d96a5adabf1a24cbd",
-      "published_sha256": "5948f86c84272245a1154ce903aba56c41f3100b0b5de8ddfb82d589c0bdebb1",
+      "published_sha256": "3dd69e359ba4c3d891627c2fc40d5e132e2c6fc5e9494aa185761487f909b90f",
       "rows": 4
     },
     "dynamic-cases.csv": {
       "evidence_source": "dynamic_summary.json",
       "source_sha256": "6fed921a1658c354141f8d8edf8f9ee7aa417aaa0431af5c1ae00c51d34140e3",
-      "published_sha256": "61db51375681125c17c6c7e9d7e5c938d2a7b9a1a874618e1f3a8b5f35dca00e",
+      "published_sha256": "631e9318573061760331018c6e56bd679f84878ec29d3767556ba9b9f8f0d16a",
       "rows": 7
     },
     "waveforms/tt-loop-full.csv": {
       "evidence_source": "core/tt_mid_0_full/loop.dat",
       "source_sha256": "4fc95a72aa818395cedebfebb355980bcd45ef927be2b2fda6b4bf1a4d2e92ae",
-      "published_sha256": "94dd5e073e233d3b6778e6b8ffa6d07416b86c9aa38834bc15e9a5810df8a630",
+      "published_sha256": "408313dffc53fa762ea6ed2c4be8d0905d08e8bf38ff5f5da4b4c38397ac0053",
       "rows": 721,
       "columns": [
         "frequency_Hz",
@@ -94,7 +94,7 @@
     "waveforms/tt-loop-reduced.csv": {
       "evidence_source": "core/tt_mid_0_reduced/loop.dat",
       "source_sha256": "c6426aa06b1de208421b37bce0974dcefd2e0db8b940ad5252ffcc57b9df19fb",
-      "published_sha256": "c69a8bc1d57c836e695b6be21ebc7603b372a561adc214087eb5db194811055f",
+      "published_sha256": "a41393aebb8430927fab42813a690e501871e91b55ab1942b8f61a1085cb2b90",
       "rows": 721,
       "columns": [
         "frequency_Hz",
@@ -106,7 +106,7 @@
     "waveforms/ss-cold-worst-pm-loop.csv": {
       "evidence_source": "core/ss_cold_low_0_reduced/loop.dat",
       "source_sha256": "c103d3be9b2778cf97810c3657bb87b255769e1665d3b84e79af0ae49afdc355",
-      "published_sha256": "7cd0bdae307785c8710f14ef9db851293a740e8d1e7d94e0b90a1e584ee0411a",
+      "published_sha256": "42be3fe223e1762f15ac876caf7ce8c8c6fb272d223656cacc25574039232425",
       "rows": 721,
       "columns": [
         "frequency_Hz",
@@ -118,7 +118,7 @@
     "waveforms/ss-cold-worst-gm-loop.csv": {
       "evidence_source": "core/ss_cold_mid_source_reduced/loop.dat",
       "source_sha256": "f629afbaff734d5c6f838d8e5419f616730c6386f76cf337c73aa2128e03e18b",
-      "published_sha256": "0e22fbf0bb22a9355f76b0df665b8aad1cca2722f421f7f3ddaa9668a93de886",
+      "published_sha256": "2e15170acd35951147164da5bccd8c70319f00506131bbfd6146ed404e695aeb",
       "rows": 721,
       "columns": [
         "frequency_Hz",
@@ -130,7 +130,7 @@
     "waveforms/r500_ss_hot_mid_0-loop.csv": {
       "evidence_source": "interface/r500_ss_hot_mid_0/loop.dat",
       "source_sha256": "7f8602d6baea9a8674b4f5ce5d511972f915fffb2048e8501d0972728889c59a",
-      "published_sha256": "c2f64be6e3970c1546677492ead8b131e40178f2c3463ac19911e52f6aab26e3",
+      "published_sha256": "bfb002d335fa71ac3ab96e1bfc0e883af466660801d523db2d0ff4adc3af97da",
       "rows": 541,
       "columns": [
         "frequency_Hz",
@@ -142,7 +142,7 @@
     "waveforms/r500_ss_cold_mid_0-loop.csv": {
       "evidence_source": "interface/r500_ss_cold_mid_0/loop.dat",
       "source_sha256": "5023888919da47277b1045015140ad9128d7a7aede70a126d9d9f2934ddb82a1",
-      "published_sha256": "b9c3e693ce2d859aab53f5bfe2ba6c2098ac2909291c4fb8468851f12d0f4bd4",
+      "published_sha256": "f9012bc385cd4d3addb655376ba63cae3774227a29ad4e523b57e946b65b5ff2",
       "rows": 541,
       "columns": [
         "frequency_Hz",
@@ -154,7 +154,7 @@
     "waveforms/asw_ss_cold_mid_sink-loop.csv": {
       "evidence_source": "interface/asw_ss_cold_mid_sink/loop.dat",
       "source_sha256": "7f6c14d4b977f852c0d9fece3ef2774cf90f75e05f3ec5d7c8fed18b013d3921",
-      "published_sha256": "0d87a0b39f841dd4f0da25fc7687a90f2bfe2224b741971f83075b1fa9db6ec7",
+      "published_sha256": "f9f1693a5ea1c9d662eaaee2299b6b7d8df9121cd2d51776c0fb4ae7978a02a8",
       "rows": 541,
       "columns": [
         "frequency_Hz",
@@ -166,7 +166,7 @@
     "waveforms/asw_ss_cold_high_source-loop.csv": {
       "evidence_source": "interface/asw_ss_cold_high_source/loop.dat",
       "source_sha256": "108af59749c4d66f7754f5fffbee6afc76f591d1d0ba8a32ff8b505f70ad73e0",
-      "published_sha256": "d57954e649e035a9aef6d3a84fef5587debb2e82f5fcfb16bd1e3ec64c311cfb",
+      "published_sha256": "3e15ef6a59be6b70811219f75a19fcd28d1e15544f3aab139ab7c261dd2141b3",
       "rows": 541,
       "columns": [
         "frequency_Hz",
@@ -178,7 +178,7 @@
     "waveforms/startup_tt_10us.csv": {
       "evidence_source": "dynamic/startup_tt_10us/startup.dat",
       "source_sha256": "63922f27c6173a816556f51e680b2da414136af286269ce973eccb432481061e",
-      "published_sha256": "718b4f2663879657e2e36c0a76e7000ecdcf87ce47786ee0f3fae5aa6f0c8a9e",
+      "published_sha256": "b118de035173dcfdfedfa49b72bd644553491970e0b76900ab2b85754662c473",
       "rows": 1649,
       "columns": [
         "time_s",
@@ -191,7 +191,7 @@
     "waveforms/startup_ss_cold_10us.csv": {
       "evidence_source": "dynamic/startup_ss_cold_10us/startup.dat",
       "source_sha256": "477518905c3eb79dc9fb0f90f8f0a7d5b064f0f6046efee7b2e600c4aaf29763",
-      "published_sha256": "2383eada8f240970f2116d5ba2b3a858c480d276a204fce33c933d81d844db31",
+      "published_sha256": "55dd0dcc4d578f238338e08c28592f1eb900848f31e28f019b09e826abe7729f",
       "rows": 1662,
       "columns": [
         "time_s",
@@ -204,7 +204,7 @@
     "waveforms/tt_unloaded_50mV.csv": {
       "evidence_source": "dynamic/tt_unloaded_50mV/step.dat",
       "source_sha256": "6159483004344753835eef7d72573435290215e85a9a7a0030e717b08e197084",
-      "published_sha256": "40a88d9c4e2d8ad5fa2c5a6d7bcdc6576e4606ad4342a454bc6f61b5fa0c995c",
+      "published_sha256": "7190e2d835649840b86b262fcf7b2f7fe32520ec8e116c6949fd4cb44a8a61e6",
       "rows": 2516,
       "columns": [
         "time_s",
@@ -217,7 +217,7 @@
     "waveforms/ss_sink_100uV.csv": {
       "evidence_source": "dynamic/ss_sink_100uV/step.dat",
       "source_sha256": "199d91f66a6d6eb0aa777452f8b1a390f124a3f7c63980a5e700ebd105a9c36d",
-      "published_sha256": "578325da2691cd6b8a9514abc6862d881bd069ac6484d5b322557cdc47e9a0ae",
+      "published_sha256": "c1b96a887dae140ecd2e8e3f77ae7fc218a5a8503d9e16d7900e154f4b653ed8",
       "rows": 2516,
       "columns": [
         "time_s",
@@ -230,7 +230,7 @@
     "waveforms/ss_source_100uV.csv": {
       "evidence_source": "dynamic/ss_source_100uV/step.dat",
       "source_sha256": "3e7bc41b92420c3779a58f1eb7af683154c2d84a14f7b444338efef71a2f1d39",
-      "published_sha256": "4c15ba42c0780f4e285a2da949f7d39c8fe44fbaa06157f760c19bf1ca4a742b",
+      "published_sha256": "26b2a454d54ff00ce8fc15b9f66816302b8bb16954869ed138887831ee19ff9d",
       "rows": 2516,
       "columns": [
         "time_s",
@@ -243,7 +243,7 @@
     "waveforms/tt_loadstep_source.csv": {
       "evidence_source": "dynamic/tt_loadstep_source/loadstep.dat",
       "source_sha256": "1875cac27e8ab522f71395035d48b3ec2652a2fff7e297399fb269024293df2e",
-      "published_sha256": "39677888c0c90498268d5310bcb5732a01fff7592118d00d7ad09d31c7c3abbe",
+      "published_sha256": "f50edca795369a046449adc31b4caea92a127a2e700a4fbfdd3b3a2627cb9e1b",
       "rows": 2515,
       "columns": [
         "time_s",
@@ -255,7 +255,7 @@
     "waveforms/tt_loadstep_sink.csv": {
       "evidence_source": "dynamic/tt_loadstep_sink/loadstep.dat",
       "source_sha256": "1597cd90d74cd51698af00190967ecbc0708c81b00f3b7866976c74396740d99",
-      "published_sha256": "41bfb219e47b83817cb555e12ddda3acdeddef22e383961a80bc1da735332e01",
+      "published_sha256": "56622bc22f012c38141f4120be281e6d7c7a976a367b292112b4513da7ec06a5",
       "rows": 2514,
       "columns": [
         "time_s",
@@ -291,7 +291,7 @@
     "nominal-bias.json": {
       "evidence_source": "core/tt_mid_0_full/op_physical.raw",
       "source_sha256": "4f442897c0e51270ddd230990f70325af999642693af089fd1106c9593d29b4d",
-      "published_sha256": "43486be1b82b68dc569167a5870cd72c14db33999fde749b9cbae219bd15d24c",
+      "published_sha256": "a2c5f94ed9e084a4aa9ac11492eba5fca2c9359f5a4ff9329565da331fe8608f",
       "conversion": "Mapped local voltages and recovered DC terminal currents; see method and supplementary source hashes in nominal-bias.json"
     }
   }
