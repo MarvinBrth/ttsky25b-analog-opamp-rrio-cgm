@@ -1,0 +1,480 @@
+{
+  "case": "tt_mid_0_full",
+  "corner": "tt",
+  "temperature_C": 27,
+  "supply_V": 3.3,
+  "command_V": 1.65,
+  "load_demand_mA": 0,
+  "load_pF": 20,
+  "command": "Command: ngspice-44, Build Fri Aug  8 04:03:34 UTC 2025",
+  "method": "Saved node voltages and explicit extracted resistors: current entering MOS terminal equals sum (Vneighbor-Vterminal)/R. Capacitors contribute no steady DC current. Exactly one MOS terminal per node asserted. Output sum uses40 physical fingers with extraction D/S reversals handled by supply/output connectivity.",
+  "nodes": [
+    {
+      "label": "bias1",
+      "device": "X133",
+      "pin": "G",
+      "node": "a_10523_42120.t1",
+      "voltage_V": 2.053539544735965,
+      "net_min_V": 2.052969276094326,
+      "net_max_V": 2.0536366345444,
+      "mapping": "diode PMOS33/6 MPTAIL; also gates PMOS33/6 M13=X69 and M23=X176",
+      "inc_line": 135,
+      "collapsed_line": 135
+    },
+    {
+      "label": "bias4",
+      "device": "X181",
+      "pin": "G",
+      "node": "a_7720_24032.t1",
+      "voltage_V": 1.046923929681392,
+      "net_min_V": 1.046841899351131,
+      "net_max_V": 1.047535664811429,
+      "mapping": "diode NMOS10/6 MNTAIL; also gates NMOS10/6 M22=X209 and M31=X206",
+      "inc_line": 183,
+      "collapsed_line": 183
+    },
+    {
+      "label": "bias2",
+      "device": "X40",
+      "pin": "G",
+      "node": "a_7320_17870.t0",
+      "voltage_V": 2.046169697376001,
+      "net_min_V": 2.045598543877234,
+      "net_max_V": 2.04623876438663,
+      "mapping": "diode PMOS45.83/0.5 MPCAS, source from L100 RPCAS=X93 and drain to N5/1 MNPCAS=X0",
+      "inc_line": 42,
+      "collapsed_line": 42
+    },
+    {
+      "label": "bias3",
+      "device": "X195",
+      "pin": "G",
+      "node": "a_1883_42510.t1",
+      "voltage_V": 1.139126111100643,
+      "net_min_V": 1.139060923560689,
+      "net_max_V": 1.139782173946713,
+      "mapping": "diode NMOS13.89/0.5 MNCAS, source to L100 RNCAS=X137; drain fed by P10/1 MPNCAS=X166",
+      "inc_line": 197,
+      "collapsed_line": 197
+    },
+    {
+      "label": "bias",
+      "device": "X3",
+      "pin": "G",
+      "node": "a_2491_39944.t2",
+      "voltage_V": 1.65028282705685,
+      "net_min_V": 1.649020768123348,
+      "net_max_V": 1.651038022219148,
+      "mapping": "common gates of equal-input-size spillover MOS, connected between L150 divider X136 and X188",
+      "inc_line": 5,
+      "collapsed_line": 5
+    },
+    {
+      "label": "IREF gate/drain voltage",
+      "device": "X148",
+      "pin": "G",
+      "node": "a_11140_760.t1",
+      "voltage_V": 0.9123401628739783,
+      "net_min_V": 0.9122254180328412,
+      "net_max_V": 0.9125461410018585,
+      "mapping": "diode N5/1 MBN fed by P10/1 reference output X11; confirmed iref_mapping.json",
+      "inc_line": 150,
+      "collapsed_line": 150
+    },
+    {
+      "label": "PMASTER",
+      "device": "X160",
+      "pin": "G",
+      "node": "a_13180_663.t0",
+      "voltage_V": 2.161656172381891,
+      "net_min_V": 2.161456389612332,
+      "net_max_V": 2.161818276547553,
+      "mapping": "diode P10/1 MPMASTER=X160 drained by N5/1 MNMASTER=X231",
+      "inc_line": 162,
+      "collapsed_line": 162
+    },
+    {
+      "label": "reference Vbiasp",
+      "device": "X4",
+      "pin": "G",
+      "node": "a_3300_3920.t1",
+      "voltage_V": 2.17363089117689,
+      "net_min_V": 2.173480863865721,
+      "net_max_V": 2.173770762479542,
+      "mapping": "diode P10/1 M40; gates P10/1 M41=X44 and IREF output=X11; D of N20/1 M39=X53",
+      "inc_line": 6,
+      "collapsed_line": 6
+    },
+    {
+      "label": "reference Vbiasn",
+      "device": "X46",
+      "pin": "G",
+      "node": "a_1340_5332.t0",
+      "voltage_V": 0.9115682104020865,
+      "net_min_V": 0.9114471860479728,
+      "net_max_V": 0.9118508721942413,
+      "mapping": "diode N5/1 M42, gate of source-degenerated N20/1 M39=X53 and N3/1 startup M44=X104",
+      "inc_line": 48,
+      "collapsed_line": 48
+    },
+    {
+      "label": "reference Vstartup",
+      "device": "X108",
+      "pin": "G",
+      "node": "a_1400_1563.t1",
+      "voltage_V": 0.9087561942565883,
+      "net_min_V": 0.9086158403361155,
+      "net_max_V": 0.909414142528379,
+      "mapping": "diode P1/10 M43; D of N3/1 M44=X104 and gate of N2/1 M45=X213",
+      "inc_line": 110,
+      "collapsed_line": 110
+    },
+    {
+      "label": "reference resistor top",
+      "device": "X53",
+      "pin": "S",
+      "node": "a_3042_3920.t0",
+      "voltage_V": 0.07117974030226996,
+      "net_min_V": 0.07102247376806939,
+      "net_max_V": 0.07117974030226996,
+      "mapping": "source of N20/1 M39, connected through L30.5 R1=X24 to VGND",
+      "inc_line": 55,
+      "collapsed_line": 55
+    },
+    {
+      "label": "PMOS replica gate ab_p (schematic net9)",
+      "device": "X27",
+      "pin": "G",
+      "node": "a_7320_19630.t1",
+      "voltage_V": 0.9518717814911888,
+      "net_min_V": 0.9516785072147115,
+      "net_max_V": 0.9519503284387404,
+      "mapping": "second diode in P22/2 + P45.83/0.5 replica; sink N10/6 M31=X206; gates M35=X36 and MFC_P=X98",
+      "inc_line": 29,
+      "collapsed_line": 29
+    },
+    {
+      "label": "NMOS replica gate ab_n (schematic net8)",
+      "device": "X86",
+      "pin": "G",
+      "node": "a_16430_12123.t1",
+      "voltage_V": 1.938736803143849,
+      "net_min_V": 1.938630608182316,
+      "net_max_V": 1.93893519259391,
+      "mapping": "upper diode N13.89/0.5 M25; fed by P33/6 M23=X176; gates M26=X22 and MFC_N=X37",
+      "inc_line": 88,
+      "collapsed_line": 88
+    },
+    {
+      "label": "PMOS mirror gate fc_pref (schematic net6)",
+      "device": "X37",
+      "pin": "D",
+      "node": "a_7411_27923.t0",
+      "voltage_V": 2.102725630225623,
+      "net_min_V": 2.102725630225623,
+      "net_max_V": 2.102902428373144,
+      "mapping": "D of MFC_N, S of MFC_P=X98 and G of P22/2 mirror M14=X68/X74 and M15=X163/X167",
+      "inc_line": 39,
+      "collapsed_line": 39
+    },
+    {
+      "label": "NMOS mirror gate fc_nref",
+      "device": "X37",
+      "pin": "S",
+      "node": "a_6131_12850.t1",
+      "voltage_V": 0.999852490292556,
+      "net_min_V": 0.999695243528225,
+      "net_max_V": 0.9998525747132807,
+      "mapping": "S of MFC_N=X37, D of MFC_P=X98; G of mirror M20=X211/X230 and M21=X45/X127 (two fingers each)",
+      "inc_line": 39,
+      "collapsed_line": 39
+    },
+    {
+      "label": "PMOS output gate (schematic net10)",
+      "device": "X22",
+      "pin": "D",
+      "node": "a_6869_6483.t1",
+      "voltage_V": 2.105031015242101,
+      "net_min_V": 2.105031015242101,
+      "net_max_V": 2.105208109947861,
+      "mapping": "D of N13.89/0.5 M26 and S of P45.83/0.5 M35=X36; all outputP40 fingers have this G",
+      "inc_line": 24,
+      "collapsed_line": 24
+    },
+    {
+      "label": "NMOS output gate (schematic net12)",
+      "device": "X22",
+      "pin": "S",
+      "node": "a_6131_15250.t1",
+      "voltage_V": 1.002717391965935,
+      "net_min_V": 1.002545144242164,
+      "net_max_V": 1.002717391965935,
+      "mapping": "S of N13.89/0.5 M26 and D of P45.83/0.5 M35=X36; all outputN40 fingers have this G",
+      "inc_line": 24,
+      "collapsed_line": 24
+    },
+    {
+      "label": "PMOS input tail source net1",
+      "device": "X69",
+      "pin": "D",
+      "node": "a_10381_28108.t0",
+      "voltage_V": 2.552117706476624,
+      "net_min_V": 2.551869133658542,
+      "net_max_V": 2.552117706476624,
+      "mapping": "D of P33/6 M13; common S of PMOS signal/spillover devices",
+      "inc_line": 71,
+      "collapsed_line": 71
+    },
+    {
+      "label": "NMOS input tail source net3",
+      "device": "X209",
+      "pin": "D",
+      "node": "a_8920_24120.t20",
+      "voltage_V": 0.8671106240737797,
+      "net_min_V": 0.8671106240737797,
+      "net_max_V": 0.8672584076518597,
+      "mapping": "D of N10/6 M22; common S of NMOS signal/spillover devices",
+      "inc_line": 211,
+      "collapsed_line": 211
+    }
+  ],
+  "terminal_currents": [
+    {
+      "label": "IREF receiver MBN",
+      "device": "X148",
+      "pin": "D",
+      "node": "a_11140_760.t2",
+      "current_uA": 4.985697948153357,
+      "inc_line": 150,
+      "collapsed_line": 150
+    },
+    {
+      "label": "PMOS input tail M13",
+      "device": "X69",
+      "pin": "S",
+      "node": "VAPWR.t7",
+      "current_uA": 5.245534474218381,
+      "inc_line": 71,
+      "collapsed_line": 71
+    },
+    {
+      "label": "NMOS input tail M22",
+      "device": "X209",
+      "pin": "D",
+      "node": "a_8920_24120.t20",
+      "current_uA": 5.734337518998525,
+      "inc_line": 211,
+      "collapsed_line": 211
+    },
+    {
+      "label": "PMOS source for NMOS AB replica M23",
+      "device": "X176",
+      "pin": "S",
+      "node": "VAPWR.t20",
+      "current_uA": 5.352864046554581,
+      "inc_line": 178,
+      "collapsed_line": 178
+    },
+    {
+      "label": "NMOS sink for PMOS AB replica M31",
+      "device": "X206",
+      "pin": "D",
+      "node": "a_7320_19630.t0",
+      "current_uA": 5.732726165156123,
+      "inc_line": 208,
+      "collapsed_line": 208
+    },
+    {
+      "label": "PMOS tail bias replica MPTAIL",
+      "device": "X133",
+      "pin": "S",
+      "node": "VAPWR.t72",
+      "current_uA": 5.303626927903383,
+      "inc_line": 135,
+      "collapsed_line": 135
+    },
+    {
+      "label": "NMOS tail bias replica MNTAIL",
+      "device": "X181",
+      "pin": "D",
+      "node": "a_7720_24032.t2",
+      "current_uA": 5.729855497641493,
+      "inc_line": 183,
+      "collapsed_line": 183
+    },
+    {
+      "label": "PMOS mirror master MPMASTER",
+      "device": "X160",
+      "pin": "S",
+      "node": "VAPWR.t46",
+      "current_uA": 5.327290776260612,
+      "inc_line": 162,
+      "collapsed_line": 162
+    },
+    {
+      "label": "PMOS cascode bias replica MPCAS",
+      "device": "X40",
+      "pin": "S",
+      "node": "a_5051_40224.t1",
+      "current_uA": 5.301386301927023,
+      "inc_line": 42,
+      "collapsed_line": 42
+    },
+    {
+      "label": "NMOS cascode bias replica MNCAS",
+      "device": "X195",
+      "pin": "D",
+      "node": "a_1883_42510.t2",
+      "current_uA": 5.702248965963007,
+      "inc_line": 197,
+      "collapsed_line": 197
+    },
+    {
+      "label": "beta PMOS diode M40",
+      "device": "X4",
+      "pin": "S",
+      "node": "VAPWR.t3",
+      "current_uA": 4.596643609112717,
+      "inc_line": 6,
+      "collapsed_line": 6
+    },
+    {
+      "label": "beta PMOS mirror M41",
+      "device": "X44",
+      "pin": "S",
+      "node": "VAPWR.t32",
+      "current_uA": 4.987649352902669,
+      "inc_line": 46,
+      "collapsed_line": 46
+    },
+    {
+      "label": "beta NMOS resistor device M39",
+      "device": "X53",
+      "pin": "D",
+      "node": "a_3300_3920.t0",
+      "current_uA": 4.596642561600698,
+      "inc_line": 55,
+      "collapsed_line": 55
+    },
+    {
+      "label": "beta NMOS diode M42",
+      "device": "X46",
+      "pin": "D",
+      "node": "a_1340_5332.t1",
+      "current_uA": 4.987651005310261,
+      "inc_line": 48,
+      "collapsed_line": 48
+    },
+    {
+      "label": "startup weak pull-up M43",
+      "device": "X108",
+      "pin": "S",
+      "node": "VAPWR.t30",
+      "current_uA": 2.817546028141179,
+      "inc_line": 110,
+      "collapsed_line": 110
+    },
+    {
+      "label": "startup pull-down M44",
+      "device": "X104",
+      "pin": "D",
+      "node": "a_1400_1563.t0",
+      "current_uA": 2.8175484193803775,
+      "inc_line": 106,
+      "collapsed_line": 106
+    },
+    {
+      "label": "startup bridge M45",
+      "device": "X213",
+      "pin": "D",
+      "node": "a_3300_3920.t3",
+      "current_uA": 2.1736819393869724e-06,
+      "inc_line": 215,
+      "collapsed_line": 215
+    },
+    {
+      "label": "MFC_N floating copy",
+      "device": "X37",
+      "pin": "D",
+      "node": "a_7411_27923.t0",
+      "current_uA": 2.323398373874178,
+      "inc_line": 39,
+      "collapsed_line": 39
+    },
+    {
+      "label": "MFC_P floating copy",
+      "device": "X98",
+      "pin": "S",
+      "node": "a_7411_27923.t2",
+      "current_uA": 2.3945731130593395,
+      "inc_line": 100,
+      "collapsed_line": 100
+    },
+    {
+      "label": "M26 class-AB control NMOS",
+      "device": "X22",
+      "pin": "D",
+      "node": "a_6869_6483.t1",
+      "current_uA": 2.1726816572789063,
+      "inc_line": 24,
+      "collapsed_line": 24
+    },
+    {
+      "label": "M35 class-AB control PMOS",
+      "device": "X36",
+      "pin": "S",
+      "node": "a_6869_6483.t0",
+      "current_uA": 2.5358094153209554,
+      "inc_line": 38,
+      "collapsed_line": 38
+    },
+    {
+      "label": "reference PMOS output XREF.M1",
+      "device": "X11",
+      "pin": "S",
+      "node": "VAPWR.t5",
+      "current_uA": 4.985695386399917,
+      "inc_line": 13,
+      "collapsed_line": 13
+    },
+    {
+      "label": "M29 output pull-up",
+      "device": "X9,X14,X32,X39,X47,X48,X52,X54,X58,X60,X67,X72,X73,X82,X88,X92,X105,X106,X109,X115,X118,X125,X132,X135,X149,X151,X157,X164,X170,X172,X179,X187,X190,X203,X204,X205,X207,X216,X217,X224",
+      "pin": "physical supply terminal",
+      "node": "VAPWR",
+      "current_uA": 161.88120434564323,
+      "output_terminal_current_uA": 161.88291328822433,
+      "fingers": 40
+    },
+    {
+      "label": "M32 output pull-down",
+      "device": "X1,X12,X15,X16,X20,X23,X30,X31,X42,X49,X50,X55,X59,X63,X77,X78,X83,X89,X91,X99,X103,X107,X119,X122,X131,X141,X144,X145,X154,X161,X162,X171,X174,X177,X180,X191,X192,X197,X214,X221",
+      "pin": "physical OUT terminal",
+      "node": "ua[2]",
+      "current_uA": 161.8829132491018,
+      "output_terminal_current_uA": 161.8829132491018,
+      "fingers": 40
+    },
+    {
+      "label": "RCM_TOP / RCM_BOTTOM divider series branch",
+      "device": "X188 (RCM_TOP), X136 (RCM_BOTTOM)",
+      "pin": "RCM_TOP VAPWR terminal",
+      "node": "VAPWR.t47",
+      "current_uA": 22.214693277515853,
+      "inc_line": 190,
+      "collapsed_line": 190,
+      "terminal_method": "At resistor X188 VAPWR terminal VAPWR.t47, sum (Vneighbor\u2212Vterminal)/R over attached extracted routing resistors. Cross-check at resistor X136 midpoint terminal a_2491_39944.t0 agrees within 7.3 fA. The common gate load draws negligible steady current; this is one series divider branch, not two independent currents.",
+      "bottom_crosscheck_current_uA": 22.214693284752226
+    }
+  ],
+  "source_currents": {
+    "i(vdd)": -0.0002603418881007615,
+    "i(vin)": 1.873501354054952e-16,
+    "i(vj)": 4.9439619065339e-15
+  },
+  "evidence_sha256": {
+    "verification/core/tt_mid_0_full/op_physical.raw": "4f442897c0e51270ddd230990f70325af999642693af089fd1106c9593d29b4d",
+    "layout/rc/simulation_full/rc_dut_capreduced.inc": "d8503be80dc1cc7d493aefe7a960884ef20f6d4e8034bd1d1fe9f6e0f57ddf03",
+    "layout/rc/netlist/rc_collapsed_for_lvs.spice": "a043963ad94f87f3d0eb98f2171ba689fc7bdfe672ee4168d00e8722acfda3de"
+  }
+}

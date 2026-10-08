@@ -1,0 +1,298 @@
+{
+  "documentation_date": "2026-10-08",
+  "evidence_date": "2026-10-08",
+  "hardware_baseline_commit": "448d26c0b0525362527032585f0d44fe4e89a787",
+  "scope": "Final extracted RC; 42 reduced core cases, separate nominal full-RC comparison, 4 limiting interface reruns, 7 dynamic cases. Silicon pending.",
+  "file_sha256": {
+    "gds/tt_um_marvinbrth_opamp_rrio_cgm_3v3.gds": "51fc3c35decbf8409eec6f5720971efe651120b82ab5025a5dba9840b7bcdddc",
+    "lef/tt_um_marvinbrth_opamp_rrio_cgm_3v3.lef": "3d9022b42a11355a6ff85b8bfcd0a2b17660f9cd9f31843aa7d4d650c25e9301",
+    "xschem/opamp-rrio-cgm-3v3.sch": "80f8c5d734302c5a42a55f511c34cf0fd88d6fac30bff359abfb64b54c03bd44",
+    "xschem/opamp_bias_3v3.sch": "353e7a010f25faabeb4d4695a9c4be5dca649d981ff3a0cc2ebce63fcdbe103b",
+    "xschem/reference_bias_3v3.sch": "97798ff5c69f3b38b684922e45e6f4139170af572b0c18c1f4ecbf9f65a8728c",
+    "info.yaml": "c9a6d29d2f9e18104e81dd55b636987e0e3898b9a5bef6b63c2fd75c5309b421",
+    "src/project.v": "01439e1c37dee010e48138fa1d947041464a464578a4a79c00ae8319cb06257d"
+  },
+  "nominal_full_RC": {
+    "case": "tt_mid_0_full",
+    "corner": "tt",
+    "temperature_C": 27,
+    "supply_V": 3.3,
+    "command_V": 1.65,
+    "load_demand_mA": 0,
+    "load_pF": 20,
+    "rc_network": "full",
+    "output_V": 1.649973377353091,
+    "signed_error_mV": -0.026622646909002512,
+    "absolute_error_mV": 0.026622646909002512,
+    "supply_current_uA": 260.3418881007615,
+    "reference_current_uA": 4.985695386638436,
+    "gain_dB": 98.87759832417385,
+    "unity_frequency_Hz": 3100650.5306018083,
+    "phase_margin_deg": 79.55455516901289,
+    "gain_margin_dB": 9.364168377045763,
+    "closed_peak_dB": -0.002359271406272575,
+    "physical_MOS_checked": 225,
+    "physically_valid_DC": true
+  },
+  "core_extremes": {
+    "min_phase_margin_deg": 71.52468792872658,
+    "min_gain_margin_dB": 6.428134688397178,
+    "max_absolute_error_mV": 1.5833266563241022
+  },
+  "interface_extremes": {
+    "min_phase_margin_deg": 60.916534111093156,
+    "max_closed_peak_dB": 0.687992916477671
+  },
+  "RC_provenance_run_id": "20261008T022431874548Z",
+  "RC_products_sha256": {
+    "netlist/layout_rc_raw.spice": "e2a01c45ce6699ce2c0918972d3153fb5831fdb42485d18c0603e8c2313e48c5",
+    "simulation_full/rc_dut.inc": "3b23a98220730cd1902e63279ddec359df2d35870e303ee47f3c1e2b42832c17",
+    "simulation_full/rc_dut_capreduced.inc": "d8503be80dc1cc7d493aefe7a960884ef20f6d4e8034bd1d1fe9f6e0f57ddf03",
+    "simulation_reduced/rc_dut.inc": "175e4fb8352824f621e8524279c4ed5311d84cb4c66971aaa6483b4036488067",
+    "simulation_reduced/rc_dut_capreduced.inc": "35c2885a94b6b8d7af69bdc39251a9687cb3ddb1a6e73d6c4893bb472291e127",
+    "simulation_full/iref_mapping.json": "5fc1d72a8569d553dad1d8a97507785b8f8ba605f9dcb836d5060133b8e52212"
+  },
+  "models_fingerprint_sha256": "780ac2d571ab8653603579e103f4102000f0e339ab4b25d14c76cd7cebd8b686",
+  "reduction_comparison": {
+    "fresh_extraction": true,
+    "full_reduced_relative_complex_loop_max_error": 3.704494296698813e-08,
+    "full_case": "tt_mid_0_full",
+    "reduced_case": "tt_mid_0_reduced",
+    "all_original_R_C_products_retained": true
+  },
+  "published_data": {
+    "core-cases.csv": {
+      "evidence_source": "qualify42_summary.json",
+      "source_sha256": "d029f1b5eb10e7a18fa49c2b2ae22d755ddeee1a386f202fae1f303fb8e9cb02",
+      "published_sha256": "c6000672a3428e98204c1713fe58e41eb5a446d0e02c7cbb11fd28f81a32d1cd",
+      "rows": 42
+    },
+    "interface-cases.csv": {
+      "evidence_source": "targeted_interface_summary.json",
+      "source_sha256": "e91d3e62659462223b07756dd76e7d887de4a89c857ca05d96a5adabf1a24cbd",
+      "published_sha256": "5948f86c84272245a1154ce903aba56c41f3100b0b5de8ddfb82d589c0bdebb1",
+      "rows": 4
+    },
+    "dynamic-cases.csv": {
+      "evidence_source": "dynamic_summary.json",
+      "source_sha256": "6fed921a1658c354141f8d8edf8f9ee7aa417aaa0431af5c1ae00c51d34140e3",
+      "published_sha256": "61db51375681125c17c6c7e9d7e5c938d2a7b9a1a874618e1f3a8b5f35dca00e",
+      "rows": 7
+    },
+    "waveforms/tt-loop-full.csv": {
+      "evidence_source": "core/tt_mid_0_full/loop.dat",
+      "source_sha256": "4fc95a72aa818395cedebfebb355980bcd45ef927be2b2fda6b4bf1a4d2e92ae",
+      "published_sha256": "94dd5e073e233d3b6778e6b8ffa6d07416b86c9aa38834bc15e9a5810df8a630",
+      "rows": 721,
+      "columns": [
+        "frequency_Hz",
+        "real_T",
+        "imag_T"
+      ],
+      "sample_conversion": "Lossless original decimal strings; renamed header; CSV delimiters"
+    },
+    "waveforms/tt-loop-reduced.csv": {
+      "evidence_source": "core/tt_mid_0_reduced/loop.dat",
+      "source_sha256": "c6426aa06b1de208421b37bce0974dcefd2e0db8b940ad5252ffcc57b9df19fb",
+      "published_sha256": "c69a8bc1d57c836e695b6be21ebc7603b372a561adc214087eb5db194811055f",
+      "rows": 721,
+      "columns": [
+        "frequency_Hz",
+        "real_T",
+        "imag_T"
+      ],
+      "sample_conversion": "Lossless original decimal strings; renamed header; CSV delimiters"
+    },
+    "waveforms/ss-cold-worst-pm-loop.csv": {
+      "evidence_source": "core/ss_cold_low_0_reduced/loop.dat",
+      "source_sha256": "c103d3be9b2778cf97810c3657bb87b255769e1665d3b84e79af0ae49afdc355",
+      "published_sha256": "7cd0bdae307785c8710f14ef9db851293a740e8d1e7d94e0b90a1e584ee0411a",
+      "rows": 721,
+      "columns": [
+        "frequency_Hz",
+        "real_T",
+        "imag_T"
+      ],
+      "sample_conversion": "Lossless original decimal strings; renamed header; CSV delimiters"
+    },
+    "waveforms/ss-cold-worst-gm-loop.csv": {
+      "evidence_source": "core/ss_cold_mid_source_reduced/loop.dat",
+      "source_sha256": "f629afbaff734d5c6f838d8e5419f616730c6386f76cf337c73aa2128e03e18b",
+      "published_sha256": "0e22fbf0bb22a9355f76b0df665b8aad1cca2722f421f7f3ddaa9668a93de886",
+      "rows": 721,
+      "columns": [
+        "frequency_Hz",
+        "real_T",
+        "imag_T"
+      ],
+      "sample_conversion": "Lossless original decimal strings; renamed header; CSV delimiters"
+    },
+    "waveforms/r500_ss_hot_mid_0-loop.csv": {
+      "evidence_source": "interface/r500_ss_hot_mid_0/loop.dat",
+      "source_sha256": "7f8602d6baea9a8674b4f5ce5d511972f915fffb2048e8501d0972728889c59a",
+      "published_sha256": "c2f64be6e3970c1546677492ead8b131e40178f2c3463ac19911e52f6aab26e3",
+      "rows": 541,
+      "columns": [
+        "frequency_Hz",
+        "real_T",
+        "imag_T"
+      ],
+      "sample_conversion": "Lossless original decimal strings; renamed header; CSV delimiters"
+    },
+    "waveforms/r500_ss_cold_mid_0-loop.csv": {
+      "evidence_source": "interface/r500_ss_cold_mid_0/loop.dat",
+      "source_sha256": "5023888919da47277b1045015140ad9128d7a7aede70a126d9d9f2934ddb82a1",
+      "published_sha256": "b9c3e693ce2d859aab53f5bfe2ba6c2098ac2909291c4fb8468851f12d0f4bd4",
+      "rows": 541,
+      "columns": [
+        "frequency_Hz",
+        "real_T",
+        "imag_T"
+      ],
+      "sample_conversion": "Lossless original decimal strings; renamed header; CSV delimiters"
+    },
+    "waveforms/asw_ss_cold_mid_sink-loop.csv": {
+      "evidence_source": "interface/asw_ss_cold_mid_sink/loop.dat",
+      "source_sha256": "7f6c14d4b977f852c0d9fece3ef2774cf90f75e05f3ec5d7c8fed18b013d3921",
+      "published_sha256": "0d87a0b39f841dd4f0da25fc7687a90f2bfe2224b741971f83075b1fa9db6ec7",
+      "rows": 541,
+      "columns": [
+        "frequency_Hz",
+        "real_T",
+        "imag_T"
+      ],
+      "sample_conversion": "Lossless original decimal strings; renamed header; CSV delimiters"
+    },
+    "waveforms/asw_ss_cold_high_source-loop.csv": {
+      "evidence_source": "interface/asw_ss_cold_high_source/loop.dat",
+      "source_sha256": "108af59749c4d66f7754f5fffbee6afc76f591d1d0ba8a32ff8b505f70ad73e0",
+      "published_sha256": "d57954e649e035a9aef6d3a84fef5587debb2e82f5fcfb16bd1e3ec64c311cfb",
+      "rows": 541,
+      "columns": [
+        "frequency_Hz",
+        "real_T",
+        "imag_T"
+      ],
+      "sample_conversion": "Lossless original decimal strings; renamed header; CSV delimiters"
+    },
+    "waveforms/startup_tt_10us.csv": {
+      "evidence_source": "dynamic/startup_tt_10us/startup.dat",
+      "source_sha256": "63922f27c6173a816556f51e680b2da414136af286269ce973eccb432481061e",
+      "published_sha256": "718b4f2663879657e2e36c0a76e7000ecdcf87ce47786ee0f3fae5aa6f0c8a9e",
+      "rows": 1649,
+      "columns": [
+        "time_s",
+        "supply_V",
+        "output_V",
+        "reference_current_A"
+      ],
+      "sample_conversion": "Lossless original decimal strings; renamed header; CSV delimiters"
+    },
+    "waveforms/startup_ss_cold_10us.csv": {
+      "evidence_source": "dynamic/startup_ss_cold_10us/startup.dat",
+      "source_sha256": "477518905c3eb79dc9fb0f90f8f0a7d5b064f0f6046efee7b2e600c4aaf29763",
+      "published_sha256": "2383eada8f240970f2116d5ba2b3a858c480d276a204fce33c933d81d844db31",
+      "rows": 1662,
+      "columns": [
+        "time_s",
+        "supply_V",
+        "output_V",
+        "reference_current_A"
+      ],
+      "sample_conversion": "Lossless original decimal strings; renamed header; CSV delimiters"
+    },
+    "waveforms/tt_unloaded_50mV.csv": {
+      "evidence_source": "dynamic/tt_unloaded_50mV/step.dat",
+      "source_sha256": "6159483004344753835eef7d72573435290215e85a9a7a0030e717b08e197084",
+      "published_sha256": "40a88d9c4e2d8ad5fa2c5a6d7bcdc6576e4606ad4342a454bc6f61b5fa0c995c",
+      "rows": 2516,
+      "columns": [
+        "time_s",
+        "input_V",
+        "output_V",
+        "supply_source_current_A"
+      ],
+      "sample_conversion": "Lossless original decimal strings; renamed header; CSV delimiters"
+    },
+    "waveforms/ss_sink_100uV.csv": {
+      "evidence_source": "dynamic/ss_sink_100uV/step.dat",
+      "source_sha256": "199d91f66a6d6eb0aa777452f8b1a390f124a3f7c63980a5e700ebd105a9c36d",
+      "published_sha256": "578325da2691cd6b8a9514abc6862d881bd069ac6484d5b322557cdc47e9a0ae",
+      "rows": 2516,
+      "columns": [
+        "time_s",
+        "input_V",
+        "output_V",
+        "supply_source_current_A"
+      ],
+      "sample_conversion": "Lossless original decimal strings; renamed header; CSV delimiters"
+    },
+    "waveforms/ss_source_100uV.csv": {
+      "evidence_source": "dynamic/ss_source_100uV/step.dat",
+      "source_sha256": "3e7bc41b92420c3779a58f1eb7af683154c2d84a14f7b444338efef71a2f1d39",
+      "published_sha256": "4c15ba42c0780f4e285a2da949f7d39c8fe44fbaa06157f760c19bf1ca4a742b",
+      "rows": 2516,
+      "columns": [
+        "time_s",
+        "input_V",
+        "output_V",
+        "supply_source_current_A"
+      ],
+      "sample_conversion": "Lossless original decimal strings; renamed header; CSV delimiters"
+    },
+    "waveforms/tt_loadstep_source.csv": {
+      "evidence_source": "dynamic/tt_loadstep_source/loadstep.dat",
+      "source_sha256": "1875cac27e8ab522f71395035d48b3ec2652a2fff7e297399fb269024293df2e",
+      "published_sha256": "39677888c0c90498268d5310bcb5732a01fff7592118d00d7ad09d31c7c3abbe",
+      "rows": 2515,
+      "columns": [
+        "time_s",
+        "output_V",
+        "supply_source_current_A"
+      ],
+      "sample_conversion": "Lossless original decimal strings; renamed header; CSV delimiters"
+    },
+    "waveforms/tt_loadstep_sink.csv": {
+      "evidence_source": "dynamic/tt_loadstep_sink/loadstep.dat",
+      "source_sha256": "1597cd90d74cd51698af00190967ecbc0708c81b00f3b7866976c74396740d99",
+      "published_sha256": "41bfb219e47b83817cb555e12ddda3acdeddef22e383961a80bc1da735332e01",
+      "rows": 2514,
+      "columns": [
+        "time_s",
+        "output_V",
+        "supply_source_current_A"
+      ],
+      "sample_conversion": "Lossless original decimal strings; renamed header; CSV delimiters"
+    },
+    "../images/layout.png": {
+      "evidence_source": "layout.png",
+      "source_sha256": "db96906ce1463d2fd668492ac484e2e5e82c49a1a74a9cd9cf1be96eb7a9c374",
+      "published_sha256": "db96906ce1463d2fd668492ac484e2e5e82c49a1a74a9cd9cf1be96eb7a9c374",
+      "conversion": "Unmodified verified image"
+    },
+    "../images/logo.png": {
+      "evidence_source": "logo.png",
+      "source_sha256": "1033ecdfd668a20a6cbec2c62ead9c0bc87709fce185a00b5a1063143f3780d6",
+      "published_sha256": "1033ecdfd668a20a6cbec2c62ead9c0bc87709fce185a00b5a1063143f3780d6",
+      "conversion": "Unmodified verified image"
+    },
+    "../images/functional-regression.png": {
+      "evidence_source": "functional_regression.png",
+      "source_sha256": "79f99c692db5a6571f832dfd5dc833f65a91d6e664e8f6cbf3e48d98bd92605a",
+      "published_sha256": "79f99c692db5a6571f832dfd5dc833f65a91d6e664e8f6cbf3e48d98bd92605a",
+      "conversion": "Unmodified verified image"
+    },
+    "../images/routing-before-after.png": {
+      "evidence_source": "routing_before_after.png",
+      "source_sha256": "ade6549cf7fd16c6c55aae4531c85da6f45040ccfa313a82e177ebcc87749f6b",
+      "published_sha256": "ade6549cf7fd16c6c55aae4531c85da6f45040ccfa313a82e177ebcc87749f6b",
+      "conversion": "Unmodified verified image"
+    },
+    "nominal-bias.json": {
+      "evidence_source": "core/tt_mid_0_full/op_physical.raw",
+      "source_sha256": "4f442897c0e51270ddd230990f70325af999642693af089fd1106c9593d29b4d",
+      "published_sha256": "43486be1b82b68dc569167a5870cd72c14db33999fde749b9cbae219bd15d24c",
+      "conversion": "Mapped local voltages and recovered DC terminal currents; see method and supplementary source hashes in nominal-bias.json"
+    }
+  }
+}
