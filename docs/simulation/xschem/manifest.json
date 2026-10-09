@@ -1,0 +1,56 @@
+{
+  "tool": "Xschem 3.4.5 native PostScript export, converted to vector PDF",
+  "purpose": "Documentation testbenches for Chapter 5; production circuitry unchanged.",
+  "benches": [
+    {
+      "bench": "follower",
+      "source_sha256": "25f7110305ea09f628baf5df4e7cbb35757d4c33f8ba29af05b0f0990523b2d8",
+      "native_export_sha256": "3be87073334ebae4386d81b1345c7c4220c9e44d426c9190c8cc49566a48ca21",
+      "netlist_connections_checked": [
+        "XDUT VAPWR out vin out 0 opamp-rrio-cgm-3v3",
+        "VDD VAPWR 0 3.3 AC 0",
+        "VIN vin 0 1.65 AC 1",
+        "CL out 0 20p m=1"
+      ],
+      "output_pdf_sha256": "91f1b0ff5a95654fb770db0785d4aedbba30b656a4850fad5b4f6b30b386532b",
+      "crop": "Native Xschem export, white margins cropped; circuit graphics unmodified."
+    },
+    {
+      "bench": "open",
+      "source_sha256": "9e0b28ced9cabd20319234fbf019f8c2ffee6c5efb76709850cc0784395ab817",
+      "native_export_sha256": "fb1e6f8e03b5f149df9c257e59ffd7c5303da71d74257d6347badaf6f5961fdb",
+      "netlist_connections_checked": [
+        "XDUT VAPWR out vin vminus 0 opamp-rrio-cgm-3v3",
+        "LDC vminus out 1e12 m=1",
+        "CISO vminus cm 1 m=1",
+        "VCM cm 0 1.65 AC 0"
+      ],
+      "output_pdf_sha256": "712febe0594c040ef1d9d8570185be7b441cd8f654312ee13dc871d8dd5b6912",
+      "crop": "Native Xschem export, white margins cropped; circuit graphics unmodified."
+    },
+    {
+      "bench": "loop",
+      "source_sha256": "f149bea7cb4379fd1c4aa48d7d7b02e0e9907aed07b6cde2de36a1170236bc3d",
+      "native_export_sha256": "8a56b2c3c1fc719d0126a562410de1132b9a5abb2c4ae379002908034321e12f",
+      "netlist_connections_checked": [
+        "VJ vminus out 0 AC 0",
+        "IT 0 out 0 AC 0",
+        "VIN vin 0 1.65 AC 0"
+      ],
+      "output_pdf_sha256": "15a08167e0949b3448d6ec4739a759452be33c703349d416d29422e5ee0d64c1",
+      "crop": "Native Xschem export, white margins cropped; circuit graphics unmodified."
+    },
+    {
+      "bench": "commonmode",
+      "source_sha256": "6c9e8c624ec4fd12186ebc9bcbbbbec0ee2b489fc46f3c18f47acc9e8b500400",
+      "native_export_sha256": "4105ba2291adf08bf1ec37607e5b048bfc381f5b49f0331f69cde3f84b83779e",
+      "netlist_connections_checked": [
+        "BSERVO vminus out V = v(vin)-1.65",
+        "dc VIN 0.05 3.25 0.05"
+      ],
+      "output_pdf_sha256": "f48311d15ae8c3a094417ea34cfe2b2fa568acadcd1284733eecce5b111bea28",
+      "crop": "Native Xschem export, white margins cropped; circuit graphics unmodified."
+    }
+  ],
+  "symbol_sha256": "0a14edee679b64ebe8c38dfa1e94c2940331bebd994aaff3fd6a9b70565bbb7a"
+}

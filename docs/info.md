@@ -178,10 +178,12 @@ An [interactive 3D layout viewer](https://marvinbrth.github.io/ttsky26d-analog-o
 
 ## 5. Setting up the simulations
 
+The four drawings below are exported directly from Xschem. Their editable [testbench schematics](simulation/xschem/bench-follower.sch) sit alongside the simulation decks. They use the project's amplifier hierarchy, with the source/load values shown in this chapter. The extracted counterpart also holds VDPWR at 1.8 V; that supply is unused by the schematic core.
+
 ### DC and ordinary closed-loop tests
 
 ![Unity follower testbench](images/bench-follower.png)
-Figure 13. The ordinary follower testbench. Direct OUT-to-IN− feedback is correct for DC, signal AC transfer and transient response. The capacitor represents the specified output load. Supplies are omitted from the amplifier symbol but stated above it.
+Figure 13. Native Xschem export of the follower testbench, using the project's OpAmp symbol, an explicit 3.3 V source and 20 pF load. The shown source setting is for signal AC; transient tests replace VIN's stimulus with the stated step waveform. Direct OUT-to-IN− feedback is correct for both.
 
 A straight feedback wire is exactly what a normal unity follower needs. For AC signal transfer, VIN has its DC value plus AC = 1; ngspice linearizes the transistor circuit at that DC operating point. AC = 1 is a transfer-function normalization, not a physically applied 1 V large-signal swing. For a step test, VIN instead receives the specified time waveform. A zero-volt source can replace the wire if a current measurement or later injection needs it; it is still a DC/AC short when its stimulus is zero.
 
@@ -190,14 +192,14 @@ Before trusting a frequency plot, check the DC solution: OUT near the intended c
 ### True open-loop gain while keeping the DC point
 
 ![Open-loop gain testbench](images/bench-open.png)
-Figure 14. The open-loop voltage-gain test. LDC is a DC short but effectively open over the AC sweep. CISO is a DC open and holds IN− at AC ground through the fixed common-mode source. Both are ideal testbench devices, never physical on-chip elements.
+Figure 14. Native Xschem export of the open-loop voltage-gain testbench. LDC = 10¹² H preserves DC feedback; CISO = 1 F holds IN− at AC ground through VCM = 1.65 V, AC = 0. These are ideal testbench devices. The source labels and connections match the documented gain measurement.
 
 If feedback is simply disconnected, a tiny input offset can drive the high-gain amplifier to a rail. The resulting AC linearization then describes a saturated circuit. LDC = 10¹² H closes the loop at DC; CISO = 1 F fixes IN− for AC. At the lowest swept frequency, 1 Hz, those impedances already separate the two jobs by many orders of magnitude. Gain is calculated as `Aol = V(OUT)/(V(IN+) − V(IN−))`, using the actual differential voltage rather than assuming it is exactly one. The open and closed testbench DC outputs agree within 2 µV in these runs.
 
 ### Stability requires a loop measurement
 
 ![Loop injection testbench](images/bench-loop.png)
-Figure 15. Two-injection return-ratio measurement at the follower feedback port. VJ has zero DC voltage; IT has zero DC current. One AC run excites VJ, another IT. The signal source has AC = 0 in both. Normal signal transfer is a third run with both injection stimuli zero.
+Figure 15. Native Xschem export of the two-injection loop testbench. VJ and IT are both zero at DC. The visible control block first excites VJ, then IT; VIN has AC = 0. Normal signal transfer is a third run with both injection stimuli zero and VIN AC = 1.
 
 Open-loop voltage gain and loop return ratio are related but not identical. Finite reverse transmission and loading at the injection point can matter. The two-injection calculation retains the circuit on both sides of that port and gives the return ratio used for phase and gain margins. For the source orientations shown, vv and iv are V(OUT) and I(VJ) from the 1 V injection; vi and ii are the same responses from the 1 A injection. All four are complex frequency responses, normalized by their respective test stimulus. IT points from ground into OUT, and positive I(VJ) points from IN− to OUT. The saved responses produce the plotted return ratio with:
 
@@ -213,7 +215,7 @@ The frequency sweep uses 60 points per decade from 1 Hz to 100 MHz. A negative m
 ### Separate common mode from output swing
 
 ![Common-mode testbench](images/bench-commonmode.png)
-Figure 16. A DC level shift keeps OUT near 1.65 V while moving both inputs through the common-mode range. The behavioral source obeys V(IN−)−V(OUT) = V(IN+)−1.65 V. It exists only in the testbench.
+Figure 16. Native Xschem export of the common-mode testbench. BSERVO is a behavioral voltage source with V(IN−)−V(OUT) = V(vin)−1.65 V. Sweeping VIN moves both inputs while holding OUT near 1.65 V. It exists only in the testbench.
 
 A follower sweep moves input common mode and output voltage together. If it fails near a rail, it cannot by itself say whether the input stage or the output lost headroom. For the common-mode test above, OUT remains near mid-supply. Conversely, the output-range test keeps IN+ at 1.65 V and uses a level shift with the swept output command. These two tests isolate the limits that a single follower sweep combines.
 
