@@ -1,0 +1,413 @@
+{
+  "PDK_release": "bdc9412b3e468c102d01b7cf6337be06ec6e9c9a",
+  "simulator": "ngspice 44",
+  "cases": [
+    {
+      "case": "drive_schematic",
+      "original_deck_sha256": "294b5ef7aa3953e10ce6b2b48dd85a82faacc7fb30a8ed984f9634994b204484",
+      "portable_deck_sha256": "23bbfb9699d504fe926d38bd3d681c8ea50c0173dc65b8903aa9d385c297c9e1"
+    },
+    {
+      "case": "drive_small_output",
+      "original_deck_sha256": "09ab51341902c6838f7c352e510465c5576f8bf2ea2a75550500d40cdfd95bb5",
+      "portable_deck_sha256": "3848626fd5b7b1e05813f3adf37eb433d75c6dd71200370fed2788fd25bcd3e4"
+    },
+    {
+      "case": "frequency_ideal_bias_teaching",
+      "original_deck_sha256": "397d28191076a96fe4d44519473b12f736f915bdce32e1a392b82895d6c17875",
+      "portable_deck_sha256": "66bfe3a29f4f065a7baa695b7a9c5a3c6392687bee2dfe4bbf4190ad19a6eb88"
+    },
+    {
+      "case": "frequency_no_compensation_teaching",
+      "original_deck_sha256": "934bb264996999c9d8ec8458d324e7bf4163e297b1008d277e1ff55356b5783c",
+      "portable_deck_sha256": "ba1709c39e6358fae68de3160198222b61b6bfe2ebde0345eea9b480eb721dd3"
+    },
+    {
+      "case": "frequency_pex_cool",
+      "original_deck_sha256": "147233cc0a560c596afbeedafc0f12af580ede2b23405f71460228a00391da6c",
+      "portable_deck_sha256": "f36270678413a40e10feea2975a2b245677bb5d548392659280e9416d347be22"
+    },
+    {
+      "case": "frequency_pex_high_supply",
+      "original_deck_sha256": "5e3ae44c291eaaf50410b8fc64c0fa4fd1975db087df1d777eac8e7a9b29c064",
+      "portable_deck_sha256": "9cd39251cb62047f8c6ca21c9cd080158e1906b720211b891f9c188777a997a2"
+    },
+    {
+      "case": "frequency_pex_load_100pF",
+      "original_deck_sha256": "9127c5a8bcc0a26b843a2316485409dcad47a443c0af482ee906d624a9d1abc3",
+      "portable_deck_sha256": "91051b8d1a6e12b979f07bc2d2df62e4076e6f4b359a37a9987db689f5a4e4b0"
+    },
+    {
+      "case": "frequency_pex_load_20pF",
+      "original_deck_sha256": "b324aded6b51371ab478148af3e5ccedc81a2811c779db26028725c43954ee0d",
+      "portable_deck_sha256": "5fd644dbc98411b1777be240417b4e32b8ad63c22d4b8af91453dff92b188f78"
+    },
+    {
+      "case": "frequency_pex_load_50pF",
+      "original_deck_sha256": "0ed46b9fbda52f5ec3d9de63d865debafe0d907b0fe6ed2c64929871cba761db",
+      "portable_deck_sha256": "a25b829b137252b8766197ac08f3b994fdfbde3259ffc0d02e94457b23ea38ff"
+    },
+    {
+      "case": "frequency_pex_load_5pF",
+      "original_deck_sha256": "41e8e6b8d5d7e3c07040017d2d1b88885268335391dcb98ed06f09a155289dfc",
+      "portable_deck_sha256": "d38e70e8afd3cd7099af0bc559cf7acb7443ec097a5feaf8b5e7a1f48b7a4a51"
+    },
+    {
+      "case": "frequency_pex_low_supply",
+      "original_deck_sha256": "23459a3a5700bc0acb51d411d69ad37f6538ac01b33649b9d7d0f0523e239be1",
+      "portable_deck_sha256": "e2b3685783bf9c1251b643bbc76858a2025036e3c9e5e9afc75b3b2efbe7a135"
+    },
+    {
+      "case": "frequency_pex_nominal",
+      "original_deck_sha256": "b324aded6b51371ab478148af3e5ccedc81a2811c779db26028725c43954ee0d",
+      "portable_deck_sha256": "5fd644dbc98411b1777be240417b4e32b8ad63c22d4b8af91453dff92b188f78"
+    },
+    {
+      "case": "frequency_pex_warm",
+      "original_deck_sha256": "c74f21007bd8069c3d0f7f2db9496636443baceda27c7f18f9a98f6670a4b005",
+      "portable_deck_sha256": "1ba191e5f77925bd9c64a01ceb2ee5dc5b2e482cfe8313e2191660b386da09e4"
+    },
+    {
+      "case": "frequency_schematic_cool",
+      "original_deck_sha256": "df7dbeff7338acc3108f4c27f1b2fb299ce37b282c679df3086fec7ac05cd821",
+      "portable_deck_sha256": "55820812c3cd7703d919b8386f65e3097310a467ff2a0d1eb474044f8addd48e"
+    },
+    {
+      "case": "frequency_schematic_ff",
+      "original_deck_sha256": "0803546d5dd1aae87f6ebfb034595ea11a453877c1b0a589a54330837f08b8f4",
+      "portable_deck_sha256": "3cf128fab3c6ba7e62f5058f9618c27728d67db12fd8e9d0c0b25e6efc79e6bf"
+    },
+    {
+      "case": "frequency_schematic_fs",
+      "original_deck_sha256": "419d5dc36e7cf3a1a73a619c618db3cb475f769cf8b955d965bacab55fef2273",
+      "portable_deck_sha256": "f69423f549b3c145c9a0291172b98ab090882416c95dc321d5468b1c87e2294e"
+    },
+    {
+      "case": "frequency_schematic_high_supply",
+      "original_deck_sha256": "544f1944a482d1a80339ca93bc44713c277c4edbc18e6f79d2ac2a6dc53e5df2",
+      "portable_deck_sha256": "2805a42be5f8616b0fd3c7ec1214b6f7b6bac309b95a88964f99e12c173de823"
+    },
+    {
+      "case": "frequency_schematic_load_100pF",
+      "original_deck_sha256": "8654e1efddfe8c94121ec24c6f9f4a73a02178da17d357004bf13ea5e74896c0",
+      "portable_deck_sha256": "12386522fe05fc7f37de761aa253d6f047bfa65d4fc71c67880636be370aa44a"
+    },
+    {
+      "case": "frequency_schematic_load_20pF",
+      "original_deck_sha256": "e7c720c139f72ac8ad9634174146122f8983700641e7fe0eb1144d00b408b0ca",
+      "portable_deck_sha256": "c663535e7c740763f0bee8edf8fe17210b1882147dad92e8da54cae49d583e7d"
+    },
+    {
+      "case": "frequency_schematic_load_50pF",
+      "original_deck_sha256": "1a4a5c9f9895d494f14568c3aad619459fe3498ae1427e00950167fb85f5b4fe",
+      "portable_deck_sha256": "aeb50aef1a0dc68cde513364ff5e76ae2644031510d57aacd7eb3e748dd7dcde"
+    },
+    {
+      "case": "frequency_schematic_load_5pF",
+      "original_deck_sha256": "bf621f0216bdbc5a38f8cacef155dce1ca7727000b53dd381774df04093c3e11",
+      "portable_deck_sha256": "01c8ff415454b3f9686bcab2412261635fd3aee7542318c6cf1dc2279b548a8b"
+    },
+    {
+      "case": "frequency_schematic_low_supply",
+      "original_deck_sha256": "8f30957437b2c1a527ab7b1e290c5c5c737b15dedb28f5d790bed281f4092937",
+      "portable_deck_sha256": "330befe0404217f659a55e1845750f3dbfb0b15cd281d9968a8c3e48ba6c2cdc"
+    },
+    {
+      "case": "frequency_schematic_nominal",
+      "original_deck_sha256": "e7c720c139f72ac8ad9634174146122f8983700641e7fe0eb1144d00b408b0ca",
+      "portable_deck_sha256": "c663535e7c740763f0bee8edf8fe17210b1882147dad92e8da54cae49d583e7d"
+    },
+    {
+      "case": "frequency_schematic_sf",
+      "original_deck_sha256": "212d6d362bef2634470a99a04d10a0f7d119f49e3319980fcffbca6d9edc8524",
+      "portable_deck_sha256": "81903b1b146d9eeb85226a53a7f14f87485a42cda0baaa9123cdc1a594e37ad8"
+    },
+    {
+      "case": "frequency_schematic_ss",
+      "original_deck_sha256": "8e2208591d503d99ac390e2c9960a243963c46bff9f65ee1d5dbc776e59f270b",
+      "portable_deck_sha256": "99b363da63bc369651cf66692d39b2a697ffacaf9846e321e3ad42cf9cd92642"
+    },
+    {
+      "case": "frequency_schematic_tt",
+      "original_deck_sha256": "e7c720c139f72ac8ad9634174146122f8983700641e7fe0eb1144d00b408b0ca",
+      "portable_deck_sha256": "c663535e7c740763f0bee8edf8fe17210b1882147dad92e8da54cae49d583e7d"
+    },
+    {
+      "case": "frequency_schematic_warm",
+      "original_deck_sha256": "5d00eaab26708856075247f3ddb5c5748123f61be8027f458374861b6cdeffc1",
+      "portable_deck_sha256": "f25b7265e169e41e63eae86c4da4eeed5bcf4713e225fa6cb5c20f4e1dc62a57"
+    },
+    {
+      "case": "frequency_ideal_bias_teaching_open",
+      "original_deck_sha256": "06f74f02ce83b32b0d961c2cad4b2089862de19c3c2a3d820301ad565f84febf",
+      "portable_deck_sha256": "051fe141c21c5c7d7360314c0c5ec4600b7fa9b39e0fa4cea848725695c5e44c"
+    },
+    {
+      "case": "frequency_no_compensation_teaching_open",
+      "original_deck_sha256": "6f6605a955a5abcc8c1d054fc0fd224cc4e64fce30ae18b13bd4b923f14e4552",
+      "portable_deck_sha256": "ef80cc9953494970a74438abf03fc5a2170d9fbae8fc2633cd470500393f0002"
+    },
+    {
+      "case": "frequency_pex_cool_open",
+      "original_deck_sha256": "55ed89e5f4044855d798321066648001df710950db68b2930e933ba97753e177",
+      "portable_deck_sha256": "d05839a33c8e6c6eb8373f77a51ad9a2e07da8c0b364f83480030463aad014c3"
+    },
+    {
+      "case": "frequency_pex_high_supply_open",
+      "original_deck_sha256": "9d0417b62e329cc279c9b9630a0ab4bad742592dea7d3bc34eec57f70ecf3b94",
+      "portable_deck_sha256": "e41fed289930281aa91abc13a2743d3833e390d06f4e6405d7340dd1ce617334"
+    },
+    {
+      "case": "frequency_pex_load_100pF_open",
+      "original_deck_sha256": "4e98c8e29d62038f6d9de5d07bf6b1e1ff54de1282ff81ec43e670f569808de2",
+      "portable_deck_sha256": "e7002ebacc3365e17f63c0b2ed3cac74a8181d6a9ec0596218ee7ee663d4cc0d"
+    },
+    {
+      "case": "frequency_pex_load_20pF_open",
+      "original_deck_sha256": "a5515d56f91b0fac474462300935f91acd295172dab4c751f6517faf849126f5",
+      "portable_deck_sha256": "71f8bb73b81e68d54f801ba52a6a4ef66030a6459ba655332800af8ddd16c848"
+    },
+    {
+      "case": "frequency_pex_load_50pF_open",
+      "original_deck_sha256": "4fd1899c4a50970a52d8dcde0cf4f00f03a5965a70966009f07e7952220eb877",
+      "portable_deck_sha256": "1bec7f8d2fab6c908cff24b13d595804070ad90a9b7546661f2abd8b81bcf0bd"
+    },
+    {
+      "case": "frequency_pex_load_5pF_open",
+      "original_deck_sha256": "5e8cb0bc9f0eba49f3ea7486df41c1257aad5231df3e3c0ffaf4ae90203dc9ea",
+      "portable_deck_sha256": "7caf150b17b6ba677f1da55795a0051c0afd4ecb268164e6c78ab57eac949fd1"
+    },
+    {
+      "case": "frequency_pex_low_supply_open",
+      "original_deck_sha256": "650fbef53083a69b3046051dd2b7fc7e7a140ad7ed4441cb5ff1a5df053e3a10",
+      "portable_deck_sha256": "ecec0fc14fe49b631543e3c2004d06770b369d7b690ffe048b0467891b6764ed"
+    },
+    {
+      "case": "frequency_pex_nominal_open",
+      "original_deck_sha256": "a5515d56f91b0fac474462300935f91acd295172dab4c751f6517faf849126f5",
+      "portable_deck_sha256": "71f8bb73b81e68d54f801ba52a6a4ef66030a6459ba655332800af8ddd16c848"
+    },
+    {
+      "case": "frequency_pex_warm_open",
+      "original_deck_sha256": "fb58f1ffdf85d65c6ee487d3a83f27e9c3df33076f0dbffa796276e799ffcb08",
+      "portable_deck_sha256": "055aa6cc0abe27a2297974dcd91561bd1bb06e0bcf998d1447ab52a598b73fac"
+    },
+    {
+      "case": "frequency_schematic_cool_open",
+      "original_deck_sha256": "ec18b60ef864c4d5071bd416b0ce4c731cc2821b4a466412ec3f80435bb64cee",
+      "portable_deck_sha256": "46000a7f0144ecc0dd7ab869946e5aa6d95e15c5106e351e9a5503fb3f63d4aa"
+    },
+    {
+      "case": "frequency_schematic_ff_open",
+      "original_deck_sha256": "03f64b4f3b109dfd01e41c8448f92359c0f64cad7985ef0ab8346c061413d3ff",
+      "portable_deck_sha256": "1bb413d9f97db8022f591215eed2d6fff855b9a865bfc84ed98cfdd8e1836af3"
+    },
+    {
+      "case": "frequency_schematic_fs_open",
+      "original_deck_sha256": "6e7fbdde4a63577e689542fd19d1b1e50074da184a5817a4487998f64609aad7",
+      "portable_deck_sha256": "a82b26547694c9e74b4d2d714cdd15aacc4e686bb4dd104b26b0ce91ac3a61ee"
+    },
+    {
+      "case": "frequency_schematic_high_supply_open",
+      "original_deck_sha256": "d6cf33ac1e84ccee1a34a394635c610e256a295d1ea508becfcda013f73c89a9",
+      "portable_deck_sha256": "59c6b197d6b7034732855026bb57c94bfe075e79d5e8b2fdbd180fee74e0c69f"
+    },
+    {
+      "case": "frequency_schematic_load_100pF_open",
+      "original_deck_sha256": "235f922d104072dfd6c77c288f237eb0e30bc892892aa493c7afbded168be9b1",
+      "portable_deck_sha256": "31a84951bb3f44014f0415afef2e60da60cb56bbc24ec4bb07790589c5f9a83b"
+    },
+    {
+      "case": "frequency_schematic_load_20pF_open",
+      "original_deck_sha256": "55fce24c64785cd130f02a2d9261656cc0b8684f06b96dffd24bf28a136a11a0",
+      "portable_deck_sha256": "a0ea759fd29266a578762fed7dd47358012832299bb51662366ce4d5fa8d10c4"
+    },
+    {
+      "case": "frequency_schematic_load_50pF_open",
+      "original_deck_sha256": "5080478677bfc12fd52b30eb5b5d7060be77edbda44b70f59b91f99d28d85639",
+      "portable_deck_sha256": "912a1c7f51dda09ebecfe97aa604744e9e4fdc3264aecb9b33f5fbbaeafd1920"
+    },
+    {
+      "case": "frequency_schematic_load_5pF_open",
+      "original_deck_sha256": "a318ecfb734b452b674a063edff3997a30ab77bf12d58e2391bcc28e5f0029aa",
+      "portable_deck_sha256": "a7bc65e3e840e0ca29a095d151726d81d16702efe73860715ce82e78a68e5e1b"
+    },
+    {
+      "case": "frequency_schematic_low_supply_open",
+      "original_deck_sha256": "be5ee377a3266a2c86d01d1a692bbae36d34296624620e8ccee815427501c076",
+      "portable_deck_sha256": "02d6ada863c1bdb15ea214d1f34a91dd9284c3712342989662dfb6f3b29f8c2b"
+    },
+    {
+      "case": "frequency_schematic_nominal_open",
+      "original_deck_sha256": "55fce24c64785cd130f02a2d9261656cc0b8684f06b96dffd24bf28a136a11a0",
+      "portable_deck_sha256": "a0ea759fd29266a578762fed7dd47358012832299bb51662366ce4d5fa8d10c4"
+    },
+    {
+      "case": "frequency_schematic_sf_open",
+      "original_deck_sha256": "82f8b76bdf60767fb7119c6764773ffda7b606c1bc7a2efc67d8b28aa02fb73f",
+      "portable_deck_sha256": "f965eb029225b88433a8273f93783ced283a50bf469d592cfa3a799c4ab58e11"
+    },
+    {
+      "case": "frequency_schematic_ss_open",
+      "original_deck_sha256": "f29ee8d1c6d496f010d440b2a6c217e5dfda2ffb87d890d3fbd3bafe949aeb34",
+      "portable_deck_sha256": "8f8fbd14f7a23d84f2a5863073e9f14883f288b516f8f14a7873ea3c305965c5"
+    },
+    {
+      "case": "frequency_schematic_tt_open",
+      "original_deck_sha256": "55fce24c64785cd130f02a2d9261656cc0b8684f06b96dffd24bf28a136a11a0",
+      "portable_deck_sha256": "a0ea759fd29266a578762fed7dd47358012832299bb51662366ce4d5fa8d10c4"
+    },
+    {
+      "case": "frequency_schematic_warm_open",
+      "original_deck_sha256": "52f467e1fb4f5d65a230de6111ab2197ed6d23a345ebe17ae23c9a5a65e2d474",
+      "portable_deck_sha256": "f0b9fef3dc4ed0c3940891b91cd03151952c056751d017798e4b96758fa96190"
+    },
+    {
+      "case": "gm_pex_full_core",
+      "original_deck_sha256": "e066354b494c725b97342d32e24441c89fa941e4308a91668823658e1185358d",
+      "portable_deck_sha256": "70a5b171b3483913e2150244e2c86656da292a65a25e1784aded570fd8f57140"
+    },
+    {
+      "case": "gm_schematic_full_core",
+      "original_deck_sha256": "37b11d215c32360fefedf3b68f259e05b43076a63f497c93a2b2ce1e2e83d778",
+      "portable_deck_sha256": "888a352087307ff1553cd9ac56bf9150bdca9b5546fb184683baf4845a95506a"
+    },
+    {
+      "case": "input_stage_nmos_only",
+      "original_deck_sha256": "e1f4706792fbf14ef52be3ea141b7f50d54e7d98e6d1c0c10d969f6a4adf6e29",
+      "portable_deck_sha256": "61b187d97653f94fcc53e81fbbfad4af25d42ca051f496d7eb799784f68fcd32"
+    },
+    {
+      "case": "input_stage_no_spillover",
+      "original_deck_sha256": "10a445db443722f33bebaa22d77b7a97b189abcbfed2f8b9abc50b35b31dd937",
+      "portable_deck_sha256": "ae6cc1c7dd3b264a17be23149317c1bb65e2fe077912897fbbf774de306661da"
+    },
+    {
+      "case": "input_stage_with_spillover",
+      "original_deck_sha256": "a01f4a57e535cd20e3ac19cbccbcc5fe95fc6fbbc5ec44c258c65a00974469da",
+      "portable_deck_sha256": "82f339aab8962df3fe3ac8c47e1d8d6944b4cf0c6720d5b5491177c3086d5079"
+    },
+    {
+      "case": "mirror_cascode_comparison",
+      "original_deck_sha256": "afdf1325a632b408ea88a61e13129b850ed2aaf5945863477eddeb55fe81ee61",
+      "portable_deck_sha256": "3fa906e0cf4b23d410c6f6e256530eaa7fa7480109d456143b56eda754761cfa"
+    },
+    {
+      "case": "mismatch_sample_000",
+      "original_deck_sha256": "bece40835f29fbd16627ba6a64451eb09728554c5a4c5133446479fb76927461",
+      "portable_deck_sha256": "15c5ad239f644c6b645834282c26cf845c90ae77663eb2c9dfc5ec1b31c0382b"
+    },
+    {
+      "case": "reference_K2",
+      "original_deck_sha256": "f266dbbbbdd1070f2208353d66f71bfe6dd951729bb54c867f1c218c512ad8c7",
+      "portable_deck_sha256": "5c38636b6a1884ea9561597bdab2df8d0c7281352d8b74a3b76b9a1fbf1a8ea2"
+    },
+    {
+      "case": "reference_K8",
+      "original_deck_sha256": "f91287c6ea4b07becb6569d2e7bfbda6ba1e6b3d3967624bd989354a5b03908a",
+      "portable_deck_sha256": "353f62d2f2bf0c1a7ddb26a07ca6041dc3f9238e0b69d7949e4cb6e8cf456170"
+    },
+    {
+      "case": "reference_long_resistor",
+      "original_deck_sha256": "c729c7774fbb2a1b465ca32e6d54b886655fc19a6f6ec9600c12326146516366",
+      "portable_deck_sha256": "c1ab0e02fb87ccdb3095a776c5a37c81274c45ea605373480980f80275cd38f8"
+    },
+    {
+      "case": "reference_nominal",
+      "original_deck_sha256": "9ac32d5017b7c25e1120fce16c5b32d37d399f27811d1ab11534a78f5d1f7b2b",
+      "portable_deck_sha256": "18b671ac3f478037c0caa1ed639f746a01945f182edc37a8eaf27a64ccbb5cfe"
+    },
+    {
+      "case": "reference_no_startup",
+      "original_deck_sha256": "95e4192666bd2fdc6af91b0672ab45dbe24c3ab2e74737259c7c111e09b47a7a",
+      "portable_deck_sha256": "ae0f25467b685886f9fd9b78199787e5dc629571fbbdcfd375fb17e77ef0dda0"
+    },
+    {
+      "case": "reference_short_resistor",
+      "original_deck_sha256": "c120c2914cbe2758cfa197001337dbba311114270f99fd79347314d71088603d",
+      "portable_deck_sha256": "24b8711b62310f23583155acda33cec3101bff4e2258859c6208331840a33bda"
+    },
+    {
+      "case": "step_pex_cool",
+      "original_deck_sha256": "5794b3cb4d7a0c41896265be87e3912c42b319f9534e689de5fe732007150b32",
+      "portable_deck_sha256": "50a62e8d5357849df501d987a159c08f96257c25668ff0f5ec4d1c9d72b2bc22"
+    },
+    {
+      "case": "step_pex_high_supply",
+      "original_deck_sha256": "17034f3b35dd14d3fe90a8df2427821a7fdf0e0c0dae470af813811c266b1c1a",
+      "portable_deck_sha256": "5e82e33c6111e3afe03e2d5ac9dbd95054c480647e68eef3d0467b25f17292c9"
+    },
+    {
+      "case": "step_pex_large_signal",
+      "original_deck_sha256": "a4ca6b994cefa698a0a6fb0b2a5e518d99fddbab9c484838db48158b9fec053c",
+      "portable_deck_sha256": "84f39c3e1392d014dd67e7adb007ee6a5fbff50d3eaacd2942276f4fd94b4630"
+    },
+    {
+      "case": "step_pex_low_supply",
+      "original_deck_sha256": "d810499617722533072da6691cea178530c814fc41d7db06dbadab9b9c14cb11",
+      "portable_deck_sha256": "5ef39d98e08fd88984a1730deb0e190a7470cc1d5991fdfbc202b9c88fd13bb6"
+    },
+    {
+      "case": "step_pex_nominal",
+      "original_deck_sha256": "2b9b121446bb4d63c48c2371f49efe8a41cadc36d63dbd3912a576a54572a47d",
+      "portable_deck_sha256": "9dfc0845b5d82a616cacb1e99350e49d9f5a7ea619822836c1a22062c063aaa3"
+    },
+    {
+      "case": "step_pex_warm",
+      "original_deck_sha256": "485b412c9bd7562ae7d9e715b376b631c477bb6c73ff64d3d5e47aa33ddf9d2e",
+      "portable_deck_sha256": "6e4eb93de2bc8bef52f1742cd493c932431ec4a857135c5f036125b8612b8b34"
+    },
+    {
+      "case": "step_schematic_cool",
+      "original_deck_sha256": "240a1a9f14821eaa8065532f8ca86c24839fbd42e14f0f24bd8806d5258ef912",
+      "portable_deck_sha256": "304bd0a545d8be4c2c972b9a8e532e57bf8627148fc5425d446d030642b3accb"
+    },
+    {
+      "case": "step_schematic_high_supply",
+      "original_deck_sha256": "32b2295174c3056b360cc16adc6194808588b172ac13a238c2cfaf298cc7a218",
+      "portable_deck_sha256": "00f167695b1bea1c524ccd4e7b5a7d509a0e785eb26bb91152bff4cae4e3e895"
+    },
+    {
+      "case": "step_schematic_large_signal",
+      "original_deck_sha256": "9b2703557a3d65ccd219897f7652f4d920a7244d861d373b979419382d8db654",
+      "portable_deck_sha256": "158655c25d3a34a3fe79197f593eee1be47ec480958688c34338bbb19ee6ae0b"
+    },
+    {
+      "case": "step_schematic_low_supply",
+      "original_deck_sha256": "e792db065bbd8e09d61ef4118eead4fa878c97e8acb57a28b8227fca25cf344b",
+      "portable_deck_sha256": "27d865e7fb0a36e6689707270856b411a9b6e308ad4fb01e3eb05b34637f4da3"
+    },
+    {
+      "case": "step_schematic_nominal",
+      "original_deck_sha256": "9bfe7a5ce5857d4849ebabab8a9a38ca6d3a7fbd469c5976b5944d84c0c71dfc",
+      "portable_deck_sha256": "f1127cb4d0c364bc812824f561eb65b93bfb4aab138f031de1363a459ec9c407"
+    },
+    {
+      "case": "step_schematic_warm",
+      "original_deck_sha256": "ecd77be26dd5b4ebe9848d54c79380a35a86609c0029cbf72d4f954e3759ae11",
+      "portable_deck_sha256": "0bc0972c40af9bd622ac1da2584c29a38910b91c85fcf01143599706c269465d"
+    }
+  ],
+  "seed_range": [
+    70100,
+    70163
+  ],
+  "mismatch_template_case": "mismatch_sample_000",
+  "command": "python configure_models.py PATH_TO_SKY130A; then run ngspice -b test.spice from a case directory",
+  "includes_sha256": {
+    "ideal_bias.inc": "d6a5155ebbf843d9adddf2a445a2295eddfab51c9d8bdd03a6f96eb635d9c8af",
+    "K2_reference.inc": "44c81fa12635e78f6061d0dcf9f132459a4d79bfb7c9d15f6ed4ee42d64cfa26",
+    "K8_reference.inc": "af8b21bedd8c115018a4b743523fdbc45ccbcfee82d32fb8c204347316ecbd71",
+    "long_resistor_reference.inc": "11289eeb18f27fc15d584faabfa4be467bf63e196677ccc13c0267654f5eaf5c",
+    "nmos_only_input.inc": "955ac449c074a93f7003ccc9a47e937c7f5cfeba31c10fa5df362710acd01080",
+    "nominal_reference.inc": "dffcdb01ccc7fef20fc95622a291f20dfd9f7b6d32e83493be4f04eedaf62ef5",
+    "no_compensation.inc": "53aeacedf571a4afd43019d9913baa074f995059d64b82b39c151b17ee73ee86",
+    "no_spillover_input.inc": "a410714250c3d3a6d725d0bcf21a613d696dedd439a0678b2cfdf193a8595bca",
+    "no_startup_reference.inc": "c174f4be9c7d4b8f6be67cb7756f63f482771ce73227fa8c5b8a5cf88927f68f",
+    "pex.inc": "8918f7c20293ef972abd6c393fad120253be1d55d7992935a108c5930045ce3f",
+    "schematic.inc": "25c6484491f1c3985905db80c9a40aeb48543af80656cf8101063274790d8cea",
+    "short_resistor_reference.inc": "2af7fda180bd60c51f55fdd6da0102cfb99f0d7190c13d465589074a118a1d8e",
+    "small_output.inc": "92e1d2c22e669144f2ee97f52fedda94d26a3c9c6cacfe06a26fd6e14e40319c",
+    "with_spillover_input.inc": "6b7aed5c3d7a3835289d8ccee6f8d3db4acc871c2c58790f1dc87c2556b52b29"
+  }
+}

@@ -1,0 +1,22 @@
+* Teaching mirror benchmark; actual mirror/cascode sizes, new standalone bias replica
+.lib "../../models/selected.lib.spice" tt
+.temp 25
+.options klu reltol=.0001
+IREF 0 bc 5u
+XRC bc bc br 0 sky130_fd_pr__nfet_g5v0d10v5 W=13.89 L=.5 nf=1 m=1
+XRM br br 0 0 sky130_fd_pr__nfet_g5v0d10v5 W=6.66 L=2 nf=2 m=1
+XPLAIN outp br 0 0 sky130_fd_pr__nfet_g5v0d10v5 W=6.66 L=2 nf=2 m=1
+XCAS outc bc mid 0 sky130_fd_pr__nfet_g5v0d10v5 W=13.89 L=.5 nf=1 m=1
+XBOTTOM mid br 0 0 sky130_fd_pr__nfet_g5v0d10v5 W=6.66 L=2 nf=2 m=1
+VSW sweep 0 1.65
+EPLAIN outp 0 sweep 0 1
+ECAS outc 0 sweep 0 1
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=15
+dc VSW .05 3.25 .025
+wrdata mirror.dat i(EPLAIN) i(ECAS) v(br) v(bc)
+quit
+.endc
+.end

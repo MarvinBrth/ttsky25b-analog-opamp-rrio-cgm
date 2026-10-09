@@ -235,8 +235,8 @@ spiceprefix=X
 C {devices/lab_wire.sym} -230 -160 0 1 {name=p1 sig_type=std_logic lab=Vbiasn}
 C {devices/lab_wire.sym} -230 -310 0 1 {name=p2 sig_type=std_logic lab=Vbiasp}
 C {devices/lab_wire.sym} -680 -240 0 1 {name=p4 sig_type=std_logic lab=Vstartup}
-C {devices/iopin.sym} -700 -370 0 0 {name=p3 lab=VAPWR}
-C {devices/iopin.sym} -710 10 0 0 {name=p8 lab=VGND}
+C {devices/iopin.sym} -700 -370 0 1 {name=p3 lab=VAPWR}
+C {devices/iopin.sym} -710 10 0 1 {name=p8 lab=VGND}
 C {hv_pmos.sym} 70 -310 0 0 {name=M1
 L=1
 W=10

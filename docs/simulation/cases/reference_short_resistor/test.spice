@@ -1,0 +1,18 @@
+* Actual beta multiplier; one diode-connected reference load
+.lib "../../models/selected.lib.spice" tt
+.include "../../includes/short_resistor_reference.inc"
+.temp 25
+.options klu itl1=500 reltol=.0001
+VDD vapwr 0 DC 3.3 PWL(0 0 10u 3.3)
+XREF vapwr iref 0 reference_bias_3v3
+XLOAD iref iref 0 0 sky130_fd_pr__nfet_g5v0d10v5 W=5 L=1 nf=1 m=1
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=15
+save v(iref) v(vapwr) v(xref.vbiasp) v(xref.vbiasn) v(xref.net1) @m.xref.xm1.msky130_fd_pr__pfet_g5v0d10v5[id] @m.xref.xm39.msky130_fd_pr__nfet_g5v0d10v5[id] @m.xref.xm42.msky130_fd_pr__nfet_g5v0d10v5[gm]
+tran 100n 80u 0 100n uic
+wrdata reference.dat v(vapwr) v(iref) v(xref.vbiasp) v(xref.vbiasn) @m.xref.xm1.msky130_fd_pr__pfet_g5v0d10v5[id] v(xref.net1) @m.xref.xm39.msky130_fd_pr__nfet_g5v0d10v5[id] @m.xref.xm42.msky130_fd_pr__nfet_g5v0d10v5[gm]
+quit
+.endc
+.end

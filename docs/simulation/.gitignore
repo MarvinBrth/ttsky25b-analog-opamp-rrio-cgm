@@ -1,0 +1,4 @@
+models/
+**/*.dat
+**/*.raw
+**/*.log

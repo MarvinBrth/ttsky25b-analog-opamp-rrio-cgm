@@ -1,0 +1,30 @@
+* Private characterization / teaching comparison: pex
+.lib "../../models/selected.lib.spice" tt
+.include "../../includes/pex.inc"
+.temp 10
+.options klu itl1=500 reltol=0.0001
+.nodeset v(out)=1.65
+VDD vapwr 0 3.3 AC 0
+VDIG vd1v8 0 1.8 AC 0
+VIN inp 0 DC 1.65 PWL(0 1.65 1u 1.65 1.001e-06 1.7 5e-06 1.7 5.001e-06 1.65) AC 0
+VJ inn out DC 0 AC 0
+IT 0 out DC 0 AC 0
+ILOAD out 0 0
+CL out 0 20p
+XDUT vapwr out inp inn 0 vd1v8 pex_dut
+
+.control
+set numdgt=15
+set wr_singlescale
+set wr_vecnames
+set filetype=ascii
+op
+wrdata op.dat v(out) i(VDD) @m.xdut.xraw.x11.msky130_fd_pr__pfet_g5v0d10v5[id]
+write op.raw all
+save v(out) v(inp) i(VDD) @m.xdut.xraw.x11.msky130_fd_pr__pfet_g5v0d10v5[id]
+tran 2e-09 9e-06 0 2e-09
+wrdata step.dat v(out) v(inp) i(VDD) @m.xdut.xraw.x11.msky130_fd_pr__pfet_g5v0d10v5[id]
+
+quit
+.endc
+.end

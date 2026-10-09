@@ -1,0 +1,4 @@
+set ngbehavior=hsa
+set ng_nomodcheck
+set num_threads=1
+setseed 70100

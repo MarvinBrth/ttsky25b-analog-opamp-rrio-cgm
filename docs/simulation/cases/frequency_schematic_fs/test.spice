@@ -1,0 +1,38 @@
+* Private characterization / teaching comparison: schematic
+.lib "../../models/selected.lib.spice" fs
+.include "../../includes/schematic.inc"
+.temp 25
+.options klu itl1=500 reltol=0.0001
+.nodeset v(out)=1.65
+VDD vapwr 0 3.3 AC 0
+VDIG vd1v8 0 1.8 AC 0
+VIN inp 0 1.65 AC 0
+VJ inn out DC 0 AC 0
+IT 0 out DC 0 AC 0
+ILOAD out 0 0
+CL out 0 20p
+XDUT vapwr out inp inn 0 vd1v8 sch_dut
+
+.control
+set numdgt=15
+set wr_singlescale
+set wr_vecnames
+set filetype=ascii
+op
+wrdata op.dat v(out) i(VDD) @m.xdut.xcore.xb.xref.xm1.msky130_fd_pr__pfet_g5v0d10v5[id]
+write op.raw all
+alter @VJ[acmag]=1
+ac dec 60 1 1e8
+wrdata voltage.dat real(v(out)) imag(v(out)) real(i(VJ)) imag(i(VJ))
+alter @VJ[acmag]=0
+alter @IT[acmag]=1
+ac dec 60 1 1e8
+wrdata current.dat real(v(out)) imag(v(out)) real(i(VJ)) imag(i(VJ))
+alter @IT[acmag]=0
+alter @VIN[acmag]=1
+ac dec 60 1 1e8
+wrdata closed.dat real(v(out)) imag(v(out))
+
+quit
+.endc
+.end

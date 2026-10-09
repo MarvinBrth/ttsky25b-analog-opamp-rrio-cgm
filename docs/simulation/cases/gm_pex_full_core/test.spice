@@ -1,0 +1,30 @@
+* Private characterization / teaching comparison: pex
+.lib "../../models/selected.lib.spice" tt
+.include "../../includes/pex.inc"
+.temp 25
+.options klu itl1=500 reltol=0.0001
+.nodeset v(out)=1.65
+VDD vapwr 0 3.3 AC 0
+VDIG vd1v8 0 1.8 AC 0
+VIN inp 0 1.65 AC 0
+BSERVO inn out V=v(inp)-1.65
+IT 0 out DC 0 AC 0
+ILOAD out 0 0
+CL out 0 20p
+XDUT vapwr out inp inn 0 vd1v8 pex_dut
+
+.control
+set numdgt=15
+set wr_singlescale
+set wr_vecnames
+set filetype=ascii
+save all @m.xdut.xraw.x2.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x5.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x6.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x8.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x13.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x19.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x21.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x26.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x34.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x57.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x61.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x64.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x71.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x75.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x80.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x96.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x97.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x101.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x110.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x111.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x112.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x114.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x116.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x117.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x121.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x126.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x134.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x138.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x146.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x147.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x152.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x153.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x155.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x156.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x158.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x165.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x168.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x183.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x184.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x185.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x189.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x196.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x199.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x200.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x201.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x208.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x218.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x222.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x225.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x226.msky130_fd_pr__nfet_g5v0d10v5[gm]
+op
+write op.raw all
+dc VIN .05 3.25 .05
+wrdata gm.dat v(out) i(VDD) @m.xdut.xraw.x2.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x5.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x6.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x8.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x13.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x19.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x21.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x26.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x34.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x57.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x61.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x64.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x71.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x75.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x80.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x96.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x97.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x101.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x110.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x111.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x112.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x114.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x116.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x117.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x121.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x126.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x134.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x138.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x146.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x147.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x152.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x153.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x155.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x156.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x158.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x165.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x168.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x183.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x184.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x185.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x189.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x196.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xraw.x199.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x200.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x201.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x208.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x218.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x222.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x225.msky130_fd_pr__pfet_g5v0d10v5[gm] @m.xdut.xraw.x226.msky130_fd_pr__nfet_g5v0d10v5[gm]
+write dc.raw all
+
+quit
+.endc
+.end

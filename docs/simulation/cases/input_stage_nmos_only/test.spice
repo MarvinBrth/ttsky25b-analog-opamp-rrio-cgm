@@ -1,0 +1,24 @@
+* Isolated actual input-stage geometry; ideal drain clamps are testbench-only
+.lib "../../models/selected.lib.spice" tt
+.include "../../includes/nmos_only_input.inc"
+.temp 25
+.options klu itl1=500 reltol=.0001
+VDD VAPWR 0 3.3
+VCM cm 0 1.65
+EPLUS in+ 0 cm 0 1
+EMINUS in- 0 cm 0 1
+XDUT VAPWR in+ in- 0 isolated
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=15
+set filetype=ascii
+save all @m.xdut.xm1.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xm3.msky130_fd_pr__nfet_g5v0d10v5[gm]
+op
+write op.raw all
+dc VCM .05 3.25 .05
+wrdata gm.dat @m.xdut.xm1.msky130_fd_pr__nfet_g5v0d10v5[gm] @m.xdut.xm3.msky130_fd_pr__nfet_g5v0d10v5[gm]
+write dc.raw all
+quit
+.endc
+.end

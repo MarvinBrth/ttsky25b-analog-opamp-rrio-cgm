@@ -1,0 +1,33 @@
+* Private characterization / teaching comparison: small_output
+.lib "../../models/selected.lib.spice" tt
+.include "../../includes/small_output.inc"
+.temp 25
+.options klu itl1=500 reltol=0.0001
+.nodeset v(out)=1.65
+VDD vapwr 0 3.3 AC 0
+VDIG vd1v8 0 1.8 AC 0
+VIN inp 0 1.65 AC 0
+VCMD cmd 0 1.65
+BSERVO inn out V=1.65-v(cmd)
+IT 0 out DC 0 AC 0
+ILOAD out 0 .001
+CL out 0 20p
+XDUT vapwr out inp inn 0 vd1v8 sch_dut
+
+.control
+set numdgt=15
+set wr_singlescale
+set wr_vecnames
+set filetype=ascii
+op
+wrdata op.dat v(out) i(VDD) @m.xdut.xcore.xb.xref.xm1.msky130_fd_pr__pfet_g5v0d10v5[id]
+write op.raw all
+dc VCMD .15 3.15 .05
+wrdata source.dat v(out) i(VDD)
+alter ILOAD=-.001
+dc VCMD .15 3.15 .05
+wrdata sink.dat v(out) i(VDD)
+
+quit
+.endc
+.end

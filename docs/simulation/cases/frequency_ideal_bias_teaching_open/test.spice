@@ -1,0 +1,31 @@
+* Private characterization / teaching comparison: ideal_bias
+.lib "../../models/selected.lib.spice" tt
+.include "../../includes/ideal_bias.inc"
+.temp 25
+.options klu itl1=500 reltol=0.0001
+.nodeset v(out)=1.65
+VDD vapwr 0 3.3 AC 0
+VDIG vd1v8 0 1.8 AC 0
+VIN inp 0 1.65 AC 1
+LDC out inn 1e12
+CISO inn cm 1
+VCM cm 0 1.65 AC 0
+IT 0 out DC 0 AC 0
+ILOAD out 0 0
+CL out 0 20p
+XDUT vapwr out inp inn 0 vd1v8 sch_dut
+
+.control
+set numdgt=15
+set wr_singlescale
+set wr_vecnames
+set filetype=ascii
+op
+wrdata op.dat v(out) i(VDD) v(inp)*0
+write op.raw all
+ac dec 60 1 1e8
+wrdata open.dat real(v(out)) imag(v(out)) real(v(inp)-v(inn)) imag(v(inp)-v(inn))
+
+quit
+.endc
+.end

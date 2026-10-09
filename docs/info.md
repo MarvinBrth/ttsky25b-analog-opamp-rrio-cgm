@@ -1,342 +1,392 @@
 # How it works
 
-## 1. Design goals and achieved performance
+## What this amplifier was meant to do
 
-The goal was a compact, self-biased operational amplifier with complementary rail-to-rail input stages and a class-AB output, based on Huijsing, *Operational Amplifiers*, Fig. 7.7.6. The circuit was adapted to SKY130 and the 3.3 V analog supply available on Tiny Tapeout. It should generate its own bias, occupy a 1x2 tile, use only IN+, IN- and OUT as external analog signals, and supply useful load current while retaining stable feedback operation.
+This project started with the compact rail-to-rail amplifier in Johan Huijsing's *Operational Amplifiers*, Fig. 7.7.6. The aim was to turn that architecture into a small SKY130 circuit that could be built on Tiny Tapeout: its own reference and bias, two signal inputs, one output, and enough output current to be useful beyond an unloaded voltage measurement. The final version runs from a 3.3 V analog supply and uses the SKY130 HV MOS families. The shuttle's digital supply remains 1.8 V.
 
-The implemented amplifier meets the self-bias, area and interface goals. The reference supplies approximately 5 µA, with independent mirrors and replica devices generating the other biases. No ideal bias source remains inside the amplifier. Ideal stimulus, load and feedback-test sources appear only in simulation testbenches. The design uses three analog pins and a 145.360 x 225.760 µm template.
+The questions below are the design goals. They are revisited at the end, after the measurements that support each answer.
 
-The electrical results below describe simulations of the schematic and final extracted layout. They are not silicon measurements or production specifications. The schematic curves use the schematic device and junction geometry. The post-layout curves use layout-derived device/finger and junction geometry together with extracted interconnect resistance and capacitance. Differences between them therefore include both geometry and interconnect effects. Both representations use the same SKY130 model configuration, stimuli and loads in each paired plot.
-
-| Design goal | Outcome and practical boundary |
+| Goal | What would demonstrate it? |
 | --- | --- |
-| Internal reference and reliable startup | Approximately 5 µA at nominal conditions; startup checked for the explicitly stated supply ramps. |
-| Wide input common-mode range | Complementary input stages; separate common-mode tests hold OUT at mid-supply so output headroom does not obscure input behaviour. |
-| Output current in both directions | ±1 mA DC core demand checked. Source and sink response differ, especially during fast load changes. |
-| Stable unity-gain operation | Final 42-case, 20 pF core suite: minimum phase margin 71.525°, minimum gain margin 6.428 dB. |
-| Tiny Tapeout integration | 1x2 tile, three analog pins, separate 3.3 V analog and 1.8 V shuttle rails. DRC, LVS, antenna and official prechecks passed. |
-| Large capacitive loads | 20 pF is the principal checked load. 100 pF is not qualified. |
+| Generate its own bias | About 5 µA from the reference, correct mirror/replica biases, startup without forced bias initial conditions. |
+| Accept signals close to both rails | A common-mode sweep that keeps the output away from its headroom limits. |
+| Keep input transconductance reasonably uniform | Measure gm across the handover between the NMOS and PMOS pairs. |
+| Deliver useful current in both directions | Check ±1 mA DC demand and the resulting loss of output swing. |
+| Work as a unity-gain follower | Adequate loop margins and settling, before and after layout. |
+| Tolerate normal supply and temperature changes | Separate 3.3 V ±5% and 10–50 °C tests, with 25 °C as the nominal point. |
+| Fit the Tiny Tapeout interface | A 1x2 layout, three analog pins, and passing physical/interface checks. |
 
-At TT, 27 °C, 3.3 V, a 1.65 V follower command, no DC load and 20 pF, the final full-RC archive gives 1.649973 V at OUT, 260.342 µA supply current and 4.985695 µA reference current. The nominal supply power is approximately 0.859 mW. The unity-feedback return ratio is 98.878 dB at 1 Hz, with a 3.1007 MHz downward unity crossing, 79.555° phase margin and 9.364 dB gain margin. The newly paired simulations in this report use the same circuit and final RC network, with the digital rail held at 1.8 V.
+The report follows the circuit from its reference to its output. Small comparison experiments make the choices visible: changing the reference resistor, removing input-current steering, shrinking the output devices, or removing compensation. These are new controlled comparisons, not a reconstruction of every historical design revision. Unless stated otherwise, each experiment changes one feature and keeps the other dimensions fixed. It therefore shows a mechanism and a tradeoff; it does not prove that every simpler amplifier, after its own optimization, would be inferior.
 
-| Fresh nominal quantity | Schematic | Post-layout |
+All results are simulations. Solid lines mean schematic; dashed lines mean the extracted layout wherever the two are overlaid. The latter includes physical fingers and junction geometry as well as interconnect resistance and capacitance. The load is 20 pF, with no DC load, unless the caption says otherwise.
+
+## 1. Start with a current: the beta multiplier
+
+### How the loop chooses its current
+
+The reference is a self-biased beta multiplier. M40 and M41 form a nominal 1:1 PMOS mirror. M42 is diode-connected, so its current establishes the common NMOS gate voltage. M39 has the same gate voltage but four times the width, and its source is lifted by R1. The larger device needs less gate-source voltage for the same current. The difference appears across R1. Current, gate-source voltages and resistor drop must therefore settle to a mutually consistent value.
+
+![Reference schematic](images/schematic-reference.png)
+Figure 1. The actual reference and startup circuit. Dimensions are in µm. The reference's output transistor M1 is local to this subcircuit; it is not the main amplifier's input M1. VAPWR and VGND labels sit to the left of their connections.
+
+For a long-channel square-law approximation, equal branch currents and negligible body effect give:
+
+`I ≈ 2 / (β42 R1²) × (1 − 1/√K)²`, with `K = β39/β42 = 4` and `β42 = µn Cox W42/L42`.
+
+This equation is useful for choosing a starting point. It says that increasing R reduces current, and increasing K raises it. It is not an accurate final sizing equation for these SKY130 devices. M39 has a raised source but its body stays at ground, so body effect matters. The PMOS mirror sees different drain voltages. The resistor model includes its actual process behavior. Even nominally identical current copies need not carry exactly the same current.
+
+### Why 5 µA, and why these sizes?
+
+The 5 µA value came from the reference already built for this project. It was retained as the unit current for the small-signal bias branches. That gives a modest supply budget while allowing roughly 60 µS of combined input transconductance in this implementation. It is a design choice, not a special current required by Fig. 7.7.6. A lower current could save power but would generally reduce speed or require different widths; a higher current would require rechecking compensation, noise, swing and power together.
+
+The reference uses M42 = 5/1 µm and M39 = 20/1 µm, making K = 4 explicit. M40/M41 and the output copy each use 10/1 µm. Their equal geometry defines the nominal mirror ratio. The resistor is the high-poly 0.69 µm family, with length 30.5 µm. The physical generator's nominal value is about 14.70 kΩ; the simulated DC ratio V(R1)/I(R1) at 25 °C is about 15.37 kΩ. These are different definitions and should not be substituted for each other.
+
+The practical sizing sequence is: choose a realizable matched ratio, estimate a resistor, simulate the actual model, then adjust the resistor and check the reference under its intended load. Here, one diode-connected 5/1 µm NMOS represents the master receiving IREF. The following sweep checks that choice directly.
+
+| Change from the chosen reference | Final IREF at 25 °C, 3.3 V |
+| --- | --- |
+| Chosen: K=4, resistor L=30.5 µm | 4.977 µA |
+| Resistor L=20 µm | 8.441 µA |
+| Resistor L=45 µm | 3.186 µA |
+| K=2, resistor unchanged | 2.698 µA |
+| K=8, resistor unchanged | 7.345 µA |
+
+![Reference sizing and startup comparisons](images/reference-choices.png)
+Figure 2. Standalone reference, one diode-connected NMOS load, 0–3.3 V supply ramp over 10 µs, zero-state UIC. Left: startup present or removed. Right: resistor length or NMOS ratio changed individually; other dimensions stay fixed. Values in the table use the settled 80 µs endpoint.
+
+With the chosen dimensions, the model gives 4.977 µA at the output and 4.586 µA in the resistor branch. The resistor drop is 70.47 mV. The difference between those currents is a reminder to use the actual output-copy current as IREF. A square-law calculation alone would miss that distinction. Choosing K = 2 or 8 can also reach useful currents, but would require a different resistor and another startup/headroom check. The present K = 4 arrangement already supplies the intended bias budget.
+
+### Leaving the zero-current state
+
+Self-bias introduces a second possible equilibrium: everything off. M43 is a weak, diode-connected PMOS that raises Vstartup while the reference is off. M45 then connects the two bias-control nodes and disturbs that condition. As Vbiasn rises, M44 pulls Vstartup down and turns the bridge off. NMOS bodies remain at VGND and PMOS bodies at VAPWR, including M45; the lifted source is not its body connection.
+
+The left-hand comparison in Figure 2 also starts without the three startup transistors. That nominal model still reaches about 5 µA during this ramp. Leakage and the supply ramp provide enough disturbance in this particular test. This is not evidence that startup is dispensable across devices, temperature and supply histories. Nor does the comparison show a startup failure that did not occur. The implemented circuit keeps its deliberate startup path.
+
+Separate complete-amplifier tests include 1, 10 and 100 µs supply ramps at TT, 27 °C, plus a 10 µs ramp at SS, −40 °C and 3.0 V. All eight schematic/layout runs reached their reference-current and output criteria without a forced bias. For the nominal 10 µs ramp the additional delay was about 0.06 µs in both representations. The reference bridge becomes negligible in steady state; the M43/M44 branch still draws roughly 2.82 µA at the archived nominal point. Startup has a small continuing power cost.
+
+### Does the reference stay at 5 µA in everyday use?
+
+![Reference supply and temperature sensitivity](images/reference-everyday.png)
+Figure 3. IREF measured in the complete amplifier. Left: 10, 25 and 50 °C at 3.3 V. Right: 3.135, 3.3 and 3.465 V at 25 °C. TT models, 20 pF, no DC load. The command follows VAPWR/2 in the supply sweep. The connecting lines join measured points, not a continuous sweep.
+
+| Condition | Schematic IREF (µA) | Layout IREF (µA) |
 | --- | --- | --- |
-| OUT (V) | 1.650008 | 1.649973 |
-| Signed OUT−1.65 V error (µV) | 7.834 | -26.630 |
-| Reference current IREF (µA) | 5.008537 | 4.985695 |
-| Analog supply current (µA) | 261.425 | 260.332 |
-| Analog supply power (mW) | 0.8627 | 0.8591 |
+| 10 °C, 3.3 V | 4.737 | 4.715 |
+| 25 °C, 3.3 V | 4.977 | 4.954 |
+| 50 °C, 3.3 V | 5.374 | 5.349 |
+| 25 °C, 3.135 V | 4.876 | 4.854 |
+| 25 °C, 3.465 V | 5.074 | 5.051 |
 
-Supply current is −I(VDD), and IREF is the magnitude of the reference output transistor's drain current. The unloaded supply reading is the amplifier's quiescent current under this testbench boundary. The fresh post-layout value is 260.332 µA versus 260.342 µA in the earlier full-RC archive, a 0.0039% difference. The fresh test fixes VDPWR at 1.8 V and uses its own solver/testbench boundary; these values should not be presented as bit-for-bit identical reruns.
+These are modest laboratory/indoor-to-warm-enclosure test points, not a guarantee for every everyday application. The stronger variation is with temperature. This is a nominal bias reference, not a bandgap or a temperature-compensated precision current source. The question for the amplifier is whether that variation causes unacceptable gain, settling or operating-point changes; Section 6 returns to it.
 
-The rail-to-rail architecture does not imply zero headroom at arbitrary output current. The core regression includes unloaded commands at 0.1 V and VAPWR-0.1 V, and loaded points 0.3 V from the appropriate rail at 1 mA. The external analog switch path adds voltage drop and changes feedback dynamics. Initial board tests should use commands from 0.8 to 2.5 V, no more than 1 mA DC demand and a measured total output-capacitance budget around the tested 20 pF condition.
+## 2. Building the amplifier around that current
 
-## 2. Circuit: from the input signal to the output current
+The book's compact GA–CF–GA arrangement combines signal-to-current conversion, current transfer/summing and output drive. In this implementation the complementary input pairs generate signal currents, the cascode mirror branches combine them and provide high-impedance gate-drive nodes, and the complementary output devices turn those gate signals into load current. The class-AB control and compensation connect these functions. Transistor numbers below follow this project's schematic, not an assumed one-to-one numbering with the book.
 
-The main schematic contains complementary input stages, cascode current mirrors, replica-biased class-AB control, the complementary output pair and Miller compensation. The hierarchical bias block contains the reference and bias distribution. The transistor numbering below follows the actual project, rather than assuming it is identical to the book figure.
+![Main amplifier schematic](images/schematic-main.png)
+Figure 4. The complete amplifier. diffout is OUT. The signal path, replicas, floating-current path and Miller connections are shown with the actual current schematic. An enlarged vector drawing follows in the PDF.
 
-![Main schematic](images/schematic-main.png)
-Figure 1. Source-derived transistor-level schematic from the current wires, positions and device symbols. IN+ and IN- are the signal inputs; diffout is OUT. C1 connects OUT to drain (M16 source); C2/C2B connect OUT to net4 (M19 source). The bias hierarchy is detailed in Section 4.
+### Complementary inputs: coverage first, uniform gm second
 
-M1/M3 form the NMOS signal pair, with tail sink M22. M9/M10 form the PMOS pair, with tail source M13. The PMOS pair supports input operation near ground; the NMOS pair supports operation near the positive rail. Both contribute through the crossover region. M7/M8 and M2/M4 are spillover devices tied to the midpoint bias. Each group matches the dimensions of its corresponding NMOS or PMOS signal pair. They redistribute tail current as common-mode voltage changes. This aims to reduce the variation of total input transconductance; the actual crossover behaviour is evaluated electrically below.
+M1/M3 are the NMOS input pair, supplied by tail sink M22. M9/M10 are the PMOS pair, supplied by M13. A single NMOS pair loses useful transconductance near ground because its tail needs voltage headroom. A PMOS pair covers that end of the range. The NMOS pair covers the upper end. Putting both in parallel solves the coverage problem, but both conduct around the middle, which can make their combined gm nearly twice the edge value.
 
-The NMOS input currents feed the PMOS cascode mirror M14/M15 with M24/M16. The PMOS input currents feed the NMOS mirror M20/M21 with M18/M19. Their output-side nodes net10 and net12 drive the gates of output PMOS M29 and output NMOS M32. M29 sources current from VAPWR; M32 sinks it to VGND.
+M7/M8 and M2/M4 are the spillover devices. Their gates see the midpoint bias. As common mode moves through the handover, these devices steer some tail current away from the signal devices. The intention is to reduce the central gm increase without abandoning complementary inputs.
 
-M26/M35 form the complementary class-AB control path between the output gate-drive nodes. Replica stacks M23/M25/M30 and M31/M34/M28 generate the internal control voltages net8 and net9. MFC_N/MFC_P copy the complementary control geometry between the PMOS mirror reference bus net6 and NMOS bus fc_nref. This floating-current path is self-determined by the operating point. It is not an externally forced 5 µA branch. Its bodies still connect to the supply rails.
+![Input-stage alternatives](images/input-alternatives.png)
+Figure 5. Newly simulated input-stage comparisons using the actual input/tail dimensions and real bias block. Both signal gates track the swept common-mode voltage. Drains are ideally clamped to their respective supply rails to isolate the input-current mechanism. These clamps are testbench elements. This is not a full-amplifier comparison.
 
-All MOS devices use the SKY130 HV nfet_g5v0d10v5 and pfet_g5v0d10v5 families. NMOS bulks connect to VGND; PMOS bulks connect to VAPWR. The high-voltage device families provide the device choice for this 3.3 V implementation; this does not specify amplifier operation at a higher supply.
+The estimated input gm is half the sum of the intrinsic gm values of the signal devices. That is the small-signal differential-input estimate for this comparison; it is not output transconductance. From 0.3 to 3.0 V common mode, the complementary pair without spillover has a maximum/minimum ratio of 1.94. With spillover it falls to 1.17. The NMOS-only curve shows why a simpler single-pair input would give up low-common-mode coverage.
 
-| Device group | W / L (µm), nf, multiplicity |
+![Final input-stage gm](images/input-gm-final.png)
+Figure 6. The same intrinsic-gm estimate in the complete amplifier, with output held near 1.65 V by a DC feedback level shift. The extracted curve sums all 50 physical signal-input fingers. Common-mode sweep: 0.05–3.25 V; the stated uniformity metric uses 0.3–3.0 V.
+
+After layout, the estimated gm ranges from 56.39 to 65.61 µS over 0.3–3.0 V: a 1.164 maximum/minimum ratio, or 15.1% peak-to-peak relative to the midpoint of those extrema. The steering clearly helps. Calling the result exactly constant-gm would go too far. A tighter requirement would call for another round of steering-ratio/midpoint optimization and verification across common mode, process and temperature.
+
+The input widths are 69.44/0.5 µm for each NMOS group, nf = 5, and 229.17/0.5 µm for each PMOS group, nf = 10, m = 2. Each spillover group matches its corresponding input geometry. The wider PMOS devices compensate for their lower transconductance per unit width at the selected current. A first estimate for one active pair is gm ≈ Itail/Vov: 5 µA and 60 µS suggest an effective overdrive around 80 mV. At such a small value, sizing from the actual model's gm/current curves is more useful than trusting a strong-inversion square law. Width is adjusted to the wanted gm at the chosen current, then the complementary handover is checked as in Figures 5 and 6. The 6 µm tail lengths help make their current less sensitive to drain voltage. This report validates the chosen sizes; it does not claim they are the unique optimum for noise, mismatch and speed.
+
+### Cascode mirrors: gain costs headroom
+
+The NMOS signal currents enter the PMOS mirror branch M14/M15 with cascodes M24/M16. The PMOS signal currents enter the NMOS mirror branch M20/M21 with M18/M19. The cascodes reduce changes in the mirror devices' drain voltages as the output-side nodes move. Less current error and higher output resistance help create voltage gain at the output-transistor gate-drive nodes.
+
+![Simple and cascode mirror comparison](images/mirror-alternatives.png)
+Figure 7. Standalone NMOS mirror experiment: a 5 µA ideal testbench master, the actual 6.66/2 µm mirror geometry and 13.89/0.5 µm cascode geometry, and a swept output voltage. It illustrates output resistance and compliance; it is not a replacement amplifier or an ablation of the complete folded branches.
+
+Between 1.5 and 2.5 V, the measured slope corresponds to about 12.2 MΩ for the simple mirror and 204.9 MΩ for the cascode. The cascode current is flatter once sufficient headroom exists. Near ground, the extra device makes compliance harder. A simpler two-stage amplifier could use fewer transistors and lower internal headroom; reaching the same gain, input coverage and output swing would require its own design. The present branches preserve the book's architecture while the replica biases adapt their headroom to SKY130.
+
+The mirror groups use L = 2 µm, while their common-gate cascodes use L = 0.5 µm. Longer mirror channels help output resistance. Shorter cascodes provide gm without another large gate capacitance. Their gate voltages must place the underlying mirror devices at sensible drain voltages; merely copying a voltage from the 2 V book circuit would not establish that at 3.3 V.
+
+### Class AB: idle current and load current are different
+
+PMOS M29 sources current from VAPWR; NMOS M32 sinks current to VGND. M26/M35 couple the two gate-drive sides. The replica stacks M23/M25/M30 and M31/M34/M28 establish the internal class-AB control voltages. The output pair retains a finite idle current, and feedback moves the gate drives when the load asks for much more current.
+
+MFC_N/MFC_P form the complementary floating-current copy between internal reference buses. Its current is established by the surrounding circuit and device voltages. It is not another externally imposed 5 µA sink or source. Its nominal archived current is about 4.72 µA. This distinction matters when replacing ideal sources: forcing every visible branch to IREF would overconstrain the class-AB loop.
+
+At the archived 27 °C nominal point the output devices each carry about 162 µA. Those are the two ends of the same supply-to-ground idle path; adding them would double-count the current. A class-A output biased at only a few µA would be much simpler but could not sustain 1 mA in both directions. Class AB provides that larger drive with a lower idle budget than a permanently 1 mA class-A path. That comparison is a current-budget argument, not a simulated alternative amplifier.
+
+The chosen output dimensions are M29 = 440/2 µm and M32 = 133.2/2 µm, each with 40 fingers. W is the total width of one instance, so their per-finger widths are 11 and 3.33 µm. For input devices with m = 2, effective repeated width is mW. Multiplying W by nf again would count the width twice.
+
+![Output-device sizing comparison](images/output-sizing.png)
+Figure 8. Full schematic versus the same schematic with output W reduced to one quarter; all other devices and compensation unchanged. A DC feedback level shift holds input common mode near 1.65 V while sweeping the requested output. Load is +1 mA out of OUT for sourcing, then −1 mA for sinking. Shading marks ±2 mV tracking error. This comparison checks drive/headroom, not the smaller version's complete stability.
+
+On the sampled 0.15–3.15 V interval, the chosen widths meet the ±2 mV criterion throughout both load directions. With quarter-width devices the accepted source interval ends near 2.90 V and the sink interval starts near 0.50 V. The chosen widths buy useful rail headroom at this current. The cost is larger area and gate capacitance, which the preceding stages must drive. Reducing channel length would also change output resistance, idle bias and compensation; it is not a free speed improvement.
+
+### Miller compensation: sacrificing excess bandwidth for usable feedback
+
+There is more than one high-impedance internal node. Without compensation, accumulating phase lag can make unity feedback unstable before the loop gain drops below one. The three MIM capacitors return output motion to the source-side cascode nodes. C1 connects OUT to drain, the M16 source node. C2 and C2B connect OUT to net4, the M19 source node. They are not simply connected to the output transistor gates.
+
+The chosen MIM dimensions are 18×18, 30×30 and 30×10 µm. Nominal generator values are approximately 0.662 pF for C1 and 2.438 pF for C2+C2B. Their unequal values reflect the unequal complementary paths.
+
+![Compensation comparison](images/compensation-alternatives.png)
+Figure 9. Unity-follower loop return ratio at TT, 25 °C, 3.3 V and 20 pF. Removing only C1/C2/C2B leaves the DC point nearly unchanged but changes the frequency response. The loop measurement preserves DC feedback and port loading.
+
+With the chosen capacitors, schematic loop unity frequency is 3.09 MHz and phase margin is 80.6°. Removing them raises the crossing to 9.69 MHz but gives -11.8° phase margin and -7.2 dB gain margin. The uncompensated alternative is unsuitable for this unity-feedback condition. More capacitance could add margin at the expense of speed and area; less could recover bandwidth while reducing the load margin. Load and step tests, rather than bandwidth alone, decide whether the chosen balance is useful.
+
+## 3. Turn the ideal biases into real circuits
+
+IREF is used once to establish a master gate voltage. Its receiving device, MBN, is diode-connected. NMOS copies then get that gate voltage and produce separate currents in separate branches. One NMOS master copy drives a diode-connected PMOS master, which provides the complementary set of PMOS copies. This is how a single reference can serve several consumers without dividing its original current unpredictably.
+
+![Bias tree](images/schematic-bias.png)
+Figure 10. The real bias tree. The reference output feeds one master. Independent mirror devices supply the current-consuming replicas. Sharing a gate voltage is appropriate; sharing one current-output node between several independent consumers is not equivalent.
+
+| Node | How it is generated and what it biases |
 | --- | --- |
-| NMOS inputs M1/M3 and spillover M7/M8 | 69.44 / 0.5, nf=5, m=1 |
-| PMOS inputs M9/M10 and spillover M2/M4 | 229.17 / 0.5, nf=10, m=2 |
-| PMOS tails M13/M23 | 33 / 6, nf=1, m=1 |
-| NMOS tails M22/M31 | 10 / 6, nf=1, m=1 |
-| PMOS mirror/diode replicas M14/M15/M28 | 22 / 2, nf=2, m=1 |
-| NMOS mirror/diode replicas M20/M21/M30 | 6.66 / 2, nf=2, m=1 |
-| PMOS cascodes/control/replica M16/M24/M34/M35/MFC_P | 45.83 / 0.5, nf=1, m=1 |
-| NMOS cascodes/control/replica M18/M19/M25/M26/MFC_N | 13.89 / 0.5, nf=1, m=1 |
-| Output PMOS M29 | 440 / 2, nf=40, m=1 |
-| Output NMOS M32 | 133.2 / 2, nf=40, m=1 |
+| bias1 | A PMOS tail replica MPTAIL, sunk by an independent NMOS mirror; gates of M13/M23. |
+| bias4 | An NMOS tail replica MNTAIL, fed by an independent PMOS mirror; gates of M22/M31. |
+| bias2 | PMOS cascode replica plus RPCAS source shift; gates of M24/M16. |
+| bias3 | NMOS cascode replica plus RNCAS source shift; gates of M18/M19. |
+| bias | An equal-resistor supply midpoint for the spillover gates. |
 
-W is the total width across the fingers of one instance. Its per-finger width is W/nf, and the effective repeated width is mW. Multiplying W by nf again would overstate the device size. Thus each PMOS input group has 458.34 µm effective width, while the output PMOS and NMOS have 11 and 3.33 µm per finger. These widths provide output current capability; the loop and load tests determine how much of it is useful with adequate headroom and stability.
+The tail replicas use the same dimensions as the tails: PMOS 33/6 µm and NMOS 10/6 µm. The cascode replicas use the appropriate polarity and geometry. RPCAS/RNCAS are 100 µm high-poly resistors, approximately 46.91 kΩ by the physical generator. Their voltage drops shift the replica operating points. The midpoint uses two 150 µm resistors. Its roughly 22.2 µA divider current is part of the power budget; it is not another copy of 5 µA.
 
-Compensation C1 connects OUT to the source-side PMOS cascode node drain. C2 and C2B connect OUT to the source-side NMOS cascode node net4. They do not connect directly to net10/net12. The MIM dimensions are 18 x 18, 30 x 30 and 30 x 10 µm, giving nominal generator capacitances of approximately 0.662 pF and 2.438 pF for the combined lower branch. These values form the implemented compensation, assessed with the matched loop and load tests below.
+At the archived nominal extracted point, bias1/bias4 are 2.054/1.047 V, bias2/bias3 are 2.046/1.139 V, and the midpoint is 1.650 V. Actual PMOS and NMOS input tails are about 5.25 and 5.73 µA. Those deviations from IREF come from different device voltages, body effects and mirror compliance. The target is correct operation of each branch, not equal current numbers everywhere.
 
-## 3. Physical implementation
+![Real versus ideal bias comparison](images/real-bias-comparison.png)
+Figure 11. Schematic open-loop voltage gain with the real reference/tree and with five fixed ideal bias voltages replacing that block. The ideal values are taken from the earlier nominal DC solution. Both tests use 3.3 V, 25 °C and 20 pF. The ideal circuit is a private teaching experiment and is not the submitted design.
 
-![Final physical layout](images/layout.png)
-Figure 2. Final submitted-layout geometry, with dimensions in µm. The template boundary is 145.360 x 225.760 µm. The KIT and Marvin artwork occupies the free region near the top.
+The similar nominal gain curves show that the real tree reproduces the intended small-signal operating point. They do not show immunity to supply, temperature or mismatch. The ideal version also draws current from hidden ideal sources, so its VAPWR reading would be an unfair power comparison. The real amplifier contains no ideal bias source. All PMOS bodies connect to VAPWR and all NMOS bodies to VGND, including lifted-source replicas and floating-current devices.
 
-The hierarchy contains the reference, bias generators, input devices, mirrors, class-AB replicas, output devices and three MIM capacitors. Repeated fingers implement the wider MOS groups. Well and substrate contacts provide the body connections required by the schematic. Interconnect uses metal1 through metal4; metal5 is reserved for shuttle infrastructure and is absent from this design.
+## 4. What the layout adds
 
-The electrical effect of the layout is evaluated using resistance and capacitance extracted from this final hierarchy. Parasitics can shift the bias point, increase capacitive loading at internal nodes and alter the locations of poles and zeros. The following electrical chapters compare those effects directly with the schematic, rather than inferring performance from the drawing.
+![Physical layout](images/layout.png)
+Figure 12. Final layout in the 145.360×225.760 µm 1x2 template. Wide devices are divided into fingers; wells and substrate contacts implement the body connections. KIT and Marvin occupy the free artwork region.
 
-Hierarchical Magic DRC and the exported-GDS readback each report zero errors. Netgen LVS matches the reference circuit uniquely. The antenna check has zero feedback entries, and all 15 official prechecks passed. These checks establish physical and interface consistency; the electrical simulations establish the tested operating behaviour.
+The schematic defines which terminals share a net. The layout adds the actual junction dimensions and the resistance and capacitance of the conductors. Those changes can move bias points and poles even when LVS confirms the same circuit. This is why every important performance plot compares schematic and extraction under the same testbench.
 
-## 4. Reference current, startup and bias distribution
+Metal1 through metal4 are used. Metal5 is reserved for shuttle infrastructure and is absent from this design. Hierarchical Magic DRC and GDS readback report zero errors, LVS matches uniquely, the antenna check is clean, and all 15 official prechecks passed on the final exported layout. These are physical/interface checks, not proof of analog performance.
 
-The beta multiplier is the origin of the bias tree. PMOS devices M40/M41 have the same geometry and form a nominal 1:1 mirror; their actual currents depend on compliance and channel-length modulation. M42 is diode-connected with W/L=5/1 µm; M39 has W/L=20/1 µm and a source resistor. Their geometry ratio is K=4. R1 is a 0.69 µm-wide high-poly resistor with length 30.5 µm and a nominal generator resistance around 14.70 kΩ.
+An [interactive 3D layout viewer](https://marvinbrth.github.io/ttsky26d-analog-opamp-rrio-cgm/) is linked in the README as well. It uses the generated OAS layout and the Tiny Tapeout GDS viewer. The final GDS is unchanged by this documentation revision.
 
-![Reference and startup schematic](images/schematic-reference.png)
-Figure 3. Source-derived schematic of the self-biased beta multiplier and startup path. XREF.M1 is the reference output copy, distinct from the main amplifier's input M1.
+## 5. Setting up the simulations
 
-The resistor converts the difference in NMOS gate-source voltages into a self-consistent current. An ideal square-law estimate is I = 2/(β42 R1²) x (1-1/sqrt(K))², where β42 includes the geometry of M42. The real SKY130 result also depends on body effect, mirror compliance, channel-length modulation and the resistor model. This is a nominal bias reference, rather than a temperature-compensated precision reference.
+### DC and ordinary closed-loop tests
 
-The zero-current equilibrium requires a startup circuit. Weak diode-connected PMOS M43 raises Vstartup when the reference is off. M45 then conducts between Vbiasp and Vbiasn, disturbing that state. As Vbiasn rises, M44 pulls Vstartup down and weakens M45. At the archived nominal full-RC point the bridge current is negligible, but the M43/M44 pull-up/pull-down path still consumes about 2.818 µA. Startup therefore has a small steady-state supply cost.
+![Unity follower testbench](images/bench-follower.png)
+Figure 13. The ordinary follower testbench. Direct OUT-to-IN− feedback is correct for DC, signal AC transfer and transient response. The capacitor represents the specified output load. Supplies are omitted from the amplifier symbol but stated above it.
 
-The fresh startup runs begin with a zero-state UIC simulation of the complete amplifier, without a bias nodeset. VAPWR and the input command ramp together from zero, with IN+=VAPWR/2. VDPWR is held at 1.8 V, the output load is 20 pF and no DC output current is demanded. Startup is declared settled only after the supply ramp has ended, IREF is within 5% of its final value and |OUT−VAPWR/2| is below 2 mV, with both conditions maintained to the end of the record.
+A straight feedback wire is exactly what a normal unity follower needs. For AC signal transfer, VIN has its DC value plus AC = 1; ngspice linearizes the transistor circuit at that DC operating point. AC = 1 is a transfer-function normalization, not a physically applied 1 V large-signal swing. For a step test, VIN instead receives the specified time waveform. A zero-volt source can replace the wire if a current measurement or later injection needs it; it is still a DC/AC short when its stimulus is zero.
 
-| Process / temperature / supply | Ramp (µs) | Schematic delay after ramp (µs) | Post-layout delay after ramp (µs) | Final IREF, schematic / post-layout (µA) |
-| --- | --- | --- | --- | --- |
-| TT, 27 °C, 3.3 V | 1 | 0.665 | 0.738 | 5.0085 / 4.9857 |
-| TT, 27 °C, 3.3 V | 10 | 0.060 | 0.060 | 5.0085 / 4.9857 |
-| TT, 27 °C, 3.3 V | 100 | 0.000 | 0.000 | 5.0085 / 4.9857 |
-| SS, −40 °C, 3.0 V | 10 | 0.058 | 0.744 | 3.9166 / 3.8993 |
+Before trusting a frequency plot, check the DC solution: OUT near the intended command, IREF active, plausible supply current and device terminal voltages. A converged solution can still be the wrong equilibrium. A nodeset is only a starting guess and is not startup evidence. Startup is tested separately from a zero-state transient.
 
-The record extends 300 µs beyond each ramp. A reported zero delay for the 100 µs ramp means the first sampled point at the completed ramp already meets the criterion; it does not establish zero physical delay. The maximum timestep is 50 ns for the 1 µs ramp and 200 ns for the other ramps. These eight runs establish startup for those ramps and profiles, rather than for every possible supply sequence.
+### True open-loop gain while keeping the DC point
 
-![Reference startup comparison](images/reference-startup.png)
-Figure 4. Nominal TT zero-state UIC startup of the complete amplifier with a 10 µs supply/input ramp. Schematic and post-layout results are overlaid; no forced bias initial condition is used. The input command follows half the ramped supply. Other tested ramps and the SS-cold case are summarized in the table.
+![Open-loop gain testbench](images/bench-open.png)
+Figure 14. The open-loop voltage-gain test. LDC is a DC short but effectively open over the AC sweep. CISO is a DC open and holds IN− at AC ground through the fixed common-mode source. Both are ideal testbench devices, never physical on-chip elements.
 
-The reference output terminates at diode-connected MBN. Its gate is shared with independent NMOS copies MNMASTER, MNPTAIL and MNPCAS. MNMASTER drives diode-connected MPMASTER, whose gate drives the independent PMOS copies MPNTAIL and MPNCAS. Current-consuming branches receive their own mirror devices; the original IREF wire does not directly feed several consumers.
+If feedback is simply disconnected, a tiny input offset can drive the high-gain amplifier to a rail. The resulting AC linearization then describes a saturated circuit. LDC = 10¹² H closes the loop at DC; CISO = 1 F fixes IN− for AC. At the lowest swept frequency, 1 Hz, those impedances already separate the two jobs by many orders of magnitude. Gain is calculated as `Aol = V(OUT)/(V(IN+) − V(IN−))`, using the actual differential voltage rather than assuming it is exactly one. The open and closed testbench DC outputs agree within 2 µV in these runs.
 
-![Bias distribution schematic](images/schematic-bias.png)
-Figure 5. Source-derived bias schematic. Independent copies create the PMOS and NMOS tail/cascode gate biases. Multiple gates may share a bias voltage; they add capacitance but negligible DC gate current in the model.
+### Stability requires a loop measurement
 
-| Bias node | Generation and use |
-| --- | --- |
-| bias1 | PMOS MPTAIL diode, sunk by MNPTAIL; gates of M13/M23. |
-| bias4 | NMOS MNTAIL diode, fed by MPNTAIL; gates of M22/M31. |
-| bias2 | RPCAS plus PMOS MPCAS diode, sunk by MNPCAS; gates of M24/M16. |
-| bias3 | NMOS MNCAS diode plus RNCAS, fed by MPNCAS; gates of M18/M19. |
-| bias | Equal RCM_TOP/RCM_BOTTOM divider; spillover gates M2/M4/M7/M8. |
+![Loop injection testbench](images/bench-loop.png)
+Figure 15. Two-injection return-ratio measurement at the follower feedback port. VJ has zero DC voltage; IT has zero DC current. One AC run excites VJ, another IT. The signal source has AC = 0 in both. Normal signal transfer is a third run with both injection stimuli zero.
 
-RPCAS and RNCAS are each 100 µm long, approximately 46.91 kΩ by the nominal generator value. Their roughly 0.235 V drop at 5 µA shifts the replica source voltage to provide cascode headroom. The midpoint divider uses two 150 µm high-poly resistors, approximately 70.09 kΩ each by the generator value. Its archived modeled current is 22.215 µA. It contributes directly to the supply budget and is separate from IREF.
+Open-loop voltage gain and loop return ratio are related but not identical. Finite reverse transmission and loading at the injection point can matter. The two-injection calculation retains the circuit on both sides of that port and gives the return ratio used for phase and gain margins. For the source orientations shown, vv and iv are V(OUT) and I(VJ) from the 1 V injection; vi and ii are the same responses from the 1 A injection. All four are complex frequency responses, normalized by their respective test stimulus. IT points from ground into OUT, and positive I(VJ) points from IN− to OUT. The saved responses produce the plotted return ratio with:
 
-| Final full-RC nominal bias | Voltage or current |
-| --- | --- |
-| bias1 / bias4 | 2.053540 / 1.046924 V |
-| bias2 / bias3 | 2.046170 / 1.139126 V |
-| Midpoint bias at spillover gates | 1.650283 V |
-| NMOS / PMOS master gates | 0.912340 / 2.161656 V |
-| Class-AB replica net8 / net9 | 1.938737 / 0.951872 V |
-| PMOS / NMOS input tail current | 5.2455 / 5.7343 µA |
-| Floating-copy total current | 4.7180 µA |
-| Output PMOS / NMOS current at OUT | 161.8829 / 161.8829 µA |
+```
+k = 2 × (iv × vi − ii × vv) − ii − vv
+T = k / (1 − k)
+```
 
-The two output idle currents describe the same approximately 162 µA path through the complementary pair. Adding them would double-count the supply draw. Nominal 1:1 copies also differ slightly from IREF because their source/drain/body conditions differ. The table uses local terminal voltages and DC terminal currents, including leakage, recovered from the saved full-RC point.
+The phase margin is 180° plus loop phase at a downward unity crossing; gain margin is the distance below unity at a −180° phase crossing. Multiple crossings are checked rather than selecting the most favorable one. Do not change injection directions without adapting the sign convention.
 
-The reference is visibly supply- and temperature-dependent. The tables contain three discrete TT points per study, all with 20 pF and no DC load. The supply study holds temperature at 27 °C and commands VAPWR/2, so it also changes the input common-mode operating point. The temperature study holds VAPWR at 3.3 V and the command at 1.65 V. VDPWR remains 1.8 V throughout.
+The frequency sweep uses 60 points per decade from 1 Hz to 100 MHz. A negative margin is a failure of the tested feedback condition, even if an AC plot still looks smooth. A useful closed-loop magnitude curve and a settling transient provide complementary checks. They are not substitutes for each other.
 
-| Condition | Schematic IREF (µA) | Post-layout IREF (µA) | Schematic supply (µA) | Post-layout supply (µA) |
-| --- | --- | --- | --- | --- |
-| 3.0 V | 4.8228 | 4.8013 | 238.968 | 238.019 |
-| 3.3 V | 5.0085 | 4.9857 | 261.425 | 260.332 |
-| 3.6 V | 5.1848 | 5.1607 | 283.345 | 282.114 |
+### Separate common mode from output swing
 
-| Condition | Schematic IREF (µA) | Post-layout IREF (µA) | Schematic supply (µA) | Post-layout supply (µA) |
-| --- | --- | --- | --- | --- |
-| −40 °C | 3.9365 | 3.9187 | 207.634 | 206.780 |
-| 27 °C | 5.0085 | 4.9857 | 261.425 | 260.332 |
-| 125 °C | 6.5270 | 6.4974 | 339.775 | 338.372 |
+![Common-mode testbench](images/bench-commonmode.png)
+Figure 16. A DC level shift keeps OUT near 1.65 V while moving both inputs through the common-mode range. The behavioral source obeys V(IN−)−V(OUT) = V(IN+)−1.65 V. It exists only in the testbench.
 
-Relative to TT/27 °C/3.3 V, changing VAPWR from 3.0 to 3.6 V moves IREF by -3.71% to +3.52% in the schematic and -3.70% to +3.51% after layout. Post-layout supply current changes by -8.57% to +8.37%. Changing temperature from −40 to 125 °C moves IREF by -21.40% to +30.32% in the schematic and -21.40% to +30.32% after layout; post-layout supply current changes by -20.57% to +29.98%. These are finite changes from the nominal point, not fitted temperature coefficients. The generated bias voltages in Figures 6 and 7 move with the device thresholds, resistor values and required mirror compliance; approximately 5 µA is the nominal design point, rather than a precision current specification.
+A follower sweep moves input common mode and output voltage together. If it fails near a rail, it cannot by itself say whether the input stage or the output lost headroom. For the common-mode test above, OUT remains near mid-supply. Conversely, the output-range test keeps IN+ at 1.65 V and uses a level shift with the swept output command. These two tests isolate the limits that a single follower sweep combines.
 
-![Bias supply sensitivity](images/bias-supply.png)
-Figure 6. Supply dependence at TT and 27 °C. Only VAPWR changes between 3.0, 3.3 and 3.6 V. The follower command is VAPWR/2; load is 20 pF with no DC demand. Lines connect the three simulated points.
+## 6. How the complete amplifier performs
 
-![Bias temperature sensitivity](images/bias-temperature.png)
-Figure 7. Temperature dependence at TT and fixed 3.3 V. Points at -40, 27 and 125 °C compare IREF, total supply current and the generated bias voltages. The input/output operating point is 1.65 V with 20 pF and no DC demand.
+### Open loop, then closed loop
 
-Temperature changes MOS mobility and threshold voltage, body effect and high-poly resistance. Their effects compete, so a monotonic current or a zero temperature coefficient cannot be assumed from the beta-multiplier formula. Supply dependence also reflects finite mirror output resistance and compliance. The isolated sweeps above distinguish these effects from the combined process/temperature/supply regression.
+| Quantity: TT, 25 °C, 3.3 V, 20 pF | Schematic | Extracted layout |
+| --- | --- | --- |
+| Settled OUT (V) | 1.650008 | 1.649973 |
+| IREF (µA) | 4.977 | 4.954 |
+| Supply current (µA) | 259.81 | 258.72 |
+| Analog idle power (mW) | 0.857 | 0.854 |
+| Open-loop gain at 1 Hz (dB) | 99.01 | 98.94 |
+| Loop unity frequency (MHz) | 3.086 | 3.100 |
+| Loop phase margin (degrees) | 80.56 | 79.55 |
+| Loop gain margin (dB) | 10.01 | 9.36 |
 
-## 5. DC regulation, common-mode range and output drive
+![Nominal open-loop gain](images/open-loop-nominal.png)
+Figure 17. True open-loop voltage gain before and after layout. TT, 25 °C, 3.3 V, input common mode 1.65 V, 20 pF and no DC load. Margins in the table come from the separate loop-return-ratio test, not by relabeling this transfer as loop gain.
 
-A follower sweep tests whether OUT follows IN+, but it changes input common-mode and output voltage together. This report therefore uses both a follower transfer sweep and a separate common-mode sweep with OUT held near mid-supply by an ideal test-only level shift in the feedback path. That level shift is not part of the amplifier.
+The layout barely changes low-frequency gain and unity-loop frequency here. That agreement is encouraging but does not imply every parasitic effect is small; supply rejection later in this chapter provides a counterexample. The nominal output error is the settled deterministic follower error. It is not a mismatch offset specification.
 
-![DC output comparison](images/dc-transfer.png)
-Figure 8. Core follower transfer and signed regulation error at TT, 27 °C, 3.3 V and 20 pF, with no DC load and ±1 mA current demand. Positive load demand means the amplifier sources current from OUT; negative demand means it sinks current into OUT.
+![Open-loop gain for different loads](images/aol-loads.png)
+Figure 18. True open-loop gain for 5, 20, 50 and 100 pF, with schematic and layout overlaid. TT, 25 °C, 3.3 V, no DC load. Colors identify load; line style identifies representation.
 
-The following intervals are the contiguous valid sampled commands around 1.65 V. A point is accepted only when the DC device-terminal guard passes, |OUT−command| is below 2 mV, IREF is between 3 and 7 µA and the analog supply delivers positive current.
+![Closed-loop transfer for different loads](images/closed-loads.png)
+Figure 19. Signal transfer of the unity follower under the same load conditions. A rise above 0 dB indicates frequency peaking. It is distinct from step overshoot.
 
-| Test | DC load | Schematic valid command (V) | Post-layout valid command (V) |
+| CL (pF) | Phase margin, schematic/layout (°) | Gain margin, schematic/layout (dB) | Peaking, schematic/layout (dB) |
 | --- | --- | --- | --- |
-| Follower | 0 | 0.05–3.25 | 0.05–3.25 |
-| Follower | +1 mA source | 0.05–3.20 | 0.05–3.15 |
-| Follower | −1 mA sink | 0.10–3.25 | 0.15–3.25 |
-| Fixed input common mode | 0 | 0.05–3.25 | 0.05–3.25 |
-| Fixed input common mode | +1 mA source | 0.05–3.20 | 0.05–3.20 |
-| Fixed input common mode | −1 mA sink | 0.10–3.25 | 0.15–3.25 |
+| 5 | 85.3/84.8 | 12.19/11.27 | 0.00/0.00 |
+| 20 | 80.6/79.6 | 10.01/9.36 | 0.00/0.00 |
+| 50 | 70.6/68.4 | 9.57/8.98 | 0.00/0.00 |
+| 100 | 56.1/52.9 | 9.44/8.87 | 0.82/1.52 |
 
-For the fixed-input-common-mode output sweep, IN+ is fixed at 1.65 V and a test-only feedback level shift requests each output command. The differential correction is small inside the valid interval, so the input pair's mean remains close to 1.65 V. The values are sampled boundaries on a 50 mV grid, rather than continuously located failure thresholds. A 0.05 V low boundary or 3.25 V high boundary reaches the scan limit; it does not qualify the exact rail. Points outside an interval are not qualified by that test.
+The capacitor changes output dynamics much more than the DC bias. At 100 pF, the nominal extracted phase margin is 52.9° and the closed-loop peak is 1.52 dB. Both loop margins are positive, but the higher peaking and lower phase margin make this a weaker result than at 20 pF. These additional nominal load checks do not qualify all four loads across common mode, corners, mismatch and the shuttle's external switch path. The principal multi-condition qualification remains 20 pF. The four archived interface cases, including switch/resistance and 5 pF path loading, had a lowest phase margin of 60.92° and a maximum closed-loop peak of 0.688 dB. Board wiring and instruments still need an explicit capacitance budget.
 
-![Isolated output swing comparison](images/output-range.png)
-Figure 8b. Output-range sweep with input common mode held near 1.65 V by a test-only feedback level shift: TT, 27 °C, 3.3 V, 20 pF, with no DC load and ±1 mA. This separates output-stage headroom from the moving input common mode of the follower sweep. All DC sweeps sample commands from 0.05 to 3.25 V on a 50 mV grid; the exact rails are not sampled.
+### Input range and available output current
 
-![Input common-mode comparison](images/common-mode.png)
-Figure 9. Input common-mode sweep at TT, 27 °C and 3.3 V, with nominal OUT held at 1.65 V and 20 pF, no DC load. The differential input required to maintain feedback and the supply current reveal crossover behaviour separately from output swing.
+![DC output range](images/output-range.png)
+Figure 20. Separate fixed-input-common-mode output sweeps, before and after layout, at TT, 27 °C and 3.3 V. No load and ±1 mA demand are shown. The earlier DC suite uses 50 mV sample spacing and a ±2 mV tracking criterion.
 
-The feedback source is defined by IN−−OUT = IN+−1.65 V. Consequently the signed differential required by the amplifier is IN+−IN− = 1.65 V−OUT, the negative of the saved OUT−1.65 V servo error. This relation recovers the differential from the saved output trace without claiming an independently saved input-difference signal. The swept command is IN+; the actual input mean is IN+ minus half this differential.
+The separate unloaded common-mode test passes from 0.05 to 3.25 V on that sampled grid. It demonstrates operation close to both rails without requiring the output to follow them. The unloaded fixed-common-mode output test also passes 0.05–3.25 V. At 1 mA, the extracted source interval is 0.05–3.20 V and the sink interval is 0.15–3.25 V. A follower imposes both limits together and passes 0.05–3.15 V sourcing and 0.15–3.25 V sinking.
 
-| Representation | Valid IN+ command (V) | Required signed differential over interval (µV) | Supply current over interval (µA) |
+These results support the rail-to-rail architecture in a practical sense: both input and output work near the rails. They do not establish exact-rail regulation or zero headroom at arbitrary current. The 50 mV grid also limits the precision of each quoted endpoint. ±1 mA is the tested useful demand, not a measured current limit or a short-circuit rating. Sourcing and sinking are asymmetric, and the shuttle switch adds voltage drop between core OUT and the external pin.
+
+### A 50 mV step, then a large step
+
+![Small-step and ordinary-condition comparison](images/step-everyday.png)
+Figure 21. Unity-follower 50 mV rising step at the five ordinary supply/temperature conditions. Input edge: 1 ns. Left: output change relative to its pre-step value. Right: absolute error from the command, with a ±0.5 mV settling band. 20 pF, no DC load; solid schematic, dashed extraction. Falling steps are included in the table.
+
+| Condition | Layout rise/fall (ns) | Schematic settle up/down (µs) | Layout settle up/down (µs) |
 | --- | --- | --- | --- |
-| Schematic | 0.05–3.25 | -9.31 to -5.99 | 261.42–261.80 |
-| Post-layout | 0.05–3.25 | +10.06 to +51.73 | 260.34–260.71 |
+| 10 °C, 3.3 V | 100 / 96 | 0.246 / 0.234 | 0.259 / 0.233 |
+| 25 °C, 3.3 V | 100 / 96 | 0.244 / 0.232 | 0.257 / 0.231 |
+| 50 °C, 3.3 V | 100 / 94 | 0.244 / 0.232 | 0.255 / 0.229 |
+| 25 °C, 3.135 V | 102 / 100 | 0.256 / 0.242 | 0.269 / 0.241 |
+| 25 °C, 3.465 V | 96 / 90 | 0.236 / 0.224 | 0.247 / 0.221 |
 
-OUT is held within 2 mV of 1.65 V at accepted points, with the same current and physical criteria used by the DC sweeps. Thus the test separates input common-mode behaviour from output-stage rail headroom. Supply-current and differential changes through the crossover are simulated operating-point effects; this is not a mismatch-derived input-offset distribution or a CMRR measurement.
+Rise/fall time means the measured 10–90% transition. Settling begins after the input edge ends and requires the error to enter and remain within ±0.5 mV of the command until the next edge. That is 1% of a 50 mV step, not 1% of the 1.65 V operating level. The nominal layout rise is about 100 ns; rising-edge settling is 0.257 µs. The finite timestep is 2 ns, so reporting excessive digits would be misleading.
 
-Sourcing requires the PMOS output device to retain useful voltage across it; sinking requires the NMOS device to do the same. Close to a rail, feedback cannot create unlimited gate drive or remove the finite on-resistance of the output stage. This explains why current capability and output swing must be specified together. The present checked DC envelope is ±1 mA at the stated conditions, rather than a measured absolute maximum drive current.
+![Large signal step](images/large-step.png)
+Figure 22. 0.3→3.0→0.3 V follower command at TT, 25 °C, 3.3 V and 20 pF, no DC load. Input edges: 10 ns. The right panel enlarges output error; it clips the large initial tracking error for readability, not for the settling calculation.
 
-The external analog path matters under load. A 500 Ω output-path resistance drops 0.5 V at 1 mA. The Tiny Tapeout interface's 4 mA limit is an interface constraint, not a specification that this amplifier delivers 4 mA with acceptable distortion or regulation. The core curves above exclude the external switch path; external-feedback stability results appear in the next chapter.
+| Representation / transition | 10–90% time (µs) | 1% settling (µs) | Overshoot (mV) |
+| --- | --- | --- | --- |
+| Schematic; rise | 0.920 | 1.180 | 0.000 |
+| Schematic; fall | 0.977 | 1.183 | 0.000 |
+| Extracted layout; rise | 0.968 | 1.207 | 0.000 |
+| Extracted layout; fall | 0.968 | 1.169 | 0.000 |
 
-## 6. Frequency response and feedback stability
+The large-step criterion is ±27 mV, 1% of the 2.7 V excursion, and differs from the small-step criterion. It includes the nonlinear charging and recovery of the output and internal nodes. Small-signal unity frequency alone cannot predict this response. These tests do not assign a single universal slew-rate number, and they do not establish the same large-step behavior while delivering 1 mA.
 
-The loop response is obtained with two AC injection experiments at the unity-feedback connection. The Tian return ratio preserves loading on both sides of the injection point. Phase margin is measured at the downward unity-magnitude crossing; gain margin is measured at the relevant -180° phase crossing. A closed-loop response is also recorded, since peaking is directly relevant to follower operation.
+### What changes over the ordinary supply/temperature window?
 
-![Nominal frequency response comparison](images/frequency-nominal.png)
-Figure 10. Paired nominal return-ratio magnitude/phase and closed-loop response: TT, 27 °C, 3.3 V, 1.65 V follower command, 20 pF, no DC load. The schematic and final-layout curves share models and testbench settings.
+![Open-loop behavior over ordinary conditions](images/aol-everyday.png)
+Figure 23. Open-loop voltage gain at 10, 25 and 50 °C with 3.3 V, and at 3.3 V ±5% with 25 °C. Each curve changes one condition from nominal. TT, 20 pF, no DC load. Colors identify conditions; solid/dashed identify schematic/extraction.
 
-| Representation | Return ratio at 1 Hz (dB) | Downward unity crossing (MHz) | Phase margin (°) | Gain margin (dB) | Maximum closed gain (dB) |
+![Closed-loop behavior over ordinary conditions](images/closed-everyday.png)
+Figure 24. The corresponding follower signal transfer. The curves remain close to unity at low frequency despite the reference and supply-current changes. This is a command-transfer test; it does not inject supply noise.
+
+| Condition | Layout Iq (µA) | Aol at 1 Hz (dB) | Loop unity (MHz) | Phase margin (°) |
+| --- | --- | --- | --- | --- |
+| 10 °C, 3.3 V | 246.7 | 99.43 | 3.094 | 79.57 |
+| 25 °C, 3.3 V | 258.7 | 98.94 | 3.100 | 79.55 |
+| 50 °C, 3.3 V | 278.8 | 98.14 | 3.109 | 79.53 |
+| 25 °C, 3.135 V | 246.6 | 98.59 | 2.991 | 79.61 |
+| 25 °C, 3.465 V | 270.7 | 99.27 | 3.207 | 79.49 |
+
+At low frequency, feedback largely absorbs the bias changes. Bandwidth, current and settling still move. The reference variation in Section 1 therefore does not translate directly into the same percentage of output-voltage error. Supply-sweep commands follow half the supply, so their common mode changes too. To measure a disturbance from the supply itself, keep the command fixed, as in the following test.
+
+### Supply disturbances and fast load changes
+
+![Supply rejection](images/supply-rejection.png)
+Figure 25. Positive-rail rejection at TT, 27 °C, 3.3 V, fixed 1.65 V command and 20 pF. The earlier paired test separately measures signal and supply transfer. Closed rejection is −20 log10|Hsupply|; input-referred rejection is 20 log10|Hsignal/Hsupply|.
+
+At 10 Hz, closed-loop rejection falls from 104.94 dB in the schematic to 77.70 dB after layout. This roughly 27 dB loss is a material parasitic/physical effect, despite the small change in nominal gain. At 100 kHz the results are around 40–41 dB. Positive-rail ±0.1 V, 100 ns steps give about 13.5–14.8 mV peak output error after layout, recovering to the ±2 mV band in about 0.05–0.11 µs. These figures cover this rail and follower boundary condition, not a complete two-rail PSRR characterization.
+
+A fast load step is more demanding than a settled DC load. The earlier 10 ns ±1 mA applications give about 374 and 462 mV peak excursions after layout, followed by recovery to ±2 mV in approximately 0.30 and 0.42 µs. Load removals can also produce a large excursion. The amplifier can supply 1 mA after settling; it is not a stiff voltage source during an abrupt 1 mA transition. Applications requiring small load-step glitches need that limitation addressed explicitly.
+
+## 7. Process corners and Monte Carlo answer different questions
+
+### What FF means
+
+TT is the typical transistor model. FF moves the NMOS and PMOS models to their fast process cases together; SS uses both slow cases. SF and FS test opposite NMOS/PMOS directions, in that order. They are useful because the amplifier depends on complementary paths whose tracking can change. “Fast” does not mean “best”: higher gm or shifted poles can reduce a particular loop margin, while another corner can limit headroom.
+
+![Process-corner loop responses](images/process-corners.png)
+Figure 26. Schematic loop return ratio for TT/FF/SS/SF/FS at 3.3 V, 25 °C, 20 pF and no DC load. Process is changed separately from temperature and supply. Typical passive models are retained; this is a MOS-corner comparison, not an exhaustive passive-corner sweep.
+
+| Corner | IREF (µA) | Loop gain (dB) | Unity (MHz) | PM (°) | GM (dB) |
 | --- | --- | --- | --- | --- | --- |
-| Schematic | 98.946 | 3.0872 | 80.557 | 10.011 | -0.0000 |
-| Post-layout | 98.878 | 3.1007 | 79.555 | 9.364 | -0.0024 |
+| TT | 4.977 | 99.01 | 3.086 | 80.56 | 10.01 |
+| FF | 4.820 | 97.70 | 3.081 | 81.48 | 10.47 |
+| SS | 5.134 | 100.24 | 3.095 | 79.46 | 9.59 |
+| SF | 4.580 | 98.82 | 2.981 | 79.31 | 10.22 |
+| FS | 5.386 | 99.03 | 3.198 | 81.43 | 9.89 |
 
-At nominal conditions layout changes the phase margin by -1.003° and the gain margin by -0.647 dB. The maximum closed-loop gain remains below 0 dB on the recorded frequency grid, so there is no gain above unity in this nominal follower response.
+These tests explain the process effect without mixing it with ordinary temperature drift. The earlier final-layout 42-case combined-PVT suite includes more severe supply/temperature/load points at the principal 20 pF load; its minimum phase margin is 71.52° and minimum gain margin 6.43 dB. That archive remains the broader deterministic qualification. A good FF result alone would not replace it.
 
-For reproducibility, VJ is the voltage source from IN− to OUT and IT injects current from ground into OUT. The voltage experiment uses VJ AC=1 and IT AC=0; the current experiment uses VJ AC=0 and IT AC=1. I(VJ) is positive from IN− to OUT. Let vv and iv be V(OUT) and I(VJ) from the voltage experiment, and vi and ii the same observations from the current experiment. The implemented expression is k = 2(iv·vi − ii·vv) − ii − vv, followed by T = k/(1−k). With these source orientations T is positive at low frequency, the critical point is −1 and the closed-loop denominator is 1+T. The independent signal-transfer run sets IN+ AC=1 and both injection sources AC=0.
+### Local mismatch: nominally equal devices are not perfectly equal
 
-![Frequency response versus supply](images/frequency-supply.png)
-Figure 11. Paired response at TT, 27 °C and 3.0/3.3/3.6 V; command VAPWR/2, 20 pF, no DC load. This is an isolated supply study, not a process-corner sweep.
+Monte Carlo samples random model variations. Local mismatch can make two identically drawn input devices or mirror copies differ on the same die. A process corner moves device families coherently; it does not supply an input-offset distribution. Global random process variation and local mismatch are separate switches in the model library.
 
-![Frequency response versus temperature](images/frequency-temperature.png)
-Figure 12. Paired response at TT, 3.3 V and -40/27/125 °C; command 1.65 V, 20 pF, no DC load. Identical loads make the influence of temperature visible.
+This report adds 64 schematic local-mismatch samples at TT, 25 °C, 3.3 V, 1.65 V follower command and 20 pF. The library enables MC_MM_SWITCH = 1 and leaves MC_PR_SWITCH = 0. Each sample uses a recorded seed from 70100 through 70163. The equivalent follower offset is 1.65 V minus the settled output. It includes the complete simulated circuit's mismatch contribution; it is not a standalone input-pair threshold mismatch measurement.
 
-| TT condition | Representation | Unity crossing (MHz) | Phase margin (°) | Gain margin (dB) |
-| --- | --- | --- | --- | --- |
-| 3.0 V / 27 °C | Schematic | 2.8874 | 80.668 | 9.745 |
-| 3.0 V / 27 °C | Post-layout | 2.9023 | 79.659 | 9.091 |
-| 3.3 V / 27 °C | Schematic | 3.0872 | 80.557 | 10.011 |
-| 3.3 V / 27 °C | Post-layout | 3.1007 | 79.555 | 9.364 |
-| 3.6 V / 27 °C | Schematic | 3.2818 | 80.442 | 10.222 |
-| 3.6 V / 27 °C | Post-layout | 3.2941 | 79.440 | 9.575 |
-| 3.3 V / −40 °C | Schematic | 3.0559 | 80.619 | 9.840 |
-| 3.3 V / −40 °C | Post-layout | 3.0706 | 79.607 | 9.186 |
-| 3.3 V / 125 °C | Schematic | 3.1110 | 80.468 | 10.170 |
-| 3.3 V / 125 °C | Post-layout | 3.1232 | 79.471 | 9.530 |
+![Local mismatch samples](images/local-mismatch.png)
+Figure 27. Local-mismatch sample distribution and its relation to IREF. These are schematic-model samples at one condition, not measured chips or a post-layout statistical yield estimate.
 
-Across these five isolated TT conditions, the post-layout minimum phase margin is 79.440° and the minimum gain margin is 9.091 dB. The supply study also moves the follower command with VAPWR/2; the temperature study leaves it fixed. These five cases do not replace the wider combined-process, supply, temperature and output/load regression.
+All 64 samples completed; 0 failed the recorded terminal-voltage guard. The equivalent follower offset has a sample mean of +0.398 mV and sample standard deviation of 5.036 mV. Observed extremes are -11.192 to +10.632 mV. IREF spans 3.996–6.060 µA. All 64 offset values differ; repeating seed 70100 reproduces the saved offset and IREF within the recorded numerical tolerance. These samples measure the nominal DC mismatch distribution; AC stability and startup were not rerun for every draw.
 
-The broader final-layout core regression contains six selected profiles: TT/27 °C/3.3 V, SS/-40 °C/3.0 V, SS/125 °C/3.0 V, FF/125 °C/3.6 V, SF/125 °C/3.0 V and FS/125 °C/3.0 V. Each has seven output/load points at 20 pF: midpoint unloaded and ±1 mA, low sinking and high sourcing at 1 mA with 0.3 V rail allowance, and unloaded commands 0.1 V from either rail. All 42 saved operating points pass the physical-terminal guard. Their maximum absolute follower error is 1.5833 mV.
+The roughly 5 mV sample standard deviation is much larger than the tens of µV seen in the deterministic nominal follower. Offset is therefore a practical limitation for precision DC use. A sub-millivolt requirement would need another design step: for example larger matched input area, different input operating current, or an offset correction scheme, followed by a fresh mismatch study. Increasing area can improve random matching but also adds capacitance; this report has not simulated those changes and does not promise their result.
 
-Four previously limiting external-feedback cases were rerun with the final core. One interface represents 500 Ω plus 5 pF per analog path; the other uses the nominal tt_asw_3v3 switch model plus 50 Ω and 5 pF per path. Each has an external 20 pF output load. Their minimum phase margin is 60.917°, and maximum closed-loop peaking is 0.688 dB. This is useful margin, but the four cases do not constitute a complete board/package qualification.
+The repeated-seed check tests reproducibility, and different seeds must actually produce different draws. A simulation that merely runs 64 times with identical randomized parameters would not be a Monte Carlo study. The finite sample size and single operating condition also rule out a production-yield claim. Schematic grouping, multiplicity and layout-finger correlations deserve separate checking before translating this distribution into a silicon specification. The present study does not model systematic gradients, layout stress, package effects or every passive mismatch source.
 
-Neither positive phase margin at one load nor a good nominal step response establishes stability for every capacitance or output condition. The principal final checks use 20 pF. Cable and probe capacitance must be included when comparing bench measurements with these simulations.
+## 8. Return to the goals
 
-## 7. Signal steps and load disturbances
+| Original goal | Result |
+| --- | --- |
+| ✓ Self-generated reference and biases | Achieved in the tested conditions. About 5 µA nominal; independent mirrors and replicas replace ideal bias sources. Temperature drift remains. |
+| ✓ Startup in the tested ramps | Passed the stated complete-amplifier ramps. Universal startup for every power sequence is not established. |
+| ✓ Input close to both rails | Achieved on the sampled 0.05–3.25 V common-mode sweep with output held at mid-supply. |
+| △ Constant gm | Improved substantially by spillover, but not exact: about 15.1% peak-to-peak variation over 0.3–3.0 V in the nominal extracted estimate. |
+| ✓ Useful bidirectional output current | ±1 mA DC tested. Headroom and fast load-step excursions limit its use. No short-circuit rating is assigned. |
+| ✓ Stable unity follower at the principal load | Passed the principal 20 pF deterministic suite; nominal layout margin about 79.6°. Larger-load results are condition-specific. |
+| ✓ Ordinary supply and temperature tolerance | The stated ±5% / 10–50 °C cases retain operating points and stable loop margins. Current and dynamic behavior change as measured. |
+| ✓ Tiny Tapeout area/interface | 1x2, three analog signals; DRC/LVS/antenna and official prechecks pass on the final exports. |
 
-Small-signal frequency response describes operation around an established bias point. A signal step also reveals settling and overshoot; a sudden current demand reveals how quickly the output stage and feedback restore regulation. These are different disturbances and are plotted separately.
+The checkmarks apply to the stated tests; the triangle marks partial achievement. The result is a self-biased amplifier with useful gain, near-rail operation and a tested 1 mA DC load capability. The strongest cautions are the reference's temperature dependence, finite gm variation, millivolt-scale simulated mismatch offset, positive-rail rejection loss after layout and large fast-load excursions. None should be hidden behind the rail-to-rail or constant-gm name. Noise, complete CMRR/two-rail PSRR, extensive mismatch across operating conditions and silicon measurements remain outside the present qualification.
 
-![Signal step comparison](images/signal-step.png)
-Figure 13. Follower commands 1.65 to 1.70 to 1.65 V: TT, 27 °C, 3.3 V, no DC load, 20 pF. Both backends use the same 1 ns input edges. The error panel shows signed OUT minus the instantaneous input command.
+### Models, data and reproduction
 
-The command rises from 1.65 to 1.70 V and then returns to 1.65 V. The second transition is the 50 mV falling return.
+The simulations use ngspice 44 and SKY130 PDK release bdc9412b3e468c102d01b7cf6337be06ec6e9c9a. The schematic and extracted devices use nfet_g5v0d10v5/pfet_g5v0d10v5. Ordinary comparisons disable process/mismatch randomness. Local mismatch is enabled only in its dedicated library copy. The extracted circuit is derived from the final 8 October layout. Its reduced interconnect network was checked against the full nominal network; the maximum relative complex loop difference was 3.70×10⁻⁸ in that comparison.
 
-| Representation | Input transition | Settling to ±0.5 mV command band (µs) | Final absolute command error (mV) |
-| --- | --- | --- | --- |
-| Schematic | +50 mV | 0.244 | 0.0076 |
-| Schematic | −50 mV | 0.232 | 0.0078 |
-| Post-layout | +50 mV | 0.257 | 0.0405 |
-| Post-layout | −50 mV | 0.231 | 0.0266 |
+DC guards inspect all 49 schematic device groups or 225 extracted MOS instances. They check plausible terminal voltages and the stated HV voltage limits; they do not claim every device is in saturation at every sweep point. The new common-mode/gm sweeps additionally inspect every saved DC point. Transient plots save selected signals and do not prove every-device transient stress. The earlier DC, startup, supply and load tests retain their separately recorded conditions; in particular their nominal temperature is 27 °C, whereas the new comparisons use 25 °C.
 
-Settling is measured from the end of the 1 ns input edge until OUT enters and remains inside an absolute ±0.5 mV band around the requested output for the rest of that plateau. The band equals 1% of a 50 mV step numerically, but it is centered on the commanded voltage rather than the measured final increment. It therefore includes the DC regulation error and differs from an incremental 1% settling metric. The plotted initial tracking error includes the input edge while the output is still responding; it should not be interpreted as 50 mV overshoot. These tests do not measure full-range large-signal slew rate.
+The plot data and measured metrics are under [docs/data](data/revision-summary.json). The testbench decks are retained under [docs/simulation](simulation/manifest.json), including the controlled teaching variants. From docs/simulation, run `python configure_models.py PATH_TO_SKY130A` to point the libraries at the pinned local PDK. Then run `ngspice -b test.spice` from a case directory. The mismatch template uses seed 70100; the other saved samples use 70101–70163. The data/deck hashes identify the individual simulations; they do not imply bit-for-bit equality between different machines or model versions. The only schematic edit made for this report mirrors two supply-pin symbols; electrical connectivity and the final layout exports stay unchanged.
 
-![Load step comparison](images/load-step.png)
-Figure 14. Applying and removing +1 mA and -1 mA core load demand with 10 ns edges, at a fixed 1.65 V follower command, TT, 27 °C, 3.3 V and 20 pF. The final output errors are separate from the peak transient excursions.
-
-| Representation | Applied demand | Peak absolute error (mV) | Settling to ±2 mV command band (µs) | Final absolute error (mV) |
-| --- | --- | --- | --- | --- |
-| Schematic | +1 mA source | 347.22 | 0.318 | 0.397 |
-| Schematic | −1 mA sink | 433.13 | 0.459 | 0.710 |
-| Post-layout | +1 mA source | 373.60 | 0.301 | 0.444 |
-| Post-layout | −1 mA sink | 461.52 | 0.421 | 0.682 |
-
-The table measures the two load applications, starting at the end of each 10 ns edge and ending before its removal. Settling requires OUT to enter and remain within ±2 mV of the fixed 1.65 V command throughout that application interval. Load removals are visible in Figure 14 but are not assigned the application metrics above. The final plateau errors are below 1 mV even though the fast-edge excursions reach several hundred millivolts.
-
-The archived final-RC tests give approximately 374 mV and 462 mV peak excursions when applying sourcing and sinking demands, respectively. A settled 1 mA DC load capability therefore does not imply a stiff output during a fast current edge. The class-AB output must change its gate drive while charging or discharging the output capacitance. For an application sensitive to those excursions, load slew, capacitance and external buffering would need to be characterized together.
-
-The archived SS-cold ±1 mA signal tests use a positive 100 µV increment. They settle within 1% in about 0.304 µs, with less than 0.5% overshoot in those cases. Such tiny loaded steps test local feedback behaviour; they do not establish large-signal slew rate or settling for a full output-range transition.
-
-## 8. Response to supply disturbances
-
-Supply sensitivity has two meanings. The slow DC sweeps show how the operating point moves when the supply changes. A small AC perturbation or a supply step shows how much of a disturbance reaches OUT while the input command remains fixed. For these disturbance tests IN+ is fixed at 1.65 V and does not track VAPWR/2; otherwise the input would deliberately request output motion.
-
-![Supply coupling comparison](images/supply-rejection.png)
-Figure 15. VAPWR coupling, closed-loop rejection and input-referred rejection at TT, 27 °C and 3.3 V, fixed 1.65 V command, 20 pF, no DC load. Closed rejection is -20 log10(abs(Hsupply)); input-referred rejection is 20 log10(abs(Hsignal/Hsupply)), using separately measured signal and supply transfers. The test covers the positive analog rail under the stated follower boundary conditions.
-
-| Frequency | Schematic closed rejection (dB) | Post-layout closed rejection (dB) | Schematic input-referred rejection (dB) | Post-layout input-referred rejection (dB) |
-| --- | --- | --- | --- | --- |
-| 10 Hz | 104.94 | 77.70 | 104.94 | 77.69 |
-| 1 kHz | 81.12 | 75.71 | 81.12 | 75.70 |
-| 100 kHz | 41.14 | 40.06 | 41.14 | 40.05 |
-
-At 10 Hz the post-layout closed-loop supply rejection is 27.25 dB lower than the schematic value. This is a material loss in positive-rail rejection despite the small changes in nominal gain and phase margin. Closed and input-referred values remain similar at low frequency because the follower signal transfer is close to unity; their distinction matters as that transfer rolls off. The measurements use AC=1 on VAPWR, AC=0 on IN+, fixed 1.8 V VDPWR and the same 20 pF load.
-
-
-
-![Supply step comparison](images/supply-step.png)
-Figure 16. ±0.1 V supply steps about 3.3 V, with the command held at 1.65 V, TT, 27 °C, 20 pF and no DC load. The output-error and IREF traces distinguish signal disturbance from reference-current motion.
-
-| Representation | Supply transition | Peak absolute OUT error (mV) | Settling to ±2 mV command band (µs) | Final absolute error (mV) |
-| --- | --- | --- | --- | --- |
-| Schematic | +0.1 V | 12.14 | 0.045 | 0.0084 |
-| Schematic | −0.1 V | 13.23 | 0.095 | 0.0072 |
-| Post-layout | +0.1 V | 13.47 | 0.045 | 0.0163 |
-| Post-layout | −0.1 V | 14.79 | 0.105 | 0.0398 |
-
-The signed pre-step OUT−1.65 V errors are +0.007833 mV for the schematic and -0.026618 mV after layout. The supply edges last 100 ns. The table measures the +0.1 V and −0.1 V applications after each edge completes, before the return to 3.3 V. Settling uses an absolute ±2 mV band around the fixed 1.65 V command. It is not a 1% incremental supply-step metric.
-
-The late supply-step plateaus provide a separate signed DC check with the input fixed. Averaging OUT over 25–29 µs at 3.4 V and 55–59 µs at 3.2 V gives [OUT(3.4 V)−OUT(3.2 V)]/0.2 V = +6.374 µV/V for the schematic and +117.181 µV/V after layout. The corresponding 1 Hz small-signal supply-transfer real parts are +5.592 and +130.376 µV/V. Both checks agree on the positive coupling sign and much larger layout sensitivity. The finite ±100 mV secants differ from the small-signal derivatives by +14.0% and -10.1% respectively; they corroborate the trend without establishing equality for a nonlinear finite disturbance.
-
-At low frequency, feedback can suppress supply-driven output error. At higher frequency, reduced loop gain and capacitive coupling weaken that suppression. The self-biased reference and the midpoint divider also respond to the supply. These plots describe the stated core boundary conditions; the board regulator, decoupling, package and shuttle supply distribution add further paths not included in this test.
-
-## 9. Scope, evidence and reproduction
-
-The new paired tests were run on 9 October 2026 with ngspice 44 and SKY130 PDK release bdc9412b3e468c102d01b7cf6337be06ec6e9c9a. The MOS process and local mismatch switches are disabled for these deterministic comparisons; passive components use the same typical R/C models on both sides. The isolated supply and temperature studies use TT. The earlier 42-case final-layout regression is retained as a separate combined-PVT qualification.
-
-The final GDS has SHA256 51fc3c35decbf8409eec6f5720971efe651120b82ab5025a5dba9840b7bcdddc. The report does not change the schematic, layout, interface metadata or submission exports. The final extracted network comes from the 8 October hierarchy. Its reduced resistance representation retains the functional devices and extracted capacitances; the archived nominal comparison against the full network has maximum relative complex loop difference 3.70 x 10^-8.
-
-| Fresh paired stage | Passing cases | Expected cases |
-| --- | --- | --- |
-| Operating | 10 | 10 |
-| Dc | 14 | 14 |
-| Startup | 8 | 8 |
-| Transient | 4 | 4 |
-| Supply | 2 | 2 |
-
-All 38 fresh cases completed with passing stage status. The report-data manifest independently rechecked SHA256 for 518 saved case files and the shared source, extracted-network, model-library, observation-map, driver and simulator inputs. DC/AC guards inspect all 49 schematic or 225 extracted MOS instances at each saved operating point; the DC sweep guard additionally checks every swept point. The guard checks terminal-voltage plausibility and the stated HV stress limits, not whether every MOS remains in saturation. Dynamic runs cross-check their final state against a separately guarded DC endpoint; the saved transient channels do not prove every-device transient stress.
-
-A separate Windows ngspice 44 smoke comparison against the archived Linux nominal reduced network matched all 721 frequency samples. Its maximum relative complex return-ratio difference was 8.87e-09, and the maximum relative closed-signal-transfer difference was 1.01e-10, both below the 1e-06 comparison tolerance. That cross-platform check applies to the smoke deck; it does not imply bit-for-bit identity of every fresh test or validation of all full-network operating points. The original final full/reduced nominal loop comparison remains the evidence for that reduction at nominal conditions.
-
-Simulation decks, model provenance, case conditions, metrics and the data underlying the plots are retained with the characterization results. DC convergence is checked against actual device-terminal voltages, rather than accepting a numerical solution solely because the solver returned a value. Nodesets in DC/AC are initial guesses; startup simulations use zero-state UIC and no forced bias. Frequency sweeps use 80 points per decade from 1 Hz to 1 GHz.
-
-The remaining boundaries are silicon measurement, noise, full positive-and-negative-supply PSRR and CMRR characterization, comprehensive local mismatch/yield analysis, arbitrary board parasitics and 100 pF load qualification. The earlier exploratory mismatch study is not used to promise a production offset distribution. These limits define where additional evidence is needed.
-
-The physical interface follows the [Tiny Tapeout analog specifications](https://tinytapeout.com/specs/analog/). Device models are from the [pinned SKY130 release](https://github.com/chipfoundry/volare/releases/tag/sky130-bdc9412b3e468c102d01b7cf6337be06ec6e9c9a). The simulation engine is [ngspice 44](https://sourceforge.net/projects/ngspice/files/ng-spice-rework/old-releases/44/). The circuit reference is Johan H. Huijsing, *Operational Amplifiers*, Fig. 7.7.6, the compact 2 V rail-to-rail input/output class-AB GA-CF-GA arrangement with Miller compensation; this project uses its own 3.3 V SKY130 dimensions and bias implementation.
+Useful primary references are the [ngspice 44 manual](https://ngspice.sourceforge.io/docs/ngspice-44-manual.pdf), the [SKY130 device models](https://github.com/fossi-foundation/skywater-pdk-libs-sky130_fd_pr), the [pinned PDK release](https://github.com/chipfoundry/volare/releases/tag/sky130-bdc9412b3e468c102d01b7cf6337be06ec6e9c9a), and the [Tiny Tapeout analog specifications](https://tinytapeout.com/specs/analog/). The circuit reference is Huijsing, *Operational Amplifiers*, Fig. 7.7.6: the compact 2 V rail-to-rail input/output class-AB final approach with Miller compensation. This project's 3.3 V dimensions, reference and test results are its own SKY130 implementation.
 
 # How to test
 
-The design interface is ua[0]=IN+, ua[1]=IN-, ua[2]=OUT. VAPWR supplies the 3.3 V analog circuit, VDPWR is the separate 1.8 V shuttle supply, and VGND is common ground. Digital inputs are unused; digital outputs and bidirectional output enables are tied to ground. ena does not turn off the internal reference. Project selection connects the external analog paths through the shuttle switches. Consult the board mapping for actual connector locations.
+ua[0] is IN+, ua[1] is IN−, and ua[2] is OUT. VAPWR powers the analog circuit at 3.3 V, VDPWR is the separate 1.8 V shuttle supply, and VGND is common ground. Digital inputs are unused; digital outputs and bidirectional enables are tied low. ena does not shut down the internal reference. Project selection connects the external analog paths through the shuttle switches.
 
-1. Select the project, apply the two supplies with common ground and provide local decoupling. Begin with no DC output load and a low-capacitance instrument.
-2. Connect external OUT to IN- to make a follower. Apply 1.65 V to IN+. A 1 ms initial measurement delay is convenient; it is not a simulated startup-time specification.
-3. Confirm output regulation and plausible analog supply current. A board supply reading may include circuitry beyond the roughly 260 µA core.
-4. Sweep the command slowly from 0.8 to 2.5 V, recording output error and supply current. Then add controlled source and sink demands gradually toward 1 mA.
-5. Measure a 50 mV step near mid-supply and a small-signal sine sweep. Record the actual stimulus, load, probe capacitance and feedback path with each result.
-6. Compare temperature and supply changes separately. For supply-rejection testing, hold the input command independent of the disturbed supply.
+1. Select the project and apply both supplies with local decoupling. Begin without a DC output load and use a low-capacitance instrument.
+2. Connect external OUT to IN−, apply 1.65 V to IN+, and wait for the supplies and output to settle. A 1 ms initial wait is a convenient measurement procedure, not a specified startup delay.
+3. Record the output and supply current. A board-level current reading can include circuitry beyond the roughly 260 µA core.
+4. Sweep the input slowly over 0.8–2.5 V first. Add controlled source and sink demand gradually toward 1 mA, recording the actual load and error.
+5. Apply a 50 mV step near mid-supply and measure a small-signal frequency sweep. Include probe, cable and feedback-path capacitance in the load budget.
+6. Change temperature and supply separately. For supply-rejection testing, hold the input command independent of the disturbed supply.
 
-An open-loop output often saturates because even a small input difference is amplified strongly. Begin in closed loop. Keep feedback short and account for probe/cable capacitance. A resistor load varies with output voltage; use a controlled current load when trying to reproduce the constant-current simulation cases. Separate the input common-mode test from output swing by holding the output near mid-supply in a suitable closed-loop configuration.
+An open-loop chip output may saturate from a very small input difference. Begin in feedback. A resistor load draws a voltage-dependent current, unlike the constant-current simulation cases. The connector mapping comes from the selected analog board and should be checked before wiring.
 
 # External hardware
 
-Use an analog-capable Tiny Tapeout board, regulated 1.8 V and 3.3 V supplies, local decoupling, a DC/signal source, a voltmeter and a low-capacitance oscilloscope probe. Controlled loads and a frequency-response instrument extend the characterization. No external reference, bias source or clock is required.
+An analog-capable Tiny Tapeout board, regulated 1.8 V and 3.3 V supplies, local decoupling, a DC/signal source, voltmeter and low-capacitance oscilloscope probe are enough for the first follower measurements. Controlled loads and frequency-response equipment extend the tests. No external reference, bias source or clock is required.

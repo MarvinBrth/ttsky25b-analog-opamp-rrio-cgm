@@ -1,0 +1,4550 @@
+{
+  "date": "2026-10-09",
+  "case_count": 115,
+  "cases": [
+    {
+      "kind": "frequency",
+      "arguments": [
+        "schematic",
+        "nominal",
+        3.3,
+        25
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "nominal",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 20,
+        "Vout_V": 1.650007771176405,
+        "IREF_uA": 4.976647189422771,
+        "Iq_uA": 259.8089762881169,
+        "open_gain": {
+          "gain_db": 99.0110680800723,
+          "unity_crossings": [
+            {
+              "f_Hz": 3086381.5565533233,
+              "PM_deg": 80.68950021979384,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.68950021979384,
+          "min_GM_db": 9.88972962056086
+        },
+        "loop": {
+          "gain_db": 99.01098847807651,
+          "unity_crossings": [
+            {
+              "f_Hz": 3086375.583018205,
+              "PM_deg": 80.55754324593634,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.55754324593634,
+          "min_GM_db": 10.00953331061469
+        },
+        "closed_peaking_dB": -1.9146790414801972e-05,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.387503326483135,
+          "max_abs_VDS_V": 2.387503326483135,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "step",
+      "arguments": [
+        "schematic",
+        "nominal",
+        3.3,
+        25
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "nominal",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "CL_pF": 20,
+        "large_signal": false,
+        "events": [
+          {
+            "start_s": 1.001e-06,
+            "target_V": 1.7,
+            "settling_s": 2.4447999999999304e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.599999999999705e-08,
+            "overshoot_V": 7.59301383412847e-06,
+            "final_error_V": 7.588023027027546e-06
+          },
+          {
+            "start_s": 5.001e-06,
+            "target_V": 1.65,
+            "settling_s": 2.3248000000001882e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.400000000000706e-08,
+            "overshoot_V": 0,
+            "final_error_V": 7.77238578009154e-06
+          }
+        ],
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3875033359675184,
+          "max_abs_VDS_V": 2.3875033359675184,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "schematic",
+        "cool",
+        3.3,
+        10
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "cool",
+        "vdd": 3.3,
+        "temp_C": 10,
+        "corner": "tt",
+        "CL_pF": 20,
+        "Vout_V": 1.650007344116527,
+        "IREF_uA": 4.736952662944091,
+        "Iq_uA": 247.69611152748487,
+        "open_gain": {
+          "gain_db": 99.50469922905766,
+          "unity_crossings": [
+            {
+              "f_Hz": 3079741.8917851653,
+              "PM_deg": 80.7041675430118,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.7041675430118,
+          "min_GM_db": 9.856384475686921
+        },
+        "loop": {
+          "gain_db": 99.50462600771802,
+          "unity_crossings": [
+            {
+              "f_Hz": 3079763.1156879202,
+              "PM_deg": 80.57248954920854,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.57248954920854,
+          "min_GM_db": 9.9762958231576
+        },
+        "closed_peaking_dB": -1.7740310521277938e-05,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3300405983831123,
+          "max_abs_VDS_V": 2.375818392501288,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "step",
+      "arguments": [
+        "schematic",
+        "cool",
+        3.3,
+        10
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "cool",
+        "vdd": 3.3,
+        "temp_C": 10,
+        "CL_pF": 20,
+        "large_signal": false,
+        "events": [
+          {
+            "start_s": 1.001e-06,
+            "target_V": 1.7,
+            "settling_s": 2.46479999999993e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.599999999999705e-08,
+            "overshoot_V": 7.1610178751235765e-06,
+            "final_error_V": 7.157725945949878e-06
+          },
+          {
+            "start_s": 5.001e-06,
+            "target_V": 1.65,
+            "settling_s": 2.3448000000001897e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.400000000000706e-08,
+            "overshoot_V": 0,
+            "final_error_V": 7.347669894075537e-06
+          }
+        ],
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3300406044258732,
+          "max_abs_VDS_V": 2.375818391865537,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "schematic",
+        "warm",
+        3.3,
+        50
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "warm",
+        "vdd": 3.3,
+        "temp_C": 50,
+        "corner": "tt",
+        "CL_pF": 20,
+        "Vout_V": 1.650008647914536,
+        "IREF_uA": 5.37355843276485,
+        "Iq_uA": 279.99556640648683,
+        "open_gain": {
+          "gain_db": 98.20423581926946,
+          "unity_crossings": [
+            {
+              "f_Hz": 3096117.1675090785,
+              "PM_deg": 80.66567921553734,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.66567921553734,
+          "min_GM_db": 9.93809184018155
+        },
+        "loop": {
+          "gain_db": 98.20415285511665,
+          "unity_crossings": [
+            {
+              "f_Hz": 3096063.2825852996,
+              "PM_deg": 80.53333857307489,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.53333857307489,
+          "min_GM_db": 10.05827740943111
+        },
+        "closed_peaking_dB": -2.1761259020245282e-05,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.482971793606276,
+          "max_abs_VDS_V": 2.482971793606276,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "step",
+      "arguments": [
+        "schematic",
+        "warm",
+        3.3,
+        50
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "warm",
+        "vdd": 3.3,
+        "temp_C": 50,
+        "CL_pF": 20,
+        "large_signal": false,
+        "events": [
+          {
+            "start_s": 1.001e-06,
+            "target_V": 1.7,
+            "settling_s": 2.4447999999999304e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.599999999999705e-08,
+            "overshoot_V": 8.43966079910885e-06,
+            "final_error_V": 8.433969649113138e-06
+          },
+          {
+            "start_s": 5.001e-06,
+            "target_V": 1.65,
+            "settling_s": 2.3248000000001882e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.400000000000706e-08,
+            "overshoot_V": 0,
+            "final_error_V": 8.639095809170882e-06
+          }
+        ],
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.482971785580303,
+          "max_abs_VDS_V": 2.482971785580303,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "schematic",
+        "low_supply",
+        3.135,
+        25
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "low_supply",
+        "vdd": 3.135,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 20,
+        "Vout_V": 1.567507015103654,
+        "IREF_uA": 4.876271185624218,
+        "Iq_uA": 247.58110396042153,
+        "open_gain": {
+          "gain_db": 98.6632014473098,
+          "unity_crossings": [
+            {
+              "f_Hz": 2976956.613344651,
+              "PM_deg": 80.75153676793641,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.75153676793641,
+          "min_GM_db": 9.760781331464434
+        },
+        "loop": {
+          "gain_db": 98.66312887154025,
+          "unity_crossings": [
+            {
+              "f_Hz": 2977023.93968332,
+              "PM_deg": 80.61882616476257,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.61882616476257,
+          "min_GM_db": 9.868279012210193
+        },
+        "closed_peaking_dB": -2.8363661238394347e-05,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.36194688388894,
+          "max_abs_VDS_V": 2.36194688388894,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "step",
+      "arguments": [
+        "schematic",
+        "low_supply",
+        3.135,
+        25
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "low_supply",
+        "vdd": 3.135,
+        "temp_C": 25,
+        "CL_pF": 20,
+        "large_signal": false,
+        "events": [
+          {
+            "start_s": 1.001e-06,
+            "target_V": 1.6175,
+            "settling_s": 2.5647999999999204e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.79999999999972e-08,
+            "overshoot_V": 6.77509188706793e-06,
+            "final_error_V": 6.770332334982143e-06
+          },
+          {
+            "start_s": 5.001e-06,
+            "target_V": 1.5675,
+            "settling_s": 2.4248000000001957e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.800000000000736e-08,
+            "overshoot_V": 0,
+            "final_error_V": 7.013118156207199e-06
+          }
+        ],
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3619468810689406,
+          "max_abs_VDS_V": 2.3619468810689406,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "schematic",
+        "high_supply",
+        3.465,
+        25
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "high_supply",
+        "vdd": 3.465,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 20,
+        "Vout_V": 1.732508487020032,
+        "IREF_uA": 5.074194402272162,
+        "Iq_uA": 271.8803428293294,
+        "open_gain": {
+          "gain_db": 99.34386027237716,
+          "unity_crossings": [
+            {
+              "f_Hz": 3194244.9135948136,
+              "PM_deg": 80.62677274359983,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.62677274359983,
+          "min_GM_db": 10.001501450655669
+        },
+        "loop": {
+          "gain_db": 99.3437773554758,
+          "unity_crossings": [
+            {
+              "f_Hz": 3194163.7462341194,
+              "PM_deg": 80.49541615224733,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.49541615224733,
+          "min_GM_db": 10.13199047574795
+        },
+        "closed_peaking_dB": -1.0737225088955606e-05,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.41144155815443,
+          "max_abs_VDS_V": 2.5504533481879,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "step",
+      "arguments": [
+        "schematic",
+        "high_supply",
+        3.465,
+        25
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "high_supply",
+        "vdd": 3.465,
+        "temp_C": 25,
+        "CL_pF": 20,
+        "large_signal": false,
+        "events": [
+          {
+            "start_s": 1.001e-06,
+            "target_V": 1.7825,
+            "settling_s": 2.3647999999999308e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.199999999999696e-08,
+            "overshoot_V": 8.340816284979624e-06,
+            "final_error_V": 8.336893001059664e-06
+          },
+          {
+            "start_s": 5.001e-06,
+            "target_V": 1.7325,
+            "settling_s": 2.2448000000001822e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.200000000000691e-08,
+            "overshoot_V": 0,
+            "final_error_V": 8.48659486707426e-06
+          }
+        ],
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.41144155815443,
+          "max_abs_VDS_V": 2.5504533481879,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "pex",
+        "nominal",
+        3.3,
+        25
+      ],
+      "result": {
+        "key": "pex",
+        "name": "nominal",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 20,
+        "Vout_V": 1.649973189767302,
+        "IREF_uA": 4.953953159604751,
+        "Iq_uA": 258.7221785446631,
+        "open_gain": {
+          "gain_db": 98.94037297510123,
+          "unity_crossings": [
+            {
+              "f_Hz": 3096734.553178818,
+              "PM_deg": 79.7306818662804,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.7306818662804,
+          "min_GM_db": 9.497255345570537
+        },
+        "loop": {
+          "gain_db": 98.9426337075333,
+          "unity_crossings": [
+            {
+              "f_Hz": 3099914.816612359,
+              "PM_deg": 79.55446940806775,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.55446940806775,
+          "min_GM_db": 9.361037526611826
+        },
+        "closed_peaking_dB": -0.0023588683698241943,
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 3.034688498873705,
+          "max_abs_VDS_V": 2.3862923547463906,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "step",
+      "arguments": [
+        "pex",
+        "nominal",
+        3.3,
+        25
+      ],
+      "result": {
+        "key": "pex",
+        "name": "nominal",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "CL_pF": 20,
+        "large_signal": false,
+        "events": [
+          {
+            "start_s": 1.001e-06,
+            "target_V": 1.7,
+            "settling_s": 2.57246042968331e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.999999999999692e-08,
+            "overshoot_V": 0,
+            "final_error_V": -4.067646014194182e-05
+          },
+          {
+            "start_s": 5.001e-06,
+            "target_V": 1.65,
+            "settling_s": 2.313117563767269e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.600000000000721e-08,
+            "overshoot_V": 2.6799347291994735e-05,
+            "final_error_V": -2.6799272121014184e-05
+          }
+        ],
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 3.034688498873705,
+          "max_abs_VDS_V": 2.3862923547463906,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "pex",
+        "cool",
+        3.3,
+        10
+      ],
+      "result": {
+        "key": "pex",
+        "name": "cool",
+        "vdd": 3.3,
+        "temp_C": 10,
+        "corner": "tt",
+        "CL_pF": 20,
+        "Vout_V": 1.649972001967576,
+        "IREF_uA": 4.71537178405279,
+        "Iq_uA": 246.6701224915828,
+        "open_gain": {
+          "gain_db": 99.43265677849513,
+          "unity_crossings": [
+            {
+              "f_Hz": 3090307.045908499,
+              "PM_deg": 79.74337088751581,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.74337088751581,
+          "min_GM_db": 9.463009634883154
+        },
+        "loop": {
+          "gain_db": 99.43490964957533,
+          "unity_crossings": [
+            {
+              "f_Hz": 3093556.108214964,
+              "PM_deg": 79.56742256096403,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.56742256096403,
+          "min_GM_db": 9.327421859297283
+        },
+        "closed_peaking_dB": -0.0023525641478079245,
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 3.0487754892031638,
+          "max_abs_VDS_V": 2.375205877131523,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "step",
+      "arguments": [
+        "pex",
+        "cool",
+        3.3,
+        10
+      ],
+      "result": {
+        "key": "pex",
+        "name": "cool",
+        "vdd": 3.3,
+        "temp_C": 10,
+        "CL_pF": 20,
+        "large_signal": false,
+        "events": [
+          {
+            "start_s": 1.001e-06,
+            "target_V": 1.7,
+            "settling_s": 2.592312641920049e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.999999999999692e-08,
+            "overshoot_V": 0,
+            "final_error_V": -4.1732262813010124e-05
+          },
+          {
+            "start_s": 5.001e-06,
+            "target_V": 1.65,
+            "settling_s": 2.3329728863839376e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.600000000000721e-08,
+            "overshoot_V": 2.799540070186346e-05,
+            "final_error_V": -2.799538659692402e-05
+          }
+        ],
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 3.048775488142643,
+          "max_abs_VDS_V": 2.375205876671964,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "pex",
+        "warm",
+        3.3,
+        50
+      ],
+      "result": {
+        "key": "pex",
+        "name": "warm",
+        "vdd": 3.3,
+        "temp_C": 50,
+        "corner": "tt",
+        "CL_pF": 20,
+        "Vout_V": 1.649975843192594,
+        "IREF_uA": 5.34904383296803,
+        "Iq_uA": 278.8342673055343,
+        "open_gain": {
+          "gain_db": 98.13629900090677,
+          "unity_crossings": [
+            {
+              "f_Hz": 3106110.9523767354,
+              "PM_deg": 79.70959065262102,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.70959065262102,
+          "min_GM_db": 9.54707194499265
+        },
+        "loop": {
+          "gain_db": 98.13854509660437,
+          "unity_crossings": [
+            {
+              "f_Hz": 3109175.0890046363,
+              "PM_deg": 79.53299830207291,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.53299830207291,
+          "min_GM_db": 9.410926635911581
+        },
+        "closed_peaking_dB": -0.0023587491827524783,
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 3.010582833019658,
+          "max_abs_VDS_V": 2.477313435243924,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "step",
+      "arguments": [
+        "pex",
+        "warm",
+        3.3,
+        50
+      ],
+      "result": {
+        "key": "pex",
+        "name": "warm",
+        "vdd": 3.3,
+        "temp_C": 50,
+        "CL_pF": 20,
+        "large_signal": false,
+        "events": [
+          {
+            "start_s": 1.001e-06,
+            "target_V": 1.7,
+            "settling_s": 2.5527259176054507e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.999999999999692e-08,
+            "overshoot_V": 0,
+            "final_error_V": -3.817397303396142e-05
+          },
+          {
+            "start_s": 5.001e-06,
+            "target_V": 1.65,
+            "settling_s": 2.2933783019245084e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.400000000000706e-08,
+            "overshoot_V": 2.4154825934985524e-05,
+            "final_error_V": -2.4154772862994278e-05
+          }
+        ],
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 3.0105828322827137,
+          "max_abs_VDS_V": 2.477313427094564,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "pex",
+        "low_supply",
+        3.135,
+        25
+      ],
+      "result": {
+        "key": "pex",
+        "name": "low_supply",
+        "vdd": 3.135,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 20,
+        "Vout_V": 1.567474102085673,
+        "IREF_uA": 4.85429106965288,
+        "Iq_uA": 246.58230510016688,
+        "open_gain": {
+          "gain_db": 98.59268100095375,
+          "unity_crossings": [
+            {
+              "f_Hz": 2988213.4567235666,
+              "PM_deg": 79.78892085167575,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.78892085167575,
+          "min_GM_db": 9.359665247308627
+        },
+        "loop": {
+          "gain_db": 98.59487081144886,
+          "unity_crossings": [
+            {
+              "f_Hz": 2991331.905612696,
+              "PM_deg": 79.61293760017462,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.61293760017462,
+          "min_GM_db": 9.219431976699358
+        },
+        "closed_peaking_dB": -0.002297567858428931,
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.8747941865199444,
+          "max_abs_VDS_V": 2.3569834658509192,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "step",
+      "arguments": [
+        "pex",
+        "low_supply",
+        3.135,
+        25
+      ],
+      "result": {
+        "key": "pex",
+        "name": "low_supply",
+        "vdd": 3.135,
+        "temp_C": 25,
+        "CL_pF": 20,
+        "large_signal": false,
+        "events": [
+          {
+            "start_s": 1.001e-06,
+            "target_V": 1.6175,
+            "settling_s": 2.69200905708493e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 1.0199999999999708e-07,
+            "overshoot_V": 0,
+            "final_error_V": -3.9420943196866176e-05
+          },
+          {
+            "start_s": 5.001e-06,
+            "target_V": 1.5675,
+            "settling_s": 2.412662653484876e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 1.0000000000000751e-07,
+            "overshoot_V": 2.589433475597147e-05,
+            "final_error_V": -2.5894271924897794e-05
+          }
+        ],
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.874794185709205,
+          "max_abs_VDS_V": 2.356983456753202,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "pex",
+        "high_supply",
+        3.465,
+        25
+      ],
+      "result": {
+        "key": "pex",
+        "name": "high_supply",
+        "vdd": 3.465,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 20,
+        "Vout_V": 1.732472271706296,
+        "IREF_uA": 5.050797007855122,
+        "Iq_uA": 270.7232496861746,
+        "open_gain": {
+          "gain_db": 99.27332758356451,
+          "unity_crossings": [
+            {
+              "f_Hz": 3203738.1388344974,
+              "PM_deg": 79.66985398648822,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.66985398648822,
+          "min_GM_db": 9.615874106003394
+        },
+        "loop": {
+          "gain_db": 99.27564514229817,
+          "unity_crossings": [
+            {
+              "f_Hz": 3206985.435851747,
+              "PM_deg": 79.49320263771523,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.49320263771523,
+          "min_GM_db": 9.485200622171169
+        },
+        "closed_peaking_dB": -0.002418686077370734,
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 3.194628534349331,
+          "max_abs_VDS_V": 2.549796756819284,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "step",
+      "arguments": [
+        "pex",
+        "high_supply",
+        3.465,
+        25
+      ],
+      "result": {
+        "key": "pex",
+        "name": "high_supply",
+        "vdd": 3.465,
+        "temp_C": 25,
+        "CL_pF": 20,
+        "large_signal": false,
+        "events": [
+          {
+            "start_s": 1.001e-06,
+            "target_V": 1.7825,
+            "settling_s": 2.472892066087549e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.59999999999979e-08,
+            "overshoot_V": 0,
+            "final_error_V": -4.1943008086020583e-05
+          },
+          {
+            "start_s": 5.001e-06,
+            "target_V": 1.7325,
+            "settling_s": 2.2135524630538225e-07,
+            "tolerance_V": 0.0005,
+            "rise_or_fall_10_90_s": 9.000000000000676e-08,
+            "overshoot_V": 2.772452081600818e-05,
+            "final_error_V": -2.772445921395139e-05
+          }
+        ],
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 3.194628533319546,
+          "max_abs_VDS_V": 2.5497967563707093,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "gm_full",
+      "arguments": [
+        "schematic"
+      ],
+      "result": {
+        "key": "schematic",
+        "gm_definition": "0.5 sum of intrinsic gm of signal NMOS and PMOS devices; includes physical fingers/multiplicity; input-stage estimate, not output gm",
+        "input_finger_count": 4,
+        "min_gm_S": 5.658324616667154e-05,
+        "max_gm_S": 6.599394228319136e-05,
+        "ratio_max_min": 1.166315946045225,
+        "variation_peak_to_peak_over_midrange": 0.1535472665922507,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 65,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3875033402989256,
+          "max_abs_VDS_V": 2.3875033402989256,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "gm_full",
+      "arguments": [
+        "pex"
+      ],
+      "result": {
+        "key": "pex",
+        "gm_definition": "0.5 sum of intrinsic gm of signal NMOS and PMOS devices; includes physical fingers/multiplicity; input-stage estimate, not output gm",
+        "input_finger_count": 50,
+        "min_gm_S": 5.638578342704398e-05,
+        "max_gm_S": 6.561222298883358e-05,
+        "ratio_max_min": 1.1636305997898821,
+        "variation_peak_to_peak_over_midrange": 0.15125557921557675,
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 65,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 3.034689227448788,
+          "max_abs_VDS_V": 2.3862923498657445,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "input_stage",
+      "arguments": [
+        "nmos_only"
+      ],
+      "result": {
+        "variant": "nmos_only",
+        "test": "input stage isolated with drains clamped to rails; DC common mode and intrinsic gm",
+        "min_gm_S": 1.972021274109059e-07,
+        "max_gm_S": 6.12493981918176e-05,
+        "ratio_max_min": 310.591974822835,
+        "guard": {
+          "MOS_checked": 22,
+          "points_checked": 65,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3875033281436298,
+          "max_abs_VDS_V": 3.2999953037718583,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "input_stage",
+      "arguments": [
+        "no_spillover"
+      ],
+      "result": {
+        "variant": "no_spillover",
+        "test": "input stage isolated with drains clamped to rails; DC common mode and intrinsic gm",
+        "min_gm_S": 6.110192296785721e-05,
+        "max_gm_S": 0.00011824407254228694,
+        "ratio_max_min": 1.9351939644271012,
+        "guard": {
+          "MOS_checked": 25,
+          "points_checked": 65,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.387503331319376,
+          "max_abs_VDS_V": 3.29999995684057,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "input_stage",
+      "arguments": [
+        "with_spillover"
+      ],
+      "result": {
+        "variant": "with_spillover",
+        "test": "input stage isolated with drains clamped to rails; DC common mode and intrinsic gm",
+        "min_gm_S": 5.660472511780235e-05,
+        "max_gm_S": 6.619076218816439e-05,
+        "ratio_max_min": 1.1693504747247188,
+        "guard": {
+          "MOS_checked": 29,
+          "points_checked": 65,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.387503332038789,
+          "max_abs_VDS_V": 2.574829565403962,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "reference",
+      "arguments": [
+        "nominal",
+        30.5,
+        4,
+        true
+      ],
+      "result": {
+        "name": "nominal",
+        "R_length_um": 30.5,
+        "K": 4,
+        "startup": true,
+        "final_IREF_uA": 4.976647226040536,
+        "R_branch_uA": 4.585520679014269,
+        "source_resistor_drop_V": 0.07047295225799273,
+        "effective_R_ohm": 15368.58236852222,
+        "gm_M42_S": 6.514037923835181e-05,
+        "record_s": 7.999999999999999e-05,
+        "MOS_reference_count": 8,
+        "no_forced_initial_bias": true,
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "reference",
+      "arguments": [
+        "short_resistor",
+        20,
+        4,
+        true
+      ],
+      "result": {
+        "name": "short_resistor",
+        "R_length_um": 20,
+        "K": 4,
+        "startup": true,
+        "final_IREF_uA": 8.441226412389382,
+        "R_branch_uA": 7.857020081787042,
+        "source_resistor_drop_V": 0.08028466339548097,
+        "effective_R_ohm": 10218.20773776368,
+        "gm_M42_S": 9.081307966925985e-05,
+        "record_s": 7.999999999999999e-05,
+        "MOS_reference_count": 8,
+        "no_forced_initial_bias": true,
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "reference",
+      "arguments": [
+        "long_resistor",
+        45,
+        4,
+        true
+      ],
+      "result": {
+        "name": "long_resistor",
+        "R_length_um": 45,
+        "K": 4,
+        "startup": true,
+        "final_IREF_uA": 3.186218333163656,
+        "R_branch_uA": 2.909029109799601,
+        "source_resistor_drop_V": 0.0654059520252329,
+        "effective_R_ohm": 22483.7736428628,
+        "gm_M42_S": 4.753600888645087e-05,
+        "record_s": 7.999999999999999e-05,
+        "MOS_reference_count": 8,
+        "no_forced_initial_bias": true,
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "reference",
+      "arguments": [
+        "K2",
+        30.5,
+        2,
+        true
+      ],
+      "result": {
+        "name": "K2",
+        "R_length_um": 30.5,
+        "K": 2,
+        "startup": true,
+        "final_IREF_uA": 2.6984430526186722,
+        "R_branch_uA": 2.454846828588645,
+        "source_resistor_drop_V": 0.03772810720449698,
+        "effective_R_ohm": 15368.823327436623,
+        "gm_M42_S": 4.192252458266077e-05,
+        "record_s": 7.999999999999999e-05,
+        "MOS_reference_count": 8,
+        "no_forced_initial_bias": true,
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "reference",
+      "arguments": [
+        "K8",
+        30.5,
+        8,
+        true
+      ],
+      "result": {
+        "name": "K8",
+        "R_length_um": 30.5,
+        "K": 8,
+        "startup": true,
+        "final_IREF_uA": 7.3447193905258334,
+        "R_branch_uA": 6.818559419472844,
+        "source_resistor_drop_V": 0.1047900157044941,
+        "effective_R_ohm": 15368.351180636279,
+        "gm_M42_S": 8.355003175097389e-05,
+        "record_s": 7.999999999999999e-05,
+        "MOS_reference_count": 8,
+        "no_forced_initial_bias": true,
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "reference",
+      "arguments": [
+        "no_startup",
+        30.5,
+        4,
+        false
+      ],
+      "result": {
+        "name": "no_startup",
+        "R_length_um": 30.5,
+        "K": 4,
+        "startup": false,
+        "final_IREF_uA": 4.976643906771161,
+        "R_branch_uA": 4.585519191584442,
+        "source_resistor_drop_V": 0.07047293786242612,
+        "effective_R_ohm": 15368.584214359265,
+        "gm_M42_S": 6.514035747053766e-05,
+        "record_s": 7.999999999999999e-05,
+        "MOS_reference_count": 5,
+        "no_forced_initial_bias": true,
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mirror",
+      "arguments": [],
+      "result": {
+        "comparison": {
+          "plain": {
+            "rout_ohm": 12195571.748037437,
+            "I_at_1p65_uA": 5.087491874486915
+          },
+          "cascode": {
+            "rout_ohm": 204856363.37596756,
+            "I_at_1p65_uA": 4.998482992002901
+          }
+        },
+        "same_5uA_master": true,
+        "scope": "Standalone conventional cascode benchmark; not a drop-in replacement for folded Huijsing stage.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "no_compensation",
+        "teaching",
+        3.3,
+        25
+      ],
+      "result": {
+        "key": "no_compensation",
+        "name": "teaching",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 20,
+        "Vout_V": 1.650007780097181,
+        "IREF_uA": 4.976647169969994,
+        "Iq_uA": 259.80891649869193,
+        "open_gain": {
+          "gain_db": 99.01504134170993,
+          "unity_crossings": [
+            {
+              "f_Hz": 9845967.80660162,
+              "PM_deg": -11.39413356692654,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": -11.39413356692654,
+          "min_GM_db": -7.045017694563545
+        },
+        "loop": {
+          "gain_db": 99.01496339528703,
+          "unity_crossings": [
+            {
+              "f_Hz": 9691971.670589805,
+              "PM_deg": -11.802292238635777,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": -11.802292238635777,
+          "min_GM_db": -7.155124755649322
+        },
+        "closed_peaking_dB": 14.351434478856614,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.387503323544372,
+          "max_abs_VDS_V": 2.387503323544372,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "ideal_bias",
+        "teaching",
+        3.3,
+        25
+      ],
+      "result": {
+        "key": "ideal_bias",
+        "name": "teaching",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 20,
+        "Vout_V": 1.650008640667805,
+        "IREF_uA": 0.0,
+        "Iq_uA": 191.4261220573394,
+        "open_gain": {
+          "gain_db": 99.01688334183119,
+          "unity_crossings": [
+            {
+              "f_Hz": 3060180.5805815607,
+              "PM_deg": 80.73861873886709,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.73861873886709,
+          "min_GM_db": 10.373072156544909
+        },
+        "loop": {
+          "gain_db": 99.01679899161573,
+          "unity_crossings": [
+            {
+              "f_Hz": 3059974.285588445,
+              "PM_deg": 80.61106621090715,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.61106621090715,
+          "min_GM_db": 10.383493948821824
+        },
+        "closed_peaking_dB": -1.5900419684799815e-05,
+        "guard": {
+          "MOS_checked": 30,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 1.2459431196401098,
+          "max_abs_VDS_V": 2.2683763502748935,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "dc_output",
+      "arguments": [
+        "schematic"
+      ],
+      "result": {
+        "key": "schematic",
+        "Iload_mA": 1,
+        "accepted_error_mV": 2,
+        "sampled_intervals_V": {
+          "source": [
+            0.15,
+            3.149999999999997
+          ],
+          "sink": [
+            0.15,
+            3.149999999999997
+          ]
+        },
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3875033377759936,
+          "max_abs_VDS_V": 2.3875033377759936,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "dc_output",
+      "arguments": [
+        "small_output"
+      ],
+      "result": {
+        "key": "small_output",
+        "Iload_mA": 1,
+        "accepted_error_mV": 2,
+        "sampled_intervals_V": {
+          "source": [
+            0.15,
+            2.899999999999998
+          ],
+          "sink": [
+            0.4999999999999999,
+            3.149999999999997
+          ]
+        },
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3875033262255307,
+          "max_abs_VDS_V": 2.3875033262255307,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "schematic",
+        "load_5pF",
+        3.3,
+        25,
+        "tt",
+        5
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "load_5pF",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 5,
+        "Vout_V": 1.650007771176405,
+        "IREF_uA": 4.976647189422771,
+        "Iq_uA": 259.8089762881169,
+        "open_gain": {
+          "gain_db": 99.01107073129924,
+          "unity_crossings": [
+            {
+              "f_Hz": 3029043.196334537,
+              "PM_deg": 85.38762430226446,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 85.38762430226446,
+          "min_GM_db": 10.97555259012825
+        },
+        "loop": {
+          "gain_db": 99.01099112917491,
+          "unity_crossings": [
+            {
+              "f_Hz": 3029532.61454786,
+              "PM_deg": 85.26186033763672,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 85.26186033763672,
+          "min_GM_db": 12.187819411959884
+        },
+        "closed_peaking_dB": -1.914679028943912e-05,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.387503326483135,
+          "max_abs_VDS_V": 2.387503326483135,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "schematic",
+        "load_20pF",
+        3.3,
+        25,
+        "tt",
+        20
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "load_20pF",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 20,
+        "Vout_V": 1.650007771176405,
+        "IREF_uA": 4.976647189422771,
+        "Iq_uA": 259.8089762881169,
+        "open_gain": {
+          "gain_db": 99.0110680800723,
+          "unity_crossings": [
+            {
+              "f_Hz": 3086381.5565533233,
+              "PM_deg": 80.68950021979384,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.68950021979384,
+          "min_GM_db": 9.88972962056086
+        },
+        "loop": {
+          "gain_db": 99.01098847807651,
+          "unity_crossings": [
+            {
+              "f_Hz": 3086375.583018205,
+              "PM_deg": 80.55754324593634,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.55754324593634,
+          "min_GM_db": 10.00953331061469
+        },
+        "closed_peaking_dB": -1.9146790414801972e-05,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.387503326483135,
+          "max_abs_VDS_V": 2.387503326483135,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "schematic",
+        "load_50pF",
+        3.3,
+        25,
+        "tt",
+        50
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "load_50pF",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 50,
+        "Vout_V": 1.650007771176405,
+        "IREF_uA": 4.976647189422771,
+        "Iq_uA": 259.8089762881169,
+        "open_gain": {
+          "gain_db": 99.01106341400313,
+          "unity_crossings": [
+            {
+              "f_Hz": 3141985.4840058987,
+              "PM_deg": 70.75419962566295,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 70.75419962566295,
+          "min_GM_db": 9.56204891283372
+        },
+        "loop": {
+          "gain_db": 99.01098381285941,
+          "unity_crossings": [
+            {
+              "f_Hz": 3140647.925681496,
+              "PM_deg": 70.62466620420723,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 70.62466620420723,
+          "min_GM_db": 9.566583329470685
+        },
+        "closed_peaking_dB": -1.9146789811131643e-05,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.387503326483135,
+          "max_abs_VDS_V": 2.387503326483135,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "schematic",
+        "load_100pF",
+        3.3,
+        25,
+        "tt",
+        100
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "load_100pF",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 100,
+        "Vout_V": 1.650007771176405,
+        "IREF_uA": 4.976647189422771,
+        "Iq_uA": 259.8089762881169,
+        "open_gain": {
+          "gain_db": 99.01105570699303,
+          "unity_crossings": [
+            {
+              "f_Hz": 3026995.9043672536,
+              "PM_deg": 56.17718374436663,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 56.17718374436663,
+          "min_GM_db": 9.440776467784183
+        },
+        "loop": {
+          "gain_db": 99.01097610703486,
+          "unity_crossings": [
+            {
+              "f_Hz": 3024231.791253924,
+              "PM_deg": 56.08764697191145,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 56.08764697191145,
+          "min_GM_db": 9.438280195655981
+        },
+        "closed_peaking_dB": 0.8224013116198683,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.387503326483135,
+          "max_abs_VDS_V": 2.387503326483135,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "step",
+      "arguments": [
+        "schematic",
+        "large_signal",
+        3.3,
+        25,
+        20,
+        true
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "large_signal",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "CL_pF": 20,
+        "large_signal": true,
+        "events": [
+          {
+            "start_s": 1.0099999999999999e-06,
+            "target_V": 3.0,
+            "settling_s": 1.179894724420856e-06,
+            "tolerance_V": 0.027000000000000003,
+            "rise_or_fall_10_90_s": 9.199999999999829e-07,
+            "overshoot_V": 0,
+            "final_error_V": -1.0146776264097213e-05
+          },
+          {
+            "start_s": 8.01e-06,
+            "target_V": 0.3,
+            "settling_s": 1.1830144426904708e-06,
+            "tolerance_V": 0.027000000000000003,
+            "rise_or_fall_10_90_s": 9.774721147370676e-07,
+            "overshoot_V": 0,
+            "final_error_V": 2.9216784469487944e-05
+          }
+        ],
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.387503338107746,
+          "max_abs_VDS_V": 2.9999707906978705,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "pex",
+        "load_5pF",
+        3.3,
+        25,
+        "tt",
+        5
+      ],
+      "result": {
+        "key": "pex",
+        "name": "load_5pF",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 5,
+        "Vout_V": 1.649973189767302,
+        "IREF_uA": 4.953953159604751,
+        "Iq_uA": 258.7221785446631,
+        "open_gain": {
+          "gain_db": 98.94037536299459,
+          "unity_crossings": [
+            {
+              "f_Hz": 3028934.5067510493,
+              "PM_deg": 84.97353273153664,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 84.97353273153664,
+          "min_GM_db": 10.685807473063509
+        },
+        "loop": {
+          "gain_db": 98.94263609559326,
+          "unity_crossings": [
+            {
+              "f_Hz": 3032518.6392993196,
+              "PM_deg": 84.81305019823704,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 84.81305019823704,
+          "min_GM_db": 11.266410734001001
+        },
+        "closed_peaking_dB": -0.002358868369903291,
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 3.034688498873705,
+          "max_abs_VDS_V": 2.3862923547463906,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "pex",
+        "load_20pF",
+        3.3,
+        25,
+        "tt",
+        20
+      ],
+      "result": {
+        "key": "pex",
+        "name": "load_20pF",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 20,
+        "Vout_V": 1.649973189767302,
+        "IREF_uA": 4.953953159604751,
+        "Iq_uA": 258.7221785446631,
+        "open_gain": {
+          "gain_db": 98.94037297510123,
+          "unity_crossings": [
+            {
+              "f_Hz": 3096734.553178818,
+              "PM_deg": 79.7306818662804,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.7306818662804,
+          "min_GM_db": 9.497255345570537
+        },
+        "loop": {
+          "gain_db": 98.9426337075333,
+          "unity_crossings": [
+            {
+              "f_Hz": 3099914.816612359,
+              "PM_deg": 79.55446940806775,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.55446940806775,
+          "min_GM_db": 9.361037526611826
+        },
+        "closed_peaking_dB": -0.0023588683698241943,
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 3.034688498873705,
+          "max_abs_VDS_V": 2.3862923547463906,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "pex",
+        "load_50pF",
+        3.3,
+        25,
+        "tt",
+        50
+      ],
+      "result": {
+        "key": "pex",
+        "name": "load_50pF",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 50,
+        "Vout_V": 1.649973189767302,
+        "IREF_uA": 4.953953159604751,
+        "Iq_uA": 258.7221785446631,
+        "open_gain": {
+          "gain_db": 98.94036819714587,
+          "unity_crossings": [
+            {
+              "f_Hz": 3157751.7453021063,
+              "PM_deg": 68.58565352527499,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 68.58565352527499,
+          "min_GM_db": 9.069794570969549
+        },
+        "loop": {
+          "gain_db": 98.94262892967127,
+          "unity_crossings": [
+            {
+              "f_Hz": 3159135.1791557604,
+              "PM_deg": 68.40133129047109,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 68.40133129047109,
+          "min_GM_db": 8.975920246946355
+        },
+        "closed_peaking_dB": -0.002358868369662144,
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 3.034688498873705,
+          "max_abs_VDS_V": 2.3862923547463906,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "pex",
+        "load_100pF",
+        3.3,
+        25,
+        "tt",
+        100
+      ],
+      "result": {
+        "key": "pex",
+        "name": "load_100pF",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 100,
+        "Vout_V": 1.649973189767302,
+        "IREF_uA": 4.953953159604751,
+        "Iq_uA": 258.7221785446631,
+        "open_gain": {
+          "gain_db": 98.94036022746138,
+          "unity_crossings": [
+            {
+              "f_Hz": 3004527.4093382824,
+              "PM_deg": 52.982423155095816,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 52.982423155095816,
+          "min_GM_db": 8.910712320923247
+        },
+        "loop": {
+          "gain_db": 98.94262095980031,
+          "unity_crossings": [
+            {
+              "f_Hz": 3003243.766400509,
+              "PM_deg": 52.851008960095854,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 52.851008960095854,
+          "min_GM_db": 8.873043973617524
+        },
+        "closed_peaking_dB": 1.5174907070277899,
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 3.034688498873705,
+          "max_abs_VDS_V": 2.3862923547463906,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "step",
+      "arguments": [
+        "pex",
+        "large_signal",
+        3.3,
+        25,
+        20,
+        true
+      ],
+      "result": {
+        "key": "pex",
+        "name": "large_signal",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "CL_pF": 20,
+        "large_signal": true,
+        "events": [
+          {
+            "start_s": 1.0099999999999999e-06,
+            "target_V": 3.0,
+            "settling_s": 1.2069964130335563e-06,
+            "tolerance_V": 0.027000000000000003,
+            "rise_or_fall_10_90_s": 9.679999999999838e-07,
+            "overshoot_V": 0,
+            "final_error_V": -6.77238708961525e-05
+          },
+          {
+            "start_s": 8.01e-06,
+            "target_V": 0.3,
+            "settling_s": 1.1692892075798223e-06,
+            "tolerance_V": 0.027000000000000003,
+            "rise_or_fall_10_90_s": 9.679999999996628e-07,
+            "overshoot_V": 0,
+            "final_error_V": 1.3016596500436961e-05
+          }
+        ],
+        "guard": {
+          "MOS_checked": 225,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 3.034645963590013,
+          "max_abs_VDS_V": 2.998259886103291,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "schematic",
+        "tt",
+        3.3,
+        25,
+        "tt"
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "tt",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "tt",
+        "CL_pF": 20,
+        "Vout_V": 1.650007771176405,
+        "IREF_uA": 4.976647189422771,
+        "Iq_uA": 259.8089762881169,
+        "open_gain": {
+          "gain_db": 99.0110680800723,
+          "unity_crossings": [
+            {
+              "f_Hz": 3086381.5565533233,
+              "PM_deg": 80.68950021979384,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.68950021979384,
+          "min_GM_db": 9.88972962056086
+        },
+        "loop": {
+          "gain_db": 99.01098847807651,
+          "unity_crossings": [
+            {
+              "f_Hz": 3086375.583018205,
+              "PM_deg": 80.55754324593634,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 80.55754324593634,
+          "min_GM_db": 10.00953331061469
+        },
+        "closed_peaking_dB": -1.9146790414801972e-05,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.387503326483135,
+          "max_abs_VDS_V": 2.387503326483135,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "schematic",
+        "ff",
+        3.3,
+        25,
+        "ff"
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "ff",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "ff",
+        "CL_pF": 20,
+        "Vout_V": 1.650009589438333,
+        "IREF_uA": 4.820433718539737,
+        "Iq_uA": 263.27692967567367,
+        "open_gain": {
+          "gain_db": 97.70028284231472,
+          "unity_crossings": [
+            {
+              "f_Hz": 3081487.5405386183,
+              "PM_deg": 81.58402807295587,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 81.58402807295587,
+          "min_GM_db": 10.408879800734397
+        },
+        "loop": {
+          "gain_db": 97.70024538049012,
+          "unity_crossings": [
+            {
+              "f_Hz": 3081367.0867909724,
+              "PM_deg": 81.47919893401321,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 81.47919893401321,
+          "min_GM_db": 10.472134719353846
+        },
+        "closed_peaking_dB": -7.570478230128121e-05,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.2706163836831976,
+          "max_abs_VDS_V": 2.432287074018445,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "schematic",
+        "ss",
+        3.3,
+        25,
+        "ss"
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "ss",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "ss",
+        "CL_pF": 20,
+        "Vout_V": 1.650006276753579,
+        "IREF_uA": 5.13447026729457,
+        "Iq_uA": 257.1155813849411,
+        "open_gain": {
+          "gain_db": 100.24077904798601,
+          "unity_crossings": [
+            {
+              "f_Hz": 3094673.5996979135,
+              "PM_deg": 79.62193682655206,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.62193682655206,
+          "min_GM_db": 9.41840808023129
+        },
+        "loop": {
+          "gain_db": 100.24067457798266,
+          "unity_crossings": [
+            {
+              "f_Hz": 3094665.3623709297,
+              "PM_deg": 79.45712512888542,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.45712512888542,
+          "min_GM_db": 9.592693733059804
+        },
+        "closed_peaking_dB": 1.9233877292938775e-05,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.5160626117146974,
+          "max_abs_VDS_V": 2.5160626117146974,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "schematic",
+        "sf",
+        3.3,
+        25,
+        "sf"
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "sf",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "sf",
+        "CL_pF": 20,
+        "Vout_V": 1.650007947682693,
+        "IREF_uA": 4.580059457165176,
+        "Iq_uA": 242.52800961839168,
+        "open_gain": {
+          "gain_db": 98.82337000888606,
+          "unity_crossings": [
+            {
+              "f_Hz": 2979881.627524933,
+              "PM_deg": 79.48475519098342,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.48475519098342,
+          "min_GM_db": 10.06447198052199
+        },
+        "loop": {
+          "gain_db": 98.82330147400098,
+          "unity_crossings": [
+            {
+              "f_Hz": 2980634.9741470586,
+              "PM_deg": 79.3050024677181,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 79.3050024677181,
+          "min_GM_db": 10.219432071188077
+        },
+        "closed_peaking_dB": -3.0909010946117824e-05,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.5334989016687004,
+          "max_abs_VDS_V": 2.5334989016687004,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "frequency",
+      "arguments": [
+        "schematic",
+        "fs",
+        3.3,
+        25,
+        "fs"
+      ],
+      "result": {
+        "key": "schematic",
+        "name": "fs",
+        "vdd": 3.3,
+        "temp_C": 25,
+        "corner": "fs",
+        "CL_pF": 20,
+        "Vout_V": 1.650007733041923,
+        "IREF_uA": 5.385534728564856,
+        "Iq_uA": 278.985438147179,
+        "open_gain": {
+          "gain_db": 99.02916106664351,
+          "unity_crossings": [
+            {
+              "f_Hz": 3198976.7763303886,
+              "PM_deg": 81.53116726373092,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 81.53116726373092,
+          "min_GM_db": 9.782240891417391
+        },
+        "loop": {
+          "gain_db": 99.02906699264813,
+          "unity_crossings": [
+            {
+              "f_Hz": 3197904.15099438,
+              "PM_deg": 81.43285081610492,
+              "direction": "down"
+            }
+          ],
+          "min_PM_deg": 81.43285081610492,
+          "min_GM_db": 9.892329450758922
+        },
+        "closed_peaking_dB": -3.8389562513875885e-06,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.253795960349639,
+          "max_abs_VDS_V": 2.32016021413505,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        0
+      ],
+      "result": {
+        "seed": 70100,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.650197341707733,
+        "required_input_offset_V": -0.00019734170773300086,
+        "IREF_uA": 4.386861554708137,
+        "Iq_uA": 252.0295819181858,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3856026944117596,
+          "max_abs_VDS_V": 2.3928727957646982,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        1
+      ],
+      "result": {
+        "seed": 70101,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.647292417624577,
+        "required_input_offset_V": 0.002707582375423012,
+        "IREF_uA": 4.706575405791975,
+        "Iq_uA": 267.332336286874,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.4619468506137614,
+          "max_abs_VDS_V": 2.4619468506137614,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        2
+      ],
+      "result": {
+        "seed": 70102,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.650378937996151,
+        "required_input_offset_V": -0.0003789379961511852,
+        "IREF_uA": 4.718866141093159,
+        "Iq_uA": 245.3151086415777,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.289812582174439,
+          "max_abs_VDS_V": 2.3923141379474435,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        3
+      ],
+      "result": {
+        "seed": 70103,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.652758569490743,
+        "required_input_offset_V": -0.002758569490743046,
+        "IREF_uA": 4.937166733052511,
+        "Iq_uA": 270.6906651991317,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.4489833210576903,
+          "max_abs_VDS_V": 2.4489833210576903,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        4
+      ],
+      "result": {
+        "seed": 70104,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.656933470841462,
+        "required_input_offset_V": -0.006933470841462119,
+        "IREF_uA": 5.755660912418591,
+        "Iq_uA": 305.82430069317763,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.4955351868853217,
+          "max_abs_VDS_V": 2.4955351868853217,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        5
+      ],
+      "result": {
+        "seed": 70105,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.651484355573649,
+        "required_input_offset_V": -0.00148435557364901,
+        "IREF_uA": 4.846587258535099,
+        "Iq_uA": 259.276738199669,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3867566562717486,
+          "max_abs_VDS_V": 2.3925321052641415,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        6
+      ],
+      "result": {
+        "seed": 70106,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.655581431618576,
+        "required_input_offset_V": -0.005581431618576049,
+        "IREF_uA": 4.427131298428876,
+        "Iq_uA": 239.895847167035,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.262707650276621,
+          "max_abs_VDS_V": 2.396950062209486,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        7
+      ],
+      "result": {
+        "seed": 70107,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.648422286410234,
+        "required_input_offset_V": 0.0015777135897658834,
+        "IREF_uA": 4.862216221082442,
+        "Iq_uA": 247.2704428116123,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.4081034365428993,
+          "max_abs_VDS_V": 2.4081034365428993,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        8
+      ],
+      "result": {
+        "seed": 70108,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.654632514290816,
+        "required_input_offset_V": -0.004632514290816125,
+        "IREF_uA": 5.38832192993872,
+        "Iq_uA": 295.17563586157047,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.5629585746558856,
+          "max_abs_VDS_V": 2.5629585746558856,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        9
+      ],
+      "result": {
+        "seed": 70109,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.646610590541566,
+        "required_input_offset_V": 0.003389409458433912,
+        "IREF_uA": 5.277390177686701,
+        "Iq_uA": 243.40977621605,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.545531023084177,
+          "max_abs_VDS_V": 2.545531023084177,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        10
+      ],
+      "result": {
+        "seed": 70110,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.653934487457936,
+        "required_input_offset_V": -0.00393448745793612,
+        "IREF_uA": 5.539218550479877,
+        "Iq_uA": 279.8047027565611,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.5964656245666657,
+          "max_abs_VDS_V": 2.5964656245666657,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        11
+      ],
+      "result": {
+        "seed": 70111,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.653114316607955,
+        "required_input_offset_V": -0.0031143166079550255,
+        "IREF_uA": 4.110962717856288,
+        "Iq_uA": 216.025170051062,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.2914982923991616,
+          "max_abs_VDS_V": 2.3993996519042784,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        12
+      ],
+      "result": {
+        "seed": 70112,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.64314857132197,
+        "required_input_offset_V": 0.006851428678029903,
+        "IREF_uA": 4.4343463270264785,
+        "Iq_uA": 211.4572238059774,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.18505507713287,
+          "max_abs_VDS_V": 2.4066559446771154,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        13
+      ],
+      "result": {
+        "seed": 70113,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.639368083907146,
+        "required_input_offset_V": 0.010631916092853855,
+        "IREF_uA": 4.799731110385774,
+        "Iq_uA": 263.6124094546763,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.4813137690638376,
+          "max_abs_VDS_V": 2.4813137690638376,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        14
+      ],
+      "result": {
+        "seed": 70114,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.65537972606902,
+        "required_input_offset_V": -0.005379726069020041,
+        "IREF_uA": 5.7774472830070565,
+        "Iq_uA": 291.76655018497974,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.53639501738549,
+          "max_abs_VDS_V": 2.53639501738549,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        15
+      ],
+      "result": {
+        "seed": 70115,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.644054022579948,
+        "required_input_offset_V": 0.005945977420051873,
+        "IREF_uA": 5.483888819030168,
+        "Iq_uA": 278.3829246147821,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.480114875744772,
+          "max_abs_VDS_V": 2.480114875744772,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        16
+      ],
+      "result": {
+        "seed": 70116,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.650716964253972,
+        "required_input_offset_V": -0.0007169642539721632,
+        "IREF_uA": 6.060498783819207,
+        "Iq_uA": 296.4149455828996,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.5449579389475554,
+          "max_abs_VDS_V": 2.5449579389475554,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        17
+      ],
+      "result": {
+        "seed": 70117,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.652673150543458,
+        "required_input_offset_V": -0.0026731505434580694,
+        "IREF_uA": 5.073195258046172,
+        "Iq_uA": 278.0989246620098,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3219490068309008,
+          "max_abs_VDS_V": 2.3876674848380737,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        18
+      ],
+      "result": {
+        "seed": 70118,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.650573636182023,
+        "required_input_offset_V": -0.0005736361820229963,
+        "IREF_uA": 4.395923099323281,
+        "Iq_uA": 212.4711887899964,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.372279939511383,
+          "max_abs_VDS_V": 2.3982683076209748,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        19
+      ],
+      "result": {
+        "seed": 70119,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.652135765349126,
+        "required_input_offset_V": -0.002135765349126073,
+        "IREF_uA": 5.4967108586627225,
+        "Iq_uA": 271.7162172135583,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.475555876693579,
+          "max_abs_VDS_V": 2.475555876693579,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        20
+      ],
+      "result": {
+        "seed": 70120,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.652047554416987,
+        "required_input_offset_V": -0.0020475544169871185,
+        "IREF_uA": 5.519617706191777,
+        "Iq_uA": 303.6745760243456,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.487573333249599,
+          "max_abs_VDS_V": 2.487573333249599,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        21
+      ],
+      "result": {
+        "seed": 70121,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.64246637252909,
+        "required_input_offset_V": 0.007533627470909909,
+        "IREF_uA": 4.610378390717025,
+        "Iq_uA": 248.059203648509,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.322726812474501,
+          "max_abs_VDS_V": 2.39544242439211,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        22
+      ],
+      "result": {
+        "seed": 70122,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.641845139403277,
+        "required_input_offset_V": 0.00815486059672299,
+        "IREF_uA": 3.9960208369560735,
+        "Iq_uA": 190.2033282253033,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.315318666271642,
+          "max_abs_VDS_V": 2.404883135923276,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        23
+      ],
+      "result": {
+        "seed": 70123,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.647710665622028,
+        "required_input_offset_V": 0.0022893343779719633,
+        "IREF_uA": 5.794408481051199,
+        "Iq_uA": 280.3104474130589,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.4415180021440186,
+          "max_abs_VDS_V": 2.4415180021440186,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        24
+      ],
+      "result": {
+        "seed": 70124,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.647441821966755,
+        "required_input_offset_V": 0.0025581780332448734,
+        "IREF_uA": 4.9165039956665995,
+        "Iq_uA": 249.57657528229217,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.4759836692720283,
+          "max_abs_VDS_V": 2.4759836692720283,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        25
+      ],
+      "result": {
+        "seed": 70125,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.641577918629817,
+        "required_input_offset_V": 0.008422081370182966,
+        "IREF_uA": 4.760781082459068,
+        "Iq_uA": 252.89819323207828,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.333391674899136,
+          "max_abs_VDS_V": 2.391441994888957,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        26
+      ],
+      "result": {
+        "seed": 70126,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.642387788069238,
+        "required_input_offset_V": 0.007612211930762003,
+        "IREF_uA": 5.681803403286692,
+        "Iq_uA": 285.747505451743,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.471423055887761,
+          "max_abs_VDS_V": 2.471423055887761,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        27
+      ],
+      "result": {
+        "seed": 70127,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.647679993451188,
+        "required_input_offset_V": 0.002320006548811815,
+        "IREF_uA": 4.605234753548496,
+        "Iq_uA": 251.1046947339,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3159935595134216,
+          "max_abs_VDS_V": 2.3960771740333158,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        28
+      ],
+      "result": {
+        "seed": 70128,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.657439547595864,
+        "required_input_offset_V": -0.007439547595864182,
+        "IREF_uA": 5.8290800583093,
+        "Iq_uA": 282.6744431690779,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.543056781508156,
+          "max_abs_VDS_V": 2.543056781508156,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        29
+      ],
+      "result": {
+        "seed": 70129,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.652183933192664,
+        "required_input_offset_V": -0.002183933192664078,
+        "IREF_uA": 4.67168011752031,
+        "Iq_uA": 240.0161490272699,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3253368823591547,
+          "max_abs_VDS_V": 2.394150349545591,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        30
+      ],
+      "result": {
+        "seed": 70130,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.64044640390165,
+        "required_input_offset_V": 0.009553596098349937,
+        "IREF_uA": 5.6045924972015735,
+        "Iq_uA": 274.8224817879991,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.631211900460409,
+          "max_abs_VDS_V": 2.631211900460409,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        31
+      ],
+      "result": {
+        "seed": 70131,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.6529417740136,
+        "required_input_offset_V": -0.0029417740136001846,
+        "IREF_uA": 4.4155698444395535,
+        "Iq_uA": 247.5115884619741,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.332427790518323,
+          "max_abs_VDS_V": 2.3984374586570056,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        32
+      ],
+      "result": {
+        "seed": 70132,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.652785513829004,
+        "required_input_offset_V": -0.0027855138290040493,
+        "IREF_uA": 4.611723893601382,
+        "Iq_uA": 262.2270338341674,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3550709104826746,
+          "max_abs_VDS_V": 2.3982185491705454,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        33
+      ],
+      "result": {
+        "seed": 70133,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.653088819557167,
+        "required_input_offset_V": -0.0030888195571669996,
+        "IREF_uA": 5.371000018248318,
+        "Iq_uA": 287.773539946378,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.433270185967496,
+          "max_abs_VDS_V": 2.433270185967496,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        34
+      ],
+      "result": {
+        "seed": 70134,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.639630667774866,
+        "required_input_offset_V": 0.01036933222513392,
+        "IREF_uA": 5.544359185808388,
+        "Iq_uA": 287.01857925809026,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.53697222310587,
+          "max_abs_VDS_V": 2.53697222310587,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        35
+      ],
+      "result": {
+        "seed": 70135,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.646477652045158,
+        "required_input_offset_V": 0.0035223479548418535,
+        "IREF_uA": 4.935689699731392,
+        "Iq_uA": 242.936153456169,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.2620847305585725,
+          "max_abs_VDS_V": 2.390919552925037,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        36
+      ],
+      "result": {
+        "seed": 70136,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.646558652300764,
+        "required_input_offset_V": 0.003441347699235875,
+        "IREF_uA": 4.916368516282712,
+        "Iq_uA": 282.4465647644797,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.4430738788220276,
+          "max_abs_VDS_V": 2.4430738788220276,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        37
+      ],
+      "result": {
+        "seed": 70137,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.652731465158279,
+        "required_input_offset_V": -0.002731465158279045,
+        "IREF_uA": 4.570739376058741,
+        "Iq_uA": 252.3692011196478,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3539441949347557,
+          "max_abs_VDS_V": 2.3942186694809315,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        38
+      ],
+      "result": {
+        "seed": 70138,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.650933144770568,
+        "required_input_offset_V": -0.0009331447705680507,
+        "IREF_uA": 4.770115735446263,
+        "Iq_uA": 244.5612501432095,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3650927254061163,
+          "max_abs_VDS_V": 2.395197168963324,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        39
+      ],
+      "result": {
+        "seed": 70139,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.645385171670494,
+        "required_input_offset_V": 0.004614828329505993,
+        "IREF_uA": 5.1498824610269445,
+        "Iq_uA": 260.6218745374778,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.4870180229723555,
+          "max_abs_VDS_V": 2.4870180229723555,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        40
+      ],
+      "result": {
+        "seed": 70140,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.655658266264403,
+        "required_input_offset_V": -0.005658266264403133,
+        "IREF_uA": 5.101389211195371,
+        "Iq_uA": 270.2063721798785,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3199462628557015,
+          "max_abs_VDS_V": 2.3886664205522106,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        41
+      ],
+      "result": {
+        "seed": 70141,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.652792196764125,
+        "required_input_offset_V": -0.002792196764125121,
+        "IREF_uA": 5.398467949429939,
+        "Iq_uA": 254.62249794475989,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3582762783970175,
+          "max_abs_VDS_V": 2.3928298930544356,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        42
+      ],
+      "result": {
+        "seed": 70142,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.652286086809678,
+        "required_input_offset_V": -0.002286086809678123,
+        "IREF_uA": 5.094142578375965,
+        "Iq_uA": 262.7657777650341,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.373261934110818,
+          "max_abs_VDS_V": 2.38687269825464,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        43
+      ],
+      "result": {
+        "seed": 70143,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.652986831545521,
+        "required_input_offset_V": -0.0029868315455210404,
+        "IREF_uA": 4.240348545128311,
+        "Iq_uA": 231.8012976290261,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.254634398044849,
+          "max_abs_VDS_V": 2.401820961526049,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        44
+      ],
+      "result": {
+        "seed": 70144,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.648434585072777,
+        "required_input_offset_V": 0.0015654149272228413,
+        "IREF_uA": 5.248606335000979,
+        "Iq_uA": 255.82487307750043,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.4535484333520405,
+          "max_abs_VDS_V": 2.4535484333520405,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        45
+      ],
+      "result": {
+        "seed": 70145,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.648977973091339,
+        "required_input_offset_V": 0.0010220269086609335,
+        "IREF_uA": 4.2774934935149735,
+        "Iq_uA": 227.9319956265999,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.261439908872827,
+          "max_abs_VDS_V": 2.395856492474769,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        46
+      ],
+      "result": {
+        "seed": 70146,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.645070009192669,
+        "required_input_offset_V": 0.0049299908073308085,
+        "IREF_uA": 4.7974226720793665,
+        "Iq_uA": 251.40912880926567,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3671200952037186,
+          "max_abs_VDS_V": 2.3915622331726487,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        47
+      ],
+      "result": {
+        "seed": 70147,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.647630816296063,
+        "required_input_offset_V": 0.0023691837039370167,
+        "IREF_uA": 4.529450666060669,
+        "Iq_uA": 243.4313288205177,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.306697328315955,
+          "max_abs_VDS_V": 2.397830325159889,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        48
+      ],
+      "result": {
+        "seed": 70148,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.640164820677152,
+        "required_input_offset_V": 0.009835179322847942,
+        "IREF_uA": 5.010944591119078,
+        "Iq_uA": 288.1179290036885,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.429836152212538,
+          "max_abs_VDS_V": 2.429836152212538,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        49
+      ],
+      "result": {
+        "seed": 70149,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.655812126931869,
+        "required_input_offset_V": -0.005812126931869166,
+        "IREF_uA": 4.197974675950583,
+        "Iq_uA": 224.8257809561034,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.2260649338893357,
+          "max_abs_VDS_V": 2.402902728843607,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        50
+      ],
+      "result": {
+        "seed": 70150,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.647750593344916,
+        "required_input_offset_V": 0.0022494066550839964,
+        "IREF_uA": 5.213670523557902,
+        "Iq_uA": 263.4096083990515,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.4238658792247834,
+          "max_abs_VDS_V": 2.4238658792247834,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        51
+      ],
+      "result": {
+        "seed": 70151,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.653022391242202,
+        "required_input_offset_V": -0.0030223912422020494,
+        "IREF_uA": 4.388696715762466,
+        "Iq_uA": 242.9220374811935,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.2504572026441068,
+          "max_abs_VDS_V": 2.4006337681418435,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        52
+      ],
+      "result": {
+        "seed": 70152,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.649591039331596,
+        "required_input_offset_V": 0.00040896066840390155,
+        "IREF_uA": 5.464900069006634,
+        "Iq_uA": 280.5602902640844,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.4993745731736277,
+          "max_abs_VDS_V": 2.4993745731736277,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        53
+      ],
+      "result": {
+        "seed": 70153,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.647074551999005,
+        "required_input_offset_V": 0.0029254480009948125,
+        "IREF_uA": 5.0943399602752955,
+        "Iq_uA": 248.856277788324,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.4042524518208372,
+          "max_abs_VDS_V": 2.4042524518208372,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        54
+      ],
+      "result": {
+        "seed": 70154,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.642827884588583,
+        "required_input_offset_V": 0.007172115411416824,
+        "IREF_uA": 4.065194479326215,
+        "Iq_uA": 208.51019962195932,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.298130463858224,
+          "max_abs_VDS_V": 2.4030265219288336,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        55
+      ],
+      "result": {
+        "seed": 70155,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.656206198506785,
+        "required_input_offset_V": -0.0062061985067851655,
+        "IREF_uA": 5.153990757727388,
+        "Iq_uA": 269.8898556748768,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.380353862546757,
+          "max_abs_VDS_V": 2.385927152910721,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        56
+      ],
+      "result": {
+        "seed": 70156,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.651909980371017,
+        "required_input_offset_V": -0.0019099803710171948,
+        "IREF_uA": 5.268509258083201,
+        "Iq_uA": 269.8117197254201,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.5175919701063365,
+          "max_abs_VDS_V": 2.5175919701063365,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        57
+      ],
+      "result": {
+        "seed": 70157,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.653627821026841,
+        "required_input_offset_V": -0.003627821026841005,
+        "IREF_uA": 5.057139902961866,
+        "Iq_uA": 279.6199587327965,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.391218614750818,
+          "max_abs_VDS_V": 2.391218614750818,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        58
+      ],
+      "result": {
+        "seed": 70158,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.642887745315469,
+        "required_input_offset_V": 0.0071122546845308054,
+        "IREF_uA": 4.914103683539019,
+        "Iq_uA": 269.11286727648786,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.338620113363389,
+          "max_abs_VDS_V": 2.3873380695613102,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        59
+      ],
+      "result": {
+        "seed": 70159,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.647711205853117,
+        "required_input_offset_V": 0.0022887941468829887,
+        "IREF_uA": 4.89191384663193,
+        "Iq_uA": 262.6036730751894,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.330478144224314,
+          "max_abs_VDS_V": 2.3900172113447313,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        60
+      ],
+      "result": {
+        "seed": 70160,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.654810171947743,
+        "required_input_offset_V": -0.004810171947743136,
+        "IREF_uA": 4.326201650543373,
+        "Iq_uA": 230.6698371795925,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.375572103628943,
+          "max_abs_VDS_V": 2.402128477097684,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        61
+      ],
+      "result": {
+        "seed": 70161,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.66119208803869,
+        "required_input_offset_V": -0.011192088038689985,
+        "IREF_uA": 5.826089775213975,
+        "Iq_uA": 260.3882479606959,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.506158125226298,
+          "max_abs_VDS_V": 2.506158125226298,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        62
+      ],
+      "result": {
+        "seed": 70162,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.65625289619384,
+        "required_input_offset_V": -0.006252896193840174,
+        "IREF_uA": 5.943486205541645,
+        "Iq_uA": 287.9014047238223,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.3683933869381146,
+          "max_abs_VDS_V": 2.377442213728571,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    },
+    {
+      "kind": "mismatch",
+      "arguments": [
+        63
+      ],
+      "result": {
+        "seed": 70163,
+        "MC_MM_SWITCH": 1,
+        "MC_PR_SWITCH": 0,
+        "corner": "tt",
+        "temp_C": 25,
+        "VDD": 3.3,
+        "CL_pF": 20,
+        "Vout_V": 1.646668916257134,
+        "required_input_offset_V": 0.003331083742865948,
+        "IREF_uA": 4.704429606612055,
+        "Iq_uA": 275.5786585721533,
+        "guard": {
+          "MOS_checked": 49,
+          "points_checked": 1,
+          "invalid_points": [],
+          "stress_invalid_points": [],
+          "max_abs_VGS_or_VBS_V": 2.343494687644352,
+          "max_abs_VDS_V": 2.3915687427409043,
+          "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+          "saturation_not_claimed": true,
+          "passed": true
+        },
+        "interpretation": "64 schematic local mismatch draws at one condition; no silicon yield claim.",
+        "simulation_completed": true
+      }
+    }
+  ],
+  "repeat_seed_check": {
+    "seed": 70100,
+    "original_values": [
+      3.3,
+      1.650197341707733,
+      -0.0002520295819181858,
+      4.386861554708137e-06
+    ],
+    "repeated_values": [
+      3.3,
+      1.650197341707733,
+      -0.0002520295819181858,
+      4.386861554708137e-06
+    ],
+    "absolute_differences": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "tolerance_absolute": 1e-12,
+    "repeatable": true
+  },
+  "final_GDS_sha256": "51fc3c35decbf8409eec6f5720971efe651120b82ab5025a5dba9840b7bcdddc",
+  "data_sha256": {
+    "drive_schematic_sink.csv": "9ec50b48d9f204769ceafcad4b348e09148189fa7a61bc9fcc658ad77c808769",
+    "drive_schematic_source.csv": "cafd6813f508353f039a7df4321254ffefdd03e575081f9a3eb16d32ddaf2cee",
+    "drive_small_output_sink.csv": "cc28d8326e98575b6e1a78166a1fd5b46151b101276abf6972cec1c3178141df",
+    "drive_small_output_source.csv": "e2fa79748c01fa0a22c0058e130aa534722e968536cf281f485481489f2c3897",
+    "frequency_ideal_bias_teaching_aol.csv": "d640226af8470785b436394b859af8687dd8df5fc7dfb7d6cf232459464f6f5a",
+    "frequency_no_compensation_teaching_loop.csv": "bad89ae8722b35c167f37bd648eb029c3d2c648c35e09c35de4eb7f54358cf13",
+    "frequency_pex_cool_aol.csv": "8e79c4372e740f5f569ebe1bef70b26bffaed5724f52f5b5bb57bea7e834d5d9",
+    "frequency_pex_cool_closed.csv": "280230cd9dfc4564cfc4e066b626b8d60fef5c27cb99d3b689e04612120fea5b",
+    "frequency_pex_high_supply_aol.csv": "d35ffdad094316a64f8e5dad0e1ec3c76d16a33aaecca1c74874d4fcb78cf630",
+    "frequency_pex_high_supply_closed.csv": "059ace9e321bde918e9e6f5ac3f5141e65f18d88e4986851a7613dbe4ae5c4c2",
+    "frequency_pex_load_100pF_aol.csv": "1dfbe7f14d6eeefaed3cc6ca618499eefcb0d7495a03bb5208255b8414f0f2aa",
+    "frequency_pex_load_100pF_closed.csv": "2e6bc122dc2be824eb4e49161b6376314d4bd8296d8e5bcb64e790b129a34173",
+    "frequency_pex_load_20pF_aol.csv": "79de74e1f497b75d8eca2332af6ae83da7f80b5739a54a5e0fe1028e311d1ecf",
+    "frequency_pex_load_20pF_closed.csv": "97ac2f535d09df3446c7c1db3c5d4b054dc4d3fac5b10b2d5a313fccfb97f71b",
+    "frequency_pex_load_50pF_aol.csv": "9ae11888f33c040c914190f51229758d67c4335287fea0cd0926606a8cc80679",
+    "frequency_pex_load_50pF_closed.csv": "61200e0c329b2df4f80f4831c11c83eab5189766de7aeda45cbe3cb30a322b09",
+    "frequency_pex_load_5pF_aol.csv": "8ea76e3dd1ba1a0c9365f8d93c6efb6d63b824df71682c129213f04bcd83ce34",
+    "frequency_pex_load_5pF_closed.csv": "c771cd09793fe2fad46b57f3e39855b94fdff20c1938937a6e2362c33ab95f2c",
+    "frequency_pex_low_supply_aol.csv": "59744e7d2a4f8724db32f851aa66787def8ef1de5bd7395ef51f8a077e5e2551",
+    "frequency_pex_low_supply_closed.csv": "9ce8c04cc11435ae05eedee912b5d50b11113d0cea273436645d2a2bcdb12f42",
+    "frequency_pex_nominal_aol.csv": "79de74e1f497b75d8eca2332af6ae83da7f80b5739a54a5e0fe1028e311d1ecf",
+    "frequency_pex_nominal_closed.csv": "97ac2f535d09df3446c7c1db3c5d4b054dc4d3fac5b10b2d5a313fccfb97f71b",
+    "frequency_pex_warm_aol.csv": "b4961347b479ceaa1b8af9a9a7786685be9b5520f0742b1bf8631ef1574b0e44",
+    "frequency_pex_warm_closed.csv": "35dbae826ed429b3d42317351ad95b90da0596821fe8cecc9f72d63593a7fe03",
+    "frequency_schematic_cool_aol.csv": "2174c3261c5b0032fbcd29595592603e6fc38af845880a718523a5d187f192bf",
+    "frequency_schematic_cool_closed.csv": "c56c22c15754ea3a72071e7e3b963021b357630e8f3eac7b70a69c0eeca429ec",
+    "frequency_schematic_ff_loop.csv": "c31ea5201dacfb125a5fae948b38b66c2a739935874c1823bc20de9f4c4669c8",
+    "frequency_schematic_fs_loop.csv": "b60c0cc8887dd7538763112ca06ed9d656b740fc1562ce694b0b70ce7c5256c4",
+    "frequency_schematic_high_supply_aol.csv": "cb4b223dbad77fc8ab0f2836a8fc16c4a4088c5fbc91acfcff8ed0b8e9730a6e",
+    "frequency_schematic_high_supply_closed.csv": "9c9bb0f3227497b466de4d6edad26f31210c701c5a52a1f3c71e78b31d4067e7",
+    "frequency_schematic_load_100pF_aol.csv": "77bdb9dfe8d20767095bc2a38816c0d20e82674a39f585b3e89cda2a4ffa0d82",
+    "frequency_schematic_load_100pF_closed.csv": "d982f80728a3962ac850bbc4abe24c0b8cd2af5c4cd68ef147d8949657210384",
+    "frequency_schematic_load_20pF_aol.csv": "740d22fb8a223d1ee73bad2fc582db452d76f3750136d5d29be59e652d682260",
+    "frequency_schematic_load_20pF_closed.csv": "5cd2ef4eab033fe3610dec39d897ee497afc19b7c4eccbe6dbf3c6088c81bf56",
+    "frequency_schematic_load_50pF_aol.csv": "b88d6c293df25a39b33c7125f57d9f67f046e71a2362a25f32e66a1419eb6663",
+    "frequency_schematic_load_50pF_closed.csv": "ed14ff7b9d8a1c41bebbeca59582025069b3f53d6a306e077bd66a27841765fe",
+    "frequency_schematic_load_5pF_aol.csv": "ca79b8acee4b1ba6fe32d885d6decb6e8230018ae6687f6a3727cd241b2ce02b",
+    "frequency_schematic_load_5pF_closed.csv": "b7a666ac7b27c8b2a232fb98f849cb85a952a4d8e370dc4206caef3a1aea6b63",
+    "frequency_schematic_low_supply_aol.csv": "5fb50a403349d287f05eb781b97bb19089851b261e0032c8ae0ce19c21b903f4",
+    "frequency_schematic_low_supply_closed.csv": "f252a6d2cc267314690294c194e0fabf71250e4b200068b4e558b91374b83397",
+    "frequency_schematic_nominal_aol.csv": "740d22fb8a223d1ee73bad2fc582db452d76f3750136d5d29be59e652d682260",
+    "frequency_schematic_nominal_closed.csv": "5cd2ef4eab033fe3610dec39d897ee497afc19b7c4eccbe6dbf3c6088c81bf56",
+    "frequency_schematic_nominal_loop.csv": "29caf1919cad36f372f9d0d8907bb388a28f16afb12c75542899bfa78314dfb1",
+    "frequency_schematic_sf_loop.csv": "4dae3561a90b79ab5f445ff97a5e7ea4b8889c16e677be132eb965f183c038b6",
+    "frequency_schematic_ss_loop.csv": "d4b06cd5fd222cdcbf97bb54040463f5eec4dcb26a349c928ac9f3a101ac7cfb",
+    "frequency_schematic_tt_loop.csv": "29caf1919cad36f372f9d0d8907bb388a28f16afb12c75542899bfa78314dfb1",
+    "frequency_schematic_warm_aol.csv": "82b8641750a56a10333ced350bea9710547d6290a58158ce40f5359a925cfadf",
+    "frequency_schematic_warm_closed.csv": "d89932ae79cc7fb52de136a4b196a52ba3e65a44817559696660dbf7d40a75e5",
+    "gm_pex_full_core_gm_total.csv": "1e6b7455e2d2d46408417639f220450f8cd9c23c7c1a205440c38345eafc9be5",
+    "gm_schematic_full_core_gm_total.csv": "bd006705cdb714204e9e3110521d8ef40e6befa1854a1c2375c30888ca8c7380",
+    "input_stage_nmos_only_gm_total.csv": "91bcae1859b67c207ef660bdb5b08674190e018951bd7a0c823fd8d3b2bd3742",
+    "input_stage_no_spillover_gm_total.csv": "6471a8a5363861e31b17b579d592836876088b1be3d381d06988f48dc0d86a03",
+    "input_stage_with_spillover_gm_total.csv": "d15a887341b67f4723c21fc83de18095742040834cf0a28a5fe31e321ca2e1c7",
+    "local-mismatch.csv": "ae6c65e9ce58b3774a2833ec805279b3d4faf8d2764621d82fd8ed22cefa3090",
+    "mirror_cascode_comparison_mirror.csv": "1dbdd851c50f5f9c61aa3b2f5e8d46dfb67c03719e1bad210f646f460ee049b1",
+    "reference_K2_reference.csv": "e9114eef793d002bc981c250c15e493a21199007e3f471dff113f0c8454d9580",
+    "reference_K8_reference.csv": "fdfa54d76398e3f4160031833b6f40ca54ecbf80749d68aa101f5a36834d119b",
+    "reference_long_resistor_reference.csv": "60efe00df2c0049c2ffcf60ccb8758c375ffe225499d72a0cc7f1e848af4a761",
+    "reference_nominal_reference.csv": "97a3a8a20b5fb47916036dc4589e592ab8a0d68ef7a11492b7e2391145547d6a",
+    "reference_no_startup_reference.csv": "ac8d66bb6e73f40e617b1d3d989be448f12893d73c50cfee3f70645f7d45401c",
+    "reference_short_resistor_reference.csv": "14029a1d687bc88eb892437568bfd7936c9256abe68b069a47d009d5f6b9dc7f",
+    "step_pex_cool_step.csv": "3ad198c42cff8b4f7238e14284b5ab9f5e178a876f07e4661a0cf82fa846c4f1",
+    "step_pex_high_supply_step.csv": "cda94d50b869f746bf7243bf3c2524ad54c9bb7ab64d88d555658ce1e0c6fa2e",
+    "step_pex_large_signal_step.csv": "10cfe0ad6c705311da463ce87b2c9d4b9b535a185be1b277321596d03f629043",
+    "step_pex_low_supply_step.csv": "53148e3f3219c0d5a6f8b254c7d718188d0ee28f0ece4361c3087e0a39426b69",
+    "step_pex_nominal_step.csv": "014a1f0adf83d0bccd7ce8d99ae1a6f33d71f402f58c4094f6016aab82cfb660",
+    "step_pex_warm_step.csv": "5a961b90235e8bef1f8af6cdf147caaabb932ff8b118e0b8e936601e551bfdc9",
+    "step_schematic_cool_step.csv": "342d5c596febef6d9321acf6b47312e7cdd30ee6d98bff7a7d2aa59f1d4e7d61",
+    "step_schematic_high_supply_step.csv": "48e2330a76667f3be34d82133bd4af4de79dcb6e3e23998eca1601aa2aa57b2d",
+    "step_schematic_large_signal_step.csv": "df2992897513f89d40e4f843bc9c23a106dc8c860c89ed0246d9eaa57b9cdedd",
+    "step_schematic_low_supply_step.csv": "b565aa1b4724aa89d55e5f9e5261302abdba4bc988ea1f01067b47231147012f",
+    "step_schematic_nominal_step.csv": "ca0f4f90585231641eb54dd997f8521387655777ce437230023727e5a70419a6",
+    "step_schematic_warm_step.csv": "c12946ff4f4a49c1ce1e1c4c45079504ee712da6c74cd82f0606cfbac940fbb8"
+  },
+  "scope": "Teaching variants are private test circuits. Submission electrical topology is unchanged. Current report uses 25 C; retained earlier DC/supply/startup tests use their stated conditions."
+}
