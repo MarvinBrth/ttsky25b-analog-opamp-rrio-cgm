@@ -1,5 +1,5 @@
 {
-  "documentation_date": "2026-10-08",
+  "documentation_date": "2026-10-09",
   "evidence_date": "2026-10-08",
   "hardware_baseline_commit": "448d26c0b0525362527032585f0d44fe4e89a787",
   "scope": "Final extracted RC; 42 reduced core cases, separate nominal full-RC comparison, 4 limiting interface reruns, 7 dynamic cases. Silicon pending.",
@@ -276,23 +276,32 @@
       "published_sha256": "1033ecdfd668a20a6cbec2c62ead9c0bc87709fce185a00b5a1063143f3780d6",
       "conversion": "Unmodified verified image"
     },
-    "../images/functional-regression.png": {
-      "evidence_source": "functional_regression.png",
-      "source_sha256": "79f99c692db5a6571f832dfd5dc833f65a91d6e664e8f6cbf3e48d98bd92605a",
-      "published_sha256": "79f99c692db5a6571f832dfd5dc833f65a91d6e664e8f6cbf3e48d98bd92605a",
-      "conversion": "Unmodified verified image"
-    },
-    "../images/routing-before-after.png": {
-      "evidence_source": "routing_before_after.png",
-      "source_sha256": "ade6549cf7fd16c6c55aae4531c85da6f45040ccfa313a82e177ebcc87749f6b",
-      "published_sha256": "ade6549cf7fd16c6c55aae4531c85da6f45040ccfa313a82e177ebcc87749f6b",
-      "conversion": "Unmodified verified image"
-    },
     "nominal-bias.json": {
       "evidence_source": "core/tt_mid_0_full/op_physical.raw",
       "source_sha256": "4f442897c0e51270ddd230990f70325af999642693af089fd1106c9593d29b4d",
       "published_sha256": "a2c5f94ed9e084a4aa9ac11492eba5fca2c9359f5a4ff9329565da331fe8608f",
       "conversion": "Mapped local voltages and recovered DC terminal currents; see method and supplementary source hashes in nominal-bias.json"
     }
-  }
+  },
+  "images_sha256": {
+    "bias-supply.png": "c094fd362107cb279ecf2a87108c1c0d324279445b750132d52e57f2258fc076",
+    "bias-temperature.png": "5bea0cb54eb5e65d62cbe75314bc5d0b1eb88610aa448a502ecb482910585c6b",
+    "common-mode.png": "6652d96894b8a65bb30345f78096b55d2a9a346fef73c907f5a09ee7c394a1a3",
+    "dc-transfer.png": "b9c63c5d812ebfc7223a41f105f4ebeb161dbbdad3e3480e0dfc286e17efe346",
+    "frequency-nominal.png": "e27237b29ab9c966ca9c4b03a04b665dc72d7b901981113a178b758fd7c191f2",
+    "frequency-supply.png": "06abf02d586e87cd3b426dfdb3507b146670f96af313779997659d7c423d2cf4",
+    "frequency-temperature.png": "34bf51e421f502956b0f04b06f6b57260f7f453b91ffef7d84828dc77c9de93a",
+    "layout.png": "db96906ce1463d2fd668492ac484e2e5e82c49a1a74a9cd9cf1be96eb7a9c374",
+    "load-step.png": "ba4cee5ef0e463ec7291be96120df3f5c0b25f2b274b8dbc9e7c5b2c48163b26",
+    "logo.png": "1033ecdfd668a20a6cbec2c62ead9c0bc87709fce185a00b5a1063143f3780d6",
+    "output-range.png": "8870c38c7e3452b5571a524561d7564830abec61af4f7abe4d6e88e3b3e90958",
+    "reference-startup.png": "a8805a730a0c15d0a15e5e71c95b356bd83a43ea1efd593df4ee3a5444112731",
+    "schematic-bias.png": "aeba3003e4a76a507e84b0bb4146cf0bbb05440db2b14b2e550bbcf8d9b76ccf",
+    "schematic-main.png": "38f299e87c639b326b6314b46936da78d4a2fe8be7d75cf75795dcc57ed2c744",
+    "schematic-reference.png": "75a2bfa83396c767645cfe2cf653bd14d04289ab50906db1bf2e6ffeb7ec7c60",
+    "signal-step.png": "f426b4d636a54f08a97ecd0968140f46d272e02f70e0a7e58b5b5b9f0a4dc771",
+    "supply-rejection.png": "ba5f0e9894a3cb046daf7d9b736b7478360b0056433110cce44e63e3e429c160",
+    "supply-step.png": "b896b85e473980dc80957a9cef157e86fc7e86c16976d46af9b8f9af82d7b455"
+  },
+  "additional_characterization": "characterization-summary.json"
 }

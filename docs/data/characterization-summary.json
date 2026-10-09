@@ -1,0 +1,2563 @@
+{
+  "date": "2026-10-09",
+  "measurements": 38,
+  "paired_cases": 19,
+  "endpoint_guard_decks": 14,
+  "nominal_CL_pF": 20,
+  "digital_supply_V": 1.8,
+  "cases": [
+    {
+      "vout": 1.499974986568908,
+      "dc_error_mV": 0.025013431091958083,
+      "supply_uA": 238.0192666648201,
+      "IREF_uA": 4.801317249909148,
+      "bias_voltages_V": {
+        "bias1": 1.759478704556742,
+        "bias2": 1.764508311142795,
+        "bias3": 1.114306179147847,
+        "bias4": 1.037987359072284,
+        "bias": 1.500258382758277,
+        "vbiasp": 1.875387485006024,
+        "vbiasn": 0.908689368788765,
+        "vstartup": 0.6567920098064729
+      },
+      "startup_currents_uA": {
+        "M43": 2.648035108453238,
+        "M44": 2.64803679437752,
+        "M45": 6.959205247405249e-13
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.742167816239399,
+        "max_abs_VDS_V": 2.341938689560591,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "gain_db": 98.2350445234236,
+      "unity_crossings": [
+        {
+          "f_Hz": 2902337.2289765226,
+          "PM_deg": 79.65931042533747,
+          "direction": "down"
+        }
+      ],
+      "min_PM_deg": 79.65931042533747,
+      "min_GM_db": 9.09084368096017,
+      "closed_peaking_dB": -0.0022469851877395053,
+      "PSRR_definition": "VAPWR only, VIN independent and AC=0, VDPWR fixed1.8V; closed rejection=-20log|Vout/VAPWR|; input referred=20log|Hsignal/Hsupply|",
+      "PSRR_at_Hz": {
+        "10": {
+          "sample_Hz": 10.00000000000005,
+          "closed_supply_rejection_dB": 78.1406931619309,
+          "input_referred_PSRR_dB": 78.13844617670333
+        },
+        "1000": {
+          "sample_Hz": 1000.000000000014,
+          "closed_supply_rejection_dB": 75.7330431467811,
+          "input_referred_PSRR_dB": 75.73079575925578
+        },
+        "100000": {
+          "sample_Hz": 100000.0000000023,
+          "closed_supply_rejection_dB": 39.445207324292504,
+          "input_referred_PSRR_dB": 39.438939796058904
+        }
+      },
+      "backend": "pex",
+      "case": "tt_v3p0_t27",
+      "stage": "operating",
+      "corner": "tt",
+      "VDD": 3.0,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 64.81200000015087,
+      "passed": true
+    },
+    {
+      "vout": 1.649988602895744,
+      "dc_error_mV": 0.011397104255905788,
+      "supply_uA": 338.37208085374584,
+      "IREF_uA": 6.49741249425632,
+      "bias_voltages_V": {
+        "bias1": 2.139267619894778,
+        "bias2": 2.085660435204357,
+        "bias3": 1.175335882315792,
+        "bias4": 1.034799729241423,
+        "bias": 1.650260503326894,
+        "vbiasp": 2.303393326712983,
+        "vbiasn": 0.8422327603833347,
+        "vstartup": 0.5437822514376824
+      },
+      "startup_currents_uA": {
+        "M43": 3.578907368939308,
+        "M44": 3.578892252959319,
+        "M45": 2.8662080782738808e-09
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.9338027066313357,
+        "max_abs_VDS_V": 2.754501077335017,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "gain_db": 95.71021245847467,
+      "unity_crossings": [
+        {
+          "f_Hz": 3123157.04511581,
+          "PM_deg": 79.47117132360489,
+          "direction": "down"
+        }
+      ],
+      "min_PM_deg": 79.47117132360489,
+      "min_GM_db": 9.530229703868498,
+      "closed_peaking_dB": -0.0023045360711013035,
+      "PSRR_definition": "VAPWR only, VIN independent and AC=0, VDPWR fixed1.8V; closed rejection=-20log|Vout/VAPWR|; input referred=20log|Hsignal/Hsupply|",
+      "PSRR_at_Hz": {
+        "10": {
+          "sample_Hz": 10.00000000000005,
+          "closed_supply_rejection_dB": 77.56062147163232,
+          "input_referred_PSRR_dB": 77.5583169355279
+        },
+        "1000": {
+          "sample_Hz": 1000.000000000014,
+          "closed_supply_rejection_dB": 75.55732178287366,
+          "input_referred_PSRR_dB": 75.55501691028
+        },
+        "100000": {
+          "sample_Hz": 100000.0000000023,
+          "closed_supply_rejection_dB": 39.882102817143796,
+          "input_referred_PSRR_dB": 39.87643496859103
+        }
+      },
+      "backend": "pex",
+      "case": "tt_v3p3_t125",
+      "stage": "operating",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 125,
+      "CL_pF": 20,
+      "elapsed_s": 77.65600000019185,
+      "passed": true
+    },
+    {
+      "vout": 1.649973370316055,
+      "dc_error_mV": 0.02662968394484544,
+      "supply_uA": 260.33177297180094,
+      "IREF_uA": 4.98569535194475,
+      "bias_voltages_V": {
+        "bias1": 2.053539552721011,
+        "bias2": 2.046169705104196,
+        "bias3": 1.139126106550956,
+        "bias4": 1.046923925965966,
+        "bias": 1.650282829996326,
+        "vbiasp": 2.173630892257098,
+        "vbiasn": 0.9115682061304287,
+        "vstartup": 0.9087560728183101
+      },
+      "startup_currents_uA": {
+        "M43": 2.817546465798738,
+        "M44": 2.817547947855835,
+        "M45": 2.077925592665816e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.032788653538458,
+        "max_abs_VDS_V": 2.389892849456725,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "gain_db": 98.87768849189624,
+      "unity_crossings": [
+        {
+          "f_Hz": 3100661.795698961,
+          "PM_deg": 79.5545288673903,
+          "direction": "down"
+        }
+      ],
+      "min_PM_deg": 79.5545288673903,
+      "min_GM_db": 9.364093021685301,
+      "closed_peaking_dB": -0.0023593255517305924,
+      "PSRR_definition": "VAPWR only, VIN independent and AC=0, VDPWR fixed1.8V; closed rejection=-20log|Vout/VAPWR|; input referred=20log|Hsignal/Hsupply|",
+      "PSRR_at_Hz": {
+        "10": {
+          "sample_Hz": 10.00000000000005,
+          "closed_supply_rejection_dB": 77.69580983102182,
+          "input_referred_PSRR_dB": 77.69345050543588
+        },
+        "1000": {
+          "sample_Hz": 1000.000000000014,
+          "closed_supply_rejection_dB": 75.70689676230798,
+          "input_referred_PSRR_dB": 75.70453709106347
+        },
+        "100000": {
+          "sample_Hz": 100000.0000000023,
+          "closed_supply_rejection_dB": 40.056484246935426,
+          "input_referred_PSRR_dB": 40.05067004031432
+        }
+      },
+      "backend": "pex",
+      "case": "tt_v3p3_t27",
+      "stage": "operating",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 70.04700000002049,
+      "passed": true
+    },
+    {
+      "vout": 1.649970183073087,
+      "dc_error_mV": 0.029816926912840103,
+      "supply_uA": 206.77969150656818,
+      "IREF_uA": 3.918695791833718,
+      "bias_voltages_V": {
+        "bias1": 1.992027615236408,
+        "bias2": 2.007817778279454,
+        "bias3": 1.129117590999458,
+        "bias4": 1.063100748769712,
+        "bias": 1.650295019688809,
+        "vbiasp": 2.082577723366549,
+        "vbiasn": 0.962582364084199,
+        "vstartup": 1.162503561086167
+      },
+      "startup_currents_uA": {
+        "M43": 2.229926852071785,
+        "M44": 2.22992782692218,
+        "M45": 6.175201159671581e-12
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.093600947069582,
+        "max_abs_VDS_V": 2.4531870607226507,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "gain_db": 101.19052860615065,
+      "unity_crossings": [
+        {
+          "f_Hz": 3070574.016034428,
+          "PM_deg": 79.60713997332199,
+          "direction": "down"
+        }
+      ],
+      "min_PM_deg": 79.60713997332199,
+      "min_GM_db": 9.18573123683484,
+      "closed_peaking_dB": -0.002282489076557835,
+      "PSRR_definition": "VAPWR only, VIN independent and AC=0, VDPWR fixed1.8V; closed rejection=-20log|Vout/VAPWR|; input referred=20log|Hsignal/Hsupply|",
+      "PSRR_at_Hz": {
+        "10": {
+          "sample_Hz": 10.00000000000005,
+          "closed_supply_rejection_dB": 78.2466667473472,
+          "input_referred_PSRR_dB": 78.24438425823541
+        },
+        "1000": {
+          "sample_Hz": 1000.000000000014,
+          "closed_supply_rejection_dB": 76.06560404610472,
+          "input_referred_PSRR_dB": 76.0633212009084
+        },
+        "100000": {
+          "sample_Hz": 100000.0000000023,
+          "closed_supply_rejection_dB": 40.10332083330966,
+          "input_referred_PSRR_dB": 40.09747934863394
+        }
+      },
+      "backend": "pex",
+      "case": "tt_v3p3_tm40",
+      "stage": "operating",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": -40,
+      "CL_pF": 20,
+      "elapsed_s": 90.53099999995902,
+      "passed": true
+    },
+    {
+      "vout": 1.799971701442035,
+      "dc_error_mV": 0.02829855796493419,
+      "supply_uA": 282.1144340359183,
+      "IREF_uA": 5.160681254761069,
+      "bias_voltages_V": {
+        "bias1": 2.348027460796276,
+        "bias2": 2.328827070599615,
+        "bias3": 1.162857163784926,
+        "bias4": 1.055276097285048,
+        "bias": 1.800307285737613,
+        "vbiasp": 2.47201066274561,
+        "vbiasn": 0.9142356376531211,
+        "vstartup": 1.166241470549633
+      },
+      "startup_currents_uA": {
+        "M43": 2.971411774110294,
+        "M44": 2.971413041102797,
+        "M45": 2.82411774166374e-08
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.323559480354763,
+        "max_abs_VDS_V": 2.6850646062902026,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "gain_db": 99.47346113191117,
+      "unity_crossings": [
+        {
+          "f_Hz": 3294057.366977137,
+          "PM_deg": 79.44001007004145,
+          "direction": "down"
+        }
+      ],
+      "min_PM_deg": 79.44001007004145,
+      "min_GM_db": 9.575418512966149,
+      "closed_peaking_dB": -0.00246699108635849,
+      "PSRR_definition": "VAPWR only, VIN independent and AC=0, VDPWR fixed1.8V; closed rejection=-20log|Vout/VAPWR|; input referred=20log|Hsignal/Hsupply|",
+      "PSRR_at_Hz": {
+        "10": {
+          "sample_Hz": 10.00000000000005,
+          "closed_supply_rejection_dB": 77.31523402173549,
+          "input_referred_PSRR_dB": 77.31276703061931
+        },
+        "1000": {
+          "sample_Hz": 1000.000000000014,
+          "closed_supply_rejection_dB": 75.64834743660177,
+          "input_referred_PSRR_dB": 75.6458801442679
+        },
+        "100000": {
+          "sample_Hz": 100000.0000000023,
+          "closed_supply_rejection_dB": 40.61476535188162,
+          "input_referred_PSRR_dB": 40.609287414936574
+        }
+      },
+      "backend": "pex",
+      "case": "tt_v3p6_t27",
+      "stage": "operating",
+      "corner": "tt",
+      "VDD": 3.6,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 86.04700000002049,
+      "passed": true
+    },
+    {
+      "vout": 1.500006397836651,
+      "dc_error_mV": 0.006397836650906541,
+      "supply_uA": 238.96782593564672,
+      "IREF_uA": 4.822845294815543,
+      "bias_voltages_V": {
+        "bias1": 1.759949438995482,
+        "bias2": 1.762980150297952,
+        "bias3": 1.115529980219446,
+        "bias4": 1.038157213846544,
+        "bias": 1.499999999999984,
+        "vbiasp": 1.875466700069312,
+        "vbiasn": 0.908725217419537,
+        "vstartup": 0.653302782939022
+      },
+      "startup_currents_uA": {
+        "M43": 2.663187804474331,
+        "M44": 2.663189498398737,
+        "M45": 6.243283122994989e-13
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.346697217060978,
+        "max_abs_VDS_V": 2.346697217060978,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "gain_db": 98.30252569993549,
+      "unity_crossings": [
+        {
+          "f_Hz": 2887390.8732824815,
+          "PM_deg": 80.66790665339595,
+          "direction": "down"
+        }
+      ],
+      "min_PM_deg": 80.66790665339595,
+      "min_GM_db": 9.744506743914064,
+      "closed_peaking_dB": -3.671414172059596e-05,
+      "PSRR_definition": "VAPWR only, VIN independent and AC=0, VDPWR fixed1.8V; closed rejection=-20log|Vout/VAPWR|; input referred=20log|Hsignal/Hsupply|",
+      "PSRR_at_Hz": {
+        "10": {
+          "sample_Hz": 10.00000000000005,
+          "closed_supply_rejection_dB": 102.65890557672363,
+          "input_referred_PSRR_dB": 102.65886886252737
+        },
+        "1000": {
+          "sample_Hz": 1000.000000000014,
+          "closed_supply_rejection_dB": 80.50129677945392,
+          "input_referred_PSRR_dB": 80.50125965507084
+        },
+        "100000": {
+          "sample_Hz": 100000.0000000023,
+          "closed_supply_rejection_dB": 40.530577245033726,
+          "input_referred_PSRR_dB": 40.526440843047396
+        }
+      },
+      "backend": "schematic",
+      "case": "tt_v3p0_t27",
+      "stage": "operating",
+      "corner": "tt",
+      "VDD": 3.0,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 8.437000000150874,
+      "passed": true
+    },
+    {
+      "vout": 1.650012635577638,
+      "dc_error_mV": 0.012635577638198114,
+      "supply_uA": 339.7754619936303,
+      "IREF_uA": 6.526970932023913,
+      "bias_voltages_V": {
+        "bias1": 2.139978536413693,
+        "bias2": 2.083454788932053,
+        "bias3": 1.177271699803086,
+        "bias4": 1.035139743140058,
+        "bias": 1.650000000000008,
+        "vbiasp": 2.303511715057477,
+        "vbiasn": 0.8423022490466917,
+        "vstartup": 0.5388893190810132
+      },
+      "startup_currents_uA": {
+        "M43": 3.5989539674053983,
+        "M44": 3.598938861608166,
+        "M45": 2.597605082248309e-09
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.7611106809189865,
+        "max_abs_VDS_V": 2.7611106809189865,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "gain_db": 95.76298236936472,
+      "unity_crossings": [
+        {
+          "f_Hz": 3111018.262156519,
+          "PM_deg": 80.46811244452624,
+          "direction": "down"
+        }
+      ],
+      "min_PM_deg": 80.46811244452624,
+      "min_GM_db": 10.170408867234356,
+      "closed_peaking_dB": -2.8312104616569215e-05,
+      "PSRR_definition": "VAPWR only, VIN independent and AC=0, VDPWR fixed1.8V; closed rejection=-20log|Vout/VAPWR|; input referred=20log|Hsignal/Hsupply|",
+      "PSRR_at_Hz": {
+        "10": {
+          "sample_Hz": 10.00000000000005,
+          "closed_supply_rejection_dB": 102.26652968167316,
+          "input_referred_PSRR_dB": 102.26650136953293
+        },
+        "1000": {
+          "sample_Hz": 1000.000000000014,
+          "closed_supply_rejection_dB": 80.91359017384556,
+          "input_referred_PSRR_dB": 80.9135615179299
+        },
+        "100000": {
+          "sample_Hz": 100000.0000000023,
+          "closed_supply_rejection_dB": 40.94773352981064,
+          "input_referred_PSRR_dB": 40.94426893780137
+        }
+      },
+      "backend": "schematic",
+      "case": "tt_v3p3_t125",
+      "stage": "operating",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 125,
+      "CL_pF": 20,
+      "elapsed_s": 7.016000000061467,
+      "passed": true
+    },
+    {
+      "vout": 1.650007834397329,
+      "dc_error_mV": 0.007834397329098408,
+      "supply_uA": 261.4246773309823,
+      "IREF_uA": 5.008536728455965,
+      "bias_voltages_V": {
+        "bias1": 2.05405688035989,
+        "bias2": 2.044522561423788,
+        "bias3": 1.140476649962242,
+        "bias4": 1.047100137374687,
+        "bias": 1.649999999999997,
+        "vbiasp": 2.173718706084784,
+        "vbiasn": 0.9115989125840429,
+        "vstartup": 0.9048377981873718
+      },
+      "startup_currents_uA": {
+        "M43": 2.8348553993368353,
+        "M44": 2.834856889529468,
+        "M45": 1.924389312387003e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.395162201812628,
+        "max_abs_VDS_V": 2.395162201812628,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "gain_db": 98.94585773179953,
+      "unity_crossings": [
+        {
+          "f_Hz": 3087156.697430049,
+          "PM_deg": 80.5573993952936,
+          "direction": "down"
+        }
+      ],
+      "min_PM_deg": 80.5573993952936,
+      "min_GM_db": 10.010773678252741,
+      "closed_peaking_dB": -1.945924159123645e-05,
+      "PSRR_definition": "VAPWR only, VIN independent and AC=0, VDPWR fixed1.8V; closed rejection=-20log|Vout/VAPWR|; input referred=20log|Hsignal/Hsupply|",
+      "PSRR_at_Hz": {
+        "10": {
+          "sample_Hz": 10.00000000000005,
+          "closed_supply_rejection_dB": 104.94284015979244,
+          "input_referred_PSRR_dB": 104.94282070050207
+        },
+        "1000": {
+          "sample_Hz": 1000.000000000014,
+          "closed_supply_rejection_dB": 81.12098099438894,
+          "input_referred_PSRR_dB": 81.12096118230227
+        },
+        "100000": {
+          "sample_Hz": 100000.0000000023,
+          "closed_supply_rejection_dB": 41.141370383970056,
+          "input_referred_PSRR_dB": 41.13782444231334
+        }
+      },
+      "backend": "schematic",
+      "case": "tt_v3p3_t27",
+      "stage": "operating",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 7.030999999959022,
+      "passed": true
+    },
+    {
+      "vout": 1.650006181372375,
+      "dc_error_mV": 0.006181372375069216,
+      "supply_uA": 207.63391404331992,
+      "IREF_uA": 3.9365159322381102,
+      "bias_voltages_V": {
+        "bias1": 1.992420256293966,
+        "bias2": 2.006531639725567,
+        "bias3": 1.130100146191451,
+        "bias4": 1.063182860018912,
+        "bias": 1.650000000000003,
+        "vbiasp": 2.082645025482344,
+        "vbiasn": 0.9625901083928807,
+        "vstartup": 1.159564825887463
+      },
+      "startup_currents_uA": {
+        "M43": 2.2440365077860367,
+        "M44": 2.2440374901179507,
+        "M45": 5.7417204788568336e-12
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.140435174112537,
+        "max_abs_VDS_V": 2.4527872622393216,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "gain_db": 101.2616074996172,
+      "unity_crossings": [
+        {
+          "f_Hz": 3055930.877776957,
+          "PM_deg": 80.61914978726895,
+          "direction": "down"
+        }
+      ],
+      "min_PM_deg": 80.61914978726895,
+      "min_GM_db": 9.84009070963891,
+      "closed_peaking_dB": -1.5155434783985837e-05,
+      "PSRR_definition": "VAPWR only, VIN independent and AC=0, VDPWR fixed1.8V; closed rejection=-20log|Vout/VAPWR|; input referred=20log|Hsignal/Hsupply|",
+      "PSRR_at_Hz": {
+        "10": {
+          "sample_Hz": 10.00000000000005,
+          "closed_supply_rejection_dB": 106.80964016255415,
+          "input_referred_PSRR_dB": 106.80962500707678
+        },
+        "1000": {
+          "sample_Hz": 1000.000000000014,
+          "closed_supply_rejection_dB": 81.18532365858553,
+          "input_referred_PSRR_dB": 81.18530813988096
+        },
+        "100000": {
+          "sample_Hz": 100000.0000000023,
+          "closed_supply_rejection_dB": 41.19970399549533,
+          "input_referred_PSRR_dB": 41.19605835933241
+        }
+      },
+      "backend": "schematic",
+      "case": "tt_v3p3_tm40",
+      "stage": "operating",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": -40,
+      "CL_pF": 20,
+      "elapsed_s": 6.797000000020489,
+      "passed": true
+    },
+    {
+      "vout": 1.800009097048475,
+      "dc_error_mV": 0.009097048474959735,
+      "supply_uA": 283.3451525306566,
+      "IREF_uA": 5.1848009934953,
+      "bias_voltages_V": {
+        "bias1": 2.348589591910851,
+        "bias2": 2.327063293782822,
+        "bias3": 1.164334832146811,
+        "bias4": 1.055458732938655,
+        "bias": 1.80000000000002,
+        "vbiasp": 2.472106664858561,
+        "vbiasn": 0.9142613431553462,
+        "vstartup": 1.161930574568702
+      },
+      "startup_currents_uA": {
+        "M43": 2.9907552045074657,
+        "M44": 2.990756479235615,
+        "M45": 2.598742301375967e-08
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.438069425431298,
+        "max_abs_VDS_V": 2.685738656844654,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "gain_db": 99.54070765000233,
+      "unity_crossings": [
+        {
+          "f_Hz": 3281812.8962247698,
+          "PM_deg": 80.44208089115021,
+          "direction": "down"
+        }
+      ],
+      "min_PM_deg": 80.44208089115021,
+      "min_GM_db": 10.221711013515758,
+      "closed_peaking_dB": -4.4483205619758e-06,
+      "PSRR_definition": "VAPWR only, VIN independent and AC=0, VDPWR fixed1.8V; closed rejection=-20log|Vout/VAPWR|; input referred=20log|Hsignal/Hsupply|",
+      "PSRR_at_Hz": {
+        "10": {
+          "sample_Hz": 10.00000000000005,
+          "closed_supply_rejection_dB": 107.36427697425717,
+          "input_referred_PSRR_dB": 107.36427252589223
+        },
+        "1000": {
+          "sample_Hz": 1000.000000000014,
+          "closed_supply_rejection_dB": 81.68590851943172,
+          "input_referred_PSRR_dB": 81.68590376334296
+        },
+        "100000": {
+          "sample_Hz": 100000.0000000023,
+          "closed_supply_rejection_dB": 41.69965118154818,
+          "input_referred_PSRR_dB": 41.69657041739194
+        }
+      },
+      "backend": "schematic",
+      "case": "tt_v3p6_t27",
+      "stage": "operating",
+      "corner": "tt",
+      "VDD": 3.6,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 8.859000000171363,
+      "passed": true
+    },
+    {
+      "vout": 1.649973370316055,
+      "dc_error_mV": 0.02662968394484544,
+      "supply_uA": 260.33177297180094,
+      "IREF_uA": 4.98569535194475,
+      "bias_voltages_V": {
+        "bias1": 2.053539552721011,
+        "bias2": 2.046169705104196,
+        "bias3": 1.139126106550956,
+        "bias4": 1.046923925965966,
+        "bias": 1.650282829996326,
+        "vbiasp": 2.173630892257098,
+        "vbiasn": 0.9115682061304287,
+        "vstartup": 0.9087560728183101
+      },
+      "startup_currents_uA": {
+        "M43": 2.817546465798738,
+        "M44": 2.817547947855835,
+        "M45": 2.077925592665816e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.032788653538458,
+        "max_abs_VDS_V": 2.389892849456725,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "mode": "common_mode",
+      "Iload_A": 0,
+      "validity": "physical terminal guards, |tracking error|<2mV, 3<IREF_uA<7, positive supply draw",
+      "valid_interval_V": [
+        0.05,
+        3.249999999999996
+      ],
+      "valid_interval_points": 65,
+      "low_headroom_V": null,
+      "high_headroom_V": null,
+      "dc_physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 65,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.032789420508546,
+        "max_abs_VDS_V": 2.389892727444219,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "outside_valid_interval_is_not_qualified": true,
+      "backend": "pex",
+      "case": "common_mode_servo",
+      "stage": "dc",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 164.125,
+      "passed": true
+    },
+    {
+      "vout": 1.649973370316055,
+      "dc_error_mV": 0.02662968394484544,
+      "supply_uA": 260.33177297180094,
+      "IREF_uA": 4.98569535194475,
+      "bias_voltages_V": {
+        "bias1": 2.053539552721011,
+        "bias2": 2.046169705104196,
+        "bias3": 1.139126106550956,
+        "bias4": 1.046923925965966,
+        "bias": 1.650282829996326,
+        "vbiasp": 2.173630892257098,
+        "vbiasn": 0.9115682061304287,
+        "vstartup": 0.9087560728183101
+      },
+      "startup_currents_uA": {
+        "M43": 2.817546465798738,
+        "M44": 2.817547947855835,
+        "M45": 2.077925592665816e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.032788653538458,
+        "max_abs_VDS_V": 2.389892849456725,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "mode": "follower",
+      "Iload_A": 0,
+      "validity": "physical terminal guards, |tracking error|<2mV, 3<IREF_uA<7, positive supply draw",
+      "valid_interval_V": [
+        0.05,
+        3.249999999999996
+      ],
+      "valid_interval_points": 65,
+      "low_headroom_V": 0.05,
+      "high_headroom_V": 0.05000000000000382,
+      "dc_physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 65,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.2487760463550006,
+        "max_abs_VDS_V": 3.2484672061622573,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "outside_valid_interval_is_not_qualified": true,
+      "backend": "pex",
+      "case": "follower_none",
+      "stage": "dc",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 341.3129999998491,
+      "passed": true
+    },
+    {
+      "vout": 1.650682236784937,
+      "dc_error_mV": 0.6822367849370625,
+      "supply_uA": 214.6130103969789,
+      "IREF_uA": 4.988995846387015,
+      "bias_voltages_V": {
+        "bias1": 2.053513014506454,
+        "bias2": 2.046157611278005,
+        "bias3": 1.139559460707662,
+        "bias4": 1.047275982869512,
+        "bias": 1.650403052515705,
+        "vbiasp": 2.173562075758607,
+        "vbiasn": 0.9119714279282395,
+        "vstartup": 0.9202672019214114
+      },
+      "startup_currents_uA": {
+        "M43": 2.776514924919383,
+        "M44": 2.776516385480002,
+        "M45": 2.5987735120673034e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.0333686544769694,
+        "max_abs_VDS_V": 2.3873559269678823,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "mode": "follower",
+      "Iload_A": -0.001,
+      "validity": "physical terminal guards, |tracking error|<2mV, 3<IREF_uA<7, positive supply draw",
+      "valid_interval_V": [
+        0.15,
+        3.249999999999996
+      ],
+      "valid_interval_points": 63,
+      "low_headroom_V": 0.15,
+      "high_headroom_V": 0.05000000000000382,
+      "dc_physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 65,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.238102621432881,
+        "max_abs_VDS_V": 3.2370849213788966,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "outside_valid_interval_is_not_qualified": true,
+      "backend": "pex",
+      "case": "follower_sink",
+      "stage": "dc",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 190.89099999982864,
+      "passed": true
+    },
+    {
+      "vout": 1.649556255287672,
+      "dc_error_mV": 0.44374471232799806,
+      "supply_uA": 1207.116712136371,
+      "IREF_uA": 4.985492488435251,
+      "bias_voltages_V": {
+        "bias1": 2.052854939284107,
+        "bias2": 2.045492388417863,
+        "bias3": 1.13909936619781,
+        "bias4": 1.046903383835112,
+        "bias": 1.649931193891451,
+        "vbiasp": 2.173603368712689,
+        "vbiasn": 0.9115454319168357,
+        "vstartup": 0.9080528507403008
+      },
+      "startup_currents_uA": {
+        "M43": 2.8198201499011177,
+        "M44": 2.819821633253666,
+        "M45": 2.049698166855655e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.0321055041374856,
+        "max_abs_VDS_V": 2.3905273001343517,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "mode": "follower",
+      "Iload_A": 0.001,
+      "validity": "physical terminal guards, |tracking error|<2mV, 3<IREF_uA<7, positive supply draw",
+      "valid_interval_V": [
+        0.05,
+        3.149999999999997
+      ],
+      "valid_interval_points": 63,
+      "low_headroom_V": 0.05,
+      "high_headroom_V": 0.15000000000000302,
+      "dc_physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 65,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.24017218699492,
+        "max_abs_VDS_V": 3.2356619526292163,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "outside_valid_interval_is_not_qualified": true,
+      "backend": "pex",
+      "case": "follower_source",
+      "stage": "dc",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 316.7650000001304,
+      "passed": true
+    },
+    {
+      "vout": 1.649973377401314,
+      "dc_error_mV": 0.026622598686021348,
+      "supply_uA": 260.3418881406498,
+      "IREF_uA": 4.9856953864240765,
+      "bias_voltages_V": {
+        "bias1": 2.053539544741112,
+        "bias2": 2.046169697390303,
+        "bias3": 1.13912611108776,
+        "bias4": 1.046923929680066,
+        "bias": 1.650282827398237,
+        "vbiasp": 2.173630891180343,
+        "vbiasn": 0.9115682103962301,
+        "vstartup": 0.9087561943120541
+      },
+      "startup_currents_uA": {
+        "M43": 2.817546028628082,
+        "M44": 2.817547510584131,
+        "M45": 2.077929881565705e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.0327886426249826,
+        "max_abs_VDS_V": 2.3898927274465955,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "mode": "output",
+      "Iload_A": 0,
+      "validity": "physical terminal guards, |tracking error|<2mV, 3<IREF_uA<7, positive supply draw",
+      "valid_interval_V": [
+        0.05,
+        3.249999999999996
+      ],
+      "valid_interval_points": 65,
+      "low_headroom_V": 0.05,
+      "high_headroom_V": 0.05000000000000382,
+      "dc_physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 65,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.248796180358039,
+        "max_abs_VDS_V": 3.248539044489864,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "outside_valid_interval_is_not_qualified": true,
+      "backend": "pex",
+      "case": "output_servo_none",
+      "stage": "dc",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 183.9210000000894,
+      "passed": true
+    },
+    {
+      "vout": 1.650682236463138,
+      "dc_error_mV": 0.6822364631380307,
+      "supply_uA": 214.613246694986,
+      "IREF_uA": 4.988995847263893,
+      "bias_voltages_V": {
+        "bias1": 2.053513014317994,
+        "bias2": 2.04615761109625,
+        "bias3": 1.139559460815037,
+        "bias4": 1.047275982957678,
+        "bias": 1.650403052454791,
+        "vbiasp": 2.173562075732306,
+        "vbiasn": 0.9119714280283339,
+        "vstartup": 0.9202672047459917
+      },
+      "startup_currents_uA": {
+        "M43": 2.7765149148207118,
+        "M44": 2.776516375371096,
+        "M45": 2.598773513466167e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.033368650984809,
+        "max_abs_VDS_V": 2.3873559268597595,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "mode": "output",
+      "Iload_A": -0.001,
+      "validity": "physical terminal guards, |tracking error|<2mV, 3<IREF_uA<7, positive supply draw",
+      "valid_interval_V": [
+        0.15,
+        3.249999999999996
+      ],
+      "valid_interval_points": 63,
+      "low_headroom_V": 0.15,
+      "high_headroom_V": 0.05000000000000382,
+      "dc_physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 65,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.2381293685413155,
+        "max_abs_VDS_V": 3.2371116752924443,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "outside_valid_interval_is_not_qualified": true,
+      "backend": "pex",
+      "case": "output_servo_sink",
+      "stage": "dc",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 157.1720000000205,
+      "passed": true
+    },
+    {
+      "vout": 1.649556281232641,
+      "dc_error_mV": 0.443718767358936,
+      "supply_uA": 1207.1379246292108,
+      "IREF_uA": 4.985492561624589,
+      "bias_voltages_V": {
+        "bias1": 2.052854922531555,
+        "bias2": 2.045492372171227,
+        "bias3": 1.139099375791187,
+        "bias4": 1.04690339164791,
+        "bias": 1.649931188443873,
+        "vbiasp": 2.173603366440361,
+        "vbiasn": 0.9115454408767436,
+        "vstartup": 0.9080531054376655
+      },
+      "startup_currents_uA": {
+        "M43": 2.819819233097896,
+        "M44": 2.8198207163078113,
+        "M45": 2.049708440202836e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.0321054812872035,
+        "max_abs_VDS_V": 2.390527044354117,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "mode": "output",
+      "Iload_A": 0.001,
+      "validity": "physical terminal guards, |tracking error|<2mV, 3<IREF_uA<7, positive supply draw",
+      "valid_interval_V": [
+        0.05,
+        3.199999999999997
+      ],
+      "valid_interval_points": 64,
+      "low_headroom_V": 0.05,
+      "high_headroom_V": 0.10000000000000275,
+      "dc_physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 65,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.2402192497521116,
+        "max_abs_VDS_V": 3.2357093873258957,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "outside_valid_interval_is_not_qualified": true,
+      "backend": "pex",
+      "case": "output_servo_source",
+      "stage": "dc",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 172.9220000000205,
+      "passed": true
+    },
+    {
+      "vout": 1.650007834397329,
+      "dc_error_mV": 0.007834397329098408,
+      "supply_uA": 261.4246773309823,
+      "IREF_uA": 5.008536728455965,
+      "bias_voltages_V": {
+        "bias1": 2.05405688035989,
+        "bias2": 2.044522561423788,
+        "bias3": 1.140476649962242,
+        "bias4": 1.047100137374687,
+        "bias": 1.649999999999997,
+        "vbiasp": 2.173718706084784,
+        "vbiasn": 0.9115989125840429,
+        "vstartup": 0.9048377981873718
+      },
+      "startup_currents_uA": {
+        "M43": 2.8348553993368353,
+        "M44": 2.834856889529468,
+        "M45": 1.924389312387003e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.395162201812628,
+        "max_abs_VDS_V": 2.395162201812628,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "mode": "common_mode",
+      "Iload_A": 0,
+      "validity": "physical terminal guards, |tracking error|<2mV, 3<IREF_uA<7, positive supply draw",
+      "valid_interval_V": [
+        0.05,
+        3.249999999999996
+      ],
+      "valid_interval_points": 65,
+      "low_headroom_V": null,
+      "high_headroom_V": null,
+      "dc_physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 65,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.3951622179870964,
+        "max_abs_VDS_V": 2.3951622179870964,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "outside_valid_interval_is_not_qualified": true,
+      "backend": "schematic",
+      "case": "common_mode_servo",
+      "stage": "dc",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 13.764999999897555,
+      "passed": true
+    },
+    {
+      "vout": 1.650007834397329,
+      "dc_error_mV": 0.007834397329098408,
+      "supply_uA": 261.4246773309823,
+      "IREF_uA": 5.008536728455965,
+      "bias_voltages_V": {
+        "bias1": 2.05405688035989,
+        "bias2": 2.044522561423788,
+        "bias3": 1.140476649962242,
+        "bias4": 1.047100137374687,
+        "bias": 1.649999999999997,
+        "vbiasp": 2.173718706084784,
+        "vbiasn": 0.9115989125840429,
+        "vstartup": 0.9048377981873718
+      },
+      "startup_currents_uA": {
+        "M43": 2.8348553993368353,
+        "M44": 2.834856889529468,
+        "M45": 1.924389312387003e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.395162201812628,
+        "max_abs_VDS_V": 2.395162201812628,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "mode": "follower",
+      "Iload_A": 0,
+      "validity": "physical terminal guards, |tracking error|<2mV, 3<IREF_uA<7, positive supply draw",
+      "valid_interval_V": [
+        0.05,
+        3.249999999999996
+      ],
+      "valid_interval_points": 65,
+      "low_headroom_V": 0.05,
+      "high_headroom_V": 0.05000000000000382,
+      "dc_physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 65,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.395162213666744,
+        "max_abs_VDS_V": 3.249777427653285,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "outside_valid_interval_is_not_qualified": true,
+      "backend": "schematic",
+      "case": "follower_none",
+      "stage": "dc",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 50.85899999993853,
+      "passed": true
+    },
+    {
+      "vout": 1.650709809131156,
+      "dc_error_mV": 0.7098091311561472,
+      "supply_uA": 215.5568028963504,
+      "IREF_uA": 5.008536788330152,
+      "bias_voltages_V": {
+        "bias1": 2.054056878410286,
+        "bias2": 2.044522547120538,
+        "bias3": 1.140476656402553,
+        "bias4": 1.047100139365407,
+        "bias": 1.649999999999997,
+        "vbiasp": 2.173718705126907,
+        "vbiasn": 0.9115989134814982,
+        "vstartup": 0.9048377897001584
+      },
+      "startup_currents_uA": {
+        "M43": 2.834855429811738,
+        "M44": 2.834856920677356,
+        "M45": 1.924388462218863e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.3951622102998416,
+        "max_abs_VDS_V": 2.3951622102998416,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "mode": "follower",
+      "Iload_A": -0.001,
+      "validity": "physical terminal guards, |tracking error|<2mV, 3<IREF_uA<7, positive supply draw",
+      "valid_interval_V": [
+        0.1,
+        3.249999999999996
+      ],
+      "valid_interval_points": 64,
+      "low_headroom_V": 0.1,
+      "high_headroom_V": 0.05000000000000382,
+      "dc_physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 65,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.13217898833133,
+        "max_abs_VDS_V": 3.250668480442249,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "outside_valid_interval_is_not_qualified": true,
+      "backend": "schematic",
+      "case": "follower_sink",
+      "stage": "dc",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 47.186999999918044,
+      "passed": true
+    },
+    {
+      "vout": 1.649602670350165,
+      "dc_error_mV": 0.39732964983496544,
+      "supply_uA": 1207.800072167284,
+      "IREF_uA": 5.008536788330152,
+      "bias_voltages_V": {
+        "bias1": 2.054056878410286,
+        "bias2": 2.044522547120538,
+        "bias3": 1.140476656402553,
+        "bias4": 1.047100139365407,
+        "bias": 1.649999999999997,
+        "vbiasp": 2.173718705126907,
+        "vbiasn": 0.9115989134814982,
+        "vstartup": 0.9048377897001584
+      },
+      "startup_currents_uA": {
+        "M43": 2.834855429811738,
+        "M44": 2.834856920677356,
+        "M45": 1.924388462218863e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.3951622102998416,
+        "max_abs_VDS_V": 2.3951622102998416,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "mode": "follower",
+      "Iload_A": 0.001,
+      "validity": "physical terminal guards, |tracking error|<2mV, 3<IREF_uA<7, positive supply draw",
+      "valid_interval_V": [
+        0.05,
+        3.199999999999997
+      ],
+      "valid_interval_points": 64,
+      "low_headroom_V": 0.05,
+      "high_headroom_V": 0.10000000000000275,
+      "dc_physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 65,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.1170822621870413,
+        "max_abs_VDS_V": 3.2503449605756356,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "outside_valid_interval_is_not_qualified": true,
+      "backend": "schematic",
+      "case": "follower_source",
+      "stage": "dc",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 44.890000000130385,
+      "passed": true
+    },
+    {
+      "vout": 1.650007838809104,
+      "dc_error_mV": 0.007838809104043776,
+      "supply_uA": 261.424789120011,
+      "IREF_uA": 5.008536767925582,
+      "bias_voltages_V": {
+        "bias1": 2.054056879016523,
+        "bias2": 2.044522547813469,
+        "bias3": 1.140476651674076,
+        "bias4": 1.047100138059869,
+        "bias": 1.649999999999997,
+        "vbiasp": 2.173718705454003,
+        "vbiasn": 0.9115989131061134,
+        "vstartup": 0.9048377932488236
+      },
+      "startup_currents_uA": {
+        "M43": 2.834855417069597,
+        "M44": 2.834856907648589,
+        "M45": 1.924388464385835e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.395162206751176,
+        "max_abs_VDS_V": 2.395162206751176,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "mode": "output",
+      "Iload_A": 0,
+      "validity": "physical terminal guards, |tracking error|<2mV, 3<IREF_uA<7, positive supply draw",
+      "valid_interval_V": [
+        0.05,
+        3.249999999999996
+      ],
+      "valid_interval_points": 65,
+      "low_headroom_V": 0.05,
+      "high_headroom_V": 0.05000000000000382,
+      "dc_physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 65,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.3951622172111993,
+        "max_abs_VDS_V": 3.24982315081084,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "outside_valid_interval_is_not_qualified": true,
+      "backend": "schematic",
+      "case": "output_servo_none",
+      "stage": "dc",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 29.79700000002049,
+      "passed": true
+    },
+    {
+      "vout": 1.650709808361132,
+      "dc_error_mV": 0.7098083611321027,
+      "supply_uA": 215.5634744820349,
+      "IREF_uA": 5.008536805052301,
+      "bias_voltages_V": {
+        "bias1": 2.054056878358388,
+        "bias2": 2.044522542754431,
+        "bias3": 1.140476656055082,
+        "bias4": 1.047100139313879,
+        "bias": 1.649999999999997,
+        "vbiasp": 2.173718704860323,
+        "vbiasn": 0.9115989137256315,
+        "vstartup": 0.9048377871644682
+      },
+      "startup_currents_uA": {
+        "M43": 2.834855438916588,
+        "M44": 2.834856929096404,
+        "M45": 1.924388460683969e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.3951622128355314,
+        "max_abs_VDS_V": 2.3951622128355314,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "mode": "output",
+      "Iload_A": -0.001,
+      "validity": "physical terminal guards, |tracking error|<2mV, 3<IREF_uA<7, positive supply draw",
+      "valid_interval_V": [
+        0.1,
+        3.249999999999996
+      ],
+      "valid_interval_points": 64,
+      "low_headroom_V": 0.1,
+      "high_headroom_V": 0.05000000000000382,
+      "dc_physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 65,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.125782478614097,
+        "max_abs_VDS_V": 3.250671592704724,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "outside_valid_interval_is_not_qualified": true,
+      "backend": "schematic",
+      "case": "output_servo_sink",
+      "stage": "dc",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 41.859999999869615,
+      "passed": true
+    },
+    {
+      "vout": 1.649597179176121,
+      "dc_error_mV": 0.40282082387887996,
+      "supply_uA": 1207.803449448145,
+      "IREF_uA": 5.008536778361545,
+      "bias_voltages_V": {
+        "bias1": 2.054056879557672,
+        "bias2": 2.04452254601522,
+        "bias3": 1.140476654753064,
+        "bias4": 1.047100138873309,
+        "bias": 1.649999999999991,
+        "vbiasp": 2.173718705286495,
+        "vbiasn": 0.9115989133302925,
+        "vstartup": 0.9048377910599742
+      },
+      "startup_currents_uA": {
+        "M43": 2.834855424929064,
+        "M44": 2.834856915412792,
+        "M45": 1.9243884630617581e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.3951622089400257,
+        "max_abs_VDS_V": 2.3951622089400257,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "mode": "output",
+      "Iload_A": 0.001,
+      "validity": "physical terminal guards, |tracking error|<2mV, 3<IREF_uA<7, positive supply draw",
+      "valid_interval_V": [
+        0.05,
+        3.199999999999997
+      ],
+      "valid_interval_points": 64,
+      "low_headroom_V": 0.05,
+      "high_headroom_V": 0.10000000000000275,
+      "dc_physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 65,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.1182041903940565,
+        "max_abs_VDS_V": 3.2503725842707767,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "outside_valid_interval_is_not_qualified": true,
+      "backend": "schematic",
+      "case": "output_servo_source",
+      "stage": "dc",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 34.09399999980815,
+      "passed": true
+    },
+    {
+      "vout": 1.499976165611164,
+      "dc_error_mV": 0.02383438883590827,
+      "supply_uA": 184.40673685332538,
+      "IREF_uA": 3.899327170011391,
+      "bias_voltages_V": {
+        "bias1": 1.632366275034565,
+        "bias2": 1.636488121088874,
+        "bias3": 1.19697039193155,
+        "bias4": 1.094907901598786,
+        "bias": 1.500270778086294,
+        "vbiasp": 1.71683732658,
+        "vbiasn": 1.004420569649702,
+        "vstartup": 0.7900970204115353
+      },
+      "startup_currents_uA": {
+        "M43": 2.048575884935171,
+        "M44": 2.0485773045967557,
+        "M45": 1.3019199165273319e-17
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.793300240467651,
+        "max_abs_VDS_V": 2.352759436580049,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "endpoint_guard_scope": "all MOS terminals at final DC; transient saved observations only",
+      "kind": "startup",
+      "stop_s": 0.00031,
+      "maximum_timestep_s": 2e-07,
+      "peak_abs_output_error_mV": 1444.114464352668,
+      "final_output_error_mV": 0.023832009766966422,
+      "final_IREF_uA": 3.8993271704504684,
+      "ramp_s": 1e-05,
+      "startup_settled_at_s": 1.074432610842403e-05,
+      "startup_settled_after_ramp_s": 7.44326108424029e-07,
+      "settling_criterion": "IREF within5% of final and |OUT-VDD/2|<2mV, then remains in band",
+      "peak_M45_uA": 0.0057071146273414836,
+      "final_startup_currents_uA": {
+        "M43": 2.048575885016654,
+        "M44": 2.0485773227546358,
+        "M45": 1.3019199214254329e-17
+      },
+      "backend": "pex",
+      "case": "ss_cold_ramp10us",
+      "stage": "startup",
+      "corner": "ss",
+      "VDD": 3.0,
+      "temp_C": -40,
+      "CL_pF": 20,
+      "elapsed_s": 117.4370000003837,
+      "passed": true
+    },
+    {
+      "vout": 1.649973370316055,
+      "dc_error_mV": 0.02662968394484544,
+      "supply_uA": 260.33177297180094,
+      "IREF_uA": 4.98569535194475,
+      "bias_voltages_V": {
+        "bias1": 2.053539552721011,
+        "bias2": 2.046169705104196,
+        "bias3": 1.139126106550956,
+        "bias4": 1.046923925965966,
+        "bias": 1.650282829996326,
+        "vbiasp": 2.173630892257098,
+        "vbiasn": 0.9115682061304287,
+        "vstartup": 0.9087560728183101
+      },
+      "startup_currents_uA": {
+        "M43": 2.817546465798738,
+        "M44": 2.817547947855835,
+        "M45": 2.077925592665816e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.032788653538458,
+        "max_abs_VDS_V": 2.389892849456725,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "endpoint_guard_scope": "all MOS terminals at final DC; transient saved observations only",
+      "kind": "startup",
+      "stop_s": 0.00039999999999999996,
+      "maximum_timestep_s": 2e-07,
+      "peak_abs_output_error_mV": 866.8559971497311,
+      "final_output_error_mV": 0.02661994730401851,
+      "final_IREF_uA": 4.985695389594818,
+      "ramp_s": 0.0001,
+      "startup_settled_at_s": 0.0001,
+      "startup_settled_after_ramp_s": 0,
+      "settling_criterion": "IREF within5% of final and |OUT-VDD/2|<2mV, then remains in band",
+      "peak_M45_uA": 0.0002553156601110425,
+      "final_startup_currents_uA": {
+        "M43": 2.817546024073554,
+        "M44": 2.8175475681888487,
+        "M45": 2.077929880563277e-10
+      },
+      "backend": "pex",
+      "case": "tt_ramp100us",
+      "stage": "startup",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 123.23400000017136,
+      "passed": true
+    },
+    {
+      "vout": 1.649973370316055,
+      "dc_error_mV": 0.02662968394484544,
+      "supply_uA": 260.33177297180094,
+      "IREF_uA": 4.98569535194475,
+      "bias_voltages_V": {
+        "bias1": 2.053539552721011,
+        "bias2": 2.046169705104196,
+        "bias3": 1.139126106550956,
+        "bias4": 1.046923925965966,
+        "bias": 1.650282829996326,
+        "vbiasp": 2.173630892257098,
+        "vbiasn": 0.9115682061304287,
+        "vstartup": 0.9087560728183101
+      },
+      "startup_currents_uA": {
+        "M43": 2.817546465798738,
+        "M44": 2.817547947855835,
+        "M45": 2.077925592665816e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.032788653538458,
+        "max_abs_VDS_V": 2.389892849456725,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "endpoint_guard_scope": "all MOS terminals at final DC; transient saved observations only",
+      "kind": "startup",
+      "stop_s": 0.00031,
+      "maximum_timestep_s": 2e-07,
+      "peak_abs_output_error_mV": 1128.8721537867254,
+      "final_output_error_mV": 0.02661865629982607,
+      "final_IREF_uA": 4.985695386486282,
+      "ramp_s": 1e-05,
+      "startup_settled_at_s": 1.006e-05,
+      "startup_settled_after_ramp_s": 5.999999999999943e-08,
+      "settling_criterion": "IREF within5% of final and |OUT-VDD/2|<2mV, then remains in band",
+      "peak_M45_uA": 0.002756764549229553,
+      "final_startup_currents_uA": {
+        "M43": 2.817546028141346,
+        "M44": 2.8175475109040713,
+        "M45": 2.0779298816496782e-10
+      },
+      "backend": "pex",
+      "case": "tt_ramp10us",
+      "stage": "startup",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 108.5140000001993,
+      "passed": true
+    },
+    {
+      "vout": 1.649973370316055,
+      "dc_error_mV": 0.02662968394484544,
+      "supply_uA": 260.33177297180094,
+      "IREF_uA": 4.98569535194475,
+      "bias_voltages_V": {
+        "bias1": 2.053539552721011,
+        "bias2": 2.046169705104196,
+        "bias3": 1.139126106550956,
+        "bias4": 1.046923925965966,
+        "bias": 1.650282829996326,
+        "vbiasp": 2.173630892257098,
+        "vbiasn": 0.9115682061304287,
+        "vstartup": 0.9087560728183101
+      },
+      "startup_currents_uA": {
+        "M43": 2.817546465798738,
+        "M44": 2.817547947855835,
+        "M45": 2.077925592665816e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.032788653538458,
+        "max_abs_VDS_V": 2.389892849456725,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "endpoint_guard_scope": "all MOS terminals at final DC; transient saved observations only",
+      "kind": "startup",
+      "stop_s": 0.000301,
+      "maximum_timestep_s": 5e-08,
+      "peak_abs_output_error_mV": 1504.948119422073,
+      "final_output_error_mV": 0.026620045359804223,
+      "final_IREF_uA": 4.985695533575736,
+      "ramp_s": 1e-06,
+      "startup_settled_at_s": 1.73832746299672e-06,
+      "startup_settled_after_ramp_s": 7.383274629967201e-07,
+      "settling_criterion": "IREF within5% of final and |OUT-VDD/2|<2mV, then remains in band",
+      "peak_M45_uA": 0.03732480428650592,
+      "final_startup_currents_uA": {
+        "M43": 2.817546047204348,
+        "M44": 2.817547551499548,
+        "M45": 2.077930732414634e-10
+      },
+      "backend": "pex",
+      "case": "tt_ramp1us",
+      "stage": "startup",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 146.40599999995902,
+      "passed": true
+    },
+    {
+      "vout": 1.500003987306071,
+      "dc_error_mV": 0.003987306071095986,
+      "supply_uA": 185.1148072920796,
+      "IREF_uA": 3.916570752154305,
+      "bias_voltages_V": {
+        "bias1": 1.632704285204797,
+        "bias2": 1.63526370121387,
+        "bias3": 1.197877463864117,
+        "bias4": 1.095001537388378,
+        "bias": 1.499999999999977,
+        "vbiasp": 1.716897659373449,
+        "vbiasn": 1.004436918393151,
+        "vstartup": 0.7874573450725924
+      },
+      "startup_currents_uA": {
+        "M43": 2.0601467025643827,
+        "M44": 2.060148127198185,
+        "M45": 1.2214901526172619e-17
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.2125426549274074,
+        "max_abs_VDS_V": 2.3524245514374496,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "endpoint_guard_scope": "all MOS terminals at final DC; transient saved observations only",
+      "kind": "startup",
+      "stop_s": 0.00031,
+      "maximum_timestep_s": 2e-07,
+      "peak_abs_output_error_mV": 1311.054028958549,
+      "final_output_error_mV": 0.003987148812001351,
+      "final_IREF_uA": 3.9165708412599733,
+      "ramp_s": 1e-05,
+      "startup_settled_at_s": 1.005752513999593e-05,
+      "startup_settled_after_ramp_s": 5.752513999592917e-08,
+      "settling_criterion": "IREF within5% of final and |OUT-VDD/2|<2mV, then remains in band",
+      "peak_M45_uA": 0.00886620177183045,
+      "final_startup_currents_uA": {
+        "M43": 2.060146744515171,
+        "M44": 2.060148173119735,
+        "M45": 1.221489745879499e-17
+      },
+      "backend": "schematic",
+      "case": "ss_cold_ramp10us",
+      "stage": "startup",
+      "corner": "ss",
+      "VDD": 3.0,
+      "temp_C": -40,
+      "CL_pF": 20,
+      "elapsed_s": 18.374000000068918,
+      "passed": true
+    },
+    {
+      "vout": 1.650007834397329,
+      "dc_error_mV": 0.007834397329098408,
+      "supply_uA": 261.4246773309823,
+      "IREF_uA": 5.008536728455965,
+      "bias_voltages_V": {
+        "bias1": 2.05405688035989,
+        "bias2": 2.044522561423788,
+        "bias3": 1.140476649962242,
+        "bias4": 1.047100137374687,
+        "bias": 1.649999999999997,
+        "vbiasp": 2.173718706084784,
+        "vbiasn": 0.9115989125840429,
+        "vstartup": 0.9048377981873718
+      },
+      "startup_currents_uA": {
+        "M43": 2.8348553993368353,
+        "M44": 2.834856889529468,
+        "M45": 1.924389312387003e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.395162201812628,
+        "max_abs_VDS_V": 2.395162201812628,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "endpoint_guard_scope": "all MOS terminals at final DC; transient saved observations only",
+      "kind": "startup",
+      "stop_s": 0.00039999999999999996,
+      "maximum_timestep_s": 2e-07,
+      "peak_abs_output_error_mV": 934.1529598970774,
+      "final_output_error_mV": 0.00783804947901423,
+      "final_IREF_uA": 5.008536792147998,
+      "ramp_s": 0.0001,
+      "startup_settled_at_s": 0.0001,
+      "startup_settled_after_ramp_s": 0,
+      "settling_criterion": "IREF within5% of final and |OUT-VDD/2|<2mV, then remains in band",
+      "peak_M45_uA": 0.0005834640221600914,
+      "final_startup_currents_uA": {
+        "M43": 2.834855426562566,
+        "M44": 2.834856921293112,
+        "M45": 1.924388462656639e-10
+      },
+      "backend": "schematic",
+      "case": "tt_ramp100us",
+      "stage": "startup",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 18.96900000027381,
+      "passed": true
+    },
+    {
+      "vout": 1.650007834397329,
+      "dc_error_mV": 0.007834397329098408,
+      "supply_uA": 261.4246773309823,
+      "IREF_uA": 5.008536728455965,
+      "bias_voltages_V": {
+        "bias1": 2.05405688035989,
+        "bias2": 2.044522561423788,
+        "bias3": 1.140476649962242,
+        "bias4": 1.047100137374687,
+        "bias": 1.649999999999997,
+        "vbiasp": 2.173718706084784,
+        "vbiasn": 0.9115989125840429,
+        "vstartup": 0.9048377981873718
+      },
+      "startup_currents_uA": {
+        "M43": 2.8348553993368353,
+        "M44": 2.834856889529468,
+        "M45": 1.924389312387003e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.395162201812628,
+        "max_abs_VDS_V": 2.395162201812628,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "endpoint_guard_scope": "all MOS terminals at final DC; transient saved observations only",
+      "kind": "startup",
+      "stop_s": 0.00031,
+      "maximum_timestep_s": 2e-07,
+      "peak_abs_output_error_mV": 1026.0952598434253,
+      "final_output_error_mV": 0.007841756090032348,
+      "final_IREF_uA": 5.0085369117501095,
+      "ramp_s": 1e-05,
+      "startup_settled_at_s": 1.006e-05,
+      "startup_settled_after_ramp_s": 5.999999999999943e-08,
+      "settling_criterion": "IREF within5% of final and |OUT-VDD/2|<2mV, then remains in band",
+      "peak_M45_uA": 0.007439373116797342,
+      "final_startup_currents_uA": {
+        "M43": 2.834855485711969,
+        "M44": 2.834856982715399,
+        "M45": 1.924387607549269e-10
+      },
+      "backend": "schematic",
+      "case": "tt_ramp10us",
+      "stage": "startup",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 24.17200000002049,
+      "passed": true
+    },
+    {
+      "vout": 1.650007834397329,
+      "dc_error_mV": 0.007834397329098408,
+      "supply_uA": 261.4246773309823,
+      "IREF_uA": 5.008536728455965,
+      "bias_voltages_V": {
+        "bias1": 2.05405688035989,
+        "bias2": 2.044522561423788,
+        "bias3": 1.140476649962242,
+        "bias4": 1.047100137374687,
+        "bias": 1.649999999999997,
+        "vbiasp": 2.173718706084784,
+        "vbiasn": 0.9115989125840429,
+        "vstartup": 0.9048377981873718
+      },
+      "startup_currents_uA": {
+        "M43": 2.8348553993368353,
+        "M44": 2.834856889529468,
+        "M45": 1.924389312387003e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.395162201812628,
+        "max_abs_VDS_V": 2.395162201812628,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "endpoint_guard_scope": "all MOS terminals at final DC; transient saved observations only",
+      "kind": "startup",
+      "stop_s": 0.000301,
+      "maximum_timestep_s": 5e-08,
+      "peak_abs_output_error_mV": 1400.355064391825,
+      "final_output_error_mV": 0.007834784134130857,
+      "final_IREF_uA": 5.008536797179549,
+      "ramp_s": 1e-06,
+      "startup_settled_at_s": 1.665263269380352e-06,
+      "startup_settled_after_ramp_s": 6.65263269380352e-07,
+      "settling_criterion": "IREF within5% of final and |OUT-VDD/2|<2mV, then remains in band",
+      "peak_M45_uA": 0.09603101200138639,
+      "final_startup_currents_uA": {
+        "M43": 2.834855425361381,
+        "M44": 2.834856916282311,
+        "M45": 1.9243884629256792e-10
+      },
+      "backend": "schematic",
+      "case": "tt_ramp1us",
+      "stage": "startup",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 30.42200000002049,
+      "passed": true
+    },
+    {
+      "vout": 1.649973370316055,
+      "dc_error_mV": 0.02662968394484544,
+      "supply_uA": 260.33177297180094,
+      "IREF_uA": 4.98569535194475,
+      "bias_voltages_V": {
+        "bias1": 2.053539552721011,
+        "bias2": 2.046169705104196,
+        "bias3": 1.139126106550956,
+        "bias4": 1.046923925965966,
+        "bias": 1.650282829996326,
+        "vbiasp": 2.173630892257098,
+        "vbiasn": 0.9115682061304287,
+        "vstartup": 0.9087560728183101
+      },
+      "startup_currents_uA": {
+        "M43": 2.817546465798738,
+        "M44": 2.817547947855835,
+        "M45": 2.077925592665816e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.032788653538458,
+        "max_abs_VDS_V": 2.389892849456725,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "endpoint_guard_scope": "all MOS terminals at final DC; transient saved observations only",
+      "kind": "load",
+      "stop_s": 1.7e-05,
+      "maximum_timestep_s": 2e-09,
+      "peak_abs_output_error_mV": 521.3996126884499,
+      "final_output_error_mV": 0.026619472008881928,
+      "final_IREF_uA": 4.985695388190605,
+      "events": [
+        {
+          "start_s": 1.01e-06,
+          "end_s": 5e-06,
+          "amplitude": 0.001,
+          "peak_abs_error_mV": 373.5958560183599,
+          "settled_error_mV": 0.44371591510183883,
+          "settling_s": 3.01429540252491e-07,
+          "settling_tolerance_mV": 2.0,
+          "IREF_uA_end": 4.985492557828805
+        },
+        {
+          "start_s": 9.01e-06,
+          "end_s": 1.3e-05,
+          "amplitude": -0.001,
+          "peak_abs_error_mV": 461.520238027175,
+          "settled_error_mV": 0.6822395945551563,
+          "settling_s": 4.209999999998542e-07,
+          "settling_tolerance_mV": 2.0,
+          "IREF_uA_end": 4.988995848000605
+        }
+      ],
+      "backend": "pex",
+      "case": "load_pm1mA",
+      "stage": "transient",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 177.9529999999795,
+      "passed": true
+    },
+    {
+      "vout": 1.649973370316055,
+      "dc_error_mV": 0.02662968394484544,
+      "supply_uA": 260.33177297180094,
+      "IREF_uA": 4.98569535194475,
+      "bias_voltages_V": {
+        "bias1": 2.053539552721011,
+        "bias2": 2.046169705104196,
+        "bias3": 1.139126106550956,
+        "bias4": 1.046923925965966,
+        "bias": 1.650282829996326,
+        "vbiasp": 2.173630892257098,
+        "vbiasn": 0.9115682061304287,
+        "vstartup": 0.9087560728183101
+      },
+      "startup_currents_uA": {
+        "M43": 2.817546465798738,
+        "M44": 2.817547947855835,
+        "M45": 2.077925592665816e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.032788653538458,
+        "max_abs_VDS_V": 2.389892849456725,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "endpoint_guard_scope": "all MOS terminals at final DC; transient saved observations only",
+      "kind": "signal",
+      "stop_s": 1e-05,
+      "maximum_timestep_s": 2e-09,
+      "peak_abs_output_error_mV": 50.204286735856975,
+      "final_output_error_mV": 0.026619511674930152,
+      "final_IREF_uA": 4.985695385740359,
+      "events": [
+        {
+          "start_s": 1.001e-06,
+          "end_s": 5e-06,
+          "amplitude": 0.05,
+          "peak_abs_error_mV": 50.204286735856975,
+          "settled_error_mV": 0.04051203742094778,
+          "settling_s": 2.5724808100331304e-07,
+          "settling_tolerance_mV": 0.5,
+          "IREF_uA_end": 4.98569498312949
+        },
+        {
+          "start_s": 5.001e-06,
+          "end_s": 1e-05,
+          "amplitude": -0.05,
+          "peak_abs_error_mV": 50.16349213019411,
+          "settled_error_mV": 0.026619511674930152,
+          "settling_s": 2.3131375441745377e-07,
+          "settling_tolerance_mV": 0.5,
+          "IREF_uA_end": 4.985695385740359
+        }
+      ],
+      "backend": "pex",
+      "case": "signal50mV",
+      "stage": "transient",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 143.74999999976717,
+      "passed": true
+    },
+    {
+      "vout": 1.650007834397329,
+      "dc_error_mV": 0.007834397329098408,
+      "supply_uA": 261.4246773309823,
+      "IREF_uA": 5.008536728455965,
+      "bias_voltages_V": {
+        "bias1": 2.05405688035989,
+        "bias2": 2.044522561423788,
+        "bias3": 1.140476649962242,
+        "bias4": 1.047100137374687,
+        "bias": 1.649999999999997,
+        "vbiasp": 2.173718706084784,
+        "vbiasn": 0.9115989125840429,
+        "vstartup": 0.9048377981873718
+      },
+      "startup_currents_uA": {
+        "M43": 2.8348553993368353,
+        "M44": 2.834856889529468,
+        "M45": 1.924389312387003e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.395162201812628,
+        "max_abs_VDS_V": 2.395162201812628,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "endpoint_guard_scope": "all MOS terminals at final DC; transient saved observations only",
+      "kind": "load",
+      "stop_s": 1.7e-05,
+      "maximum_timestep_s": 2e-09,
+      "peak_abs_output_error_mV": 496.3240384981722,
+      "final_output_error_mV": 0.007836306596065157,
+      "final_IREF_uA": 5.008536714780202,
+      "events": [
+        {
+          "start_s": 1.01e-06,
+          "end_s": 5e-06,
+          "amplitude": 0.001,
+          "peak_abs_error_mV": 347.22110242855496,
+          "settled_error_mV": 0.3973228443778787,
+          "settling_s": 3.1773249915430186e-07,
+          "settling_tolerance_mV": 2.0,
+          "IREF_uA_end": 5.008536735347013
+        },
+        {
+          "start_s": 9.01e-06,
+          "end_s": 1.3e-05,
+          "amplitude": -0.001,
+          "peak_abs_error_mV": 433.1306214464732,
+          "settled_error_mV": 0.7098089676980113,
+          "settling_s": 4.5899999999984094e-07,
+          "settling_tolerance_mV": 2.0,
+          "IREF_uA_end": 5.008536698860553
+        }
+      ],
+      "backend": "schematic",
+      "case": "load_pm1mA",
+      "stage": "transient",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 31.671000000322238,
+      "passed": true
+    },
+    {
+      "vout": 1.650007834397329,
+      "dc_error_mV": 0.007834397329098408,
+      "supply_uA": 261.4246773309823,
+      "IREF_uA": 5.008536728455965,
+      "bias_voltages_V": {
+        "bias1": 2.05405688035989,
+        "bias2": 2.044522561423788,
+        "bias3": 1.140476649962242,
+        "bias4": 1.047100137374687,
+        "bias": 1.649999999999997,
+        "vbiasp": 2.173718706084784,
+        "vbiasn": 0.9115989125840429,
+        "vstartup": 0.9048377981873718
+      },
+      "startup_currents_uA": {
+        "M43": 2.8348553993368353,
+        "M44": 2.834856889529468,
+        "M45": 1.924389312387003e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.395162201812628,
+        "max_abs_VDS_V": 2.395162201812628,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "endpoint_guard_scope": "all MOS terminals at final DC; transient saved observations only",
+      "kind": "signal",
+      "stop_s": 1e-05,
+      "maximum_timestep_s": 2e-09,
+      "peak_abs_output_error_mV": 50.251222186166174,
+      "final_output_error_mV": 0.007836404987138224,
+      "final_IREF_uA": 5.0085367017197076,
+      "events": [
+        {
+          "start_s": 1.001e-06,
+          "end_s": 5e-06,
+          "amplitude": 0.05,
+          "peak_abs_error_mV": 50.22308633446193,
+          "settled_error_mV": 0.007639387079150239,
+          "settling_s": 2.4447999999999304e-07,
+          "settling_tolerance_mV": 0.5,
+          "IREF_uA_end": 5.0085367207153215
+        },
+        {
+          "start_s": 5.001e-06,
+          "end_s": 1e-05,
+          "amplitude": -0.05,
+          "peak_abs_error_mV": 50.251222186166174,
+          "settled_error_mV": 0.007836404987138224,
+          "settling_s": 2.3248000000001882e-07,
+          "settling_tolerance_mV": 0.5,
+          "IREF_uA_end": 5.0085367017197076
+        }
+      ],
+      "backend": "schematic",
+      "case": "signal50mV",
+      "stage": "transient",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 26.79699999978766,
+      "passed": true
+    },
+    {
+      "vout": 1.649973370316055,
+      "dc_error_mV": 0.02662968394484544,
+      "supply_uA": 260.33177297180094,
+      "IREF_uA": 4.98569535194475,
+      "bias_voltages_V": {
+        "bias1": 2.053539552721011,
+        "bias2": 2.046169705104196,
+        "bias3": 1.139126106550956,
+        "bias4": 1.046923925965966,
+        "bias": 1.650282829996326,
+        "vbiasp": 2.173630892257098,
+        "vbiasn": 0.9115682061304287,
+        "vstartup": 0.9087560728183101
+      },
+      "startup_currents_uA": {
+        "M43": 2.817546465798738,
+        "M44": 2.817547947855835,
+        "M45": 2.077925592665816e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 225,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 3.032788653538458,
+        "max_abs_VDS_V": 2.389892849456725,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "endpoint_guard_scope": "all MOS terminals at final DC; transient saved observations only",
+      "kind": "supply",
+      "stop_s": 8e-05,
+      "maximum_timestep_s": 1e-08,
+      "peak_abs_output_error_mV": 14.891910259408059,
+      "final_output_error_mV": 0.02661828310301928,
+      "final_IREF_uA": 4.985695380366947,
+      "events": [
+        {
+          "start_s": 1.01e-05,
+          "end_s": 3e-05,
+          "amplitude": 0.1,
+          "peak_abs_error_mV": 13.47240864871213,
+          "settled_error_mV": 0.01632536423801234,
+          "settling_s": 4.5000000000000416e-08,
+          "settling_tolerance_mV": 2.0,
+          "IREF_uA_end": 5.044922529734883
+        },
+        {
+          "start_s": 4.01e-05,
+          "end_s": 6e-05,
+          "amplitude": -0.1,
+          "peak_abs_error_mV": 14.792643366090985,
+          "settled_error_mV": 0.039761481514855035,
+          "settling_s": 1.050000000000134e-07,
+          "settling_tolerance_mV": 2.0,
+          "IREF_uA_end": 4.925426374243599
+        }
+      ],
+      "backend": "pex",
+      "case": "supply_pm100mV",
+      "stage": "supply",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 163.28100000019185,
+      "passed": true
+    },
+    {
+      "vout": 1.650007834397329,
+      "dc_error_mV": 0.007834397329098408,
+      "supply_uA": 261.4246773309823,
+      "IREF_uA": 5.008536728455965,
+      "bias_voltages_V": {
+        "bias1": 2.05405688035989,
+        "bias2": 2.044522561423788,
+        "bias3": 1.140476649962242,
+        "bias4": 1.047100137374687,
+        "bias": 1.649999999999997,
+        "vbiasp": 2.173718706084784,
+        "vbiasn": 0.9115989125840429,
+        "vstartup": 0.9048377981873718
+      },
+      "startup_currents_uA": {
+        "M43": 2.8348553993368353,
+        "M44": 2.834856889529468,
+        "M45": 1.924389312387003e-10
+      },
+      "physical_guard": {
+        "MOS_checked": 49,
+        "points_checked": 1,
+        "invalid_points": [],
+        "stress_invalid_points": [],
+        "max_abs_VGS_or_VBS_V": 2.395162201812628,
+        "max_abs_VDS_V": 2.395162201812628,
+        "criterion": "|VGS|,|VBS| <=5.5 V; |VDS|<=11 V; terminals in [-0.2,VDD+0.2] V",
+        "saturation_not_claimed": true,
+        "passed": true
+      },
+      "endpoint_guard_scope": "all MOS terminals at final DC; transient saved observations only",
+      "kind": "supply",
+      "stop_s": 8e-05,
+      "maximum_timestep_s": 1e-08,
+      "peak_abs_output_error_mV": 13.226568529864924,
+      "final_output_error_mV": 0.007832665833040764,
+      "final_IREF_uA": 5.00853681239412,
+      "events": [
+        {
+          "start_s": 1.01e-05,
+          "end_s": 3e-05,
+          "amplitude": 0.1,
+          "peak_abs_error_mV": 12.138447910998051,
+          "settled_error_mV": 0.00843513932013984,
+          "settling_s": 4.5000000000000416e-08,
+          "settling_tolerance_mV": 2.0,
+          "IREF_uA_end": 5.068192790224353
+        },
+        {
+          "start_s": 4.01e-05,
+          "end_s": 6e-05,
+          "amplitude": -0.1,
+          "peak_abs_error_mV": 13.226568529864924,
+          "settled_error_mV": 0.0071624590420871215,
+          "settling_s": 9.50000000000118e-08,
+          "settling_tolerance_mV": 2.0,
+          "IREF_uA_end": 4.947834991758534
+        }
+      ],
+      "backend": "schematic",
+      "case": "supply_pm100mV",
+      "stage": "supply",
+      "corner": "tt",
+      "VDD": 3.3,
+      "temp_C": 27,
+      "CL_pF": 20,
+      "elapsed_s": 26.531000000191852,
+      "passed": true
+    }
+  ],
+  "frozen_input_sha256": {
+    "source": "56757d2cf17d03b9bbf58a48450e4c08969efd90a464863b83bafadd1cb4daac",
+    "pex": "35c2885a94b6b8d7af69bdc39251a9687cb3ddb1a6e73d6c4893bb472291e127",
+    "iref_mapping": "5fc1d72a8569d553dad1d8a97507785b8f8ba605f9dcb836d5060133b8e52212",
+    "model_library": "4c395fd2b5a4dbab8b0db634b51071b311874af24d63cb63cd5136146a8e88c2",
+    "ngspice": "c27ef7ed070c74824b8c0856738b062abf3652dc35d627fbf9b47c53cb37f89e",
+    "driver": "dd03a780cbd73d0cab40f6f8598f24b5f4d5682ba2f0a690c1fd76428eeb03d2"
+  },
+  "unchanged_final_GDS_sha256": "51fc3c35decbf8409eec6f5720971efe651120b82ab5025a5dba9840b7bcdddc",
+  "data_sha256": {
+    "bias-supply-pex.csv": "494a787d3512554f90598b48be0956d887090fc603ff93a3f69a32fc99cf0dca",
+    "bias-supply-schematic.csv": "1be7504cdd88ce58d45957618f6efc710a3fe9a6948d8000988a593b6a64495e",
+    "bias-temperature-pex.csv": "1906f4c8a1abed6402c53ff549b9682f16ed8568d01bff29ef694cafb6f9aa5a",
+    "bias-temperature-schematic.csv": "156b74f8bcb404d78e0558f8ffb6d733aef636a8939f35f758ebad73b9e72503",
+    "common-mode-pex-currents.csv": "c80510080d0c098f27348eb501f063a048bd3048915f431b46e47b15bfc1bb5e",
+    "common-mode-pex.csv": "220368cda681ab9cf1098a6872089bf6426026276b88bc2cf86dfb820a626b7e",
+    "common-mode-schematic-currents.csv": "e3b83b9152bcf4b73851e290dbd7f1f8f3d1326d5a78456fa79e8e99d4c94cd9",
+    "common-mode-schematic.csv": "ad4af68070d104f34f91e97367a80ca8d80e43e7853b20ef248d521b1fd66f5a",
+    "dc-transfer-pex-no-currents.csv": "9ed1cb5362c8c5c1ab7aa082b5392fca9e5894f1a4dcef8e72fb68265b5907bc",
+    "dc-transfer-pex-no.csv": "02082a438aa8a9b0051de26a0f32ffcd08400af8aa9ec0184bdb943b3666118b",
+    "dc-transfer-pex-sink-currents.csv": "ceb87df887b883818282b6eafc44c6d718d49420fdc2e88191ed243cc1f0e17c",
+    "dc-transfer-pex-sink.csv": "c7f38909fced8cfe1fe649c07d6364baa0992d325372b9a94cead9ff3252ae37",
+    "dc-transfer-pex-source-currents.csv": "4d764e6992b204fa239ba23351cc11f76e85cbb68cb7657025746fae40464a87",
+    "dc-transfer-pex-source.csv": "cc3746e5a80c9a4783881e34c1e718efb75fc8cd7fcd6e55b09cd787a6515da8",
+    "dc-transfer-schematic-no-currents.csv": "5eb285c98d5189f7afdbb25295d30a2b3652f3778657d022d6854727bed80a09",
+    "dc-transfer-schematic-no.csv": "5b0ce0cb6217c1d2c2894f8ca53c233b2ef1d72101a1b4083009477e9aec5249",
+    "dc-transfer-schematic-sink-currents.csv": "1ff8a544dfcf3269ff7a2ebef6e391463ca6ac15c664cece06f66c69dcacbb15",
+    "dc-transfer-schematic-sink.csv": "d185eba57b693ecb3ee89a0d3a77cad2b17876dbbe66f8730991d3e6ef6e140e",
+    "dc-transfer-schematic-source-currents.csv": "0e152a6bc9904ca05d5ebf03ca98de90ec7dfa9872cd436119be7e9429cdd84f",
+    "dc-transfer-schematic-source.csv": "67b253527271653ea5cb8df72be34ebf8c2c7ab4b0113ee92543cbd0b85a9c81",
+    "frequency-nominal-pex-closed.csv": "303d19f6a78d973d51f35be016e011e9ad7eff374bb0a1535a55f0fcba0537a1",
+    "frequency-nominal-pex-loop.csv": "d6183e1bcd68c804746ca81d70ed052092215516a4281eae8a1bdc21b3ed0580",
+    "frequency-nominal-schematic-closed.csv": "e74924ebf5737c7ac9e23ad00a28b65b4052d09edbe2b0820c3f3e69b5b4dc99",
+    "frequency-nominal-schematic-loop.csv": "09f694efe186238b9cc8c9a60802ac316c858d4b9470930dd70401e8ccb454a3",
+    "frequency-supply-pex-metrics.csv": "7aefdb4810c4debfb69a161b7f5542e99510074a95cba2ea519a40d28c907862",
+    "frequency-supply-pex-tt_v3p0_t27-closed.csv": "3eb18b6df1d9c17e107cf6feefce175bded8544393655d99e2b06ff209d7dc81",
+    "frequency-supply-pex-tt_v3p0_t27-loop.csv": "c50dfc8985ae20e3429f266bf9c1924413b5b695dc51ebe8391ead65acd0148f",
+    "frequency-supply-pex-tt_v3p3_t27-closed.csv": "11c5c62d3cb1e80fd486fb936d7f4e0e77640236c4b49036f57954c4aea036c3",
+    "frequency-supply-pex-tt_v3p3_t27-loop.csv": "38501c45d0965b82540a8e1d44eb59a03dcf5b99e4e84bbea4a629a762f0754b",
+    "frequency-supply-pex-tt_v3p6_t27-closed.csv": "35e43e098dd7814aa4451c04630b753af98a2fb2e7c5b20a80f97af2a80253d0",
+    "frequency-supply-pex-tt_v3p6_t27-loop.csv": "0db79d47418da12e69485d609876166c45b4a32070f7daa448055afb6c2f84a3",
+    "frequency-supply-schematic-metrics.csv": "e1add44544c423ff6e9c5e9737bbd805b52406d1f17d6e3c2bd15cba2beb0429",
+    "frequency-supply-schematic-tt_v3p0_t27-closed.csv": "48c9f43d5e5855d23b6d55fc7cfa9f37c383fbd25a1b372d4225ee4c2b8b1588",
+    "frequency-supply-schematic-tt_v3p0_t27-loop.csv": "e0cf6b76815690c3e88869274a3da2d7ec01017cb4220645a193642367cd5722",
+    "frequency-supply-schematic-tt_v3p3_t27-closed.csv": "2adc419393448ab9a33ecdb71e21ff89118f7a3f5f12c73163d26645a5796961",
+    "frequency-supply-schematic-tt_v3p3_t27-loop.csv": "5c109270af1a743b1446cc122c55a0e75a9e2de10721f0635470e1e0199e3908",
+    "frequency-supply-schematic-tt_v3p6_t27-closed.csv": "1dd5d327d573150560cf816d6a0dc7b7f5b0153d462d32951be10006f92f0017",
+    "frequency-supply-schematic-tt_v3p6_t27-loop.csv": "e72ca7c0aa2c4b690f529baed00dffeec37fb9fca68d134a62a776cea6a7295c",
+    "frequency-temperature-pex-metrics.csv": "6d8c74a5848caefd920f30f2a7656c3a4f8602b957920a33654eb9203426bbf3",
+    "frequency-temperature-pex-tt_v3p3_t125-closed.csv": "844b1915e91a264fa9b817bff293e3e816b9de6c01ed55328871665253a6669d",
+    "frequency-temperature-pex-tt_v3p3_t125-loop.csv": "250ea00b35996cb74f15740671e62d1a6079235216fd968cc93db627f51764ad",
+    "frequency-temperature-pex-tt_v3p3_t27-closed.csv": "11c5c62d3cb1e80fd486fb936d7f4e0e77640236c4b49036f57954c4aea036c3",
+    "frequency-temperature-pex-tt_v3p3_t27-loop.csv": "38501c45d0965b82540a8e1d44eb59a03dcf5b99e4e84bbea4a629a762f0754b",
+    "frequency-temperature-pex-tt_v3p3_tm40-closed.csv": "d0363abbe47aa34b26128975c9ebd2794084fbde6aaa91aecd92a4fb0f21e8a5",
+    "frequency-temperature-pex-tt_v3p3_tm40-loop.csv": "44dd614f12ce805b17ea1ecde79e6879432e9979c0a4f775abef23e36f980848",
+    "frequency-temperature-schematic-metrics.csv": "38b72e636c875b39c0bcaa08c4082b3e301360f87b14a19096cc383fb022a0fa",
+    "frequency-temperature-schematic-tt_v3p3_t125-closed.csv": "3270e11ab139be06ec8325c4370d1b24fbe67c253fcd9d1b66daeaa7c4cbb8a1",
+    "frequency-temperature-schematic-tt_v3p3_t125-loop.csv": "f96be2fb7bb330cf03e654f61bca1cc7121650f84ec01980a41223e10a8da222",
+    "frequency-temperature-schematic-tt_v3p3_t27-closed.csv": "2adc419393448ab9a33ecdb71e21ff89118f7a3f5f12c73163d26645a5796961",
+    "frequency-temperature-schematic-tt_v3p3_t27-loop.csv": "5c109270af1a743b1446cc122c55a0e75a9e2de10721f0635470e1e0199e3908",
+    "frequency-temperature-schematic-tt_v3p3_tm40-closed.csv": "17c95b699adcb1b610fd0880a1eed25c7c42b11c1ecf2662b02f7f3b9361616b",
+    "frequency-temperature-schematic-tt_v3p3_tm40-loop.csv": "6d76f7266c79521308429e5332573602fa202b95fd7a0e2b079cc3af7ccefc97",
+    "load-step-pex.csv": "7f0936e45d2f54bf4348064489ce6c159c07cb1f00252261cb22c63db48951de",
+    "load-step-schematic.csv": "a10af6ab28242d72197f29c0ab0b86997f243cc2115a53dab7048f5d11f8cc95",
+    "output-range-pex-no-currents.csv": "ebd1054d0b91d13abf3eccf7cc8a84196e8b602e607c0aff1c5c86fe93e8124e",
+    "output-range-pex-no.csv": "85f563e09154cc34d203b6320777e18242acc355b603dedc85743288be4cf5c0",
+    "output-range-pex-sink-currents.csv": "5c65ec5ab03860ebaf0b0c090bdb42fe26aea2d19a1ef550481f80c6a2bbb51f",
+    "output-range-pex-sink.csv": "9113774287c9157a9607dd9f00a91af74ce6bb37ec07d0e56c59b4bdd91b32ae",
+    "output-range-pex-source-currents.csv": "0463ccb17516e4981aeb5b2f18144a1c6513ccd9c7bd522be6fbb127abf9bcc9",
+    "output-range-pex-source.csv": "98f8b070aa427a703223e6eccf875a7fcb28803e2a274e3a2b78f0a23e213e27",
+    "output-range-schematic-no-currents.csv": "c51116d066e0fdfab72265d255961f4d1116bd5a63ce586056dfde224a857844",
+    "output-range-schematic-no.csv": "b6dc9941d12575722106c55556aff7c840609b6163f6c6c7dd44dd6fc46aa1bc",
+    "output-range-schematic-sink-currents.csv": "2c26f070688f35628f0569cfa8aac167b19b66bdcc57b44fd7013549862db3d8",
+    "output-range-schematic-sink.csv": "fcb4c4a7d2003b294ec37c1e6e321ef0572c104ea10a9f3f12770a27d43792f1",
+    "output-range-schematic-source-currents.csv": "e9eaca37712b86ceafd406eb9bf748ec5c99d829bf3d77a72ecbbbac4d1efbcb",
+    "output-range-schematic-source.csv": "9bb59868488aaa008591651fbfb6e9c3248dfa41f660cffbc86ccd493b40b009",
+    "reference-startup-pex.csv": "3cf30ef0f9424a27756e6406addd98d957d49ab3e63307edc960cf81b7bf7ffa",
+    "reference-startup-schematic.csv": "b3febcc7036a68a6a6dd602daeaeae39942323001430b06cdab2941aa6611597",
+    "signal-step-pex.csv": "ad5215d61f619807f17fce20733849506e324b9ae42c005dbcd2fa3a96fb3f98",
+    "signal-step-schematic.csv": "6f08c8b1513a200bd5c24cd662314181c52a8a5df07f108f777cf954849cfa6e",
+    "supply-rejection-pex-rejection.csv": "09c1fec2830a64f4a0ea04f8598e29b5ced4e9164e1c6dc45659d9d853f66d37",
+    "supply-rejection-pex-transfer.csv": "7dc968263b4e12e332be0cccf81c8e061c8a4538b032a62e9303ea5ead4fcb8c",
+    "supply-rejection-schematic-rejection.csv": "4bc2738e43ec6bc1ff54323eeff2a6347d2dd767d90275812eaa42043168f524",
+    "supply-rejection-schematic-transfer.csv": "177a8c41db0abe42f3d810dd90b8288cd3e507edf56a808fea7ff0e19e870331",
+    "supply-step-pex.csv": "e8fe5e565f802aafd81bc6d0f8e70831551be79abb51a37d9edba2025c62d280",
+    "supply-step-schematic.csv": "cf5df20aece7b1fad07526906d9b5717040eff89ed64aa03f43afe83ecb13816"
+  }
+}

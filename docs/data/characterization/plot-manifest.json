@@ -1,0 +1,1090 @@
+{
+  "created_utc": "2026-10-09T01:35:45.467143+00:00",
+  "mode": "fresh",
+  "plotter_sha256": "a426417e88635fce93a896b43037ff967eb0eead83063e4b36a4c38df0be3a11",
+  "figures": [
+    {
+      "name": "frequency-nominal",
+      "caption": "Fresh paired study, 9 October 2026. TT, 27 C, VDD=3.3 V, Vset=1.65 V, no DC load, CL=20 pF. PEX uses reduced extracted RC. Tian two-injection loop and separate VIN-to-VOUT closed response. Plot window 1 Hz\u2013100 MHz; exports retain the full sweep. SCHEMATIC: unity 3.087 MHz, PM 80.56 degrees, GM 10.01 dB; PEX (extracted RC): unity 3.101 MHz, PM 79.55 degrees, GM 9.36 dB.",
+      "outputs": {
+        "png": {
+          "path": "../../images/frequency-nominal.png",
+          "sha256": "e27237b29ab9c966ca9c4b03a04b665dc72d7b901981113a178b758fd7c191f2"
+        }
+      },
+      "source_files": [
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/result.json",
+          "sha256": "dd1b7517a99b6c0b730c7e142229f26d062c24f7033dda0c88fb91646446e373"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/result.json",
+          "sha256": "8661ea218160e378ac40c4cae0490e06d46c90f3a91751abc2cb22d4ef7b676a"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/loop.dat",
+          "sha256": "2a2d807e40384c2db7b131e1bdca315a11a695f51c2e215ce352e76de53ea0de"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/closed.dat",
+          "sha256": "52ee4532287a1f916fa569e1bd1ed2f29749ceb393e1808780e3f5f3c547a89b"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/loop.dat",
+          "sha256": "4b2087fd29c2da232f995db863972c04353039da47d3e1de2a5e7b6d410c139e"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/closed.dat",
+          "sha256": "47873ba1b363c20b9d1ef29acf699ac7210ff2e6a0f41bef312523df79925d42"
+        }
+      ],
+      "csv_exports": [
+        {
+          "path": "frequency-nominal-schematic-loop.csv",
+          "sha256": "09f694efe186238b9cc8c9a60802ac316c858d4b9470930dd70401e8ccb454a3",
+          "rows": 721
+        },
+        {
+          "path": "frequency-nominal-schematic-closed.csv",
+          "sha256": "e74924ebf5737c7ac9e23ad00a28b65b4052d09edbe2b0820c3f3e69b5b4dc99",
+          "rows": 721
+        },
+        {
+          "path": "frequency-nominal-pex-loop.csv",
+          "sha256": "d6183e1bcd68c804746ca81d70ed052092215516a4281eae8a1bdc21b3ed0580",
+          "rows": 721
+        },
+        {
+          "path": "frequency-nominal-pex-closed.csv",
+          "sha256": "303d19f6a78d973d51f35be016e011e9ad7eff374bb0a1535a55f0fcba0537a1",
+          "rows": 721
+        }
+      ]
+    },
+    {
+      "name": "supply-rejection",
+      "caption": "Fresh paired study, 9 October 2026. TT, 27 C, VDD=3.3 V, unity feedback, Vset=1.65 V, unloaded, CL=20 pF; VDPWR fixed at 1.8 V. VIN reference is independent of VDD and has AC=0. Coupling=20log|Hsupply|; closed rejection=-20log|Hsupply|; input-referred PSRR=20log|Hsignal/Hsupply|. These definitions describe VAPWR coupling only.",
+      "outputs": {
+        "png": {
+          "path": "../../images/supply-rejection.png",
+          "sha256": "ba5f0e9894a3cb046daf7d9b736b7478360b0056433110cce44e63e3e429c160"
+        }
+      },
+      "source_files": [
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/result.json",
+          "sha256": "dd1b7517a99b6c0b730c7e142229f26d062c24f7033dda0c88fb91646446e373"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/result.json",
+          "sha256": "8661ea218160e378ac40c4cae0490e06d46c90f3a91751abc2cb22d4ef7b676a"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/supply.dat",
+          "sha256": "801bf3d7f913b7c02517e02d225a86af5199c9b9ac1c411081ebde9dc846c9bc"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/supply_metrics.dat",
+          "sha256": "beb60e85a601cd77325f89888f35ad9c22be6213bfcf0c652a07da88e085df80"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/supply.dat",
+          "sha256": "b526a9b30fef3be51d2218bc0fd31cf55740c0790bae08e680a5b21568a572d4"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/supply_metrics.dat",
+          "sha256": "4e81e15c1b8bc7a1d4f9deea19f753295af9de9b106507a2938de60e060592a3"
+        }
+      ],
+      "csv_exports": [
+        {
+          "path": "supply-rejection-schematic-transfer.csv",
+          "sha256": "177a8c41db0abe42f3d810dd90b8288cd3e507edf56a808fea7ff0e19e870331",
+          "rows": 721
+        },
+        {
+          "path": "supply-rejection-schematic-rejection.csv",
+          "sha256": "4bc2738e43ec6bc1ff54323eeff2a6347d2dd767d90275812eaa42043168f524",
+          "rows": 721
+        },
+        {
+          "path": "supply-rejection-pex-transfer.csv",
+          "sha256": "7dc968263b4e12e332be0cccf81c8e061c8a4538b032a62e9303ea5ead4fcb8c",
+          "rows": 721
+        },
+        {
+          "path": "supply-rejection-pex-rejection.csv",
+          "sha256": "09c1fec2830a64f4a0ea04f8598e29b5ced4e9164e1c6dc45659d9d853f66d37",
+          "rows": 721
+        }
+      ]
+    },
+    {
+      "name": "bias-supply",
+      "caption": "Fresh paired study, 9 October 2026. TT, temperature fixed at 27 C; Vset=VDD/2, no DC load, CL=20 pF. Vset tracks VDD, so input common mode changes with supply. Connected lines join the three simulated points; they do not add sampled conditions. Both backends use the same pinned model configuration.",
+      "outputs": {
+        "png": {
+          "path": "../../images/bias-supply.png",
+          "sha256": "c094fd362107cb279ecf2a87108c1c0d324279445b750132d52e57f2258fc076"
+        }
+      },
+      "source_files": [
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p0_t27/result.json",
+          "sha256": "7acd32acb9832a48f9f2180bad6577904e09ef8d8b8f7d51b9007d2ab83903b0"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p0_t27/result.json",
+          "sha256": "a95b045f4d6a7fa3c74e42a7ffcc3125e02e5943e36f6800a47bd8d5bdb4f81d"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p0_t27/op.dat",
+          "sha256": "e932f1264a3061fc8be5bc628535b6b6518357b1ddeca6efe36942e72cf18f1a"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/result.json",
+          "sha256": "dd1b7517a99b6c0b730c7e142229f26d062c24f7033dda0c88fb91646446e373"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/result.json",
+          "sha256": "8661ea218160e378ac40c4cae0490e06d46c90f3a91751abc2cb22d4ef7b676a"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/op.dat",
+          "sha256": "e67853e9a5f1dc1f93622c6d4f8d6b054adf57281dbe2ba2ab4f772ba22cc455"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p6_t27/result.json",
+          "sha256": "d78ff8e36cb6102e20639239eda30a0450a9f9774eef4710722ee6304d018808"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p6_t27/result.json",
+          "sha256": "8070aeea90e302176413010ef6c70d7ff627ee9ec045ba02652f09a5ca039cee"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p6_t27/op.dat",
+          "sha256": "56a9c4bb018f75042d6b090cf475fa8a8af94227833e6570954d2cfa323a3cf6"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p0_t27/op.dat",
+          "sha256": "a12455b06bfac96c5def9e543ec582deb68ff9051265e19de85aedcff5378460"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/op.dat",
+          "sha256": "f8644349af79284b8e4fa5ce285e48d5ca865147b502a9edcea0cd3290f97402"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p6_t27/op.dat",
+          "sha256": "7cdd228f8cacabeeb95d18390fa3607bed41fa98f078a6a61ab76e9fbc7ddbe8"
+        }
+      ],
+      "csv_exports": [
+        {
+          "path": "bias-supply-schematic.csv",
+          "sha256": "1be7504cdd88ce58d45957618f6efc710a3fe9a6948d8000988a593b6a64495e",
+          "rows": 3
+        },
+        {
+          "path": "bias-supply-pex.csv",
+          "sha256": "494a787d3512554f90598b48be0956d887090fc603ff93a3f69a32fc99cf0dca",
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "name": "frequency-supply",
+      "caption": "Fresh paired study, 9 October 2026. TT, temperature fixed at 27 C; Vset=VDD/2, no DC load, CL=20 pF. Vset tracks VDD, so input common mode changes with supply. Tian two-injection loop. Points are independently simulated; line segments interpolate visually between the three stored conditions.",
+      "outputs": {
+        "png": {
+          "path": "../../images/frequency-supply.png",
+          "sha256": "06abf02d586e87cd3b426dfdb3507b146670f96af313779997659d7c423d2cf4"
+        }
+      },
+      "source_files": [
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p0_t27/result.json",
+          "sha256": "7acd32acb9832a48f9f2180bad6577904e09ef8d8b8f7d51b9007d2ab83903b0"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p0_t27/result.json",
+          "sha256": "a95b045f4d6a7fa3c74e42a7ffcc3125e02e5943e36f6800a47bd8d5bdb4f81d"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/result.json",
+          "sha256": "dd1b7517a99b6c0b730c7e142229f26d062c24f7033dda0c88fb91646446e373"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/result.json",
+          "sha256": "8661ea218160e378ac40c4cae0490e06d46c90f3a91751abc2cb22d4ef7b676a"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p6_t27/result.json",
+          "sha256": "d78ff8e36cb6102e20639239eda30a0450a9f9774eef4710722ee6304d018808"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p6_t27/result.json",
+          "sha256": "8070aeea90e302176413010ef6c70d7ff627ee9ec045ba02652f09a5ca039cee"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p0_t27/loop.dat",
+          "sha256": "4448a4bd1286cd17fb97de9496aafce33c82ab406aaa211840d473be588a2fe9"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p0_t27/closed.dat",
+          "sha256": "01efa9a15d3912b06170c46e94bc6e1e4a423c1569dab83e86ce3c7aaa60c87a"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/loop.dat",
+          "sha256": "2a2d807e40384c2db7b131e1bdca315a11a695f51c2e215ce352e76de53ea0de"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/closed.dat",
+          "sha256": "52ee4532287a1f916fa569e1bd1ed2f29749ceb393e1808780e3f5f3c547a89b"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p6_t27/loop.dat",
+          "sha256": "9207f458e49d028e73819184be82846e13a4730e4546af6d6f3e323ea789dbee"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p6_t27/closed.dat",
+          "sha256": "4c3c040a2a094cb4e349a26cb073ca203dd45a89d8cd408e06d2fe515e717c32"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p0_t27/loop.dat",
+          "sha256": "5ae13df4a0ad926f68eaf8aa4596810f07d035c6ee27adbdbac0908e8ecbb925"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p0_t27/closed.dat",
+          "sha256": "5e670a9e45cac32439c9a500aa64346b477febfc011b329fd235b79783a81517"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/loop.dat",
+          "sha256": "4b2087fd29c2da232f995db863972c04353039da47d3e1de2a5e7b6d410c139e"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/closed.dat",
+          "sha256": "47873ba1b363c20b9d1ef29acf699ac7210ff2e6a0f41bef312523df79925d42"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p6_t27/loop.dat",
+          "sha256": "f8327059b87598576166446f8d9fb21a7f4ff703ae9162323465eff4c2d5f20f"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p6_t27/closed.dat",
+          "sha256": "1e0ebc6df38d6ef64101c7bf4bc8b7b2e6ea5c3415b91766df25c42a7fcf7bea"
+        }
+      ],
+      "csv_exports": [
+        {
+          "path": "frequency-supply-schematic-tt_v3p0_t27-loop.csv",
+          "sha256": "e0cf6b76815690c3e88869274a3da2d7ec01017cb4220645a193642367cd5722",
+          "rows": 721
+        },
+        {
+          "path": "frequency-supply-schematic-tt_v3p0_t27-closed.csv",
+          "sha256": "48c9f43d5e5855d23b6d55fc7cfa9f37c383fbd25a1b372d4225ee4c2b8b1588",
+          "rows": 721
+        },
+        {
+          "path": "frequency-supply-schematic-tt_v3p3_t27-loop.csv",
+          "sha256": "5c109270af1a743b1446cc122c55a0e75a9e2de10721f0635470e1e0199e3908",
+          "rows": 721
+        },
+        {
+          "path": "frequency-supply-schematic-tt_v3p3_t27-closed.csv",
+          "sha256": "2adc419393448ab9a33ecdb71e21ff89118f7a3f5f12c73163d26645a5796961",
+          "rows": 721
+        },
+        {
+          "path": "frequency-supply-schematic-tt_v3p6_t27-loop.csv",
+          "sha256": "e72ca7c0aa2c4b690f529baed00dffeec37fb9fca68d134a62a776cea6a7295c",
+          "rows": 721
+        },
+        {
+          "path": "frequency-supply-schematic-tt_v3p6_t27-closed.csv",
+          "sha256": "1dd5d327d573150560cf816d6a0dc7b7f5b0153d462d32951be10006f92f0017",
+          "rows": 721
+        },
+        {
+          "path": "frequency-supply-schematic-metrics.csv",
+          "sha256": "e1add44544c423ff6e9c5e9737bbd805b52406d1f17d6e3c2bd15cba2beb0429",
+          "rows": 3
+        },
+        {
+          "path": "frequency-supply-pex-tt_v3p0_t27-loop.csv",
+          "sha256": "c50dfc8985ae20e3429f266bf9c1924413b5b695dc51ebe8391ead65acd0148f",
+          "rows": 721
+        },
+        {
+          "path": "frequency-supply-pex-tt_v3p0_t27-closed.csv",
+          "sha256": "3eb18b6df1d9c17e107cf6feefce175bded8544393655d99e2b06ff209d7dc81",
+          "rows": 721
+        },
+        {
+          "path": "frequency-supply-pex-tt_v3p3_t27-loop.csv",
+          "sha256": "38501c45d0965b82540a8e1d44eb59a03dcf5b99e4e84bbea4a629a762f0754b",
+          "rows": 721
+        },
+        {
+          "path": "frequency-supply-pex-tt_v3p3_t27-closed.csv",
+          "sha256": "11c5c62d3cb1e80fd486fb936d7f4e0e77640236c4b49036f57954c4aea036c3",
+          "rows": 721
+        },
+        {
+          "path": "frequency-supply-pex-tt_v3p6_t27-loop.csv",
+          "sha256": "0db79d47418da12e69485d609876166c45b4a32070f7daa448055afb6c2f84a3",
+          "rows": 721
+        },
+        {
+          "path": "frequency-supply-pex-tt_v3p6_t27-closed.csv",
+          "sha256": "35e43e098dd7814aa4451c04630b753af98a2fb2e7c5b20a80f97af2a80253d0",
+          "rows": 721
+        },
+        {
+          "path": "frequency-supply-pex-metrics.csv",
+          "sha256": "7aefdb4810c4debfb69a161b7f5542e99510074a95cba2ea519a40d28c907862",
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "name": "bias-temperature",
+      "caption": "Fresh paired study, 9 October 2026. TT, VDD fixed at 3.3 V; Vset=1.65 V, no DC load, CL=20 pF. Connected lines join the three simulated points; they do not add sampled conditions. Both backends use the same pinned model configuration.",
+      "outputs": {
+        "png": {
+          "path": "../../images/bias-temperature.png",
+          "sha256": "5bea0cb54eb5e65d62cbe75314bc5d0b1eb88610aa448a502ecb482910585c6b"
+        }
+      },
+      "source_files": [
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_tm40/result.json",
+          "sha256": "aed78dcd50d99e8c6e053d57dcacc99478d72ee89ce407636024243625c384b5"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_tm40/result.json",
+          "sha256": "b87162c038be4158825a9b05de94c270b7a02710eb7a6ded3608776545b9df51"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_tm40/op.dat",
+          "sha256": "92117368aaa645e2c52110ecb8cabbd8d9c4664a484ad54d2d69e22ff61064f1"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/result.json",
+          "sha256": "dd1b7517a99b6c0b730c7e142229f26d062c24f7033dda0c88fb91646446e373"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/result.json",
+          "sha256": "8661ea218160e378ac40c4cae0490e06d46c90f3a91751abc2cb22d4ef7b676a"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/op.dat",
+          "sha256": "e67853e9a5f1dc1f93622c6d4f8d6b054adf57281dbe2ba2ab4f772ba22cc455"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t125/result.json",
+          "sha256": "74450cfec8bdf95147b9750802b809a6311e3a7c08e2b95b440d92d379bc7509"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t125/result.json",
+          "sha256": "0dbdcfc531d67a38db95372d6a5efc7f6fc73d7b6a5732755aca3b7a19b65821"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t125/op.dat",
+          "sha256": "ecf3ea9fb2e962631671ba42966a803a405a8b693a754925d56b734eb05d5421"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_tm40/op.dat",
+          "sha256": "19aa11d776a04ceb4a495d02713ce2cb0a961aa8359746d95f2a72b585f7a85a"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/op.dat",
+          "sha256": "f8644349af79284b8e4fa5ce285e48d5ca865147b502a9edcea0cd3290f97402"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t125/op.dat",
+          "sha256": "6a5f20c1ba9c481b462d3045e82d93d1e575f1f80a71d932184f3f830beabc22"
+        }
+      ],
+      "csv_exports": [
+        {
+          "path": "bias-temperature-schematic.csv",
+          "sha256": "156b74f8bcb404d78e0558f8ffb6d733aef636a8939f35f758ebad73b9e72503",
+          "rows": 3
+        },
+        {
+          "path": "bias-temperature-pex.csv",
+          "sha256": "1906f4c8a1abed6402c53ff549b9682f16ed8568d01bff29ef694cafb6f9aa5a",
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "name": "frequency-temperature",
+      "caption": "Fresh paired study, 9 October 2026. TT, VDD fixed at 3.3 V; Vset=1.65 V, no DC load, CL=20 pF. Tian two-injection loop. Points are independently simulated; line segments interpolate visually between the three stored conditions.",
+      "outputs": {
+        "png": {
+          "path": "../../images/frequency-temperature.png",
+          "sha256": "34bf51e421f502956b0f04b06f6b57260f7f453b91ffef7d84828dc77c9de93a"
+        }
+      },
+      "source_files": [
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_tm40/result.json",
+          "sha256": "aed78dcd50d99e8c6e053d57dcacc99478d72ee89ce407636024243625c384b5"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_tm40/result.json",
+          "sha256": "b87162c038be4158825a9b05de94c270b7a02710eb7a6ded3608776545b9df51"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/result.json",
+          "sha256": "dd1b7517a99b6c0b730c7e142229f26d062c24f7033dda0c88fb91646446e373"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/result.json",
+          "sha256": "8661ea218160e378ac40c4cae0490e06d46c90f3a91751abc2cb22d4ef7b676a"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t125/result.json",
+          "sha256": "74450cfec8bdf95147b9750802b809a6311e3a7c08e2b95b440d92d379bc7509"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t125/result.json",
+          "sha256": "0dbdcfc531d67a38db95372d6a5efc7f6fc73d7b6a5732755aca3b7a19b65821"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_tm40/loop.dat",
+          "sha256": "8dc64504dc7b722f4e99c63d6f29d0eda74ca4ae9d39b0d60cb5c501b57f1e0d"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_tm40/closed.dat",
+          "sha256": "a1b581e0eac016df78b99e69fb82579da4ee86d371f2e88c8954ef0dcd53df91"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/loop.dat",
+          "sha256": "2a2d807e40384c2db7b131e1bdca315a11a695f51c2e215ce352e76de53ea0de"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t27/closed.dat",
+          "sha256": "52ee4532287a1f916fa569e1bd1ed2f29749ceb393e1808780e3f5f3c547a89b"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t125/loop.dat",
+          "sha256": "be3ed44f27991f88d86ec3d4264cff0e8e3ecaceffc08fafcbd10710899c9805"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/schematic_tt_v3p3_t125/closed.dat",
+          "sha256": "2883dbb46d0e0bc62414108f87a31ede89fe354252048eeea901e5d3219af141"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_tm40/loop.dat",
+          "sha256": "35d7593014bb46cd76fea3a567a7447f1038e89430ea69a55cdbcc6609461ba7"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_tm40/closed.dat",
+          "sha256": "38e9d445e4fa491dd3f15f945ca7a4518d1157da8ebc8f5fb7782c8905a7dd40"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/loop.dat",
+          "sha256": "4b2087fd29c2da232f995db863972c04353039da47d3e1de2a5e7b6d410c139e"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t27/closed.dat",
+          "sha256": "47873ba1b363c20b9d1ef29acf699ac7210ff2e6a0f41bef312523df79925d42"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t125/loop.dat",
+          "sha256": "b0505dd8f0000c57a15f2f870a1f250d598746578ae64fe7044645f3b2a305b5"
+        },
+        {
+          "path": "Documentation-20261009/results/operating/pex_tt_v3p3_t125/closed.dat",
+          "sha256": "cfbe3b79957ca59077b0a291d0c8ee2b1848e8f423837bd4d80465adcad1d462"
+        }
+      ],
+      "csv_exports": [
+        {
+          "path": "frequency-temperature-schematic-tt_v3p3_tm40-loop.csv",
+          "sha256": "6d76f7266c79521308429e5332573602fa202b95fd7a0e2b079cc3af7ccefc97",
+          "rows": 721
+        },
+        {
+          "path": "frequency-temperature-schematic-tt_v3p3_tm40-closed.csv",
+          "sha256": "17c95b699adcb1b610fd0880a1eed25c7c42b11c1ecf2662b02f7f3b9361616b",
+          "rows": 721
+        },
+        {
+          "path": "frequency-temperature-schematic-tt_v3p3_t27-loop.csv",
+          "sha256": "5c109270af1a743b1446cc122c55a0e75a9e2de10721f0635470e1e0199e3908",
+          "rows": 721
+        },
+        {
+          "path": "frequency-temperature-schematic-tt_v3p3_t27-closed.csv",
+          "sha256": "2adc419393448ab9a33ecdb71e21ff89118f7a3f5f12c73163d26645a5796961",
+          "rows": 721
+        },
+        {
+          "path": "frequency-temperature-schematic-tt_v3p3_t125-loop.csv",
+          "sha256": "f96be2fb7bb330cf03e654f61bca1cc7121650f84ec01980a41223e10a8da222",
+          "rows": 721
+        },
+        {
+          "path": "frequency-temperature-schematic-tt_v3p3_t125-closed.csv",
+          "sha256": "3270e11ab139be06ec8325c4370d1b24fbe67c253fcd9d1b66daeaa7c4cbb8a1",
+          "rows": 721
+        },
+        {
+          "path": "frequency-temperature-schematic-metrics.csv",
+          "sha256": "38b72e636c875b39c0bcaa08c4082b3e301360f87b14a19096cc383fb022a0fa",
+          "rows": 3
+        },
+        {
+          "path": "frequency-temperature-pex-tt_v3p3_tm40-loop.csv",
+          "sha256": "44dd614f12ce805b17ea1ecde79e6879432e9979c0a4f775abef23e36f980848",
+          "rows": 721
+        },
+        {
+          "path": "frequency-temperature-pex-tt_v3p3_tm40-closed.csv",
+          "sha256": "d0363abbe47aa34b26128975c9ebd2794084fbde6aaa91aecd92a4fb0f21e8a5",
+          "rows": 721
+        },
+        {
+          "path": "frequency-temperature-pex-tt_v3p3_t27-loop.csv",
+          "sha256": "38501c45d0965b82540a8e1d44eb59a03dcf5b99e4e84bbea4a629a762f0754b",
+          "rows": 721
+        },
+        {
+          "path": "frequency-temperature-pex-tt_v3p3_t27-closed.csv",
+          "sha256": "11c5c62d3cb1e80fd486fb936d7f4e0e77640236c4b49036f57954c4aea036c3",
+          "rows": 721
+        },
+        {
+          "path": "frequency-temperature-pex-tt_v3p3_t125-loop.csv",
+          "sha256": "250ea00b35996cb74f15740671e62d1a6079235216fd968cc93db627f51764ad",
+          "rows": 721
+        },
+        {
+          "path": "frequency-temperature-pex-tt_v3p3_t125-closed.csv",
+          "sha256": "844b1915e91a264fa9b817bff293e3e816b9de6c01ed55328871665253a6669d",
+          "rows": 721
+        },
+        {
+          "path": "frequency-temperature-pex-metrics.csv",
+          "sha256": "6d8c74a5848caefd920f30f2a7656c3a4f8602b957920a33654eb9203426bbf3",
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "name": "dc-transfer",
+      "caption": "Fresh paired study, 9 October 2026. Direct unity feedback: input common mode and output command move together. TT, 27 C, VDD=3.3 V, CL=20 pF; 50 mV grid. Colored samples pass terminal guards, |tracking error|<2 mV, 3<IREF<7 uA and positive supply draw. Gray crosses mark rejected samples; rejected errors clip to +/-2.2 mV for display, with originals preserved in CSV.",
+      "outputs": {
+        "png": {
+          "path": "../../images/dc-transfer.png",
+          "sha256": "b9c63c5d812ebfc7223a41f105f4ebeb161dbbdad3e3480e0dfc286e17efe346"
+        }
+      },
+      "source_files": [
+        {
+          "path": "Documentation-20261009/results/dc/pex_follower_none/result.json",
+          "sha256": "b12e28646fb399046ad7c71988b6e54ac9897f98154aa43d83a4ccfd5d2076fa"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_follower_none/result.json",
+          "sha256": "97eae07dee29a3f8c37a7ec412ded93ba394c06074f6706cafb6d93dc0b62088"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_follower_none/dc_valid.dat",
+          "sha256": "db2b0c76ceae130c0aa97455e83f3ecfd6eecf585cb0183e5654a72cec5c52bf"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_follower_none/dc.dat",
+          "sha256": "16c8fb00e1ba71f773d7cc9a052e8ab070aa173619b95b4ab6e611b6e0980942"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_follower_none/dc_valid.dat",
+          "sha256": "c382f1bcb3331a7a578a740fdaca5b0ffcf7e747b3688228570e00823783a8ad"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_follower_none/dc.dat",
+          "sha256": "452627bbda557ddd95ec40f2de0ae32f90bc7ccee6a64dd0dd297fe35ceb4b43"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_follower_source/result.json",
+          "sha256": "ae87c1dfb8ec96e44859d2b19be71c40bfb0604004838df3f71f1742cec4caf8"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_follower_source/result.json",
+          "sha256": "23ba134bcba645b5220e6b110a4841c43a566c280e03f0cbf284469ce56cbdc3"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_follower_source/dc_valid.dat",
+          "sha256": "b5731fafe2323894b5e369a406ceca5b085c1a2dcba5f42ea92f350a58c817e6"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_follower_source/dc.dat",
+          "sha256": "c7769b88f181dbda377a5e820f3b7527174a30940a2f43351720925ccb67f412"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_follower_source/dc_valid.dat",
+          "sha256": "36f2d4a0aa7536e14d52611a6b86ade06bf251507c099dbd69db3012ae4cc019"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_follower_source/dc.dat",
+          "sha256": "d7ec2311112351aed12e07a5cd2a5221778e5da8209e40dfb0de91889c08dd67"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_follower_sink/result.json",
+          "sha256": "b2d512ee10ee6c517895b1bcd20f83b397e7bc71883b3d35d59195cfdc382397"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_follower_sink/result.json",
+          "sha256": "1632378d5b8adb94c5d09eca7c46cd50d53e8dd13f8994895f106a3fd918a27d"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_follower_sink/dc_valid.dat",
+          "sha256": "53bce48675bf0c035e984f01c24b282c6d551ba9f65b38a4064a57813f1f50bc"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_follower_sink/dc.dat",
+          "sha256": "c3b0cd03bb3e7ef5bbe88661d67e5da311fcc36cbe08e3533306e6d31cd4b4ad"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_follower_sink/dc_valid.dat",
+          "sha256": "66e359ea699ba96cc55cada3080761a609245a349499a3e7dbcec9ac79977320"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_follower_sink/dc.dat",
+          "sha256": "b49f92e9a361d2882e21b65ead3ec1c64b600cf4cb09c3fc846516c00f6703df"
+        }
+      ],
+      "csv_exports": [
+        {
+          "path": "dc-transfer-schematic-no.csv",
+          "sha256": "5b0ce0cb6217c1d2c2894f8ca53c233b2ef1d72101a1b4083009477e9aec5249",
+          "rows": 65
+        },
+        {
+          "path": "dc-transfer-schematic-no-currents.csv",
+          "sha256": "5eb285c98d5189f7afdbb25295d30a2b3652f3778657d022d6854727bed80a09",
+          "rows": 65
+        },
+        {
+          "path": "dc-transfer-pex-no.csv",
+          "sha256": "02082a438aa8a9b0051de26a0f32ffcd08400af8aa9ec0184bdb943b3666118b",
+          "rows": 65
+        },
+        {
+          "path": "dc-transfer-pex-no-currents.csv",
+          "sha256": "9ed1cb5362c8c5c1ab7aa082b5392fca9e5894f1a4dcef8e72fb68265b5907bc",
+          "rows": 65
+        },
+        {
+          "path": "dc-transfer-schematic-source.csv",
+          "sha256": "67b253527271653ea5cb8df72be34ebf8c2c7ab4b0113ee92543cbd0b85a9c81",
+          "rows": 65
+        },
+        {
+          "path": "dc-transfer-schematic-source-currents.csv",
+          "sha256": "0e152a6bc9904ca05d5ebf03ca98de90ec7dfa9872cd436119be7e9429cdd84f",
+          "rows": 65
+        },
+        {
+          "path": "dc-transfer-pex-source.csv",
+          "sha256": "cc3746e5a80c9a4783881e34c1e718efb75fc8cd7fcd6e55b09cd787a6515da8",
+          "rows": 65
+        },
+        {
+          "path": "dc-transfer-pex-source-currents.csv",
+          "sha256": "4d764e6992b204fa239ba23351cc11f76e85cbb68cb7657025746fae40464a87",
+          "rows": 65
+        },
+        {
+          "path": "dc-transfer-schematic-sink.csv",
+          "sha256": "d185eba57b693ecb3ee89a0d3a77cad2b17876dbbe66f8730991d3e6ef6e140e",
+          "rows": 65
+        },
+        {
+          "path": "dc-transfer-schematic-sink-currents.csv",
+          "sha256": "1ff8a544dfcf3269ff7a2ebef6e391463ca6ac15c664cece06f66c69dcacbb15",
+          "rows": 65
+        },
+        {
+          "path": "dc-transfer-pex-sink.csv",
+          "sha256": "c7f38909fced8cfe1fe649c07d6364baa0992d325372b9a94cead9ff3252ae37",
+          "rows": 65
+        },
+        {
+          "path": "dc-transfer-pex-sink-currents.csv",
+          "sha256": "ceb87df887b883818282b6eafc44c6d718d49420fdc2e88191ed243cc1f0e17c",
+          "rows": 65
+        }
+      ]
+    },
+    {
+      "name": "output-range",
+      "caption": "Fresh paired study, 9 October 2026. Test-only shifted feedback holds IN+ at 1.65 V and IN- near 1.65 V while output command is swept independently. TT, 27 C, VDD=3.3 V, CL=20 pF; 50 mV grid. Colored samples pass terminal guards, |tracking error|<2 mV, 3<IREF<7 uA and positive supply draw. Gray crosses mark rejected samples; rejected errors clip to +/-2.2 mV for display, with originals preserved in CSV.",
+      "outputs": {
+        "png": {
+          "path": "../../images/output-range.png",
+          "sha256": "8870c38c7e3452b5571a524561d7564830abec61af4f7abe4d6e88e3b3e90958"
+        }
+      },
+      "source_files": [
+        {
+          "path": "Documentation-20261009/results/dc/pex_output_servo_none/result.json",
+          "sha256": "6a1f59f2f6e7b242812ac47a533a803c23a3f7776d5254d39be7eaac194a7455"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_output_servo_none/result.json",
+          "sha256": "740ea1c3de2fb5c7e820503d6b40e58232e09e074b64df494e8a5996c30e2d19"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_output_servo_none/dc_valid.dat",
+          "sha256": "72c69895d127e43bf70c3735a009cf90c17c4f51650f1d38b87950822e8764cd"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_output_servo_none/dc.dat",
+          "sha256": "568747ce0f3f7bf5bda0c4071084a3e131b58b507772974e8882aa83856cb36b"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_output_servo_none/dc_valid.dat",
+          "sha256": "3dd8113c68ce7f3c84f270aab0e868a39b2477c99555776c41b0370002706f6b"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_output_servo_none/dc.dat",
+          "sha256": "be46c50d20bb97fe1ce4d72f5edd660e099b2eadc42b719a796a62da72ef2973"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_output_servo_source/result.json",
+          "sha256": "a634a4efd8c70feb759190b4508891958e7ab9a504c298ef910e62658d6cd4d2"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_output_servo_source/result.json",
+          "sha256": "96bce53c1911835f043603aadc64464603178d1c28f5644dd3e2eadfea675170"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_output_servo_source/dc_valid.dat",
+          "sha256": "1b4a5293fdfcfd7f663e06958598826b681de4b8cc402ec0b939f337a35a094b"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_output_servo_source/dc.dat",
+          "sha256": "67432bed863821dc63875a5b081f18b865b1aef5dc9684dfd186c70a4ecbfae6"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_output_servo_source/dc_valid.dat",
+          "sha256": "b763f8724434f051ea293f6f76880ed23717f6e2ec6d4f142118c2c78bc791c9"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_output_servo_source/dc.dat",
+          "sha256": "203fcd19a50d162d4e8242a1595561829ffcf8919e96a1e1e1b808b9a2e4484b"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_output_servo_sink/result.json",
+          "sha256": "ff33724b0cf9459235a919b1c0bd381e5463d434448aa4f563e5a82b68274ca7"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_output_servo_sink/result.json",
+          "sha256": "408d60d57015c031f8f8bb03a08347670e2178e63eed98f8bcceac97760048ce"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_output_servo_sink/dc_valid.dat",
+          "sha256": "b0dd712b66055dd9c991a4dd75813e58e04dfa63fcfb7482a7f9fc0e5e0b1291"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_output_servo_sink/dc.dat",
+          "sha256": "43fe6e78ece0a9934a2ba51dc5611239a0b97288b361cf7e84528b0af162c18a"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_output_servo_sink/dc_valid.dat",
+          "sha256": "d9a1f05187d61ba2cde73a7af406d4de55c3295c20d8e1437fb1410dd14c51b8"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_output_servo_sink/dc.dat",
+          "sha256": "fd6028f467da0054c39972fe9fc8d970835c7663cc0398cc824c314c840dded9"
+        }
+      ],
+      "csv_exports": [
+        {
+          "path": "output-range-schematic-no.csv",
+          "sha256": "b6dc9941d12575722106c55556aff7c840609b6163f6c6c7dd44dd6fc46aa1bc",
+          "rows": 65
+        },
+        {
+          "path": "output-range-schematic-no-currents.csv",
+          "sha256": "c51116d066e0fdfab72265d255961f4d1116bd5a63ce586056dfde224a857844",
+          "rows": 65
+        },
+        {
+          "path": "output-range-pex-no.csv",
+          "sha256": "85f563e09154cc34d203b6320777e18242acc355b603dedc85743288be4cf5c0",
+          "rows": 65
+        },
+        {
+          "path": "output-range-pex-no-currents.csv",
+          "sha256": "ebd1054d0b91d13abf3eccf7cc8a84196e8b602e607c0aff1c5c86fe93e8124e",
+          "rows": 65
+        },
+        {
+          "path": "output-range-schematic-source.csv",
+          "sha256": "9bb59868488aaa008591651fbfb6e9c3248dfa41f660cffbc86ccd493b40b009",
+          "rows": 65
+        },
+        {
+          "path": "output-range-schematic-source-currents.csv",
+          "sha256": "e9eaca37712b86ceafd406eb9bf748ec5c99d829bf3d77a72ecbbbac4d1efbcb",
+          "rows": 65
+        },
+        {
+          "path": "output-range-pex-source.csv",
+          "sha256": "98f8b070aa427a703223e6eccf875a7fcb28803e2a274e3a2b78f0a23e213e27",
+          "rows": 65
+        },
+        {
+          "path": "output-range-pex-source-currents.csv",
+          "sha256": "0463ccb17516e4981aeb5b2f18144a1c6513ccd9c7bd522be6fbb127abf9bcc9",
+          "rows": 65
+        },
+        {
+          "path": "output-range-schematic-sink.csv",
+          "sha256": "fcb4c4a7d2003b294ec37c1e6e321ef0572c104ea10a9f3f12770a27d43792f1",
+          "rows": 65
+        },
+        {
+          "path": "output-range-schematic-sink-currents.csv",
+          "sha256": "2c26f070688f35628f0569cfa8aac167b19b66bdcc57b44fd7013549862db3d8",
+          "rows": 65
+        },
+        {
+          "path": "output-range-pex-sink.csv",
+          "sha256": "9113774287c9157a9607dd9f00a91af74ce6bb37ec07d0e56c59b4bdd91b32ae",
+          "rows": 65
+        },
+        {
+          "path": "output-range-pex-sink-currents.csv",
+          "sha256": "5c65ec5ab03860ebaf0b0c090bdb42fe26aea2d19a1ef550481f80c6a2bbb51f",
+          "rows": 65
+        }
+      ]
+    },
+    {
+      "name": "common-mode",
+      "caption": "Fresh paired study, 9 October 2026. TT, 27 C, VDD=3.3 V, unloaded, CL=20 pF. BSERVO feedback holds OUT near 1.65 V while input common mode sweeps 0.05\u20133.25 V in 50 mV steps. Required input difference = 1.65 V minus OUT from the exact servo equation. This separates DC common mode from output swing; it is not AC CMRR.",
+      "outputs": {
+        "png": {
+          "path": "../../images/common-mode.png",
+          "sha256": "6652d96894b8a65bb30345f78096b55d2a9a346fef73c907f5a09ee7c394a1a3"
+        }
+      },
+      "source_files": [
+        {
+          "path": "Documentation-20261009/results/dc/pex_common_mode_servo/result.json",
+          "sha256": "1a25ca29e177b13fa811b79e9da4d38291e000075f43e4a6aad17b02fd055c25"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_common_mode_servo/result.json",
+          "sha256": "8c21da50f9dd34df530369955ac52750c51e5f26067427e95eaa3463f0a90b51"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_common_mode_servo/dc_valid.dat",
+          "sha256": "c5a7e8b19064a1203d8a3da0069aec02376597b6fafbbfdc1ea198442cf86bb5"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/schematic_common_mode_servo/dc.dat",
+          "sha256": "f9fbf4a633bd6be9f16f3c154a562a5051ad2d88bf432448ce85b03e76893cf3"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_common_mode_servo/dc_valid.dat",
+          "sha256": "6858804f63e457851757620945da0f00f1c32a1d10228fa353d442d949fd8a1b"
+        },
+        {
+          "path": "Documentation-20261009/results/dc/pex_common_mode_servo/dc.dat",
+          "sha256": "395ce6db03ccf2a9fba0b6de6bb33a7f212f03eef9d49c32b91a2c7e97d3094e"
+        }
+      ],
+      "csv_exports": [
+        {
+          "path": "common-mode-schematic.csv",
+          "sha256": "ad4af68070d104f34f91e97367a80ca8d80e43e7853b20ef248d521b1fd66f5a",
+          "rows": 65
+        },
+        {
+          "path": "common-mode-schematic-currents.csv",
+          "sha256": "e3b83b9152bcf4b73851e290dbd7f1f8f3d1326d5a78456fa79e8e99d4c94cd9",
+          "rows": 65
+        },
+        {
+          "path": "common-mode-pex.csv",
+          "sha256": "220368cda681ab9cf1098a6872089bf6426026276b88bc2cf86dfb820a626b7e",
+          "rows": 65
+        },
+        {
+          "path": "common-mode-pex-currents.csv",
+          "sha256": "c80510080d0c098f27348eb501f063a048bd3048915f431b46e47b15bfc1bb5e",
+          "rows": 65
+        }
+      ]
+    },
+    {
+      "name": "reference-startup",
+      "caption": "Fresh paired study, 9 October 2026. Integrated reference and amplifier, TT/27 C/3.3 V, CL=20 pF; zero-state UIC, no nodeset, simultaneous VDD and VIN ramps over 10 us. Gray dotted trace is VIN=VDD/2. Display 0\u201350.0 us; CSV preserves the full 310 us run. M45 is the startup injection branch; this is not a standalone unloaded-reference test.",
+      "outputs": {
+        "png": {
+          "path": "../../images/reference-startup.png",
+          "sha256": "a8805a730a0c15d0a15e5e71c95b356bd83a43ea1efd593df4ee3a5444112731"
+        }
+      },
+      "source_files": [
+        {
+          "path": "Documentation-20261009/results/startup/pex_tt_ramp10us/result.json",
+          "sha256": "ac940959060d3fdcfce54959fc8556ca2bebf1c9470bc10b1f6cdc36d7538d02"
+        },
+        {
+          "path": "Documentation-20261009/results/startup/schematic_tt_ramp10us/result.json",
+          "sha256": "d4a2ed7949cee591eb6f925c25590a7ec31c700737649156498be86c6d7b27dc"
+        },
+        {
+          "path": "Documentation-20261009/results/startup/schematic_tt_ramp10us/trace.dat",
+          "sha256": "cbfe2543629efdcc95cce9906bf6271954fbd6ae770bfe54973bd152e43f3d0a"
+        },
+        {
+          "path": "Documentation-20261009/results/startup/pex_tt_ramp10us/trace.dat",
+          "sha256": "1da9e4820d16b2ab2c5fa99ccc5171e95b25e94ca268ba6e9ff8d823fa048a15"
+        }
+      ],
+      "csv_exports": [
+        {
+          "path": "reference-startup-schematic.csv",
+          "sha256": "b3febcc7036a68a6a6dd602daeaeae39942323001430b06cdab2941aa6611597",
+          "rows": 1713
+        },
+        {
+          "path": "reference-startup-pex.csv",
+          "sha256": "3cf30ef0f9424a27756e6406addd98d957d49ab3e63307edc960cf81b7bf7ffa",
+          "rows": 1658
+        }
+      ]
+    },
+    {
+      "name": "signal-step",
+      "caption": "Fresh paired study, 9 October 2026. TT/27 C/3.3 V, unloaded, CL=20 pF. VIN rises 1.65 to 1.70 V at 1\u20131.001 us, then returns at 5\u20135.001 us; gray dotted line is commanded VIN. Normal guarded DC initialization. Error is signed VOUT-VIN, without baseline normalization.",
+      "outputs": {
+        "png": {
+          "path": "../../images/signal-step.png",
+          "sha256": "f426b4d636a54f08a97ecd0968140f46d272e02f70e0a7e58b5b5b9f0a4dc771"
+        }
+      },
+      "source_files": [
+        {
+          "path": "Documentation-20261009/results/transient/pex_signal50mV/result.json",
+          "sha256": "3eded4888aa74bea63076efebef6d3b6088bf7fdbdfa2e6473391546b22e0b55"
+        },
+        {
+          "path": "Documentation-20261009/results/transient/schematic_signal50mV/result.json",
+          "sha256": "9d7ccefd7125a80ccacf7ba79b6a695b6070397609a5cca528d084bc965190b7"
+        },
+        {
+          "path": "Documentation-20261009/results/transient/schematic_signal50mV/trace.dat",
+          "sha256": "72e2aff2f35330e80dff7d780fca5e118923e6e62c71b52a1d3d5f616e76dd5d"
+        },
+        {
+          "path": "Documentation-20261009/results/transient/pex_signal50mV/trace.dat",
+          "sha256": "7523beed262c44c023e73738d7f951bb24b55e0ea4fd3605819f98365811a4a6"
+        }
+      ],
+      "csv_exports": [
+        {
+          "path": "signal-step-schematic.csv",
+          "sha256": "6f08c8b1513a200bd5c24cd662314181c52a8a5df07f108f777cf954849cfa6e",
+          "rows": 5024
+        },
+        {
+          "path": "signal-step-pex.csv",
+          "sha256": "ad5215d61f619807f17fce20733849506e324b9ae42c005dbcd2fa3a96fb3f98",
+          "rows": 5024
+        }
+      ]
+    },
+    {
+      "name": "load-step",
+      "caption": "Fresh paired study, 9 October 2026. TT/27 C/3.3 V, fixed command 1.65 V, CL=20 pF. Gray curve is testbench demand: +1 mA source load at 1.01\u20135 us; -1 mA sink load at 9.01\u201313 us, with 10 ns ramps and return to zero. Large short-term output excursions are retained. Normal guarded DC initialization.",
+      "outputs": {
+        "png": {
+          "path": "../../images/load-step.png",
+          "sha256": "ba4cee5ef0e463ec7291be96120df3f5c0b25f2b274b8dbc9e7c5b2c48163b26"
+        }
+      },
+      "source_files": [
+        {
+          "path": "Documentation-20261009/results/transient/pex_load_pm1mA/result.json",
+          "sha256": "a7028bf9fd194ea78c04b32b8d2d1def993329d2a94667d4d2fc6f6bb35e667c"
+        },
+        {
+          "path": "Documentation-20261009/results/transient/schematic_load_pm1mA/result.json",
+          "sha256": "f431812a0314831426e7a1bca532cd04ef474a95d300a22c73861d2ad1f21311"
+        },
+        {
+          "path": "Documentation-20261009/results/transient/schematic_load_pm1mA/trace.dat",
+          "sha256": "44ad7d8db18d3de15fc9c1636f6af4b3c3b03cd72a8ddf9993fba65d2514cf7b"
+        },
+        {
+          "path": "Documentation-20261009/results/transient/pex_load_pm1mA/trace.dat",
+          "sha256": "5c4e8b4e2e5948d9268de1b3ac992c7f26802610e33a2a04f4aa6c5e77e0b594"
+        }
+      ],
+      "csv_exports": [
+        {
+          "path": "load-step-schematic.csv",
+          "sha256": "a10af6ab28242d72197f29c0ab0b86997f243cc2115a53dab7048f5d11f8cc95",
+          "rows": 8539
+        },
+        {
+          "path": "load-step-pex.csv",
+          "sha256": "7f0936e45d2f54bf4348064489ce6c159c07cb1f00252261cb22c63db48951de",
+          "rows": 8533
+        }
+      ]
+    },
+    {
+      "name": "supply-step",
+      "caption": "Fresh paired study, 9 October 2026. TT/27 C, fixed VIN=1.65 V independent of supply, unloaded, CL=20 pF. VDD steps 3.3 to 3.4 V at 10\u201310.1 us and returns at 30\u201330.1 us; then 3.3 to 3.2 V at 40\u201340.1 us and returns at 60\u201360.1 us. VDPWR remains 1.8 V. Normal guarded DC initialization.",
+      "outputs": {
+        "png": {
+          "path": "../../images/supply-step.png",
+          "sha256": "b896b85e473980dc80957a9cef157e86fc7e86c16976d46af9b8f9af82d7b455"
+        }
+      },
+      "source_files": [
+        {
+          "path": "Documentation-20261009/results/supply/pex_supply_pm100mV/result.json",
+          "sha256": "a48436f563a8c0772ba2923b0e064fe94cd40510288398f0e84efa78634435b5"
+        },
+        {
+          "path": "Documentation-20261009/results/supply/schematic_supply_pm100mV/result.json",
+          "sha256": "c642c0001f1d9267b4d26d357a183b4ffbdb4a6e066989b8fc7fb31006f2f3c1"
+        },
+        {
+          "path": "Documentation-20261009/results/supply/schematic_supply_pm100mV/trace.dat",
+          "sha256": "32fea83cbb5080c1e1f1b64ba40d4d73eac4c16632b054bf53cc62583f39d9fe"
+        },
+        {
+          "path": "Documentation-20261009/results/supply/pex_supply_pm100mV/trace.dat",
+          "sha256": "0586ffd448c11ec3abf4982297eaeb82a3f61abec46537fe8b6b77cc1826bc68"
+        }
+      ],
+      "csv_exports": [
+        {
+          "path": "supply-step-schematic.csv",
+          "sha256": "cf5df20aece7b1fad07526906d9b5717040eff89ed64aa03f43afe83ecb13816",
+          "rows": 8032
+        },
+        {
+          "path": "supply-step-pex.csv",
+          "sha256": "e8fe5e565f802aafd81bc6d0f8e70831551be79abb51a37d9edba2025c62d280",
+          "rows": 8032
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}
